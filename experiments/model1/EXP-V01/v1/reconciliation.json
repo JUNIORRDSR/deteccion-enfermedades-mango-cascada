@@ -1,0 +1,35 @@
+{
+  "definitive": false,
+  "docker_image": "gcr.io/kaggle-private-byod/python@sha256:37c64f7dd9c54116ecd1bcc88817c5469b88387388fade02bfa8bf3fc647d461",
+  "error": "JobRejected: expected one attached training output, got [] []",
+  "experiment_id": "EXP-V01",
+  "files": {
+    "job_log.txt": {
+      "attested": false,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "receipt.json": {
+      "attested": false,
+      "sha256": "2e24177bd48b766b27ef0250505525ec2d1c8595b5a81f5b0ba57f8779509dad"
+    }
+  },
+  "inventory_not_downloaded": [],
+  "kernel_source_sha256": "e70e79e01993a3f7350f38160bbd74a3fb47010569a3dca5f922d3dbb348a6a6",
+  "mode": "predict",
+  "payload_sha256": "b2f78531a0e99db304a22bd291fad136091ee5cee281c3d017658b5d420507da",
+  "phase": "valid",
+  "platform_log_sha256": "c63913940e13f50d52a39b20ad8b387c60c6153d2a9461c60b9ee5e12b279675",
+  "platform_sha256": "268e4c2319c2d8ecf2951e1d7d56864fd83e762633f4c194d776ae53e879d164",
+  "platform_status": "ERROR",
+  "reason": "failed before any model output",
+  "receipt_sha256": "2e24177bd48b766b27ef0250505525ec2d1c8595b5a81f5b0ba57f8779509dad",
+  "render_record_sha256": "a3fc38521ed7020126141b9ae0b08a84a59157c981d5dd2a26e3ec95ba64ed03",
+  "retry_allowed": true,
+  "stage": "start",
+  "status": "FAILED",
+  "unattested": [
+    "job_log.txt",
+    "receipt.json"
+  ],
+  "version": 1
+}

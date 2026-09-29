@@ -1,0 +1,158 @@
+{
+  "root": "C:\\Users\\junio\\Downloads\\mango-vision\\ALBUS26_major_revision\\.worktrees\\execution",
+  "executable": "C:\\Users\\junio\\Downloads\\mango-vision\\ALBUS26_major_revision\\.worktrees\\execution\\.venv\\Scripts\\python.exe",
+  "containment_claim": {
+    "guarded_escaped_paths": {},
+    "unguarded_expected_hazard_escapes": {
+      "datasets_dir": "output outside workspace: C:\\Users\\junio\\Downloads\\mango-vision\\ALBUS26_major_revision\\.worktrees\\datasets",
+      "weights_dir": "output is not inside a declared output subtree: weights",
+      "runs_dir": "output is not inside a declared output subtree: runs"
+    },
+    "note": "PASS means the GUARDED entrypoint is contained and the negative test produced only expected hazards inside the fixture. It does NOT mean no path anywhere escaped."
+  },
+  "isolation_values": {
+    "PYTHONDONTWRITEBYTECODE": "1",
+    "PYTHONNOUSERSITE": "1",
+    "WANDB_DISABLED": "true",
+    "WANDB_MODE": "disabled",
+    "COMET_MODE": "DISABLED"
+  },
+  "integrations_required_off": [
+    "sync",
+    "clearml",
+    "comet",
+    "dvc",
+    "hub",
+    "mlflow",
+    "neptune",
+    "raytune",
+    "tensorboard",
+    "wandb"
+  ],
+  "supersedes": "first version of this script, which caused INCIDENT-001",
+  "results": [
+    {
+      "mode": "missing",
+      "sandboxed_profile": false,
+      "profile_fixture": null,
+      "exit_code": 0,
+      "stdout": "{\"refused_before_import\": \"YOLO_CONFIG_DIR missing before scientific import\"}",
+      "stderr": "",
+      "parsed": {
+        "refused_before_import": "YOLO_CONFIG_DIR missing before scientific import"
+      }
+    },
+    {
+      "mode": "external",
+      "sandboxed_profile": false,
+      "profile_fixture": null,
+      "exit_code": 0,
+      "stdout": "{\"refused_external\": \"YOLO_CONFIG_DIR outside configured workspace: C:\\\\WINDOWS\\\\Temp\"}",
+      "stderr": "",
+      "parsed": {
+        "refused_external": "YOLO_CONFIG_DIR outside configured workspace: C:\\WINDOWS\\Temp"
+      }
+    },
+    {
+      "mode": "guarded",
+      "sandboxed_profile": false,
+      "profile_fixture": null,
+      "exit_code": 0,
+      "stdout": "{\"ultralytics\": \"8.4.52\", \"torch\": \"2.12.0+cpu\", \"torch_cuda_available\": false, \"torch_cuda_version\": null, \"ultralytics_online_probe_at_import\": false, \"effective_paths\": {\"datasets_dir\": \"C:\\\\Users\\\\junio\\\\Downloads\\\\mango-vision\\\\ALBUS26_major_revision\\\\.worktrees\\\\execution\\\\data\\\\derived\\\\ultralytics_datasets\", \"weights_dir\": \"C:\\\\Users\\\\junio\\\\Downloads\\\\mango-vision\\\\ALBUS26_major_revision\\\\.worktrees\\\\execution\\\\provenance\\\\runtime_state\\\\ultralytics\\\\weights\", \"runs_dir\": \"C:\\\\Users\\\\junio\\\\Downloads\\\\mango-vision\\\\ALBUS26_major_revision\\\\.worktrees\\\\execution\\\\experiments\\\\ultralytics_runs\", \"settings_file\": \"C:\\\\Users\\\\junio\\\\Downloads\\\\mango-vision\\\\ALBUS26_major_revision\\\\.worktrees\\\\execution\\\\provenance\\\\runtime_state\\\\ultralytics\\\\Ultralytics\\\\settings.json\", \"user_config_dir\": \"C:\\\\Users\\\\junio\\\\Downloads\\\\mango-vision\\\\ALBUS26_major_revision\\\\.worktrees\\\\execution\\\\provenance\\\\runtime_state\\\\ultralytics\\\\Ultralytics\"}, \"escaped\": {}, \"integrations\": {\"sync\": false, \"clearml\": false, \"comet\": false, \"dvc\": false, \"hub\": false, \"mlflow\": false, \"neptune\": false, \"raytune\": false, \"tensorboard\": false, \"wandb\": false}, \"lockdown_applied\": {\"sync\": false, \"clearml\": false, \"comet\": false, \"dvc\": false, \"hub\": false, \"mlflow\": false, \"neptune\": false, \"raytune\": false, \"tensorboard\": false, \"wandb\": false, \"api_key\": \"\", \"openai_api_key\": \"\", \"datasets_dir\": \"C:\\\\Users\\\\junio\\\\Downloads\\\\mango-vision\\\\ALBUS26_major_revision\\\\.worktrees\\\\execution\\\\data\\\\derived\\\\ultralytics_datasets\", \"weights_dir\": \"C:\\\\Users\\\\junio\\\\Downloads\\\\mango-vision\\\\ALBUS26_major_revision\\\\.worktrees\\\\execution\\\\provenance\\\\runtime_state\\\\ultralytics\\\\weights\", \"runs_dir\": \"C:\\\\Users\\\\junio\\\\Downloads\\\\mango-vision\\\\ALBUS26_major_revision\\\\.worktrees\\\\execution\\\\experiments\\\\ultralytics_runs\"}, \"profile_home\": \"C:\\\\Users\\\\junio\"}",
+      "stderr": "",
+      "parsed": {
+        "ultralytics": "8.4.52",
+        "torch": "2.12.0+cpu",
+        "torch_cuda_available": false,
+        "torch_cuda_version": null,
+        "ultralytics_online_probe_at_import": false,
+        "effective_paths": {
+          "datasets_dir": "C:\\Users\\junio\\Downloads\\mango-vision\\ALBUS26_major_revision\\.worktrees\\execution\\data\\derived\\ultralytics_datasets",
+          "weights_dir": "C:\\Users\\junio\\Downloads\\mango-vision\\ALBUS26_major_revision\\.worktrees\\execution\\provenance\\runtime_state\\ultralytics\\weights",
+          "runs_dir": "C:\\Users\\junio\\Downloads\\mango-vision\\ALBUS26_major_revision\\.worktrees\\execution\\experiments\\ultralytics_runs",
+          "settings_file": "C:\\Users\\junio\\Downloads\\mango-vision\\ALBUS26_major_revision\\.worktrees\\execution\\provenance\\runtime_state\\ultralytics\\Ultralytics\\settings.json",
+          "user_config_dir": "C:\\Users\\junio\\Downloads\\mango-vision\\ALBUS26_major_revision\\.worktrees\\execution\\provenance\\runtime_state\\ultralytics\\Ultralytics"
+        },
+        "escaped": {},
+        "integrations": {
+          "sync": false,
+          "clearml": false,
+          "comet": false,
+          "dvc": false,
+          "hub": false,
+          "mlflow": false,
+          "neptune": false,
+          "raytune": false,
+          "tensorboard": false,
+          "wandb": false
+        },
+        "lockdown_applied": {
+          "sync": false,
+          "clearml": false,
+          "comet": false,
+          "dvc": false,
+          "hub": false,
+          "mlflow": false,
+          "neptune": false,
+          "raytune": false,
+          "tensorboard": false,
+          "wandb": false,
+          "api_key": "",
+          "openai_api_key": "",
+          "datasets_dir": "C:\\Users\\junio\\Downloads\\mango-vision\\ALBUS26_major_revision\\.worktrees\\execution\\data\\derived\\ultralytics_datasets",
+          "weights_dir": "C:\\Users\\junio\\Downloads\\mango-vision\\ALBUS26_major_revision\\.worktrees\\execution\\provenance\\runtime_state\\ultralytics\\weights",
+          "runs_dir": "C:\\Users\\junio\\Downloads\\mango-vision\\ALBUS26_major_revision\\.worktrees\\execution\\experiments\\ultralytics_runs"
+        },
+        "profile_home": "C:\\Users\\junio"
+      }
+    },
+    {
+      "mode": "unguarded_sandboxed_profile",
+      "sandboxed_profile": true,
+      "profile_fixture": "C:\\Users\\junio\\Downloads\\mango-vision\\ALBUS26_major_revision\\.worktrees\\execution\\provenance\\runtime_state\\profile_fixture\\unguarded_sandboxed_profile",
+      "exit_code": 0,
+      "stdout": "{\"ultralytics\": \"8.4.52\", \"torch\": \"2.12.0+cpu\", \"torch_cuda_available\": false, \"torch_cuda_version\": null, \"ultralytics_online_probe_at_import\": true, \"effective_paths\": {\"datasets_dir\": \"C:\\\\Users\\\\junio\\\\Downloads\\\\mango-vision\\\\ALBUS26_major_revision\\\\.worktrees\\\\datasets\", \"weights_dir\": \"C:\\\\Users\\\\junio\\\\Downloads\\\\mango-vision\\\\ALBUS26_major_revision\\\\.worktrees\\\\execution\\\\weights\", \"runs_dir\": \"C:\\\\Users\\\\junio\\\\Downloads\\\\mango-vision\\\\ALBUS26_major_revision\\\\.worktrees\\\\execution\\\\runs\", \"settings_file\": \"C:\\\\Users\\\\junio\\\\Downloads\\\\mango-vision\\\\ALBUS26_major_revision\\\\.worktrees\\\\execution\\\\provenance\\\\runtime_state\\\\profile_fixture\\\\unguarded_sandboxed_profile\\\\AppData\\\\Roaming\\\\Ultralytics\\\\settings.json\", \"user_config_dir\": \"C:\\\\Users\\\\junio\\\\Downloads\\\\mango-vision\\\\ALBUS26_major_revision\\\\.worktrees\\\\execution\\\\provenance\\\\runtime_state\\\\profile_fixture\\\\unguarded_sandboxed_profile\\\\AppData\\\\Roaming\\\\Ultralytics\"}, \"escaped\": {\"datasets_dir\": \"output outside workspace: C:\\\\Users\\\\junio\\\\Downloads\\\\mango-vision\\\\ALBUS26_major_revision\\\\.worktrees\\\\datasets\", \"weights_dir\": \"output is not inside a declared output subtree: weights\", \"runs_dir\": \"output is not inside a declared output subtree: runs\"}, \"integrations\": {\"sync\": true, \"clearml\": true, \"comet\": true, \"dvc\": true, \"hub\": true, \"mlflow\": true, \"neptune\": true, \"raytune\": true, \"tensorboard\": false, \"wandb\": false}, \"lockdown_applied\": {}, \"profile_home\": \"C:\\\\Users\\\\junio\\\\Downloads\\\\mango-vision\\\\ALBUS26_major_revision\\\\.worktrees\\\\execution\\\\provenance\\\\runtime_state\\\\profile_fixture\\\\unguarded_sandboxed_profile\"}",
+      "stderr": "",
+      "parsed": {
+        "ultralytics": "8.4.52",
+        "torch": "2.12.0+cpu",
+        "torch_cuda_available": false,
+        "torch_cuda_version": null,
+        "ultralytics_online_probe_at_import": true,
+        "effective_paths": {
+          "datasets_dir": "C:\\Users\\junio\\Downloads\\mango-vision\\ALBUS26_major_revision\\.worktrees\\datasets",
+          "weights_dir": "C:\\Users\\junio\\Downloads\\mango-vision\\ALBUS26_major_revision\\.worktrees\\execution\\weights",
+          "runs_dir": "C:\\Users\\junio\\Downloads\\mango-vision\\ALBUS26_major_revision\\.worktrees\\execution\\runs",
+          "settings_file": "C:\\Users\\junio\\Downloads\\mango-vision\\ALBUS26_major_revision\\.worktrees\\execution\\provenance\\runtime_state\\profile_fixture\\unguarded_sandboxed_profile\\AppData\\Roaming\\Ultralytics\\settings.json",
+          "user_config_dir": "C:\\Users\\junio\\Downloads\\mango-vision\\ALBUS26_major_revision\\.worktrees\\execution\\provenance\\runtime_state\\profile_fixture\\unguarded_sandboxed_profile\\AppData\\Roaming\\Ultralytics"
+        },
+        "escaped": {
+          "datasets_dir": "output outside workspace: C:\\Users\\junio\\Downloads\\mango-vision\\ALBUS26_major_revision\\.worktrees\\datasets",
+          "weights_dir": "output is not inside a declared output subtree: weights",
+          "runs_dir": "output is not inside a declared output subtree: runs"
+        },
+        "integrations": {
+          "sync": true,
+          "clearml": true,
+          "comet": true,
+          "dvc": true,
+          "hub": true,
+          "mlflow": true,
+          "neptune": true,
+          "raytune": true,
+          "tensorboard": false,
+          "wandb": false
+        },
+        "lockdown_applied": {},
+        "profile_home": "C:\\Users\\junio\\Downloads\\mango-vision\\ALBUS26_major_revision\\.worktrees\\execution\\provenance\\runtime_state\\profile_fixture\\unguarded_sandboxed_profile"
+      },
+      "expected_hazard_escapes": {
+        "datasets_dir": "output outside workspace: C:\\Users\\junio\\Downloads\\mango-vision\\ALBUS26_major_revision\\.worktrees\\datasets",
+        "weights_dir": "output is not inside a declared output subtree: weights",
+        "runs_dir": "output is not inside a declared output subtree: runs"
+      }
+    }
+  ],
+  "failures": [],
+  "status": "PASS"
+}

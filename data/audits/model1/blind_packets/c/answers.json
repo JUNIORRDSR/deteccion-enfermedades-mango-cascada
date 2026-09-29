@@ -1,0 +1,19 @@
+{
+  "reviewer": "reviewer-C",
+  "answers": {
+    "Q-0c5f39e6ac": {"decision": "NEAR_DUPLICATE", "rationale": "Identical mango positioning, angle, and lighting on striped background indicates the same photograph.", "confidence": "high"},
+    "Q-bd82aada98": {"decision": "NEAR_DUPLICATE", "rationale": "Mango occupies same position and angle on striped background with identical composition.", "confidence": "high"},
+    "Q-d9919d257e": {"decision": "POSSIBLE_SEQUENCE_RELATION", "rationale": "Same yellow-green mango and field environment but photographed at different angles showing the fruit rotated between shots.", "confidence": "high"},
+    "Q-8a58c62e73": {"decision": "NEAR_DUPLICATE", "rationale": "Red mango in identical position and angle on striped background with consistent lighting.", "confidence": "high"},
+    "Q-c5a4fa3420": {"decision": "NEAR_DUPLICATE", "rationale": "Yellow-green mango shows same positioning and angle on concrete/straw background.", "confidence": "high"},
+    "Q-3ed2c069dd": {"decision": "NEAR_DUPLICATE", "rationale": "Red mango positioned identically on striped background in both panels.", "confidence": "high"},
+    "Q-a7f3fce081": {"decision": "POSSIBLE_SEQUENCE_RELATION", "rationale": "Same mango and field scene with straw and vegetation background but different camera angle reveals different sides of the fruit.", "confidence": "high"},
+    "Q-18aee197f4": {"decision": "NEAR_DUPLICATE", "rationale": "Green mango with dark damage marking appears in same position and angle on striped background.", "confidence": "medium"},
+    "Q-63194ef915": {"decision": "NEAR_DUPLICATE", "rationale": "Green mango positioned identically on straw/grass background with same angle and lighting.", "confidence": "high"},
+    "Q-10f82e6cfa": {"decision": "NEAR_DUPLICATE", "rationale": "Red mango in identical position on striped background with same lighting and angle.", "confidence": "high"},
+    "Q-11b3851a39": {"decision": "NEAR_DUPLICATE", "rationale": "Yellow-green mango shows identical positioning on hay/straw background.", "confidence": "high"},
+    "Q-d99026300e": {"decision": "NEAR_DUPLICATE", "rationale": "Orange-yellow mango in same position on patterned coral background in both panels.", "confidence": "high"},
+    "Q-f87c56a355": {"decision": "POSSIBLE_SEQUENCE_RELATION", "rationale": "Same red-yellow mango and dark background setup but fruit positioned differently between left and right panels suggesting repositioning or angle change.", "confidence": "medium"},
+    "Q-d7dcf41eab": {"decision": "NEAR_DUPLICATE", "rationale": "Red mango in identical position on striped background with consistent angle and composition.", "confidence": "high"}
+  }
+}

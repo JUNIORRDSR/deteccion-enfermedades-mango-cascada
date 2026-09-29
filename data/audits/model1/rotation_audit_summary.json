@@ -1,0 +1,8 @@
+{
+  "images": 669,
+  "transforms_per_image": 8,
+  "new_candidates_missed_by_plain_phash": 7,
+  "of_which_invariant_below_threshold": 0,
+  "of_which_cross_split": 4,
+  "of_which_touch_test": 1
+}

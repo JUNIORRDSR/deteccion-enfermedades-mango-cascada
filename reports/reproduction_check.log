@@ -1,0 +1,18 @@
+start 2026-09-28T20:25:48
+worktree HEAD cc19e9451aa81c40f50d8cbca203e88dcd9f5137 clone HEAD cc19e9451aa81c40f50d8cbca203e88dcd9f5137
+Unión creada para C:\Users\junio\Downloads\mango-vision\ALBUS26_major_revision\.repro\final\.venv <<===>> C:\Users\junio\Downloads\mango-vision\ALBUS26_major_revision\.worktrees\execution\.venv
+removed 6 outputs 2026-09-28T20:26:01
+Creating new Ultralytics Settings v0.0.6 file  
+View Ultralytics Settings with 'yolo settings' or at 'C:\Users\junio\Downloads\mango-vision\ALBUS26_major_revision\.repro\final\provenance\runtime_state\ultralytics\Ultralytics\settings.json'
+Update Settings with 'yolo settings key=value', i.e. 'yolo settings runs_dir=path/to/dir'. For help see https://docs.ultralytics.com/quickstart/#ultralytics-settings.
+wrote experiments\model1\EXP-R02\metrics.json
+evaluate exit 0 2026-09-28T20:36:53
+m1 intervals exit 0 2026-09-28T20:50:52
+m2 intervals exit 0 2026-09-28T20:59:26
+RESULT experiments/model1/EXP-R02/metrics.json before=5c38381b7a2d0e0ac78b826dc4bf5b5e679b24e0ae7a3ebe266b7da4736c8774 after=5c38381b7a2d0e0ac78b826dc4bf5b5e679b24e0ae7a3ebe266b7da4736c8774 same=True
+RESULT experiments/model1/EXP-R02/predictions.jsonl before=a4de90cf963d99cb155a42ae2e8ba5bad237ee61cdf2a7bba8eb590ede17303d after=a4de90cf963d99cb155a42ae2e8ba5bad237ee61cdf2a7bba8eb590ede17303d same=True
+RESULT experiments/model1/EXP-R02/predictions.jsonl.sha256 before=51d2c111ff87eb06669b3e5dc76ca0276bd3506feb6c1bde0ae23bf2f203142f after=51d2c111ff87eb06669b3e5dc76ca0276bd3506feb6c1bde0ae23bf2f203142f same=True
+RESULT experiments/model1/EXP-R02/prediction_provenance.json before=42817fd7491fc99914a4fa5c25d1c936cc7a56e1d108cffb4d947e6941237efc after=42817fd7491fc99914a4fa5c25d1c936cc7a56e1d108cffb4d947e6941237efc same=True
+RESULT artifacts/metrics/model1_intervals.json before=1d2192a30bcac947845e856377d1156f0254e16939f41bf89efc5beb6a933851 after=1d2192a30bcac947845e856377d1156f0254e16939f41bf89efc5beb6a933851 same=True
+RESULT artifacts/metrics/model2_intervals.json before=03c922cba2b9788aa6b71fc63db84a3df13a88422f2c21086b86a6877ef43031 after=03c922cba2b9788aa6b71fc63db84a3df13a88422f2c21086b86a6877ef43031 same=True
+DONE 2026-09-28T20:59:26

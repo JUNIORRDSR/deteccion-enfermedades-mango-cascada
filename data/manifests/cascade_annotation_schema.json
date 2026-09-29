@@ -1,0 +1,75 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://albus26-major-revision.local/schemas/cascade_annotation_schema.json",
+  "title": "Cascade disease ground truth annotation (SPEC section 9, TASK-07)",
+  "description": "One row per fruit adjudicated independently for the M1 (detector) -> M2 (classifier) cascade. This is the schema src.evaluation.cascade.validate_ground_truth enforces; it is never produced from model output (diagnostic_method='model_prediction' is rejected).",
+  "type": "object",
+  "additionalProperties": true,
+  "required": [
+    "image_id", "fruit_id", "bbox_xyxy", "disease_label", "healthy_or_diseased",
+    "adjudication_status", "annotator_id", "diagnostic_method", "date", "group_id", "source"
+  ],
+  "properties": {
+    "image_id": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$",
+      "description": "SHA256 of the source image, used directly as the stable image identity (the annotation contract's 'image_id/SHA')."
+    },
+    "fruit_id": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Identifies one fruit within image_id. Unique per image_id; the same fruit_id may recur across different images."
+    },
+    "bbox_xyxy": {
+      "type": "array",
+      "items": { "type": "number" },
+      "minItems": 4,
+      "maxItems": 4,
+      "description": "[x1, y1, x2, y2] in original-image pixels, matching src.evaluation.evaluate's convention. Requires x2 > x1 and y2 > y1."
+    },
+    "disease_label": {
+      "type": "string",
+      "enum": [
+        "Antracnosis", "Cancro_bacteriano", "Costras", "Podredumbre_Extremo_tallo",
+        "Saludable", "AMBIGUOUS", "UNDIAGNOSED"
+      ],
+      "description": "The four diseases and Saludable are the diagnostic labels. AMBIGUOUS/UNDIAGNOSED rows are kept (never dropped) but score_cascade excludes them from every diagnostic denominator and reports their count explicitly."
+    },
+    "healthy_or_diseased": {
+      "type": "string",
+      "enum": ["healthy", "diseased"],
+      "description": "Independent binary judgement. Must agree with disease_label when disease_label is one of the four diseases (-> 'diseased') or Saludable (-> 'healthy')."
+    },
+    "adjudication_status": {
+      "type": "string",
+      "enum": ["INDEPENDENT_ADJUDICATED", "PENDING_ADJUDICATION", "MODEL_ASSISTED"],
+      "description": "Only rows with INDEPENDENT_ADJUDICATED may produce metrics (SPEC section 9: 'sólo GT independientemente adjudicado puede producir métricas'). Others are counted and excluded, never silently dropped."
+    },
+    "annotator_id": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Opaque identifier of the independent human annotator/agronomist."
+    },
+    "diagnostic_method": {
+      "type": "string",
+      "minLength": 1,
+      "not": { "const": "model_prediction" },
+      "description": "How the diagnosis was reached (e.g. 'agronomist_visual_inspection', 'lab_confirmation'). 'model_prediction' is never accepted: a model's own output can never stand in for ground truth."
+    },
+    "date": {
+      "type": "string",
+      "format": "date",
+      "description": "ISO-8601 date (YYYY-MM-DD) the diagnosis was made."
+    },
+    "group_id": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Maximum-dependency unit available for this fruit (acquisition/scene/sequence), used for group-level resampling as in TASK-05."
+    },
+    "source": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Provenance of the annotation batch (site, campaign, or dataset of origin)."
+    }
+  }
+}

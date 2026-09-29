@@ -1,0 +1,175 @@
+{
+  "timestamp_utc": "2026-09-19T21:11:18.954933+00:00",
+  "source_count": 11137,
+  "source_mismatches": [],
+  "legacy_git_checks": [
+    {
+      "repo": "Mango-vision",
+      "command": "status --short",
+      "exit_code": 0,
+      "stdout": "",
+      "matches_initial": true
+    },
+    {
+      "repo": "Mango-vision",
+      "command": "branch --show-current",
+      "exit_code": 0,
+      "stdout": "main\n",
+      "matches_initial": true
+    },
+    {
+      "repo": "Mango-vision",
+      "command": "rev-parse HEAD",
+      "exit_code": 0,
+      "stdout": "e7e59d1bce74a7ae12674f5b6068068681e691ce\n",
+      "matches_initial": true
+    },
+    {
+      "repo": "Mango-vision",
+      "command": "worktree list --porcelain",
+      "exit_code": 0,
+      "stdout": "worktree C:/Users/junio/Downloads/mango-vision/Mango-vision\nHEAD e7e59d1bce74a7ae12674f5b6068068681e691ce\nbranch refs/heads/main\n\n",
+      "matches_initial": true
+    },
+    {
+      "repo": "SemilleroTI-Mangos",
+      "command": "status --short",
+      "exit_code": 0,
+      "stdout": " M api/__pycache__/main.cpython-313.pyc\n M api/routers/__pycache__/history.cpython-313.pyc\n M api/routers/__pycache__/inference.cpython-313.pyc\n M core/__pycache__/config.cpython-313.pyc\n M core/__pycache__/database.cpython-313.pyc\n M core/__pycache__/vision.cpython-313.pyc\n M mango_detecciones.db\n?? core/__pycache__/cascade.cpython-313.pyc\n?? core/cascade.py\n?? data/\n?? docs/MangosDataset/test/labels.cache\n?? models/clasificador_enfermedad.pt\n?? run_cascade.py\n",
+      "matches_initial": true
+    },
+    {
+      "repo": "SemilleroTI-Mangos",
+      "command": "branch --show-current",
+      "exit_code": 0,
+      "stdout": "main\n",
+      "matches_initial": true
+    },
+    {
+      "repo": "SemilleroTI-Mangos",
+      "command": "rev-parse HEAD",
+      "exit_code": 0,
+      "stdout": "98614804dd967e19a77af9fc58c27364d2e43bc9\n",
+      "matches_initial": true
+    },
+    {
+      "repo": "SemilleroTI-Mangos",
+      "command": "worktree list --porcelain",
+      "exit_code": 0,
+      "stdout": "worktree C:/Users/junio/Downloads/mango-vision/SemilleroTI-Mangos\nHEAD 98614804dd967e19a77af9fc58c27364d2e43bc9\nbranch refs/heads/main\n\n",
+      "matches_initial": true
+    }
+  ],
+  "legacy_git_unchanged": true,
+  "candidate_commit": "963b03ecaa6585628f79142ffdddc6992dc238a5",
+  "task_ids": [
+    "TASK-01",
+    "TASK-02",
+    "TASK-03",
+    "TASK-04",
+    "TASK-05",
+    "TASK-06",
+    "TASK-07",
+    "TASK-08",
+    "TASK-09",
+    "TASK-10"
+  ],
+  "review_task_coverage": {
+    "REVIEW-01": [
+      "TASK-01",
+      "TASK-02"
+    ],
+    "REVIEW-02": [
+      "TASK-02",
+      "TASK-03"
+    ],
+    "REVIEW-03": [
+      "TASK-03",
+      "TASK-04",
+      "TASK-05"
+    ],
+    "REVIEW-04": [
+      "TASK-05",
+      "TASK-09"
+    ],
+    "REVIEW-05": [
+      "TASK-05"
+    ],
+    "REVIEW-06": [
+      "TASK-09"
+    ],
+    "REVIEW-07": [
+      "TASK-01",
+      "TASK-06"
+    ],
+    "REVIEW-08": [
+      "TASK-06",
+      "TASK-09"
+    ],
+    "REVIEW-09": [
+      "TASK-01",
+      "TASK-04",
+      "TASK-05"
+    ],
+    "REVIEW-10": [
+      "TASK-09"
+    ],
+    "REVIEW-11": [
+      "TASK-07",
+      "TASK-09"
+    ],
+    "REVIEW-12": [
+      "TASK-07",
+      "TASK-09"
+    ],
+    "REVIEW-13": [
+      "TASK-07"
+    ],
+    "REVIEW-14": [
+      "TASK-09"
+    ],
+    "REVIEW-15": [
+      "TASK-05",
+      "TASK-09"
+    ],
+    "REVIEW-16": [
+      "TASK-08",
+      "TASK-09"
+    ],
+    "REVIEW-17": [
+      "TASK-08"
+    ],
+    "REVIEW-18": [
+      "TASK-08",
+      "TASK-09"
+    ]
+  },
+  "spec_amendment_ids": [
+    "AMENDMENT-01",
+    "AMENDMENT-02",
+    "AMENDMENT-03",
+    "AMENDMENT-04",
+    "AMENDMENT-05",
+    "AMENDMENT-06",
+    "AMENDMENT-07"
+  ],
+  "plan_amendment_ids": [
+    "AMENDMENT-01",
+    "AMENDMENT-02",
+    "AMENDMENT-03",
+    "AMENDMENT-04",
+    "AMENDMENT-05",
+    "AMENDMENT-06",
+    "AMENDMENT-07"
+  ],
+  "scope_exclusions": [
+    ".git byte hashes",
+    ".venv",
+    "node_modules",
+    "__pycache__"
+  ],
+  "coverage_method": "Explicit REVIEW-to-TASK table, parsed from the plan coverage section; supports abbreviated task lists.",
+  "supersedes_coverage_check": "reports\\amendments\\resumed_integrity_2026-09-19.json",
+  "previous_check_failure": "Literal REVIEW-NN search missed abbreviated grouped references; source integrity checks passed. No design or source change.",
+  "status": "PASS"
+}

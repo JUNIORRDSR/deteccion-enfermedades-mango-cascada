@@ -1,0 +1,73 @@
+{
+  "moment": "after",
+  "retrieved_at": "2026-09-28T20:34:44+00:00",
+  "source": "Kaggle MCP search_notebooks user=jorgesolanodev group=Profile pageSize=100",
+  "kernels": [
+    {
+      "ref": "jorgesolanodev/albus26-m1-exp-r02",
+      "title": "ALBUS26 M1 EXP-R02",
+      "author": "Jorge Solano DEV",
+      "last_run_time": "2026-09-28T20:32:05.713Z"
+    },
+    {
+      "ref": "jorgesolanodev/albus26-attach-probe",
+      "title": "ALBUS26 attach probe",
+      "author": "Jorge Solano DEV",
+      "last_run_time": "2026-09-28T19:23:50.057Z"
+    },
+    {
+      "ref": "jorgesolanodev/albus26-m1-exp-v01",
+      "title": "ALBUS26 M1 EXP-V01",
+      "author": "Jorge Solano DEV",
+      "last_run_time": "2026-09-28T19:53:25.230Z"
+    },
+    {
+      "ref": "jorgesolanodev/albus26-m1-exp-r01",
+      "title": "ALBUS26 M1 EXP-R01",
+      "author": "Jorge Solano DEV",
+      "last_run_time": "2026-09-27T23:46:12.610Z"
+    },
+    {
+      "ref": "jorgesolanodev/albus26-m1-kaggle-capacity-002",
+      "title": "ALBUS26 M1 kaggle capacity 002",
+      "author": "Jorge Solano DEV",
+      "last_run_time": "2026-09-25T23:25:50.227Z"
+    },
+    {
+      "ref": "jorgesolanodev/albus26-m1-kaggle-capacity-001",
+      "title": "ALBUS26 M1 kaggle capacity 001",
+      "author": "Jorge Solano DEV",
+      "last_run_time": "2026-09-23T19:15:18.107Z"
+    },
+    {
+      "ref": "jorgesolanodev/albus26-m1-kaggle-probe-001",
+      "title": "ALBUS26 M1 kaggle probe 001",
+      "author": "Jorge Solano DEV",
+      "last_run_time": "2026-09-23T03:40:53.943Z"
+    },
+    {
+      "ref": "jorgesolanodev/notebookb51340c0dc",
+      "title": "notebookb51340c0dc",
+      "author": "Jorge Solano DEV",
+      "last_run_time": "2026-04-19T08:16:33.163Z"
+    },
+    {
+      "ref": "jorgesolanodev/notebookca6728f399",
+      "title": "notebookca6728f399",
+      "author": "Jorge Solano DEV",
+      "last_run_time": "2026-04-19T07:53:42.053Z"
+    },
+    {
+      "ref": "jorgesolanodev/notebook8245f92947",
+      "title": "notebook8245f92947",
+      "author": "Jorge Solano DEV",
+      "last_run_time": "2026-04-19T07:31:36.413Z"
+    },
+    {
+      "ref": "jorgesolanodev/notebookd38f006cc6",
+      "title": "notebookd38f006cc6",
+      "author": "Jorge Solano DEV",
+      "last_run_time": "2026-04-18T04:51:48.020Z"
+    }
+  ]
+}

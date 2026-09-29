@@ -1,0 +1,15 @@
+{
+  "payload_sha256": "b2f78531a0e99db304a22bd291fad136091ee5cee281c3d017658b5d420507da",
+  "mode": "predict",
+  "phase": "valid",
+  "experiment_id": "EXP-V01",
+  "started_unix": 1790620181.367657,
+  "kernel_source_sha256": "e70e79e01993a3f7350f38160bbd74a3fb47010569a3dca5f922d3dbb348a6a6",
+  "kernel_source_method": "main_file",
+  "stage": "start",
+  "test_evaluated": false,
+  "status": "FAILED",
+  "inventory": {},
+  "error": "JobRejected: expected one attached training output, got [] []",
+  "finished_unix": 1790620181.3684373
+}

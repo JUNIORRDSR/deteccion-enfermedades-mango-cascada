@@ -1,0 +1,42 @@
+citation_text,location,ref_id,claim_id,support_judgement,reason
+"(DANE, 2023)",p1 §1 Introducción ¶1,dane2023,CLAIM-047,DOES_NOT_SUPPORT,"Página índice sin tabla; el empleo no es cuenta nacional y la GEIH 2023 da 14,4 %, no 16 %; el 7 % del PIB no se reconcilió."
+"(Dofuor et al., 2023; Iqbal et al., 2024)",p1 §1 Introducción ¶2,dofuor2023,,PARTIAL,"Respalda antracnosis/C. gloeosporioides y menciona cancro bacteriano, costras y podredumbre del extremo del tallo; no nombra Xanthomonas campestris."
+"(Dofuor et al., 2023; Iqbal et al., 2024)",p1 §1 Introducción ¶2,iqbal2024,,PARTIAL,"Sólo respalda la cenicilla (Pseudoidium anacardii, antes Oidium mangiferae); no trata las demás enfermedades listadas."
+"(Savary et al., 2019)",p1 §1 Introducción ¶3,savary2019,CLAIM-048,PARTIAL,"Cinco cultivos básicos, estimaciones por cultivo de 17,2 % a 30,0 % (rangos 8,1–41,1 %); no da un 20–40 % de la producción mundial."
+"(Khakimov et al., 2022; Buja et al., 2021)",p1 §1 Introducción ¶4,khakimov2022,,SUPPORTS,El resumen presenta observación visual y microscopía como métodos tradicionales y los métodos de laboratorio como alternativas.
+"(Khakimov et al., 2022; Buja et al., 2021)",p1 §1 Introducción ¶4,buja2021,CLAIM-049,SUPPORTS,"El resumen contrasta ensayos de laboratorio con diagnóstico en campo (texto completo no accesible: MDPI 403). No respalda la tardanza ""por naturaleza"" de la frase siguiente."
+"(Venbrux et al., 2023)",p1 §1 Introducción ¶4,venbrux2023,,PARTIAL,"Documenta técnicas lentas o costosas (cultivo, cPCR, anticuerpos) y el interés en diagnóstico in situ; no afirma escasez en zonas rurales."
+"(Ciofini et al., 2022)",p1 §1 Introducción ¶4,ciofini2022,,PARTIAL,"Respalda la dependencia de fungicidas sintéticos en la antracnosis poscosecha, no el nexo causal diagnóstico tardío→aplicación preventiva masiva."
+"(Van der Heijden et al., 2022)",p1 §1 Introducción ¶5,vanderheijden2022,CLAIM-049,UNCHECKED,Fuente no identificable (BLOCKED): el artículo 106698 es otro trabajo; no se puede juzgar el soporte.
+"(Liu & Wang, 2021)",p1–2 §1 Introducción ¶5,liu2021,CLAIM-049,PARTIAL,Afirma que el aprendizaje profundo supera a los métodos tradicionales y describe YOLO como detector en tiempo real; no evalúa dispositivos de campo con recursos limitados.
+Kapoor y Narayanan (2023),p2 §1 Introducción ¶6,kapoor2023,,SUPPORTS,Documenta la fuga como causa extendida de errores de reproducibilidad en 17 campos.
+"Paulus (Paulus, 2019)",p2 §2.1 ¶1,paulus2019,CLAIM-043,DOES_NOT_SUPPORT,"Revisión de rasgos 3D (ancho/largo de hoja, volumen); no fundó el campo ni demuestra deformaciones foliares indetectables en 2D. Forma APA: Paulus (2019)."
+Jin et al. (2021),p2 §2.1 ¶2,jin2021,,PARTIAL,"Revisa plataformas terrestres y aéreas; el resumen no respalda ""sistemáticamente"" ni la transición a RGB-D (texto completo sin acceso)."
+Van der Heijden et al. (2022),p2 §2.1 ¶3,vanderheijden2022,,UNCHECKED,Fuente no identificable (BLOCKED); no se puede juzgar el soporte.
+"(Redmon et al., 2016)",p2 §2.2 ¶1,redmon2016,,PARTIAL,"Respalda la detección en una pasada con arquitectura unificada; la velocidad se midió en una GPU Titan X, no en hardware limitado."
+Hati y Singh (2023),p2 §2.2 ¶2,hati2023,,DOES_NOT_SUPPORT,El texto completo (IEEE Xplore) no menciona aprendizaje por transferencia; usa YOLOv3 sobre un conjunto hidropónico propio pequeño.
+"(Liu & Wang, 2021)",p2 §2.2 ¶3,liu2021,,PARTIAL,Hay aplicaciones de YOLO en tomate y manzana; los casos de papa y banano no usan YOLO; no menciona mango.
+"(Liu & Wang, 2021)",p2 §2.3 ¶1,liu2021,,DOES_NOT_SUPPORT,No trata edge computing ni la dependencia de conectividad a la nube.
+"(Kapoor & Narayanan, 2023)",p2 §2.4 ¶1,kapoor2023,,PARTIAL,"Incluye ""L1.4 Duplicates in datasets"" como forma de fuga que infla resultados; no cuantifica que sea recurrente ni que sobreestime ""sistemáticamente""."
+"(Zauner, 2010)",p2 §2.4 ¶2,zauner2010,,SUPPORTS,La tesis implementa y compara funciones de hash perceptual para identificar imágenes perceptualmente similares.
+Padilla et al. (2020),p2 §2.4 ¶3,padilla2020,,SUPPORTS,"Es una revisión de métricas de detección de objetos (AP, mAP, IoU)."
+"(Jairos Workspace, 2026)",p3 §3.2.1 ¶1,jairos2026,CLAIM-004,PARTIAL,"Registro: v2, CC BY 4.0, clases Enfermo/Saludable, 669 imágenes. ""Publicado por terceros"" no es verificable: el registro no identifica al titular del workspace."
+"(Intel Corporation, 2022)",p4 §3.2.1 ¶3,intel2022,CLAIM-007,PARTIAL,La ficha identifica el dispositivo y su modo RGB; no prueba qué imágenes se capturaron con él.
+"(Barhate et al., 2025)",p4 §3.2.2 ¶1,barhate2025,CLAIM-010,PARTIAL,"1.500 imágenes, cinco categorías y CC BY 4.0 coinciden, pero el texto dice IEEE Dataport y la copia usada remite a Mendeley v1."
+"(Zauner, 2010)",p4 §3.3 ¶1,zauner2010,CLAIM-013,PARTIAL,"Zauner documenta el hash DCT de la librería C++ pHash, no la implementación imagehash.phash de Python."
+"Zauner (narrativa, sin año)",p4 §3.3 ¶2,zauner2010,CLAIM-013,DOES_NOT_SUPPORT,La tesis no calibra Hamming < 5 como alta probabilidad de contenido idéntico: declara el umbral problemático y usa distancias normalizadas. APA 7 exige el año.
+"(Jocher et al., 2023)",p4 §3.4 ¶1,jocher_ultralytics,CLAIM-016,SUPPORTS,"Ultralytics distribuye YOLO26n; el checkpoint del Modelo 1 incrusta la versión 8.4.39. La cita pasa a (Jocher et al., 2026)."
+"(Jairos Workspace, 2026)","p9 Figura 5, fuente de las imágenes",jairos2026,CLAIM-008,PARTIAL,La licencia CC BY 4.0 del conjunto consta; no certifica los derechos de cada imagen de origen ni la autoría de terceros.
+"(Barhate et al., 2025)","p11 Figura 6, fuente",barhate2025,CLAIM-009,SUPPORTS,Atribuye el origen de los datos del Modelo 2 al registro del conjunto usado.
+"(Jairos Workspace, 2026)","p12 Figura 7, fuente de las imágenes",jairos2026,CLAIM-008,PARTIAL,"Igual que en la Figura 5: la licencia consta; los derechos por imagen y ""terceros"" no son verificables."
+"(Barhate et al., 2025)","p12 Figura 7, fuente",barhate2025,,SUPPORTS,Atribuye los datos de entrenamiento del Modelo 2.
+"(Jairos Workspace, 2026)",p15 Disponibilidad de datos ¶1,jairos2026,CLAIM-008,PARTIAL,Acceso público y CC BY 4.0 confirmados; que cubra todas las imágenes reproducidas no es verificable.
+"(Barhate et al., 2025)",p15 Disponibilidad de datos ¶1,barhate2025,CLAIM-009,SUPPORTS,Mendeley v1 es de acceso público bajo CC BY 4.0.
+"(Villa Bastidas, 2026)",p15 Disponibilidad de datos ¶1,villabastidas2026,CLAIM-046,PARTIAL,"Confirmados 1019 imágenes, cinco clases y CC BY 4.0; el autor del registro es ""DANNs Workspace""; que no se usara no es verificable desde el registro."
+"Barhate et al. (narrativa, sin año)",p15 Agradecimientos ¶1,barhate2025,CLAIM-010,PARTIAL,"Nombra IEEE Dataport, pero la copia usada remite a Mendeley v1 (mención de agradecimiento; no requiere año)."
+"Jairos Workspace (narrativa, sin año)",p15 Agradecimientos ¶1,jairos2026,CLAIM-008,SUPPORTS,El registro confirma que el workspace publicó el conjunto en Roboflow Universe bajo CC BY 4.0.
+"(Cerna Grados, 2024)",p15 Agradecimientos ¶1,cerna2024,,SUPPORTS,"El registro confirma el autor, el conjunto y la CC BY 4.0; no se puede fijar la versión consultada."
+"(Villa Bastidas et al., 2026)",Resumen,villabastidas2026_repo,CLAIM-042,SUPPORTS,"El repositorio público contiene el código de la auditoría, los manifiestos, los pesos de los dos modelos y la evidencia (pasada 2f)."
+"(Villa Bastidas et al., 2026)",3.6,villabastidas2026_repo,CLAIM-042,SUPPORTS,"El repositorio público contiene el código de la auditoría, los manifiestos, los pesos de los dos modelos y la evidencia (pasada 2f)."
+"(Villa Bastidas et al., 2026)",5.3,villabastidas2026_repo,CLAIM-042,SUPPORTS,"El repositorio público contiene el código de la auditoría, los manifiestos, los pesos de los dos modelos y la evidencia (pasada 2f)."
+"(Villa Bastidas et al., 2026)",Disponibilidad de datos,villabastidas2026_repo,CLAIM-042,SUPPORTS,"El repositorio público contiene el código de la auditoría, los manifiestos, los pesos de los dos modelos y la evidencia (pasada 2f)."

@@ -1,0 +1,52 @@
+test_agreement_must_match_the_two_decisions (tests.test_leakage.Adjudications.test_agreement_must_match_the_two_decisions) ... ok
+test_cluster_record_needs_complete_membership_not_n_squared_rows (tests.test_leakage.Adjudications.test_cluster_record_needs_complete_membership_not_n_squared_rows) ... ok
+test_disagreement_resolved_by_a_third_party_passes (tests.test_leakage.Adjudications.test_disagreement_resolved_by_a_third_party_passes) ... ok
+test_disagreement_without_separate_adjudication_fails (tests.test_leakage.Adjudications.test_disagreement_without_separate_adjudication_fails) ... ok
+test_evidence_adjudicated_case_does_not_require_two_visual_passes (tests.test_leakage.Adjudications.test_evidence_adjudicated_case_does_not_require_two_visual_passes) ... ok
+test_missing_evidence_or_rationale_fails (tests.test_leakage.Adjudications.test_missing_evidence_or_rationale_fails) ... ok
+test_same_reviewer_identity_for_a_and_b_fails (tests.test_leakage.Adjudications.test_same_reviewer_identity_for_a_and_b_fails) ... ok
+test_third_adjudicator_may_not_be_either_reviewer (tests.test_leakage.Adjudications.test_third_adjudicator_may_not_be_either_reviewer) ... ok
+test_valid_row_passes (tests.test_leakage.Adjudications.test_valid_row_passes) ... ok
+test_visual_candidate_without_b_fails (tests.test_leakage.Adjudications.test_visual_candidate_without_b_fails) ... ok
+test_opaque_ids_differ_between_reviewers (tests.test_leakage.BlindPackets.test_opaque_ids_differ_between_reviewers)
+A shared opaque id would let one reviewer's notes leak to the other. ... ok
+test_packet_b_does_not_contain_the_a_decision (tests.test_leakage.BlindPackets.test_packet_b_does_not_contain_the_a_decision) ... ok
+test_packet_hides_everything_the_spec_forbids (tests.test_leakage.BlindPackets.test_packet_hides_everything_the_spec_forbids) ... ok
+test_packet_keeps_opaque_ids_and_image_references (tests.test_leakage.BlindPackets.test_packet_keeps_opaque_ids_and_image_references) ... ok
+test_packet_never_carries_a_per_candidate_prior (tests.test_leakage.BlindPackets.test_packet_never_carries_a_per_candidate_prior)
+The menu must not be narrowed per candidate, which would hint an answer. ... ok
+test_cluster_inside_one_split_is_not_cross_split (tests.test_leakage.CrossSplit.test_cluster_inside_one_split_is_not_cross_split) ... ok
+test_pairs_are_reported_once_with_their_split_shape (tests.test_leakage.CrossSplit.test_pairs_are_reported_once_with_their_split_shape) ... ok
+test_a_corrupt_image_aborts_the_audit_with_a_list (tests.test_leakage.DecodeFailures.test_a_corrupt_image_aborts_the_audit_with_a_list)
+SPEC: a decode error aborts with the list; the image is never skipped. ... ok
+test_counts_are_not_labelled_biologically_independent (tests.test_leakage.DuplicateStructure.test_counts_are_not_labelled_biologically_independent) ... ok
+test_discordant_classes_for_one_sha_are_reported (tests.test_leakage.DuplicateStructure.test_discordant_classes_for_one_sha_are_reported) ... ok
+test_fixture_counts_exactly (tests.test_leakage.DuplicateStructure.test_fixture_counts_exactly) ... ok
+test_brief_assertions (tests.test_leakage.HammingAndComponents.test_brief_assertions) ... ok
+test_components_are_deterministic_regardless_of_input_order (tests.test_leakage.HammingAndComponents.test_components_are_deterministic_regardless_of_input_order) ... ok
+test_distance_exactly_five_is_outside_the_threshold (tests.test_leakage.HammingAndComponents.test_distance_exactly_five_is_outside_the_threshold)
+SPEC: 'Distancia exactamente 5 queda fuera del umbral.' ... ok
+test_edge_with_unknown_id_is_rejected (tests.test_leakage.HammingAndComponents.test_edge_with_unknown_id_is_rejected) ... ok
+test_every_id_appears_even_when_isolated (tests.test_leakage.HammingAndComponents.test_every_id_appears_even_when_isolated)
+SPEC: clusters include all images, even isolated ones. ... ok
+test_hash_range_is_validated (tests.test_leakage.HammingAndComponents.test_hash_range_is_validated) ... ok
+test_singleton_keeps_itself_as_representative (tests.test_leakage.HammingAndComponents.test_singleton_keeps_itself_as_representative) ... ok
+test_band_five_to_ten_is_not_automatic_equivalence (tests.test_leakage.RelationLabels.test_band_five_to_ten_is_not_automatic_equivalence) ... ok
+test_documented_group_takes_priority_over_visual_similarity (tests.test_leakage.RelationLabels.test_documented_group_takes_priority_over_visual_similarity) ... ok
+test_identical_bytes_are_exact_duplicates (tests.test_leakage.RelationLabels.test_identical_bytes_are_exact_duplicates) ... ok
+test_phash_zero_without_identical_bytes_is_not_exact (tests.test_leakage.RelationLabels.test_phash_zero_without_identical_bytes_is_not_exact)
+Hamming 0 is not byte identity; the manuscript conflated them. ... ok
+test_undocumented_sequence_hint_stays_possible (tests.test_leakage.RelationLabels.test_undocumented_sequence_hint_stays_possible) ... ok
+test_eight_transforms_and_identity_first (tests.test_leakage.RotationInvariance.test_eight_transforms_and_identity_first) ... ok
+test_mirror_is_covered (tests.test_leakage.RotationInvariance.test_mirror_is_covered) ... ok
+test_rotated_copy_is_far_for_plain_phash_and_near_for_the_invariant (tests.test_leakage.RotationInvariance.test_rotated_copy_is_far_for_plain_phash_and_near_for_the_invariant) ... ok
+test_cluster_of_ten_triggers_and_nine_does_not_by_that_criterion (tests.test_leakage.VisualAdjudicationTriggers.test_cluster_of_ten_triggers_and_nine_does_not_by_that_criterion) ... ok
+test_cross_split_and_conflict_and_sequence_require_visual_passes (tests.test_leakage.VisualAdjudicationTriggers.test_cross_split_and_conflict_and_sequence_require_visual_passes) ... ok
+test_verifiable_sha_equality_needs_no_invented_visual_need (tests.test_leakage.VisualAdjudicationTriggers.test_verifiable_sha_equality_needs_no_invented_visual_need)
+SPEC: evidence-adjudicated cases must not manufacture a visual pass. ... ok
+
+----------------------------------------------------------------------
+Ran 39 tests in 1.552s
+
+OK
+exit=0

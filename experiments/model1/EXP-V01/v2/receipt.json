@@ -1,0 +1,898 @@
+{
+  "payload_sha256": "b2f78531a0e99db304a22bd291fad136091ee5cee281c3d017658b5d420507da",
+  "mode": "predict",
+  "phase": "valid",
+  "experiment_id": "EXP-V01",
+  "started_unix": 1790625214.411532,
+  "kernel_source_sha256": "ae2ee4e815d659732e4116990b3fbc05bdb24c9118538b64949e423f594e73f8",
+  "kernel_source_method": "main_file",
+  "stage": "done",
+  "test_evaluated": false,
+  "status": "COMPLETE",
+  "inventory": {
+    "evidence/nvidia_smi.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "evidence/nvidia_smi.stdout.txt": "7925ff6aa3c0f75ed4b792d59fc4b46fc8ca30d00f724248234805d4598886cc",
+    "evidence/pip_check.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "evidence/pip_check.stdout.txt": "2c99993bdaa1efa61406b281e3c408724a14e714bcaf3dfb4da60af8ec2a044c",
+    "evidence/pip_config.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "evidence/pip_config.stdout.txt": "3f363b7d217c26516cbf275b210d8ded30459c4eb0ebebeb9ca21f7b92de9745",
+    "evidence/pip_debug.stderr.txt": "40ffb3c51bd62818dedc25f24da335f773814e47dc2b350a1e475fb2c2e172f8",
+    "evidence/pip_debug.stdout.txt": "63b3922346cb06e408fea362380355a8532b1d5924b2f0a74859df7144129d48",
+    "evidence/pip_freeze.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "evidence/pip_freeze.stdout.txt": "ddbaee9add9594f5296acdfd6c84bfa4daebc7fb9d8fb1bdb2056a3144968da3",
+    "evidence/pip_install.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "evidence/pip_install.stdout.txt": "0de0df988c0fc863fe9f66881379810151dd8299196bb737e7b8e0bca1373a68",
+    "evidence/pip_install_report.json": "e235cfb25b15414937ced3e03643d84b5e949a72c188e4bf71683faa64ea5df8",
+    "predictions_raw.jsonl": "c184fed7aa7863adbc8841757072852f1e62cfbfa6aeb15615549b7bf7679ff5"
+  },
+  "checkpoint_sha256": "0648da3f3641e3cdb5a1908a092ba892548942836a249bb3b39667f9ae8e8125",
+  "pip_install": {
+    "command": [
+      "/usr/bin/python3",
+      "-m",
+      "pip",
+      "install",
+      "-q",
+      "--report",
+      "/kaggle/working/evidence/pip_install_report.json",
+      "ultralytics==8.4.52"
+    ],
+    "exit_code": 0,
+    "stdout_sha256": "0de0df988c0fc863fe9f66881379810151dd8299196bb737e7b8e0bca1373a68",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "environment": {
+    "python": "3.12.13 (main, Mar  4 2026, 09:23:07) [GCC 11.4.0]",
+    "platform": "Linux-6.12.90+-x86_64-with-glibc2.35",
+    "cpu_count": 4,
+    "ultralytics": "8.4.52",
+    "torch": "2.10.0+cu128",
+    "cuda": "12.8",
+    "cudnn": 91002,
+    "cuda_available": true,
+    "gpus": [
+      "Tesla T4",
+      "Tesla T4"
+    ],
+    "env": {
+      "CUDA_VERSION": "12.8.1",
+      "KAGGLE_KERNEL_RUN_TYPE": "Batch",
+      "NVIDIA_DRIVER_CAPABILITIES": "compute,utility",
+      "NVIDIA_VISIBLE_DEVICES": "all",
+      "YOLO_CONFIG_DIR": "/tmp/ultralytics_cfg"
+    },
+    "probes": {
+      "pip_freeze": {
+        "command": [
+          "/usr/bin/python3",
+          "-m",
+          "pip",
+          "freeze"
+        ],
+        "exit_code": 0,
+        "stdout_sha256": "ddbaee9add9594f5296acdfd6c84bfa4daebc7fb9d8fb1bdb2056a3144968da3",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "pip_check": {
+        "command": [
+          "/usr/bin/python3",
+          "-m",
+          "pip",
+          "check"
+        ],
+        "exit_code": 1,
+        "stdout_sha256": "2c99993bdaa1efa61406b281e3c408724a14e714bcaf3dfb4da60af8ec2a044c",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "pip_config": {
+        "command": [
+          "/usr/bin/python3",
+          "-m",
+          "pip",
+          "config",
+          "list"
+        ],
+        "exit_code": 0,
+        "stdout_sha256": "3f363b7d217c26516cbf275b210d8ded30459c4eb0ebebeb9ca21f7b92de9745",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "pip_debug": {
+        "command": [
+          "/usr/bin/python3",
+          "-m",
+          "pip",
+          "debug",
+          "--verbose"
+        ],
+        "exit_code": 0,
+        "stdout_sha256": "63b3922346cb06e408fea362380355a8532b1d5924b2f0a74859df7144129d48",
+        "stderr_sha256": "40ffb3c51bd62818dedc25f24da335f773814e47dc2b350a1e475fb2c2e172f8"
+      },
+      "nvidia_smi": {
+        "command": [
+          "nvidia-smi",
+          "--query-gpu=name,driver_version,memory.total",
+          "--format=csv,noheader"
+        ],
+        "exit_code": 0,
+        "stdout_sha256": "7925ff6aa3c0f75ed4b792d59fc4b46fc8ca30d00f724248234805d4598886cc",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    "pip_check_verdict": {
+      "rule": "exit 0: only empty output or the pip success line; otherwise a line blocks if unparsed or if its dependent package is in the closure",
+      "roots": [
+        "ultralytics",
+        "torch",
+        "torchvision"
+      ],
+      "closure": [
+        "certifi",
+        "charset-normalizer",
+        "contourpy",
+        "cuda-bindings",
+        "cuda-pathfinder",
+        "cycler",
+        "filelock",
+        "fonttools",
+        "fsspec",
+        "idna",
+        "importlib-metadata",
+        "jinja2",
+        "kiwisolver",
+        "markupsafe",
+        "matplotlib",
+        "mpmath",
+        "networkx",
+        "numpy",
+        "nvidia-cublas-cu12",
+        "nvidia-cuda-cupti-cu12",
+        "nvidia-cuda-nvrtc-cu12",
+        "nvidia-cuda-runtime-cu12",
+        "nvidia-cudnn-cu12",
+        "nvidia-cufft-cu12",
+        "nvidia-cufile-cu12",
+        "nvidia-curand-cu12",
+        "nvidia-cusolver-cu12",
+        "nvidia-cusparse-cu12",
+        "nvidia-cusparselt-cu12",
+        "nvidia-nccl-cu12",
+        "nvidia-nvjitlink-cu12",
+        "nvidia-nvshmem-cu12",
+        "nvidia-nvtx-cu12",
+        "opencv-python",
+        "packaging",
+        "pillow",
+        "polars",
+        "polars-runtime-32",
+        "psutil",
+        "pyparsing",
+        "python-dateutil",
+        "pyyaml",
+        "requests",
+        "scipy",
+        "setuptools",
+        "six",
+        "sympy",
+        "torch",
+        "torchvision",
+        "triton",
+        "typing-extensions",
+        "ultralytics",
+        "ultralytics-thop",
+        "urllib3",
+        "zipp"
+      ],
+      "lines": [
+        "bigframes 2.39.0 requires google-cloud-bigquery-storage, which is not installed.",
+        "google-adk 1.29.0 requires google-cloud-bigquery-storage, which is not installed.",
+        "google-colab 1.0.0 has requirement jupyter-server==2.14.0, but you have jupyter-server 2.12.5.",
+        "google-colab 1.0.0 has requirement pandas==2.2.2, but you have pandas 2.3.3.",
+        "dopamine-rl 4.1.2 has requirement gym<=0.25.2, but you have gym 0.26.2.",
+        "moviepy 1.0.3 has requirement decorator<5.0,>=4.0.2, but you have decorator 5.3.1."
+      ],
+      "blocking": []
+    }
+  },
+  "files": [
+    {
+      "path": "docs/MangosDataset/test/images/freshMango-208-_jpg.rf.8b842fbfa487761721b6d1f747f9a40b.jpg",
+      "image_sha256": "23d4f666e6b5c6377800fe9d09b94da1c9fdb7c907007122b270849fa6a3825e",
+      "label_lf_sha256": "3746fe02543bc1f1d2c9295d77df887e13a372178897cd4bcfade2cf302b17f5",
+      "split": "predict"
+    },
+    {
+      "path": "docs/MangosDataset/test/images/freshMango-208-_png.rf.3e8ef407cc937c5ce4307ca8c6310223.jpg",
+      "image_sha256": "91e90e6879d620900c7285822b03bb96b9eb21eda25481c7a08c4985c5fb0766",
+      "label_lf_sha256": "e0ccb18b7593d56c17a8d0bc3d1996174af9828ab864e74cb638d7947facd366",
+      "split": "predict"
+    },
+    {
+      "path": "docs/MangosDataset/test/images/freshMango-236-_jpg.rf.e3da021e3e02e5cc6e0abd498e949f93.jpg",
+      "image_sha256": "c6434b313d03c45e6a384967bc7f844892de19c754352ec6ef88227138cb73e3",
+      "label_lf_sha256": "a2c642ee3d7ecf96d0fb697b9103bc2510f34fae525309f3f26ee15fb8cdfb92",
+      "split": "predict"
+    },
+    {
+      "path": "docs/MangosDataset/test/images/freshMango-245-_jpg.rf.531f7af09456c6db5812926924b7e0c6.jpg",
+      "image_sha256": "949f140027019543f1d52413c5110532f86133aa8430e270aa6b8fbb9fb7fe50",
+      "label_lf_sha256": "c544b369127426310d55be43d1c8ab5d6446766f98413f6f9fde62030b2f4ddd",
+      "split": "predict"
+    },
+    {
+      "path": "docs/MangosDataset/test/images/freshMango-301-_jpg.rf.09be0a54037f349e104c1084df640aee.jpg",
+      "image_sha256": "06a6a97d52008c7b16767aee1dbb2d4ee10eccd6de031a3f273dc504c743f969",
+      "label_lf_sha256": "f0ac68298bb8cd37d70417d6e9259a24c5b0a6e755241bcf98e37772df3347f2",
+      "split": "predict"
+    },
+    {
+      "path": "docs/MangosDataset/test/images/mango20_jpeg.rf.0f7d41fbe232609b27923f38707a303c.jpg",
+      "image_sha256": "05037cad18f15600611527314101841e81541327668437b809319ecf1b47146a",
+      "label_lf_sha256": "dab4688e3c09372d16f15772416f5f8447bccb986ee3c4774c126b11b5058dfa",
+      "split": "predict"
+    },
+    {
+      "path": "docs/MangosDataset/train/images/Captura-de-pantalla-2026-04-17-214226_png.rf.a249c6e0919ca63b20d337623508f353.jpg",
+      "image_sha256": "efdc08dbd35771c8278228a084add7f6904818ecf48a65c70a56acc01bb02cf8",
+      "label_lf_sha256": "714ae443f2a786f9c08449c93a23e3545a92d35404838fe3142fcfc9296f3c1b",
+      "split": "predict"
+    },
+    {
+      "path": "docs/MangosDataset/train/images/Captura-de-pantalla-2026-04-17-215037_png.rf.1408f1a3212a69d5c65bce5483d24726.jpg",
+      "image_sha256": "39dc98d89c09f7e612b99f1c5e89ab0ab13002cc0098582daa399f8b6ad7a8e9",
+      "label_lf_sha256": "8bb2d35efc7504bf40e63c464ce160fd317143a6c138b6aa0ee36d977d5239e1",
+      "split": "predict"
+    },
+    {
+      "path": "docs/MangosDataset/train/images/Captura-de-pantalla-2026-04-17-221155_png.rf.db450988ed546fdb0ca1a445bf2b9baa.jpg",
+      "image_sha256": "4f7d5db060994edba7ec99c2f65ae1f06e81a0a4f72ecef7206eddd2a7bf4035",
+      "label_lf_sha256": "3173d1c6059057ba47eaa961976101171cc06db5182d2afd0c3fe9027e8a2822",
+      "split": "predict"
+    },
+    {
+      "path": "docs/MangosDataset/train/images/IMG_6162_JPG_JPG.rf.c81ae73aff23fd9061b044cac482a392.jpg",
+      "image_sha256": "88d1f8ec658c4798af8a93f89c2f40272e8c746e702462e27176a0b76caf694d",
+      "label_lf_sha256": "39d7cf70671e4b8ad808f4c15381f3cca252ebeb0746285a89cd5ce0a8294d17",
+      "split": "predict"
+    },
+    {
+      "path": "docs/MangosDataset/train/images/IMG_6177_JPG_JPG.rf.28d20c33bd4280f33e50bd09e14226f2.jpg",
+      "image_sha256": "9bef23ad9e936b30166c449a6cc1b7c0a23da37f14b2be03afa2311c1ad31774",
+      "label_lf_sha256": "d161e5fa635d3e3e8006b6aad69856756d18a5fa55023b7be8e9ca82cbc60cb1",
+      "split": "predict"
+    },
+    {
+      "path": "docs/MangosDataset/train/images/freshMango-172-_jpg.rf.f1b55fe8c3fc8c297f0ec3d42e63b061.jpg",
+      "image_sha256": "1fdd62d6c1d52016a708995e7f349bab73e48c5d58e5a87e2eab7524593d8dc9",
+      "label_lf_sha256": "4a6968c26aadb50a8f62110945eb6a237d9d0e784e22e1d931c47080cd283c7b",
+      "split": "predict"
+    },
+    {
+      "path": "docs/MangosDataset/train/images/freshMango-181-_jpg.rf.075ea5f7972cfad3262fdf31c561affb.jpg",
+      "image_sha256": "717c031199ae5aa33ed4e2badec33d0d6d5039ba03b38afd730e789ec2252efe",
+      "label_lf_sha256": "0f24457599f45ac6ca37c1e82fc37df8f340f5121683147616e0511bc7b24eb1",
+      "split": "predict"
+    },
+    {
+      "path": "docs/MangosDataset/train/images/freshMango-182-_png.rf.eab4c89ba0dfa0487b5c96fb1400a7bd.jpg",
+      "image_sha256": "2900b2d77b8a6f1be8bad9c1280067431919c9d9ff450ae2de78b20c47bc6c65",
+      "label_lf_sha256": "b199171ff88d117e47f9a572a1da3f8ffc7ba8df459aee7500fc139ba108608a",
+      "split": "predict"
+    },
+    {
+      "path": "docs/MangosDataset/train/images/freshMango-184-_jpg.rf.e8d13775f2e1f6ab9555a92d45589317.jpg",
+      "image_sha256": "9179c32668acc1a1a71dae75dc7fc7326b1a79b609ea65cc192d40c1cbb56e7a",
+      "label_lf_sha256": "def6bc2795b7855803f708cdacb60d242506e538314b2ec58dadb5c134015e2e",
+      "split": "predict"
+    },
+    {
+      "path": "docs/MangosDataset/train/images/freshMango-189-_jpg.rf.bfbd3e3e8df6a9bb970828e0ea5a4692.jpg",
+      "image_sha256": "491379c0ee070bbc0f316c09e63d01a87df84afb84ecb38f1c064522c9cc7e55",
+      "label_lf_sha256": "aa12bcff11c157c330c0d9d925ac6c793b97b904fe88c203d6a184eaadcc8972",
+      "split": "predict"
+    },
+    {
+      "path": "docs/MangosDataset/train/images/freshMango-19-_jpg.rf.306139d24436ed6f5bede88268d42749.jpg",
+      "image_sha256": "1dce798e02ba23921d84999dd31ce785446a3cce07a5198bc955dd56cd219a09",
+      "label_lf_sha256": "2381d32bee28c7937134903eb3a4672c5cc9a3d769676616face0c1080fdb665",
+      "split": "predict"
+    },
+    {
+      "path": "docs/MangosDataset/train/images/freshMango-191-_jpg.rf.cb1edfc9b249f7f43fdfc307253b859e.jpg",
+      "image_sha256": "4f8b9ebc5351c34fbc13f86a2855d8075a11155b8a2db11838e28447dc274f28",
+      "label_lf_sha256": "73a34633ba4b03f3f41fdac97ffbc52c60413849160a80ca80c6dffda0dbc2ea",
+      "split": "predict"
+    },
+    {
+      "path": "docs/MangosDataset/train/images/freshMango-192-_jpg.rf.1625944b3ac69f2d4792b05a003c0f0b.jpg",
+      "image_sha256": "81001e6b9f48a0111f6e411c06b02796c5e1a5bc5c5ff0ec20f7078979a8c3ce",
+      "label_lf_sha256": "d9562b302b62d9f150c6cb6435ce43e0a054d50ae9a418c3a1f88658f2d9c2bb",
+      "split": "predict"
+    },
+    {
+      "path": "docs/MangosDataset/train/images/freshMango-193-_jpg.rf.886e728c9e54aec80f1dd335a5ea7127.jpg",
+      "image_sha256": "b600b6cd1df3649893df3ccc64f0a357e166a9c6fa2a10954aab9f1f73429965",
+      "label_lf_sha256": "b1ca40d2035555db85ca946997f5017a1f2a102a7e232027b6c04a1e4616bca3",
+      "split": "predict"
+    },
+    {
+      "path": "docs/MangosDataset/train/images/freshMango-195-_jpg.rf.7b77cf75bcd02a48c3752fad6bca3077.jpg",
+      "image_sha256": "16de0c7da5e727c74dfa214dc1718eafe2ecef4ef67433d676f9d8e7cf1f5207",
+      "label_lf_sha256": "e459afb82d177ef65e9cd287d2e9d5975ac010ff7e36249d9f09b7d97b76488f",
+      "split": "predict"
+    },
+    {
+      "path": "docs/MangosDataset/train/images/freshMango-196-_jpg.rf.e6f1b7e4c78190a70a8431580eec84ff.jpg",
+      "image_sha256": "25d9ef8ac4938a14b52d62201d82348f0597a61b3022845aad878b2751e9098d",
+      "label_lf_sha256": "be3d79c26c2378d384b8aa5db5fa0e96f20e0b9d5df0ea31f15237af0582701a",
+      "split": "predict"
+    },
+    {
+      "path": "docs/MangosDataset/train/images/freshMango-198-_jpg.rf.3a3f0aa9f04d2f802771386cacff7f7e.jpg",
+      "image_sha256": "e93a912918cd921b27f5569fd802b585099edafce1d2e15b9362aae8b830b212",
+      "label_lf_sha256": "b47fc7173c0e4755ca8e4581c8a8d7b1c60bf40d761eaa47c6b474a1f2112da1",
+      "split": "predict"
+    },
+    {
+      "path": "docs/MangosDataset/train/images/freshMango-200-_jpg.rf.d3cefc4b08705c0ae88d692b45d03ab1.jpg",
+      "image_sha256": "3468b2fab100ae8dbcf97e997ac31ac428d68655cf4de2324f85da9de9ee0691",
+      "label_lf_sha256": "990c841850e446f4a6256bee7089f8af901dde6e01c55fcab528f8325aae3d03",
+      "split": "predict"
+    },
+    {
+      "path": "docs/MangosDataset/train/images/freshMango-201-_jpg.rf.f2fcd5bb6b4c2da1c6222d632f4afd76.jpg",
+      "image_sha256": "c5aaf923423546a32bb5251c338de9a2ad35c838aa7dc214d06c49c16a130a47",
+      "label_lf_sha256": "ecd30814299e7bf0520fe9107b151b8568b58382b0e8548fc6529333968ee482",
+      "split": "predict"
+    },
+    {
+      "path": "docs/MangosDataset/train/images/freshMango-202-_jpg.rf.d303faa8bfc89b3d1997e39a357470b8.jpg",
+      "image_sha256": "d0a9600efd61b6fa44a0232c637bf6a7fd8a97ea556a4b222f70ddd24a797fbe",
+      "label_lf_sha256": "c817ac4d6261f4a4b48e3328a0ecb15f6ce1b9366b1eb44f63be99879aa24c84",
+      "split": "predict"
+    },
+    {
+      "path": "docs/MangosDataset/train/images/freshMango-203-_png.rf.08a0d922fb48bf21cc9d6d9ab874511c.jpg",
+      "image_sha256": "e383f38a01403fbcb2d1186870da3c038a0d2592b7ef0efaf70e891829595650",
+      "label_lf_sha256": "6ce54d55c7557895a90121fc1514e611e31fb906e4824f0c48620cda69ee2587",
+      "split": "predict"
+    },
+    {
+      "path": "docs/MangosDataset/train/images/freshMango-204-_jpg.rf.014e9b9233442cec19a55ef629b46b6c.jpg",
+      "image_sha256": "0ae1f5a5d688a508eda9faf58587e14e50bbb7a5b9cc92b367a1150f0e02c6e9",
+      "label_lf_sha256": "b1091a0fc9c619daa1b30a5fc2c7dc9c7c31f142bf3b4ff16e1a8626de7ad30f",
+      "split": "predict"
+    },
+    {
+      "path": "docs/MangosDataset/train/images/freshMango-209-_png.rf.faa7d966e565f114ab0e5d275cda8649.jpg",
+      "image_sha256": "d94bf969604d443e0feb32024b7d09023e06378d07c0d2c79fa0ebd37ef5e08e",
+      "label_lf_sha256": "a36b46276cd86f8a94171231f66dc999fdb9acfd53e44ca17eeecfdfafa887c4",
+      "split": "predict"
+    },
+    {
+      "path": "docs/MangosDataset/train/images/freshMango-21-_png.rf.7f1a830ea93fcde98db13cea2cd739c7.jpg",
+      "image_sha256": "bedaedbc88ee906266fa382dea32649128adde41985881af7489aa5a7bd4e399",
+      "label_lf_sha256": "13d791d26d5562fe1ffc6c034cc98cb48e7fcb58b7c3b8b34362ce74e77771d1",
+      "split": "predict"
+    },
+    {
+      "path": "docs/MangosDataset/train/images/freshMango-212-_png.rf.d412ad804685fe3bc66871411b4325c0.jpg",
+      "image_sha256": "ab10e1c6d3b5948657d9ba8bd03045e90ab8aebd18281b14cd4af776ae08516d",
+      "label_lf_sha256": "09ca991669993e01c2b839c538c1fdfb86d2f971dc9562c892f1da2c21b3daf2",
+      "split": "predict"
+    },
+    {
+      "path": "docs/MangosDataset/train/images/freshMango-213-_jpg.rf.f6cf1358b1ae664353b1c67b8e1a6c8d.jpg",
+      "image_sha256": "71fe09d3e935f236972b9861dd3f2d502db898968634baa43aa982640045b551",
+      "label_lf_sha256": "0ad6f4ffaea9274a52394cdc0d7afc3169c3097c203105fea4e5c5e2f0e979ac",
+      "split": "predict"
+    },
+    {
+      "path": "docs/MangosDataset/train/images/freshMango-213-_png.rf.6d39814985198de727056d5734bc739b.jpg",
+      "image_sha256": "556af515f227cafd172940593ede488ef0de08d86f9ac216f5a2a4c7846a5290",
+      "label_lf_sha256": "21cbe7e0a4be22eb50ab3a2153d4cd62d1610089df0a4c7bb3127698b2be5671",
+      "split": "predict"
+    },
+    {
+      "path": "docs/MangosDataset/train/images/freshMango-218-_jpg.rf.17556a1819634e9b17e767f4d4013907.jpg",
+      "image_sha256": "ac4000a141cbe05331e63ef768cd42c28157e959fe50108acd0af8f20de23c03",
+      "label_lf_sha256": "6d2e6e8dcc9113fa17c8ef4960c71ac50d2a56f9dea6dec225c9b6ad95b7f0ec",
+      "split": "predict"
+    },
+    {
+      "path": "docs/MangosDataset/train/images/freshMango-221-_jpg.rf.069f1ab9f2d69ba9c9d0557acd67f49d.jpg",
+      "image_sha256": "056b103d8b41d61a30832b84e3b30407f85824f4c1a38dbc07fc054aacc8c0fb",
+      "label_lf_sha256": "3b6a48461a7923d0f9e2e5072ac7f253926524cdcc40a893028385aaa99cc852",
+      "split": "predict"
+    },
+    {
+      "path": "docs/MangosDataset/train/images/freshMango-229-_jpg.rf.202487483998fc3e5bf36eb934285077.jpg",
+      "image_sha256": "4784abb8db92f21fa08963e510f5c0fd44ad68dc4886fedc704dfaa5b683e649",
+      "label_lf_sha256": "eedf91d58bf267cf9a9960ee52ba6311c1156cdb0b3ad92f58d8a1d7aba40bf9",
+      "split": "predict"
+    },
+    {
+      "path": "docs/MangosDataset/train/images/freshMango-23-_png.rf.6d4451e3ea154a1bc87a4149a9000106.jpg",
+      "image_sha256": "86771648b8e17feca7416a42dba41ce9e3ff97b9ec39f78fe3d525e828e067da",
+      "label_lf_sha256": "bc1fbe13599ea293d6c613d0b69cdb6a3db809938c4d783e89122994eef1951e",
+      "split": "predict"
+    },
+    {
+      "path": "docs/MangosDataset/train/images/freshMango-230-_jpg.rf.1738703502f06035807afc8b8798ca57.jpg",
+      "image_sha256": "dd0c426b8d01906cf5bf75b2b9b08761c39fad42dcccfbce486741c3af1ebd37",
+      "label_lf_sha256": "e06e9042e2355718f13eea9fdc5c9607c859530149654b243ff1f8af0f64ff39",
+      "split": "predict"
+    },
+    {
+      "path": "docs/MangosDataset/train/images/freshMango-232-_jpg.rf.88a30f2332ad3613863360d2277699fc.jpg",
+      "image_sha256": "ee965e688670da6517819db85284331e83174fbeccd301e87dbb1f3003357ff8",
+      "label_lf_sha256": "861c018a87b33b3cc1d29e978a5005fd8789c6f2f481857f3a31a767400ce1c0",
+      "split": "predict"
+    },
+    {
+      "path": "docs/MangosDataset/train/images/freshMango-237-_jpg.rf.6cfd4e6c03ef59e6ccd55cd327794fb3.jpg",
+      "image_sha256": "8260e346f600c4f97e1f3c2c71c255ff22894105ab35648ce109a149a12c1b9e",
+      "label_lf_sha256": "789bcb047b8c4ada5647dc374a42401f481a71f97ffa0dd60234248f90cd2fca",
+      "split": "predict"
+    },
+    {
+      "path": "docs/MangosDataset/train/images/freshMango-238-_jpg.rf.35d40d3fa2730f59c238584021c70ccf.jpg",
+      "image_sha256": "013609c9a5658cd6e6d17a6968cb69d69fc6a02959597419ae3b38c028600138",
+      "label_lf_sha256": "bebc50e98910894c7bd3149fce0dc713d24998a86cf75aeb29aeee48972855e4",
+      "split": "predict"
+    },
+    {
+      "path": "docs/MangosDataset/train/images/freshMango-239-_jpg.rf.9356d73ff92c2a07c535b59f7ace0161.jpg",
+      "image_sha256": "8790908539000e8f915e506e6aff27588a421ff48b3d3c3cf7f017ba7b06bec4",
+      "label_lf_sha256": "1e3d83445e3ec9c2a9cdb1739745adac3b2bd2637a61de4a2a4b4702ab0398cf",
+      "split": "predict"
+    },
+    {
+      "path": "docs/MangosDataset/train/images/freshMango-24-_png.rf.09eb999322793c77d6638f15c049fa6a.jpg",
+      "image_sha256": "6bdf02f63122f7c8844ea98ea0e9ccc3f52c0cbf229a79aaedf6ca0a184ce6b2",
+      "label_lf_sha256": "0a270d0a0872c6da8d76410b948ba46aeeeac73bc9419a1f829aef36b451821d",
+      "split": "predict"
+    },
+    {
+      "path": "docs/MangosDataset/train/images/freshMango-240-_jpg.rf.9590b249c725f5629f6c526ec2bb238b.jpg",
+      "image_sha256": "5619731889ceeb547b2a6891be4a602e2b17271b4028a22b33f0f9656b328026",
+      "label_lf_sha256": "64ded92fad8238fea1d148476cd0fe33953b49a5dc600a5798eb599de333f192",
+      "split": "predict"
+    },
+    {
+      "path": "docs/MangosDataset/train/images/freshMango-241-_jpg.rf.321c0a2f0027cd481e37ec3f18542d65.jpg",
+      "image_sha256": "4260ffb96fc146c2635adb67ca7e743e36b8cbf6592b81cc496d231e77ba512c",
+      "label_lf_sha256": "aabb116f559209fe7768ddf2485c0514e04eb1d6394a642625939f37af65790e",
+      "split": "predict"
+    },
+    {
+      "path": "docs/MangosDataset/train/images/freshMango-246-_jpg.rf.9aeeeb42e539b58f286c0a52b7ddbeb3.jpg",
+      "image_sha256": "53fcec359b3d9a7287016a9133123762d8ba59edbfa7c6662344e5be04c3be33",
+      "label_lf_sha256": "3214a58d529fff379140812a9c8509174f9089729780af3539f54a61205f10dc",
+      "split": "predict"
+    },
+    {
+      "path": "docs/MangosDataset/train/images/freshMango-247-_jpg.rf.aa0807c5fe6198d883758557d8fa1278.jpg",
+      "image_sha256": "d4aafe77d9a473c342e6a1773ab3d038bdffb9086910f8b5b490bace3cb27060",
+      "label_lf_sha256": "514d36170ab303bfe8c5cd28e110d3961300d114576f0f11bcc9788395bfd30c",
+      "split": "predict"
+    },
+    {
+      "path": "docs/MangosDataset/train/images/freshMango-249-_jpg.rf.5e933aac845061ae536c3f4acf134b4b.jpg",
+      "image_sha256": "63f29c0286c1b59f2e418f5e033e2a7912179cbde7ddab0057a28219ee1f4a20",
+      "label_lf_sha256": "9563b8fac09e42d363380953b3f65cc2cc40b6f26686b18f639639697859de23",
+      "split": "predict"
+    },
+    {
+      "path": "docs/MangosDataset/train/images/freshMango-25-_jpg.rf.150175374536bd0aa1868a38dd281fa2.jpg",
+      "image_sha256": "12248ce760bf3880d5e5de56a3c54367eb16a6a12b4615b9bd299ea9274ed9ce",
+      "label_lf_sha256": "52ced58507bb36ee0217c5d8c8fdc986a5fa845bcb189f3c50d5db7475119c2c",
+      "split": "predict"
+    },
+    {
+      "path": "docs/MangosDataset/train/images/freshMango-252-_jpg.rf.95ae03c38ac7bfe9cb0ba18886f8bf05.jpg",
+      "image_sha256": "1f11106b73cf19e5134940289b16312ae61b75b33ad895eaa4af648507462f64",
+      "label_lf_sha256": "5583753f64564ae0b2b5ba2ccd08b027e2555c1f6002f59fdb2e851ea70f94de",
+      "split": "predict"
+    },
+    {
+      "path": "docs/MangosDataset/train/images/freshMango-253-_jpg.rf.427e5bcfedcb8878e1a74c84b2449f3b.jpg",
+      "image_sha256": "14aaf5d082155160282e633894a855cc012b9edd94c3fcbef8fd510e417a0e31",
+      "label_lf_sha256": "07e268a4a15d9e06703f1067c7611169c6b0773e000bcf5789ae9fc62dbe771f",
+      "split": "predict"
+    },
+    {
+      "path": "docs/MangosDataset/train/images/freshMango-254-_jpg.rf.92b81d549eafead39c4be4eeb17f5f91.jpg",
+      "image_sha256": "f183eae3db15868f2d5c3fbf4c4dadc8e71a81dc575f49e81cf36b65886c91d4",
+      "label_lf_sha256": "fe1352353109e6dcaff8f14252ecb4c87242e0ad07a563756f13842a2f5d1769",
+      "split": "predict"
+    },
+    {
+      "path": "docs/MangosDataset/train/images/freshMango-256-_jpg.rf.753230447dc5de3784f54e8bfa9f631f.jpg",
+      "image_sha256": "c5c7b30debde5f3014f22dac8d24b5575bc685e9b8ad3da2f0d8a3cf77f8ad5e",
+      "label_lf_sha256": "bdf740b8868a2b5894994d261165197883c48f825a7a631e6732fad6efa981e3",
+      "split": "predict"
+    },
+    {
+      "path": "docs/MangosDataset/train/images/freshMango-26-_jpg.rf.6251648575392cd71b52fe7f7016422c.jpg",
+      "image_sha256": "5a22129347d67d6474a279a296d1d7bcec7a833b4855e6cdd012eac581e2feb2",
+      "label_lf_sha256": "4f5c20c961b931380d2ff816d9c2494f0a10c7a6ad73801de8e7474ad5984fb2",
+      "split": "predict"
+    },
+    {
+      "path": "docs/MangosDataset/train/images/freshMango-266-_jpg.rf.ca101ea61e7ecf631a02af590ba1871c.jpg",
+      "image_sha256": "384aead8c8bc6b9ebf4314086023467915be28d5d0b864d1d7977933ff48a387",
+      "label_lf_sha256": "158e315f26f280b8d00e81d386e466cf2072fd71742eaf2d834d6e96b0708365",
+      "split": "predict"
+    },
+    {
+      "path": "docs/MangosDataset/train/images/freshMango-268-_jpg.rf.8ea96afdca6359288e0447762a49839d.jpg",
+      "image_sha256": "fe217f78c5cc5dc44146058efd890f1f1ad1bac014b61863587c5cf012aa6f72",
+      "label_lf_sha256": "425731becb0b0d0076b246077715975e0196e4504ede3c7f15f6d3b0abd60cea",
+      "split": "predict"
+    },
+    {
+      "path": "docs/MangosDataset/train/images/freshMango-269-_jpg.rf.e3a9e8c14b4f8e35fb76654a5292b76d.jpg",
+      "image_sha256": "482a29a13b81f381362a3604851b73ef3a07e5a073b4ef8fd632bb2ff3526c76",
+      "label_lf_sha256": "2fb3fe84a942610fdfb3909c8ed917bfc8891ae48335fb8981fc1313b736876b",
+      "split": "predict"
+    },
+    {
+      "path": "docs/MangosDataset/train/images/freshMango-27-_jpg.rf.81068aa15b4363b54ed9bdac7c6c2ecb.jpg",
+      "image_sha256": "402fdaee455c5c91e64f322dfc0076f5223309d83844f907bdb6327fcf4cd09d",
+      "label_lf_sha256": "1647b7cbbf0c7de6fd963837f0ad464990cd74f4e5bb5d7f4f099b8f97567ea0",
+      "split": "predict"
+    },
+    {
+      "path": "docs/MangosDataset/train/images/freshMango-276-_jpg.rf.74f1417bebc7516b9ca1cf160eeb4dd7.jpg",
+      "image_sha256": "370ed30d43a40eb6c3b5308790912f3312131263db3b2d002639e425de3f7420",
+      "label_lf_sha256": "d5219e12424bf9549d44189b3cd162c3cf47ebb0ad26f561991efe78cd1f9855",
+      "split": "predict"
+    },
+    {
+      "path": "docs/MangosDataset/train/images/freshMango-278-_jpg.rf.b4b6c6e2d2317ba0967ee6c2ad6550e0.jpg",
+      "image_sha256": "d9c3b9da85eb65d03f990f54d7ad4166a7b344853147065cc3276396e187238e",
+      "label_lf_sha256": "952be0818d5b8842fd25d2e8dbe7dcae9b9b4c724213a7660290c93cfac13698",
+      "split": "predict"
+    },
+    {
+      "path": "docs/MangosDataset/train/images/freshMango-279-_jpg.rf.198a923777fa6cee3e0cc90623b923e6.jpg",
+      "image_sha256": "09a83b440de6701a5493a875bdcd1431f11cb54fd51e67c2a74acb17dec0aefd",
+      "label_lf_sha256": "b0a8493c39f6969a5abea432b1024481b5fcd112d5f20cd2d799a7c785b94c6f",
+      "split": "predict"
+    },
+    {
+      "path": "docs/MangosDataset/train/images/freshMango-28-_jpg.rf.fd0093b7188783ace0e82a11b494523c.jpg",
+      "image_sha256": "bcf6cb4fac7951141c77253848d2c711041b1fa5134a25c836e4264fabe1eaeb",
+      "label_lf_sha256": "a720a7f9a6c2209d85c49d854c80fe3a82d5b1eb2561e38ac09287d1e15a9774",
+      "split": "predict"
+    },
+    {
+      "path": "docs/MangosDataset/train/images/freshMango-280-_jpg.rf.ca93668b8dc7f91f68492d3badc5c105.jpg",
+      "image_sha256": "d21c04eb552e411e9335ef98b4ff84b1e9bbf8dfe5e45317e8eded45b122cc82",
+      "label_lf_sha256": "c3ba8016cefb020fc9d6a82e4aaf877395cfc7f96af319fd84a3be261d43a1c8",
+      "split": "predict"
+    },
+    {
+      "path": "docs/MangosDataset/train/images/freshMango-281-_jpg.rf.fbc7af85d01a98b19283704c00a4b019.jpg",
+      "image_sha256": "0a789c2b0adad76411a8275207e01927cee22fd6a8865a071044f1bdfb851f7c",
+      "label_lf_sha256": "f96e2043a3ab94f91a0ca1bc15e6084f2029c681c9bbda286845715fd2b5b4ce",
+      "split": "predict"
+    },
+    {
+      "path": "docs/MangosDataset/train/images/freshMango-285-_jpg.rf.cb2a8247f202eb1ffbe86d65bfb6bb10.jpg",
+      "image_sha256": "2d7b0c8975e5c1ea1e461b43b67104f387f1dc6be696af30618ad39666653487",
+      "label_lf_sha256": "2e585b6e3ca6e7f33b50c33ab78d0f153d0ae59db5a172844d0a8104c5222609",
+      "split": "predict"
+    },
+    {
+      "path": "docs/MangosDataset/train/images/freshMango-286-_jpg.rf.e5441e227149b931945b9c3bba007ac5.jpg",
+      "image_sha256": "854c0de88de950fd21411f2d864f420a49c82d00206f32c8f1b6b227d5aebb00",
+      "label_lf_sha256": "4637ebcfc86c286d183fb62a3f0a2096672134979737cc296c0b92452d0dde2a",
+      "split": "predict"
+    },
+    {
+      "path": "docs/MangosDataset/train/images/freshMango-292-_jpg.rf.31af96e543c3f3d208f13333b3bcf0a9.jpg",
+      "image_sha256": "df5fb64f11be20bf289245a4c355b141ef707b8fdd9a20b695eaeaebf5fa01f8",
+      "label_lf_sha256": "7a7b6c395bff5992bba289769f8c2d9929549c2d1631162e7d1777ae4f680b62",
+      "split": "predict"
+    },
+    {
+      "path": "docs/MangosDataset/train/images/freshMango-296-_jpg.rf.46b38abb23e0e3a91d5def2d6556f276.jpg",
+      "image_sha256": "12e04ff0f345f5daee872a6614bbf661fe86746bae330ca6c532788a68a82ad7",
+      "label_lf_sha256": "838bfa4d8530ca5b2d225b62233de5b33d6e5ec01114a36cec2ee8998a333d55",
+      "split": "predict"
+    },
+    {
+      "path": "docs/MangosDataset/train/images/freshMango-299-_jpg.rf.9fec5652e9c6dfe7badcc4622405ef3a.jpg",
+      "image_sha256": "c5472f8decd8fd8cafd131420a3521fd91d9185190c8c5c27fa4aa72a769d5f6",
+      "label_lf_sha256": "439fa52068a7a412e2983e1fe058fda1d1d8fd2818aa4a264a879fe19c9e3e30",
+      "split": "predict"
+    },
+    {
+      "path": "docs/MangosDataset/train/images/freshMango-300-_jpg.rf.7eef869b279e4006e8940aca3165d17d.jpg",
+      "image_sha256": "67fcd7e1affd8f1a54547a19f573ded77153ce9a960f64d284de6b27c70c8726",
+      "label_lf_sha256": "d626a6d42cf68b1445322d1c943ed51ce0eb5707d4d5424a72210f012b08c421",
+      "split": "predict"
+    },
+    {
+      "path": "docs/MangosDataset/train/images/freshMango-303-_jpg.rf.358c9a174bffdced7714caee55be2fbf.jpg",
+      "image_sha256": "540d7cc938160624568ee1e1f1bb29a98082de13516ea5794009b72eaf22824d",
+      "label_lf_sha256": "9943fed1a55bc6a6d363873e837eb80fdf0eeafdcfee568d8da6292a8b836a9a",
+      "split": "predict"
+    },
+    {
+      "path": "docs/MangosDataset/train/images/freshMango-304-_jpg.rf.d75839aa4ed506d9f39fdcd3bde23d88.jpg",
+      "image_sha256": "e0f6193694337a8ec1a948b0686c946cf67c274bf79540a91053c62d6ba1cdec",
+      "label_lf_sha256": "ca00239c89a31985da9f9ab97d1cba1201a2deb748dc3f3accedbe330bc47b97",
+      "split": "predict"
+    },
+    {
+      "path": "docs/MangosDataset/train/images/freshMango-310-_jpg.rf.c2ad0253b1fe354dfd7e676c2dcbd030.jpg",
+      "image_sha256": "b6d264c4d8f009c756b1fbaf486ea65e805adc889a6fc821b922e170be218fe8",
+      "label_lf_sha256": "a135db838e7878d13372ceb37655c93a4c336eb131ea78db84d31dcd53f201db",
+      "split": "predict"
+    },
+    {
+      "path": "docs/MangosDataset/train/images/freshMango-312-_jpg.rf.a47d1f24a8fbe7dab4848f302cf1daa2.jpg",
+      "image_sha256": "f751f88c07ea8af45c2330972de85c3b26b9b7721fc1cf20a80ffccd7567da91",
+      "label_lf_sha256": "5041f36f22a8222d8fea75a9aa6e35d4d25470d8aef69e2fef165d52d6809c4f",
+      "split": "predict"
+    },
+    {
+      "path": "docs/MangosDataset/train/images/freshMango-315-_jpg.rf.855a5e650b3b8ff6328f42d4b5357a60.jpg",
+      "image_sha256": "1ccc33fab8b79b05e4a0efd9161a3f6a4b6f78d8fcb90f51bd0e8da21dc889db",
+      "label_lf_sha256": "b07a4e6d4c8346c9bdd28439bd406df8617424ae6bddcb5581149f0e7230c04e",
+      "split": "predict"
+    },
+    {
+      "path": "docs/MangosDataset/train/images/freshMango-324-_jpg.rf.d30aab7a12b02b264d95d0ad2fe78273.jpg",
+      "image_sha256": "a640740697038be1e0ff5632ce475cd1b5e3afcf21bf8ad197b12633e78350f9",
+      "label_lf_sha256": "8ab9b1b25e12aa2d662a2085e8142e06d81880bf74ad75128133f2d51e8ca9fd",
+      "split": "predict"
+    },
+    {
+      "path": "docs/MangosDataset/train/images/freshMango-329-_jpg.rf.0209778564410eaeaaf693c9e6c41bc5.jpg",
+      "image_sha256": "d409172a0943080fd49ca567730c05acb647c9b510a0ab08b42781070e584ecd",
+      "label_lf_sha256": "1826e28958dc040010c39b4dc58dd7a92bf7eac32fde6543ba62b87d6960b795",
+      "split": "predict"
+    },
+    {
+      "path": "docs/MangosDataset/train/images/freshMango-33-_jpg.rf.01d2a63699c7ceee384bec6f90a7a3f8.jpg",
+      "image_sha256": "fd10939a412d02b7b08b974ec058e2d0b7c142d711906bd739ed7e1e6a8089d4",
+      "label_lf_sha256": "7be618f956002a20c204f317fda994878b9415e7149202ffecc12b3fa54a5b97",
+      "split": "predict"
+    },
+    {
+      "path": "docs/MangosDataset/train/images/freshMango-34-_jpg.rf.1934533621e4e636e2fffad88531d102.jpg",
+      "image_sha256": "3918791e3b075829adf495aff7acc2dda693ff7468c832f7d1ab5dd7203df2ed",
+      "label_lf_sha256": "7ac7776f202c9493f096afd89dde1a05e86476d3e6b0488302c78edbc1284c28",
+      "split": "predict"
+    },
+    {
+      "path": "docs/MangosDataset/train/images/freshMango-35-_png.rf.6167d168956dabc3a16d5cb0513b625c.jpg",
+      "image_sha256": "7d4e8f4954271ba2e890c5608cbd40f8a190ccc10366c787db7952ae00a585a4",
+      "label_lf_sha256": "ac81b175011798c29621e5db82fd1d2eb8bec7d8a9def7419d7adc04463fd2c3",
+      "split": "predict"
+    },
+    {
+      "path": "docs/MangosDataset/train/images/mango16_jpeg.rf.5c9ba07351c8cff3ab2964a1b9f9cc6b.jpg",
+      "image_sha256": "79d576b22ba93b601cabe25832e58d450d9bf3f7e099dc333b2cd072a9502745",
+      "label_lf_sha256": "3f7a23b17414d29b1245705614b946f151a78f43b82a5540f2f46b45d901cf53",
+      "split": "predict"
+    },
+    {
+      "path": "docs/MangosDataset/train/images/mango17_jpeg.rf.b271e6b7c8e8acd1cc74b4d70ca62ea2.jpg",
+      "image_sha256": "92a06db825ec008509bef53935ffb5fb082bb4b18abd3fe0c72f5ffcfcc8d588",
+      "label_lf_sha256": "900268362ce99095593b57ef623f31b02eec7cdf6f16aaa61580deb5c1b6e699",
+      "split": "predict"
+    },
+    {
+      "path": "docs/MangosDataset/train/images/mango19_jpeg.rf.9db56c74ea83be54a82febc57ccaa2fc.jpg",
+      "image_sha256": "36fda9f8dbc91df973cd385fb44c11e31ef221028d8a15f18ae95f9855f110c6",
+      "label_lf_sha256": "218b16682e608835ffd33da5cf578b04409aeafb006b94a70b169def163866df",
+      "split": "predict"
+    },
+    {
+      "path": "docs/MangosDataset/train/images/mango3_jpg.rf.96759de89dbad0bcf7235d9ccf641c55.jpg",
+      "image_sha256": "808375ffffe9969fd0157517a6b215a8d419560d79f2aeeb0236e3dd11b5a950",
+      "label_lf_sha256": "3db8825091f72c6b23b929ce464fe9b4d61b5106f9dff8d2fed1d6fc68fb2324",
+      "split": "predict"
+    },
+    {
+      "path": "docs/MangosDataset/train/images/mango5_jpeg.rf.3ae2af7e7e725a8d47661ba1d4f2dc34.jpg",
+      "image_sha256": "ffff7b8d2b63db1f89057e8bce73beb5e164b86c9ccf2bf3c1a7e5abceb25ea6",
+      "label_lf_sha256": "0f4685c6269361bdf43d413acf14c83b19263c1469fd124683a4e01624b30638",
+      "split": "predict"
+    },
+    {
+      "path": "docs/MangosDataset/train/images/mango6_jpeg.rf.a3a507c5956331dad4189243b24f1ea9.jpg",
+      "image_sha256": "cd03d0aba1b23770484330a8cae88f702c2bda5fd8e657a2b4f019dd7d9fc156",
+      "label_lf_sha256": "94af5ca90ed38c31d435fe133706479d23ee323dea8b90f7e6238fde7fe0c915",
+      "split": "predict"
+    },
+    {
+      "path": "docs/MangosDataset/train/images/mango8_jpeg.rf.2b5c263258402bac833ace92769392ed.jpg",
+      "image_sha256": "a331e6dc4450840b795bb5b791fb49a6b41afb26ee6e373e2510eb8ceeb461e9",
+      "label_lf_sha256": "05337df22fb32b4ff88aa4fcc19ca41176a94d1e745f9b9e71def273d48f491d",
+      "split": "predict"
+    },
+    {
+      "path": "docs/MangosDataset/valid/images/IMG_9729_JPG_JPG.rf.b8180595630cb64c5c3ea9364f0f683d.jpg",
+      "image_sha256": "f6b331ba9e0cc9e445b194bb6314ead87ed54896529c2bc793c4565f62d2de32",
+      "label_lf_sha256": "ec54c7d9b0eb813e4c18ed3d7ff4048956b2e994f021bfaf052fc6f104fe2187",
+      "split": "predict"
+    },
+    {
+      "path": "docs/MangosDataset/valid/images/freshMango-176-_jpg.rf.86f985863d70d4cb5bf4d5b368b7256a.jpg",
+      "image_sha256": "9162ef7df28f83fc5f7d46e05c77880adaa0afa827b9b8f6d5bba05593c241b0",
+      "label_lf_sha256": "3d619c99d0de0c174869c1cfb3117a8ff78035e9aed51c78db8242f478f60280",
+      "split": "predict"
+    },
+    {
+      "path": "docs/MangosDataset/valid/images/freshMango-178-_jpg.rf.ede2a1e872836dec5bb6418b1a5504b9.jpg",
+      "image_sha256": "0ff1343d4e3c7df0d52c39807cf80f6801a7cbcab57be918c61574cebf4b061b",
+      "label_lf_sha256": "36c76451dc819b0e9fc12de29ef797fd040537a6cc145230c77565e9f140f346",
+      "split": "predict"
+    },
+    {
+      "path": "docs/MangosDataset/valid/images/freshMango-183-_jpg.rf.9d2fe1141e99886285a9168f7b0594ff.jpg",
+      "image_sha256": "4466c187b83c33080a7c2b71a2919e72e1efa0242812643eb0ebf38604c86a63",
+      "label_lf_sha256": "51257a6ce10eb65e39c8ab1a42ff5eb3a4af91bcbdf577531035909b3100e9af",
+      "split": "predict"
+    },
+    {
+      "path": "docs/MangosDataset/valid/images/freshMango-194-_jpg.rf.f7421176c5e510444f92976415c8a178.jpg",
+      "image_sha256": "03631caa49ce86338eee52147a5574fafb25518d1a12b851f96f672e83088677",
+      "label_lf_sha256": "933408744ef5cce94ce2e7c6709741b51c188cc24ea44da01b57abd6934606ad",
+      "split": "predict"
+    },
+    {
+      "path": "docs/MangosDataset/valid/images/freshMango-197-_jpg.rf.656dbe3b787b0664d4bc705716ab137b.jpg",
+      "image_sha256": "2ce28daa310c326bbbd7fb6f224d4d8baff80b4a56d2a448867819d68ddc18e3",
+      "label_lf_sha256": "9d49933ea92fad65f40492f2b7184f4b9a9f70371283779c02338c50a2129001",
+      "split": "predict"
+    },
+    {
+      "path": "docs/MangosDataset/valid/images/freshMango-199-_jpg.rf.ff604d9577f6b2856f81936c426353d6.jpg",
+      "image_sha256": "b38353cb354dd634a6158058092369036a2f79fdd0a2e664dbb73544ab0e38e8",
+      "label_lf_sha256": "b4c524a293d761e033035f9c31106dc7b43a708813a13964b0ca1adeced3f8fc",
+      "split": "predict"
+    },
+    {
+      "path": "docs/MangosDataset/valid/images/freshMango-211-_jpg.rf.d5b7a817d9ebec1077212ab3facc7198.jpg",
+      "image_sha256": "74cfbf5aa49fce8fd99a4976c764cfc24d529115baffcae5e60562ee30e5bc56",
+      "label_lf_sha256": "b752fbd4e3a0229e2958a1dd6051a91bf77d0579ad502a3758f8e482ffc1a93b",
+      "split": "predict"
+    },
+    {
+      "path": "docs/MangosDataset/valid/images/freshMango-214-_png.rf.815f762443f713468a6c796682be0455.jpg",
+      "image_sha256": "982f58365fa1b733941dde049f9e6718cce6639f85c6e16b52fce09debdf95ce",
+      "label_lf_sha256": "94fb1bd000fa97c3c520a324d24030382a19d34904f02d39da3d4046e957a301",
+      "split": "predict"
+    },
+    {
+      "path": "docs/MangosDataset/valid/images/freshMango-216-_jpg.rf.411edbd4dcf7467074fa7222111b9389.jpg",
+      "image_sha256": "46261f5eedc1337b93a153fc7bbd6e09b63082a0ff75cd9b8d27834c3db9f189",
+      "label_lf_sha256": "3c0828e856bafa355a482bf907e3bb46d191f078b35752e151dabd09279af549",
+      "split": "predict"
+    },
+    {
+      "path": "docs/MangosDataset/valid/images/freshMango-220-_jpg.rf.21052861dba32f59b4ec0ef1cb5b25eb.jpg",
+      "image_sha256": "65f9fe03ab8d165999e9a182e3257044d9ca79b1d1030e67574042153d68740b",
+      "label_lf_sha256": "70731c948912e5f20ae3a162c9410262682bc6afebc9afa30ee0da15b7161070",
+      "split": "predict"
+    },
+    {
+      "path": "docs/MangosDataset/valid/images/freshMango-227-_jpg.rf.3d74004b13da6c45d86431ee032d180a.jpg",
+      "image_sha256": "5b3f1457dde0cc67abc924335f73d900f7997b9bce0321d291f65cdec0fc7e0f",
+      "label_lf_sha256": "fb3129c885ac3846e565ff0203c6435bdfd32ba35f6a2c94ff61e527976717b6",
+      "split": "predict"
+    },
+    {
+      "path": "docs/MangosDataset/valid/images/freshMango-228-_jpg.rf.ad9983e2940bfac537432126a9717676.jpg",
+      "image_sha256": "6d7b0f7daa3eb8ea472787876608398695dae3a4be80fe1fe23d01f782f5c99f",
+      "label_lf_sha256": "527f42e6ef39c914776c7d479125c0e744fcdc5926a6ec10e63f420b7c959e2a",
+      "split": "predict"
+    },
+    {
+      "path": "docs/MangosDataset/valid/images/freshMango-235-_jpg.rf.f184af6010b8d1ef9c235448bdb99731.jpg",
+      "image_sha256": "ea537fd81f3765d4633a2b5d774f3eede2cc95b8df44e5bb3e99cfe0485162d9",
+      "label_lf_sha256": "f8d3778d7788c6445f5bafe04cc583ed519f1b66374413812dd1d9b8238e2d86",
+      "split": "predict"
+    },
+    {
+      "path": "docs/MangosDataset/valid/images/freshMango-242-_jpg.rf.51f87620f205481a0f088a74716cfa72.jpg",
+      "image_sha256": "bdde8a9877e0a4c9754abbf5cf23d9c07efe986a421cdcf96d27522d1e205f9b",
+      "label_lf_sha256": "514d9a8027249e33330e82dcb0080b1f76ac22e2fe1ed3579ce4c8a73398c741",
+      "split": "predict"
+    },
+    {
+      "path": "docs/MangosDataset/valid/images/freshMango-257-_jpg.rf.d9898da254cda95d4e2d09c6973a57ef.jpg",
+      "image_sha256": "94ec62f439bbf221da94dccc6bb224f0cb0e6b1dae934f615459fb6110775bf8",
+      "label_lf_sha256": "7d231e1dd5c5c2c9a7b2a5dee463419e4d8fca779d2afaee17f0adc1e2a93da2",
+      "split": "predict"
+    },
+    {
+      "path": "docs/MangosDataset/valid/images/freshMango-259-_jpg.rf.7c03651a9c479ce2d73993e3a9fe5940.jpg",
+      "image_sha256": "7c5b8b8a03ffb23868d22e146d07c207bb0f4fe16822f99f6f5d4ce54eb228d5",
+      "label_lf_sha256": "abba2909884959991c6f6b4fd10c8826e80bfaa9d405638aa262d986b5ea457b",
+      "split": "predict"
+    },
+    {
+      "path": "docs/MangosDataset/valid/images/freshMango-272-_jpg.rf.05e2337c8cfb261bbe6f7fa4c7ebebd1.jpg",
+      "image_sha256": "4072dcf0c1e4176cfbd9bf3fc3d9e80c446be1b509fc3af4de4d451061901c91",
+      "label_lf_sha256": "f0049b208bd4ccc9044074f85f3bbd93f3779001c74b6166b68eb43f5629b433",
+      "split": "predict"
+    },
+    {
+      "path": "docs/MangosDataset/valid/images/freshMango-282-_jpg.rf.d51132f1797f10d982aa20e5015a1c00.jpg",
+      "image_sha256": "4c18d8e4c6777cb5cc35ea3bb95ae1c90cfd5b344c5defe5c0bf8894a95bf269",
+      "label_lf_sha256": "ec52649fe337d75212056052a4928110f0cbf9c09b8e602b1eaf865da4817587",
+      "split": "predict"
+    },
+    {
+      "path": "docs/MangosDataset/valid/images/freshMango-302-_jpg.rf.e1c88f7ed240797c6330becad9dad6ba.jpg",
+      "image_sha256": "80732be752413ee1fc59d936752c573fbd8a45f1890ee9e204feff324fdaadc2",
+      "label_lf_sha256": "572cb34ce4cb7bc15d1daa50969d7d5160e6cb3d077783afd3dc4535d667c84a",
+      "split": "predict"
+    },
+    {
+      "path": "docs/MangosDataset/valid/images/freshMango-311-_jpg.rf.4cd08f01ad46c214dd433e9681f4778b.jpg",
+      "image_sha256": "8817897712c76f202df80c06f3620021de0142bab22fd305f19252e721fba89f",
+      "label_lf_sha256": "652dc22940edfd4ece4d9100e134d9eb51ebd9792c99ae4310dc53ddb57c3793",
+      "split": "predict"
+    },
+    {
+      "path": "docs/MangosDataset/valid/images/freshMango-325-_jpg.rf.ac7564eb8ef1762b95e4f9e7621db6a4.jpg",
+      "image_sha256": "4dbcb36c7ddea869c95a14190dd2fce47aae3b46ad5b39511aa074ff5a3c8665",
+      "label_lf_sha256": "064fd6d89520e3a40f339697cb6833b57e8460721e5e6bec2805eb43b9c41589",
+      "split": "predict"
+    },
+    {
+      "path": "docs/MangosDataset/valid/images/freshMango-39-_png.rf.ff6cff05b885f161840c348d5e2c8739.jpg",
+      "image_sha256": "e0a42016519f50a3b8ec6664665d6a0c0f27d0c29a70e5773a46324d110eb081",
+      "label_lf_sha256": "21e2513ce986f4ff24831b4e619da532b668e00c259d9acd90c403509015a4d6",
+      "split": "predict"
+    },
+    {
+      "path": "docs/MangosDataset/valid/images/mango10_jpeg.rf.fc97ad78bf8e72fe921a472783166a17.jpg",
+      "image_sha256": "3001701ac4bff1f7bf54c9c862a69c4f4571e37fd948a2da4a6617a32aa77f55",
+      "label_lf_sha256": "a9b3f73853f7afb27bd68ab7a9dd95f52c10f48c03c85659d3365153845ff1ed",
+      "split": "predict"
+    },
+    {
+      "path": "docs/MangosDataset/valid/images/mango18_jpeg.rf.20316ae53bd9e6c7e69a025c59c0d80b.jpg",
+      "image_sha256": "a4fe35fe4daf24430b237c0b2bfd1dcbc3710ca5edb1e37c58c86678cba9d9c8",
+      "label_lf_sha256": "58abc25f8393ff1c4fcd66084f11d530d4dd5e44d4380389087c28019332907f",
+      "split": "predict"
+    },
+    {
+      "path": "docs/MangosDataset/valid/images/mango4_jpeg.rf.f85b2e572e5a213f0b5695799b891695.jpg",
+      "image_sha256": "6f1bd4426380084d760a8c9098a861dc1a348a784c962220236b5835bfbe383f",
+      "label_lf_sha256": "94b8354cf2de36cb1c908603e0698f3903132be029527526aa1e3051e43a2ec6",
+      "split": "predict"
+    }
+  ],
+  "files_digest": "1bb03c1bc8e383f507db13b70f074796a89858f91c9c712fa925cb50d0f08f60",
+  "model_names": {
+    "0": "Enfermo",
+    "1": "Saludable"
+  },
+  "end2end": true,
+  "agnostic_nms": false,
+  "single_cls": false,
+  "effective_suppression": "end-to-end one-to-one head: no NMS, the iou argument is inert",
+  "input_contract": "file path given to Ultralytics predict: the loader reads BGR and preprocessing converts to RGB; rect letterbox at imgsz",
+  "predict_args": {
+    "conf": 0.001,
+    "iou": 0.6,
+    "max_det": 300,
+    "imgsz": 640,
+    "device": "0",
+    "half": false,
+    "batch": 1
+  },
+  "predictions_raw_sha256": "c184fed7aa7863adbc8841757072852f1e62cfbfa6aeb15615549b7bf7679ff5",
+  "finished_unix": 1790625246.6056466
+}

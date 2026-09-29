@@ -1,0 +1,21 @@
+{
+  "settings_version": "0.0.6",
+  "datasets_dir": "C:\\Users\\junio\\Downloads\\mango-vision\\ALBUS26_major_revision\\.worktrees\\datasets",
+  "weights_dir": "C:\\Users\\junio\\Downloads\\mango-vision\\ALBUS26_major_revision\\.worktrees\\execution\\weights",
+  "runs_dir": "C:\\Users\\junio\\Downloads\\mango-vision\\ALBUS26_major_revision\\.worktrees\\execution\\runs",
+  "uuid": "2b4c119060fca536813bb31407cfb7407b464a6e2a0e7707eca2f6fa0bbaf11b",
+  "sync": true,
+  "api_key": "",
+  "openai_api_key": "",
+  "clearml": true,
+  "comet": true,
+  "dvc": true,
+  "hub": true,
+  "mlflow": true,
+  "neptune": true,
+  "raytune": true,
+  "tensorboard": false,
+  "wandb": false,
+  "vscode_msg": true,
+  "openvino_msg": true
+}

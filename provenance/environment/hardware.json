@@ -1,0 +1,27 @@
+{
+  "os": "Windows-11-10.0.26200-SP0",
+  "os_build": "10.0.26200",
+  "cpu": "AMD64 Family 23 Model 160 Stepping 0, AuthenticAMD",
+  "cpu_count": 8,
+  "ram_bytes": 16407719936,
+  "gpu_inventory": "{\"Name\":\"AMD Radeon(TM) Graphics\",\"DriverVersion\":\"32.0.21043.10005\"}",
+  "gpu_inventory_exit_code": 0,
+  "nvidia_gpu_driver": "NVIDIA GPU/driver unavailable",
+  "cuda_runtime": {
+    "probe": "torch.cuda.is_available/torch.version.cuda inside guarded child process",
+    "torch": "2.12.0+cpu",
+    "cuda_available": false,
+    "torch_cuda_build": null,
+    "conclusion": "No usable CUDA device locally; GPU training is not possible on this host."
+  },
+  "nvidia_smi_exit_code": 127,
+  "cpu_identity": {
+    "probe": "(Get-ItemProperty 'HKLM:\\HARDWARE\\DESCRIPTION\\System\\CentralProcessor\\0').ProcessorNameString",
+    "probe_exit_code": 0,
+    "processor_name_string": "AMD Ryzen 5 7520U with Radeon Graphics",
+    "physical_cores": "4",
+    "logical_cores": 8,
+    "probed_utc": "2026-09-22T14:22:43.120424+00:00",
+    "note": "Closes finding M-03 of the amendment review. The previous record held only \"AMD64 Family 23 Model 160\", which does not name the processor. The marketing name is now measured, not inferred. REVIEW-07 concerns a Ryzen 5 7520U latency claim and this host is that processor, so the TASK-06 benchmark belongs here. It is still a FRESH measurement, not a recovery of the historical 145 ms."
+  }
+}

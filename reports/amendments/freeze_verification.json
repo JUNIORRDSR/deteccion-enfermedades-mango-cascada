@@ -1,0 +1,33 @@
+{
+  "timestamp_utc": "2026-09-19T21:23:35.025895+00:00",
+  "status": "PASS",
+  "protocol_id": "ALBUS26-116-PROTOCOL-001",
+  "document_commits_and_hashes_verified": true,
+  "complete_rules_and_documents_present": true,
+  "exclusive_creation": true,
+  "no_new_experiments": true,
+  "snapshot_files": [
+    {
+      "path": "provenance/protocol_freeze.json",
+      "sha256": "6d5aa3ff47cba97f8ecd0dd15683bb96f0d53146f3af1ce1e95bf24cec7cbc8b",
+      "size_bytes": 173976
+    },
+    {
+      "path": "provenance/protocol_freeze.md",
+      "sha256": "1a41b1aa684e26e5853aae31369c5200b29ae25a70bc383e3f0bd3ef136058be",
+      "size_bytes": 104816
+    },
+    {
+      "path": "provenance/test_access_log.csv",
+      "sha256": "4dbbed6804a22048854ce236894125170fd51be31e8f707cbd9d1da519060758",
+      "size_bytes": 825
+    },
+    {
+      "path": "provenance/protocol_freeze.sha256",
+      "sha256": "aec4aff0cc0e19f65132a868542bbf941d4fc3461d3da2663650caca11b9f016",
+      "size_bytes": 172
+    }
+  ],
+  "GATE_B": "SATISFIED",
+  "GATE_C": "SATISFIED"
+}

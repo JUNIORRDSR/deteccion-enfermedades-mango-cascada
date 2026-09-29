@@ -1,0 +1,24 @@
+test_environment_rejects_external_path (tests.test_provenance.ProvenanceTests.test_environment_rejects_external_path) ... ok
+test_hash_and_output_boundaries (tests.test_provenance.ProvenanceTests.test_hash_and_output_boundaries) ... ok
+test_manifest_coverage_and_duplicate_rejected (tests.test_provenance.ProvenanceTests.test_manifest_coverage_and_duplicate_rejected) ... FAIL
+test_portable_resolution_and_identity (tests.test_provenance.ProvenanceTests.test_portable_resolution_and_identity) ... ok
+test_redaction_preserves_host (tests.test_provenance.ProvenanceTests.test_redaction_preserves_host) ... ok
+
+======================================================================
+FAIL: test_manifest_coverage_and_duplicate_rejected (tests.test_provenance.ProvenanceTests.test_manifest_coverage_and_duplicate_rejected)
+----------------------------------------------------------------------
+ValueError: missing or unknown SRC-ID SRC-1
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\junio\Downloads\mango-vision\ALBUS26_major_revision\.worktrees\execution\tests\test_provenance.py", line 57, in test_manifest_coverage_and_duplicate_rejected
+    with self.assertRaisesRegex(ValueError, 'SRC-9'):
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: "SRC-9" does not match "missing or unknown SRC-ID SRC-1"
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.059s
+
+FAILED (failures=1)
+exit_code=1

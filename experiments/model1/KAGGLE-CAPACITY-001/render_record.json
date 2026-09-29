@@ -1,0 +1,10 @@
+{
+  "kernel_sha256": "8fe32e2a292eaf2669322448e0c73ceae9c9c4f31d36a9d003b79e000386c259",
+  "kernel_source_sha256": "8fe32e2a292eaf2669322448e0c73ceae9c9c4f31d36a9d003b79e000386c259",
+  "manifest": "data/manifests/model1_clean_manifest.csv",
+  "manifest_sha256": "dd9431dd7bbc00c6117baf6a0f6cf49eff8bc55f144016b4a98dbdea049ecf5f",
+  "payload_sha256": "48a82379ca4e0ac01c4df3481c64ac5e4a0f67c08ab296dd3ed60a7d13804608",
+  "selected_files": 552,
+  "excluded_files": 117,
+  "mode": "capacity"
+}

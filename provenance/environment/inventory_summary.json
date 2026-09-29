@@ -1,0 +1,37 @@
+{
+  "files": 11137,
+  "bytes": 940648678,
+  "types": {
+    ".docx": 7,
+    ".pdf": 11,
+    ".zip": 11,
+    ".txt": 3849,
+    ".md": 7,
+    ".py": 38,
+    ".png": 70,
+    ".jpg": 7062,
+    ".tex": 37,
+    ".bib": 5,
+    ".ipynb": 5,
+    ".csv": 10,
+    ".yaml": 6,
+    "": 2,
+    ".pt": 4,
+    ".cache": 3,
+    ".db": 1,
+    ".jpeg": 1,
+    ".html": 1,
+    ".js": 1,
+    ".css": 1,
+    ".sty": 4,
+    ".cls": 1
+  },
+  "exclusions": [
+    ".git",
+    ".venv",
+    "node_modules",
+    "__pycache__",
+    "ALBUS26_major_revision"
+  ],
+  "capture_utc": "2026-09-17T17:17:58.770289+00:00"
+}

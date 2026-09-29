@@ -1,0 +1,2419 @@
+{
+  "inputs": {
+    "predictions": "experiments\\model2\\EXP-R03\\predictions.jsonl",
+    "predictions_sha256": "e3700dbfd429001039af1572cc0ee33f6e6b92cfd95d8ab0705d6dedf7fd321d",
+    "manifest": "data\\manifests\\model2_frozen_manifest.csv",
+    "manifest_sha256": "cd4f0d0e428fc3015268b7df541bf705261893c4b5cba0a7ef274e17d0680d92",
+    "seed": 42,
+    "resamples": 2000,
+    "command": "python -m src.statistics.intervals --m2-sensitivity --predictions experiments/model2/EXP-R03/predictions.jsonl --groups data/manifests/model2_frozen_manifest.csv --seed 42 --resamples 2000 --out artifacts/metrics/model2_sensitivity.json",
+    "run_record": {
+      "experiment_id": "EXP-R03",
+      "weights_sha256": "e277717e6ca9d7f308d22697550a5a4e80613929acb68eeb790f3304ebfdb08e",
+      "manifest_sha256": "cd4f0d0e428fc3015268b7df541bf705261893c4b5cba0a7ef274e17d0680d92",
+      "imgsz": 224,
+      "rule": "top-1 without rejection",
+      "input_contract": "Ultralytics file-path loader",
+      "model_names": {
+        "0": "Antracnosis",
+        "1": "Cancro_bacteriano",
+        "2": "Costras",
+        "3": "Podredumbre_Extremo_tallo",
+        "4": "Saludable"
+      },
+      "ultralytics": "8.4.52",
+      "torch": "2.12.0+cpu",
+      "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+      "dependencies_outside_checkout": true,
+      "runtime_sha256": "f1a06a70e5af9e606618b4db5321f001ad4e905b3777f528d5b4d37465f9a2c2",
+      "runtime_modules": {
+        "ultralytics": "Lib/site-packages/ultralytics/__init__.py",
+        "torch": "Lib/site-packages/torch/__init__.py"
+      },
+      "environment": "provenance/environment/inference_environment.txt",
+      "environment_sha256": "64086b292d15a63b9418dfba1523b6343c60db2a8ba9a69ca0a17b7f5a345d4b",
+      "images": 219,
+      "predictions_sha256": "e3700dbfd429001039af1572cc0ee33f6e6b92cfd95d8ab0705d6dedf7fd321d",
+      "recorded_at": "2026-09-28T20:59:37.709116+00:00",
+      "config": "configs/evaluation_frozen.json",
+      "config_sha256": "b06081e926d01753cd276d2a3535b2f1e8a5975e7de1db031dc8e786c714e228",
+      "producer": "src/evaluation/predict_model2.py",
+      "producer_sha256": "dc981256842c0e47816cecb77455769de263e2d22ff8d4c7e4cdf21216072b65",
+      "command": "C:\\Users\\junio\\Downloads\\mango-vision\\ALBUS26_major_revision\\.worktrees\\execution\\src\\evaluation\\evaluate.py --model-id model2 --config configs/evaluation_frozen.json --split test --run-dir experiments/model2/EXP-R03"
+    }
+  },
+  "class_names": [
+    "Antracnosis",
+    "Cancro_bacteriano",
+    "Costras",
+    "Podredumbre_Extremo_tallo",
+    "Saludable"
+  ],
+  "principal": "image_weighted",
+  "estimands": {
+    "image_weighted": {
+      "blocked": false,
+      "reason": null,
+      "n_records_used": 219,
+      "weight_total": 219.0,
+      "confusion": [
+        [
+          44.0,
+          1.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          1.0,
+          37.0,
+          6.0,
+          0.0,
+          1.0
+        ],
+        [
+          2.0,
+          6.0,
+          36.0,
+          0.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0,
+          0.0,
+          41.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          41.0
+        ]
+      ],
+      "metrics": {
+        "accuracy": 0.908675799086758,
+        "accuracy_denominator": 219.0,
+        "macro_f1": 0.9094733436675042,
+        "per_class": {
+          "Antracnosis": {
+            "tp": 44.0,
+            "fp": 5.0,
+            "fn": 2.0,
+            "precision_denominator": 49.0,
+            "recall_denominator": 46.0,
+            "f1_denominator": 95.0,
+            "precision": 0.8979591836734694,
+            "recall": 0.9565217391304348,
+            "f1": 0.9263157894736842
+          },
+          "Cancro_bacteriano": {
+            "tp": 37.0,
+            "fp": 7.0,
+            "fn": 8.0,
+            "precision_denominator": 44.0,
+            "recall_denominator": 45.0,
+            "f1_denominator": 89.0,
+            "precision": 0.8409090909090909,
+            "recall": 0.8222222222222222,
+            "f1": 0.8314606741573034
+          },
+          "Costras": {
+            "tp": 36.0,
+            "fp": 6.0,
+            "fn": 8.0,
+            "precision_denominator": 42.0,
+            "recall_denominator": 44.0,
+            "f1_denominator": 86.0,
+            "precision": 0.8571428571428571,
+            "recall": 0.8181818181818182,
+            "f1": 0.8372093023255814
+          },
+          "Podredumbre_Extremo_tallo": {
+            "tp": 41.0,
+            "fp": 1.0,
+            "fn": 1.0,
+            "precision_denominator": 42.0,
+            "recall_denominator": 42.0,
+            "f1_denominator": 84.0,
+            "precision": 0.9761904761904762,
+            "recall": 0.9761904761904762,
+            "f1": 0.9761904761904762
+          },
+          "Saludable": {
+            "tp": 41.0,
+            "fp": 1.0,
+            "fn": 1.0,
+            "precision_denominator": 42.0,
+            "recall_denominator": 42.0,
+            "f1_denominator": 84.0,
+            "precision": 0.9761904761904762,
+            "recall": 0.9761904761904762,
+            "f1": 0.9761904761904762
+          }
+        },
+        "undefined": {}
+      }
+    },
+    "exact_sha_dedup": {
+      "blocked": false,
+      "reason": null,
+      "n_records_used": 208,
+      "weight_total": 208.0,
+      "confusion": [
+        [
+          37.0,
+          1.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          1.0,
+          37.0,
+          6.0,
+          0.0,
+          1.0
+        ],
+        [
+          2.0,
+          6.0,
+          36.0,
+          0.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0,
+          0.0,
+          41.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          37.0
+        ]
+      ],
+      "metrics": {
+        "accuracy": 0.9038461538461539,
+        "accuracy_denominator": 208.0,
+        "macro_f1": 0.9064249820226514,
+        "per_class": {
+          "Antracnosis": {
+            "tp": 37.0,
+            "fp": 5.0,
+            "fn": 2.0,
+            "precision_denominator": 42.0,
+            "recall_denominator": 39.0,
+            "f1_denominator": 81.0,
+            "precision": 0.8809523809523809,
+            "recall": 0.9487179487179487,
+            "f1": 0.9135802469135802
+          },
+          "Cancro_bacteriano": {
+            "tp": 37.0,
+            "fp": 7.0,
+            "fn": 8.0,
+            "precision_denominator": 44.0,
+            "recall_denominator": 45.0,
+            "f1_denominator": 89.0,
+            "precision": 0.8409090909090909,
+            "recall": 0.8222222222222222,
+            "f1": 0.8314606741573034
+          },
+          "Costras": {
+            "tp": 36.0,
+            "fp": 6.0,
+            "fn": 8.0,
+            "precision_denominator": 42.0,
+            "recall_denominator": 44.0,
+            "f1_denominator": 86.0,
+            "precision": 0.8571428571428571,
+            "recall": 0.8181818181818182,
+            "f1": 0.8372093023255814
+          },
+          "Podredumbre_Extremo_tallo": {
+            "tp": 41.0,
+            "fp": 1.0,
+            "fn": 1.0,
+            "precision_denominator": 42.0,
+            "recall_denominator": 42.0,
+            "f1_denominator": 84.0,
+            "precision": 0.9761904761904762,
+            "recall": 0.9761904761904762,
+            "f1": 0.9761904761904762
+          },
+          "Saludable": {
+            "tp": 37.0,
+            "fp": 1.0,
+            "fn": 1.0,
+            "precision_denominator": 38.0,
+            "recall_denominator": 38.0,
+            "f1_denominator": 76.0,
+            "precision": 0.9736842105263158,
+            "recall": 0.9736842105263158,
+            "f1": 0.9736842105263158
+          }
+        },
+        "undefined": {}
+      }
+    },
+    "cluster_weighted": {
+      "blocked": false,
+      "reason": null,
+      "n_records_used": 219,
+      "weight_total": 203.0,
+      "confusion": [
+        [
+          35.0,
+          1.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          1.0,
+          37.0,
+          6.0,
+          0.0,
+          1.0
+        ],
+        [
+          2.0,
+          6.0,
+          35.0,
+          0.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0,
+          0.0,
+          41.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          35.0
+        ]
+      ],
+      "metrics": {
+        "accuracy": 0.9014778325123153,
+        "accuracy_denominator": 203.0,
+        "macro_f1": 0.9044595229988488,
+        "per_class": {
+          "Antracnosis": {
+            "tp": 35.0,
+            "fp": 5.0,
+            "fn": 2.0,
+            "precision_denominator": 40.0,
+            "recall_denominator": 37.0,
+            "f1_denominator": 77.0,
+            "precision": 0.875,
+            "recall": 0.9459459459459459,
+            "f1": 0.9090909090909091
+          },
+          "Cancro_bacteriano": {
+            "tp": 37.0,
+            "fp": 7.0,
+            "fn": 8.0,
+            "precision_denominator": 44.0,
+            "recall_denominator": 45.0,
+            "f1_denominator": 89.0,
+            "precision": 0.8409090909090909,
+            "recall": 0.8222222222222222,
+            "f1": 0.8314606741573034
+          },
+          "Costras": {
+            "tp": 35.0,
+            "fp": 6.0,
+            "fn": 8.0,
+            "precision_denominator": 41.0,
+            "recall_denominator": 43.0,
+            "f1_denominator": 84.0,
+            "precision": 0.8536585365853658,
+            "recall": 0.813953488372093,
+            "f1": 0.8333333333333334
+          },
+          "Podredumbre_Extremo_tallo": {
+            "tp": 41.0,
+            "fp": 1.0,
+            "fn": 1.0,
+            "precision_denominator": 42.0,
+            "recall_denominator": 42.0,
+            "f1_denominator": 84.0,
+            "precision": 0.9761904761904762,
+            "recall": 0.9761904761904762,
+            "f1": 0.9761904761904762
+          },
+          "Saludable": {
+            "tp": 35.0,
+            "fp": 1.0,
+            "fn": 1.0,
+            "precision_denominator": 36.0,
+            "recall_denominator": 36.0,
+            "f1_denominator": 72.0,
+            "precision": 0.9722222222222222,
+            "recall": 0.9722222222222222,
+            "f1": 0.9722222222222222
+          }
+        },
+        "undefined": {}
+      }
+    }
+  },
+  "deltas": {
+    "exact_sha_dedup": {
+      "accuracy": {
+        "units": -0.004829645240604141,
+        "percentage_points": -0.4829645240604141,
+        "reason": null
+      },
+      "macro_f1": {
+        "units": -0.0030483616448527817,
+        "percentage_points": -0.30483616448527817,
+        "reason": null
+      },
+      "precision[Antracnosis]": {
+        "units": -0.017006802721088454,
+        "percentage_points": -1.7006802721088454,
+        "reason": null
+      },
+      "recall[Antracnosis]": {
+        "units": -0.0078037904124861335,
+        "percentage_points": -0.7803790412486133,
+        "reason": null
+      },
+      "f1[Antracnosis]": {
+        "units": -0.012735542560104007,
+        "percentage_points": -1.2735542560104007,
+        "reason": null
+      },
+      "precision[Cancro_bacteriano]": {
+        "units": 0.0,
+        "percentage_points": 0.0,
+        "reason": null
+      },
+      "recall[Cancro_bacteriano]": {
+        "units": 0.0,
+        "percentage_points": 0.0,
+        "reason": null
+      },
+      "f1[Cancro_bacteriano]": {
+        "units": 0.0,
+        "percentage_points": 0.0,
+        "reason": null
+      },
+      "precision[Costras]": {
+        "units": 0.0,
+        "percentage_points": 0.0,
+        "reason": null
+      },
+      "recall[Costras]": {
+        "units": 0.0,
+        "percentage_points": 0.0,
+        "reason": null
+      },
+      "f1[Costras]": {
+        "units": 0.0,
+        "percentage_points": 0.0,
+        "reason": null
+      },
+      "precision[Podredumbre_Extremo_tallo]": {
+        "units": 0.0,
+        "percentage_points": 0.0,
+        "reason": null
+      },
+      "recall[Podredumbre_Extremo_tallo]": {
+        "units": 0.0,
+        "percentage_points": 0.0,
+        "reason": null
+      },
+      "f1[Podredumbre_Extremo_tallo]": {
+        "units": 0.0,
+        "percentage_points": 0.0,
+        "reason": null
+      },
+      "precision[Saludable]": {
+        "units": -0.0025062656641603454,
+        "percentage_points": -0.25062656641603454,
+        "reason": null
+      },
+      "recall[Saludable]": {
+        "units": -0.0025062656641603454,
+        "percentage_points": -0.25062656641603454,
+        "reason": null
+      },
+      "f1[Saludable]": {
+        "units": -0.0025062656641603454,
+        "percentage_points": -0.25062656641603454,
+        "reason": null
+      }
+    },
+    "cluster_weighted": {
+      "accuracy": {
+        "units": -0.007197966574442716,
+        "percentage_points": -0.7197966574442716,
+        "reason": null
+      },
+      "macro_f1": {
+        "units": -0.005013820668655411,
+        "percentage_points": -0.5013820668655411,
+        "reason": null
+      },
+      "precision[Antracnosis]": {
+        "units": -0.022959183673469385,
+        "percentage_points": -2.2959183673469385,
+        "reason": null
+      },
+      "recall[Antracnosis]": {
+        "units": -0.010575793184488869,
+        "percentage_points": -1.0575793184488869,
+        "reason": null
+      },
+      "f1[Antracnosis]": {
+        "units": -0.017224880382775143,
+        "percentage_points": -1.7224880382775143,
+        "reason": null
+      },
+      "precision[Cancro_bacteriano]": {
+        "units": 0.0,
+        "percentage_points": 0.0,
+        "reason": null
+      },
+      "recall[Cancro_bacteriano]": {
+        "units": 0.0,
+        "percentage_points": 0.0,
+        "reason": null
+      },
+      "f1[Cancro_bacteriano]": {
+        "units": 0.0,
+        "percentage_points": 0.0,
+        "reason": null
+      },
+      "precision[Costras]": {
+        "units": -0.0034843205574912606,
+        "percentage_points": -0.34843205574912606,
+        "reason": null
+      },
+      "recall[Costras]": {
+        "units": -0.0042283298097252064,
+        "percentage_points": -0.42283298097252064,
+        "reason": null
+      },
+      "f1[Costras]": {
+        "units": -0.003875968992248069,
+        "percentage_points": -0.3875968992248069,
+        "reason": null
+      },
+      "precision[Podredumbre_Extremo_tallo]": {
+        "units": 0.0,
+        "percentage_points": 0.0,
+        "reason": null
+      },
+      "recall[Podredumbre_Extremo_tallo]": {
+        "units": 0.0,
+        "percentage_points": 0.0,
+        "reason": null
+      },
+      "f1[Podredumbre_Extremo_tallo]": {
+        "units": 0.0,
+        "percentage_points": 0.0,
+        "reason": null
+      },
+      "precision[Saludable]": {
+        "units": -0.003968253968253954,
+        "percentage_points": -0.3968253968253954,
+        "reason": null
+      },
+      "recall[Saludable]": {
+        "units": -0.003968253968253954,
+        "percentage_points": -0.3968253968253954,
+        "reason": null
+      },
+      "f1[Saludable]": {
+        "units": -0.003968253968253954,
+        "percentage_points": -0.3968253968253954,
+        "reason": null
+      }
+    }
+  },
+  "structure": {
+    "n_images": 219,
+    "n_unique_sha": 208,
+    "n_clusters": 203,
+    "n_groups": 203,
+    "cluster_size_distribution": {
+      "1": 189,
+      "2": 12,
+      "3": 2
+    },
+    "min_cluster_size": 1,
+    "median_cluster_size": 1,
+    "max_cluster_size": 3,
+    "discordant_class_sha": [],
+    "interpretation": "These counts describe operational dependence between files. They are not a demonstrated effective sample size, and a cluster count is not an independence count."
+  },
+  "sha_prediction_conflicts": [],
+  "undefined": [],
+  "bootstrap": {
+    "seed": 42,
+    "n_resamples": 2000,
+    "n_groups": 203,
+    "group_ids": [
+      "SRC-003465",
+      "SRC-003466",
+      "SRC-003467",
+      "SRC-003468",
+      "SRC-003469",
+      "SRC-003470",
+      "SRC-003471",
+      "SRC-003472",
+      "SRC-003473",
+      "SRC-003474",
+      "SRC-003475",
+      "SRC-003476",
+      "SRC-003477",
+      "SRC-003478",
+      "SRC-003480",
+      "SRC-003482",
+      "SRC-003483",
+      "SRC-003484",
+      "SRC-003489",
+      "SRC-003490",
+      "SRC-003491",
+      "SRC-003492",
+      "SRC-003494",
+      "SRC-003495",
+      "SRC-003496",
+      "SRC-003498",
+      "SRC-003499",
+      "SRC-003500",
+      "SRC-003501",
+      "SRC-003502",
+      "SRC-003503",
+      "SRC-003505",
+      "SRC-003506",
+      "SRC-003507",
+      "SRC-003508",
+      "SRC-003509",
+      "SRC-003510",
+      "SRC-003511",
+      "SRC-003512",
+      "SRC-003513",
+      "SRC-003514",
+      "SRC-003515",
+      "SRC-003516",
+      "SRC-003517",
+      "SRC-003518",
+      "SRC-003519",
+      "SRC-003520",
+      "SRC-003521",
+      "SRC-003522",
+      "SRC-003523",
+      "SRC-003524",
+      "SRC-003525",
+      "SRC-003526",
+      "SRC-003527",
+      "SRC-003528",
+      "SRC-003529",
+      "SRC-003530",
+      "SRC-003531",
+      "SRC-003532",
+      "SRC-003533",
+      "SRC-003534",
+      "SRC-003535",
+      "SRC-003536",
+      "SRC-003537",
+      "SRC-003538",
+      "SRC-003539",
+      "SRC-003540",
+      "SRC-003541",
+      "SRC-003542",
+      "SRC-003543",
+      "SRC-003544",
+      "SRC-003545",
+      "SRC-003546",
+      "SRC-003547",
+      "SRC-003548",
+      "SRC-003549",
+      "SRC-003550",
+      "SRC-003551",
+      "SRC-003552",
+      "SRC-003553",
+      "SRC-003554",
+      "SRC-003555",
+      "SRC-003556",
+      "SRC-003557",
+      "SRC-003558",
+      "SRC-003559",
+      "SRC-003560",
+      "SRC-003561",
+      "SRC-003562",
+      "SRC-003563",
+      "SRC-003564",
+      "SRC-003565",
+      "SRC-003566",
+      "SRC-003567",
+      "SRC-003568",
+      "SRC-003569",
+      "SRC-003570",
+      "SRC-003571",
+      "SRC-003572",
+      "SRC-003573",
+      "SRC-003574",
+      "SRC-003575",
+      "SRC-003577",
+      "SRC-003578",
+      "SRC-003579",
+      "SRC-003580",
+      "SRC-003581",
+      "SRC-003584",
+      "SRC-003587",
+      "SRC-003588",
+      "SRC-003589",
+      "SRC-003590",
+      "SRC-003591",
+      "SRC-003592",
+      "SRC-003594",
+      "SRC-003595",
+      "SRC-003596",
+      "SRC-003597",
+      "SRC-003598",
+      "SRC-003599",
+      "SRC-003600",
+      "SRC-003601",
+      "SRC-003602",
+      "SRC-003603",
+      "SRC-003604",
+      "SRC-003605",
+      "SRC-003606",
+      "SRC-003607",
+      "SRC-003608",
+      "SRC-003609",
+      "SRC-003610",
+      "SRC-003611",
+      "SRC-003613",
+      "SRC-003614",
+      "SRC-003615",
+      "SRC-003616",
+      "SRC-003617",
+      "SRC-003618",
+      "SRC-003619",
+      "SRC-003620",
+      "SRC-003621",
+      "SRC-003622",
+      "SRC-003623",
+      "SRC-003624",
+      "SRC-003625",
+      "SRC-003626",
+      "SRC-003627",
+      "SRC-003628",
+      "SRC-003629",
+      "SRC-003630",
+      "SRC-003631",
+      "SRC-003632",
+      "SRC-003633",
+      "SRC-003634",
+      "SRC-003635",
+      "SRC-003636",
+      "SRC-003637",
+      "SRC-003638",
+      "SRC-003639",
+      "SRC-003640",
+      "SRC-003641",
+      "SRC-003642",
+      "SRC-003643",
+      "SRC-003644",
+      "SRC-003645",
+      "SRC-003646",
+      "SRC-003647",
+      "SRC-003648",
+      "SRC-003649",
+      "SRC-003650",
+      "SRC-003651",
+      "SRC-003652",
+      "SRC-003653",
+      "SRC-003654",
+      "SRC-003655",
+      "SRC-003656",
+      "SRC-003657",
+      "SRC-003658",
+      "SRC-003659",
+      "SRC-003660",
+      "SRC-003661",
+      "SRC-003662",
+      "SRC-003663",
+      "SRC-003664",
+      "SRC-003665",
+      "SRC-003666",
+      "SRC-003667",
+      "SRC-003668",
+      "SRC-003669",
+      "SRC-003670",
+      "SRC-003671",
+      "SRC-003672",
+      "SRC-003673",
+      "SRC-003674",
+      "SRC-003675",
+      "SRC-003676",
+      "SRC-003677",
+      "SRC-003678",
+      "SRC-003679",
+      "SRC-003680",
+      "SRC-003681",
+      "SRC-003682",
+      "SRC-003683"
+    ],
+    "method": "random.Random(seed).choices(sorted unique group_ids, k=n_groups) per draw; occurrence_id = position of the group in its draw",
+    "class_group_counts": {
+      "Antracnosis": 37,
+      "Cancro_bacteriano": 45,
+      "Costras": 43,
+      "Podredumbre_Extremo_tallo": 42,
+      "Saludable": 36
+    },
+    "draws_sha256": "b525b2bbc4deb77922f040723a765284cb17c5e40f1983522b039060857535d8",
+    "intervals": {
+      "image_weighted": {
+        "accuracy": {
+          "estimate": 0.908675799086758,
+          "ci95": [
+            0.868772438552886,
+            0.946188340807175
+          ],
+          "percentiles": [
+            2.5,
+            97.5
+          ],
+          "n_resamples": 2000,
+          "n_defined": 2000,
+          "undefined_count": 0,
+          "undefined_fraction": 0.0,
+          "n_groups": 203,
+          "blocked": false,
+          "reason": null,
+          "draws_sha256": "b525b2bbc4deb77922f040723a765284cb17c5e40f1983522b039060857535d8"
+        },
+        "macro_f1": {
+          "estimate": 0.9094733436675042,
+          "ci95": [
+            0.869425643763243,
+            0.9446771240112725
+          ],
+          "percentiles": [
+            2.5,
+            97.5
+          ],
+          "n_resamples": 2000,
+          "n_defined": 2000,
+          "undefined_count": 0,
+          "undefined_fraction": 0.0,
+          "n_groups": 203,
+          "blocked": false,
+          "reason": null,
+          "draws_sha256": "b525b2bbc4deb77922f040723a765284cb17c5e40f1983522b039060857535d8"
+        },
+        "precision[Antracnosis]": {
+          "estimate": 0.8979591836734694,
+          "ci95": [
+            0.7999074074074075,
+            0.9767441860465116
+          ],
+          "percentiles": [
+            2.5,
+            97.5
+          ],
+          "n_resamples": 2000,
+          "n_defined": 2000,
+          "undefined_count": 0,
+          "undefined_fraction": 0.0,
+          "n_groups": 203,
+          "blocked": false,
+          "reason": null,
+          "draws_sha256": "b525b2bbc4deb77922f040723a765284cb17c5e40f1983522b039060857535d8"
+        },
+        "recall[Antracnosis]": {
+          "estimate": 0.9565217391304348,
+          "ci95": [
+            0.8857142857142858,
+            1.0
+          ],
+          "percentiles": [
+            2.5,
+            97.5
+          ],
+          "n_resamples": 2000,
+          "n_defined": 2000,
+          "undefined_count": 0,
+          "undefined_fraction": 0.0,
+          "n_groups": 203,
+          "blocked": false,
+          "reason": null,
+          "draws_sha256": "b525b2bbc4deb77922f040723a765284cb17c5e40f1983522b039060857535d8"
+        },
+        "f1[Antracnosis]": {
+          "estimate": 0.9263157894736842,
+          "ci95": [
+            0.857142857142857,
+            0.9747951680672269
+          ],
+          "percentiles": [
+            2.5,
+            97.5
+          ],
+          "n_resamples": 2000,
+          "n_defined": 2000,
+          "undefined_count": 0,
+          "undefined_fraction": 0.0,
+          "n_groups": 203,
+          "blocked": false,
+          "reason": null,
+          "draws_sha256": "b525b2bbc4deb77922f040723a765284cb17c5e40f1983522b039060857535d8"
+        },
+        "precision[Cancro_bacteriano]": {
+          "estimate": 0.8409090909090909,
+          "ci95": [
+            0.725,
+            0.9444444444444444
+          ],
+          "percentiles": [
+            2.5,
+            97.5
+          ],
+          "n_resamples": 2000,
+          "n_defined": 2000,
+          "undefined_count": 0,
+          "undefined_fraction": 0.0,
+          "n_groups": 203,
+          "blocked": false,
+          "reason": null,
+          "draws_sha256": "b525b2bbc4deb77922f040723a765284cb17c5e40f1983522b039060857535d8"
+        },
+        "recall[Cancro_bacteriano]": {
+          "estimate": 0.8222222222222222,
+          "ci95": [
+            0.7044993857493858,
+            0.9285714285714286
+          ],
+          "percentiles": [
+            2.5,
+            97.5
+          ],
+          "n_resamples": 2000,
+          "n_defined": 2000,
+          "undefined_count": 0,
+          "undefined_fraction": 0.0,
+          "n_groups": 203,
+          "blocked": false,
+          "reason": null,
+          "draws_sha256": "b525b2bbc4deb77922f040723a765284cb17c5e40f1983522b039060857535d8"
+        },
+        "f1[Cancro_bacteriano]": {
+          "estimate": 0.8314606741573034,
+          "ci95": [
+            0.7356237322515213,
+            0.9107187057991512
+          ],
+          "percentiles": [
+            2.5,
+            97.5
+          ],
+          "n_resamples": 2000,
+          "n_defined": 2000,
+          "undefined_count": 0,
+          "undefined_fraction": 0.0,
+          "n_groups": 203,
+          "blocked": false,
+          "reason": null,
+          "draws_sha256": "b525b2bbc4deb77922f040723a765284cb17c5e40f1983522b039060857535d8"
+        },
+        "precision[Costras]": {
+          "estimate": 0.8571428571428571,
+          "ci95": [
+            0.7441711389385808,
+            0.9545454545454545
+          ],
+          "percentiles": [
+            2.5,
+            97.5
+          ],
+          "n_resamples": 2000,
+          "n_defined": 2000,
+          "undefined_count": 0,
+          "undefined_fraction": 0.0,
+          "n_groups": 203,
+          "blocked": false,
+          "reason": null,
+          "draws_sha256": "b525b2bbc4deb77922f040723a765284cb17c5e40f1983522b039060857535d8"
+        },
+        "recall[Costras]": {
+          "estimate": 0.8181818181818182,
+          "ci95": [
+            0.6999603174603174,
+            0.925
+          ],
+          "percentiles": [
+            2.5,
+            97.5
+          ],
+          "n_resamples": 2000,
+          "n_defined": 2000,
+          "undefined_count": 0,
+          "undefined_fraction": 0.0,
+          "n_groups": 203,
+          "blocked": false,
+          "reason": null,
+          "draws_sha256": "b525b2bbc4deb77922f040723a765284cb17c5e40f1983522b039060857535d8"
+        },
+        "f1[Costras]": {
+          "estimate": 0.8372093023255814,
+          "ci95": [
+            0.7428341013824885,
+            0.9149128428608048
+          ],
+          "percentiles": [
+            2.5,
+            97.5
+          ],
+          "n_resamples": 2000,
+          "n_defined": 2000,
+          "undefined_count": 0,
+          "undefined_fraction": 0.0,
+          "n_groups": 203,
+          "blocked": false,
+          "reason": null,
+          "draws_sha256": "b525b2bbc4deb77922f040723a765284cb17c5e40f1983522b039060857535d8"
+        },
+        "precision[Podredumbre_Extremo_tallo]": {
+          "estimate": 0.9761904761904762,
+          "ci95": [
+            0.9210526315789472,
+            1.0
+          ],
+          "percentiles": [
+            2.5,
+            97.5
+          ],
+          "n_resamples": 2000,
+          "n_defined": 2000,
+          "undefined_count": 0,
+          "undefined_fraction": 0.0,
+          "n_groups": 203,
+          "blocked": false,
+          "reason": null,
+          "draws_sha256": "b525b2bbc4deb77922f040723a765284cb17c5e40f1983522b039060857535d8"
+        },
+        "recall[Podredumbre_Extremo_tallo]": {
+          "estimate": 0.9761904761904762,
+          "ci95": [
+            0.9183248299319727,
+            1.0
+          ],
+          "percentiles": [
+            2.5,
+            97.5
+          ],
+          "n_resamples": 2000,
+          "n_defined": 2000,
+          "undefined_count": 0,
+          "undefined_fraction": 0.0,
+          "n_groups": 203,
+          "blocked": false,
+          "reason": null,
+          "draws_sha256": "b525b2bbc4deb77922f040723a765284cb17c5e40f1983522b039060857535d8"
+        },
+        "f1[Podredumbre_Extremo_tallo]": {
+          "estimate": 0.9761904761904762,
+          "ci95": [
+            0.935483870967742,
+            1.0
+          ],
+          "percentiles": [
+            2.5,
+            97.5
+          ],
+          "n_resamples": 2000,
+          "n_defined": 2000,
+          "undefined_count": 0,
+          "undefined_fraction": 0.0,
+          "n_groups": 203,
+          "blocked": false,
+          "reason": null,
+          "draws_sha256": "b525b2bbc4deb77922f040723a765284cb17c5e40f1983522b039060857535d8"
+        },
+        "precision[Saludable]": {
+          "estimate": 0.9761904761904762,
+          "ci95": [
+            0.9230263157894736,
+            1.0
+          ],
+          "percentiles": [
+            2.5,
+            97.5
+          ],
+          "n_resamples": 2000,
+          "n_defined": 2000,
+          "undefined_count": 0,
+          "undefined_fraction": 0.0,
+          "n_groups": 203,
+          "blocked": false,
+          "reason": null,
+          "draws_sha256": "b525b2bbc4deb77922f040723a765284cb17c5e40f1983522b039060857535d8"
+        },
+        "recall[Saludable]": {
+          "estimate": 0.9761904761904762,
+          "ci95": [
+            0.918918918918919,
+            1.0
+          ],
+          "percentiles": [
+            2.5,
+            97.5
+          ],
+          "n_resamples": 2000,
+          "n_defined": 2000,
+          "undefined_count": 0,
+          "undefined_fraction": 0.0,
+          "n_groups": 203,
+          "blocked": false,
+          "reason": null,
+          "draws_sha256": "b525b2bbc4deb77922f040723a765284cb17c5e40f1983522b039060857535d8"
+        },
+        "f1[Saludable]": {
+          "estimate": 0.9761904761904762,
+          "ci95": [
+            0.9367088607594937,
+            1.0
+          ],
+          "percentiles": [
+            2.5,
+            97.5
+          ],
+          "n_resamples": 2000,
+          "n_defined": 2000,
+          "undefined_count": 0,
+          "undefined_fraction": 0.0,
+          "n_groups": 203,
+          "blocked": false,
+          "reason": null,
+          "draws_sha256": "b525b2bbc4deb77922f040723a765284cb17c5e40f1983522b039060857535d8"
+        }
+      },
+      "exact_sha_dedup": {
+        "accuracy": {
+          "estimate": 0.9038461538461539,
+          "ci95": [
+            0.8619047619047618,
+            0.9428571428571428
+          ],
+          "percentiles": [
+            2.5,
+            97.5
+          ],
+          "n_resamples": 2000,
+          "n_defined": 2000,
+          "undefined_count": 0,
+          "undefined_fraction": 0.0,
+          "n_groups": 203,
+          "blocked": false,
+          "reason": null,
+          "draws_sha256": "b525b2bbc4deb77922f040723a765284cb17c5e40f1983522b039060857535d8"
+        },
+        "macro_f1": {
+          "estimate": 0.9064249820226514,
+          "ci95": [
+            0.8645934950044534,
+            0.9430322288835287
+          ],
+          "percentiles": [
+            2.5,
+            97.5
+          ],
+          "n_resamples": 2000,
+          "n_defined": 2000,
+          "undefined_count": 0,
+          "undefined_fraction": 0.0,
+          "n_groups": 203,
+          "blocked": false,
+          "reason": null,
+          "draws_sha256": "b525b2bbc4deb77922f040723a765284cb17c5e40f1983522b039060857535d8"
+        },
+        "precision[Antracnosis]": {
+          "estimate": 0.8809523809523809,
+          "ci95": [
+            0.7714285714285715,
+            0.9722222222222221
+          ],
+          "percentiles": [
+            2.5,
+            97.5
+          ],
+          "n_resamples": 2000,
+          "n_defined": 2000,
+          "undefined_count": 0,
+          "undefined_fraction": 0.0,
+          "n_groups": 203,
+          "blocked": false,
+          "reason": null,
+          "draws_sha256": "b525b2bbc4deb77922f040723a765284cb17c5e40f1983522b039060857535d8"
+        },
+        "recall[Antracnosis]": {
+          "estimate": 0.9487179487179487,
+          "ci95": [
+            0.8684210526315791,
+            1.0
+          ],
+          "percentiles": [
+            2.5,
+            97.5
+          ],
+          "n_resamples": 2000,
+          "n_defined": 2000,
+          "undefined_count": 0,
+          "undefined_fraction": 0.0,
+          "n_groups": 203,
+          "blocked": false,
+          "reason": null,
+          "draws_sha256": "b525b2bbc4deb77922f040723a765284cb17c5e40f1983522b039060857535d8"
+        },
+        "f1[Antracnosis]": {
+          "estimate": 0.9135802469135802,
+          "ci95": [
+            0.8378378378378379,
+            0.9697192513368984
+          ],
+          "percentiles": [
+            2.5,
+            97.5
+          ],
+          "n_resamples": 2000,
+          "n_defined": 2000,
+          "undefined_count": 0,
+          "undefined_fraction": 0.0,
+          "n_groups": 203,
+          "blocked": false,
+          "reason": null,
+          "draws_sha256": "b525b2bbc4deb77922f040723a765284cb17c5e40f1983522b039060857535d8"
+        },
+        "precision[Cancro_bacteriano]": {
+          "estimate": 0.8409090909090909,
+          "ci95": [
+            0.725,
+            0.9444444444444444
+          ],
+          "percentiles": [
+            2.5,
+            97.5
+          ],
+          "n_resamples": 2000,
+          "n_defined": 2000,
+          "undefined_count": 0,
+          "undefined_fraction": 0.0,
+          "n_groups": 203,
+          "blocked": false,
+          "reason": null,
+          "draws_sha256": "b525b2bbc4deb77922f040723a765284cb17c5e40f1983522b039060857535d8"
+        },
+        "recall[Cancro_bacteriano]": {
+          "estimate": 0.8222222222222222,
+          "ci95": [
+            0.7044993857493858,
+            0.9285714285714286
+          ],
+          "percentiles": [
+            2.5,
+            97.5
+          ],
+          "n_resamples": 2000,
+          "n_defined": 2000,
+          "undefined_count": 0,
+          "undefined_fraction": 0.0,
+          "n_groups": 203,
+          "blocked": false,
+          "reason": null,
+          "draws_sha256": "b525b2bbc4deb77922f040723a765284cb17c5e40f1983522b039060857535d8"
+        },
+        "f1[Cancro_bacteriano]": {
+          "estimate": 0.8314606741573034,
+          "ci95": [
+            0.7356237322515213,
+            0.9107187057991512
+          ],
+          "percentiles": [
+            2.5,
+            97.5
+          ],
+          "n_resamples": 2000,
+          "n_defined": 2000,
+          "undefined_count": 0,
+          "undefined_fraction": 0.0,
+          "n_groups": 203,
+          "blocked": false,
+          "reason": null,
+          "draws_sha256": "b525b2bbc4deb77922f040723a765284cb17c5e40f1983522b039060857535d8"
+        },
+        "precision[Costras]": {
+          "estimate": 0.8571428571428571,
+          "ci95": [
+            0.7441711389385808,
+            0.9545454545454545
+          ],
+          "percentiles": [
+            2.5,
+            97.5
+          ],
+          "n_resamples": 2000,
+          "n_defined": 2000,
+          "undefined_count": 0,
+          "undefined_fraction": 0.0,
+          "n_groups": 203,
+          "blocked": false,
+          "reason": null,
+          "draws_sha256": "b525b2bbc4deb77922f040723a765284cb17c5e40f1983522b039060857535d8"
+        },
+        "recall[Costras]": {
+          "estimate": 0.8181818181818182,
+          "ci95": [
+            0.6999603174603174,
+            0.925
+          ],
+          "percentiles": [
+            2.5,
+            97.5
+          ],
+          "n_resamples": 2000,
+          "n_defined": 2000,
+          "undefined_count": 0,
+          "undefined_fraction": 0.0,
+          "n_groups": 203,
+          "blocked": false,
+          "reason": null,
+          "draws_sha256": "b525b2bbc4deb77922f040723a765284cb17c5e40f1983522b039060857535d8"
+        },
+        "f1[Costras]": {
+          "estimate": 0.8372093023255814,
+          "ci95": [
+            0.7428341013824885,
+            0.9149128428608048
+          ],
+          "percentiles": [
+            2.5,
+            97.5
+          ],
+          "n_resamples": 2000,
+          "n_defined": 2000,
+          "undefined_count": 0,
+          "undefined_fraction": 0.0,
+          "n_groups": 203,
+          "blocked": false,
+          "reason": null,
+          "draws_sha256": "b525b2bbc4deb77922f040723a765284cb17c5e40f1983522b039060857535d8"
+        },
+        "precision[Podredumbre_Extremo_tallo]": {
+          "estimate": 0.9761904761904762,
+          "ci95": [
+            0.9210526315789472,
+            1.0
+          ],
+          "percentiles": [
+            2.5,
+            97.5
+          ],
+          "n_resamples": 2000,
+          "n_defined": 2000,
+          "undefined_count": 0,
+          "undefined_fraction": 0.0,
+          "n_groups": 203,
+          "blocked": false,
+          "reason": null,
+          "draws_sha256": "b525b2bbc4deb77922f040723a765284cb17c5e40f1983522b039060857535d8"
+        },
+        "recall[Podredumbre_Extremo_tallo]": {
+          "estimate": 0.9761904761904762,
+          "ci95": [
+            0.9183248299319727,
+            1.0
+          ],
+          "percentiles": [
+            2.5,
+            97.5
+          ],
+          "n_resamples": 2000,
+          "n_defined": 2000,
+          "undefined_count": 0,
+          "undefined_fraction": 0.0,
+          "n_groups": 203,
+          "blocked": false,
+          "reason": null,
+          "draws_sha256": "b525b2bbc4deb77922f040723a765284cb17c5e40f1983522b039060857535d8"
+        },
+        "f1[Podredumbre_Extremo_tallo]": {
+          "estimate": 0.9761904761904762,
+          "ci95": [
+            0.935483870967742,
+            1.0
+          ],
+          "percentiles": [
+            2.5,
+            97.5
+          ],
+          "n_resamples": 2000,
+          "n_defined": 2000,
+          "undefined_count": 0,
+          "undefined_fraction": 0.0,
+          "n_groups": 203,
+          "blocked": false,
+          "reason": null,
+          "draws_sha256": "b525b2bbc4deb77922f040723a765284cb17c5e40f1983522b039060857535d8"
+        },
+        "precision[Saludable]": {
+          "estimate": 0.9736842105263158,
+          "ci95": [
+            0.9142857142857143,
+            1.0
+          ],
+          "percentiles": [
+            2.5,
+            97.5
+          ],
+          "n_resamples": 2000,
+          "n_defined": 2000,
+          "undefined_count": 0,
+          "undefined_fraction": 0.0,
+          "n_groups": 203,
+          "blocked": false,
+          "reason": null,
+          "draws_sha256": "b525b2bbc4deb77922f040723a765284cb17c5e40f1983522b039060857535d8"
+        },
+        "recall[Saludable]": {
+          "estimate": 0.9736842105263158,
+          "ci95": [
+            0.9130434782608695,
+            1.0
+          ],
+          "percentiles": [
+            2.5,
+            97.5
+          ],
+          "n_resamples": 2000,
+          "n_defined": 2000,
+          "undefined_count": 0,
+          "undefined_fraction": 0.0,
+          "n_groups": 203,
+          "blocked": false,
+          "reason": null,
+          "draws_sha256": "b525b2bbc4deb77922f040723a765284cb17c5e40f1983522b039060857535d8"
+        },
+        "f1[Saludable]": {
+          "estimate": 0.9736842105263158,
+          "ci95": [
+            0.930232558139535,
+            1.0
+          ],
+          "percentiles": [
+            2.5,
+            97.5
+          ],
+          "n_resamples": 2000,
+          "n_defined": 2000,
+          "undefined_count": 0,
+          "undefined_fraction": 0.0,
+          "n_groups": 203,
+          "blocked": false,
+          "reason": null,
+          "draws_sha256": "b525b2bbc4deb77922f040723a765284cb17c5e40f1983522b039060857535d8"
+        }
+      },
+      "cluster_weighted": {
+        "accuracy": {
+          "estimate": 0.9014778325123153,
+          "ci95": [
+            0.857142857142857,
+            0.9408866995073891
+          ],
+          "percentiles": [
+            2.5,
+            97.5
+          ],
+          "n_resamples": 2000,
+          "n_defined": 2000,
+          "undefined_count": 0,
+          "undefined_fraction": 0.0,
+          "n_groups": 203,
+          "blocked": false,
+          "reason": null,
+          "draws_sha256": "b525b2bbc4deb77922f040723a765284cb17c5e40f1983522b039060857535d8"
+        },
+        "macro_f1": {
+          "estimate": 0.9044595229988488,
+          "ci95": [
+            0.861582456411026,
+            0.9423108246589276
+          ],
+          "percentiles": [
+            2.5,
+            97.5
+          ],
+          "n_resamples": 2000,
+          "n_defined": 2000,
+          "undefined_count": 0,
+          "undefined_fraction": 0.0,
+          "n_groups": 203,
+          "blocked": false,
+          "reason": null,
+          "draws_sha256": "b525b2bbc4deb77922f040723a765284cb17c5e40f1983522b039060857535d8"
+        },
+        "precision[Antracnosis]": {
+          "estimate": 0.875,
+          "ci95": [
+            0.7619047619047619,
+            0.9705882352941175
+          ],
+          "percentiles": [
+            2.5,
+            97.5
+          ],
+          "n_resamples": 2000,
+          "n_defined": 2000,
+          "undefined_count": 0,
+          "undefined_fraction": 0.0,
+          "n_groups": 203,
+          "blocked": false,
+          "reason": null,
+          "draws_sha256": "b525b2bbc4deb77922f040723a765284cb17c5e40f1983522b039060857535d8"
+        },
+        "recall[Antracnosis]": {
+          "estimate": 0.9459459459459459,
+          "ci95": [
+            0.8611111111111113,
+            1.0
+          ],
+          "percentiles": [
+            2.5,
+            97.5
+          ],
+          "n_resamples": 2000,
+          "n_defined": 2000,
+          "undefined_count": 0,
+          "undefined_fraction": 0.0,
+          "n_groups": 203,
+          "blocked": false,
+          "reason": null,
+          "draws_sha256": "b525b2bbc4deb77922f040723a765284cb17c5e40f1983522b039060857535d8"
+        },
+        "f1[Antracnosis]": {
+          "estimate": 0.9090909090909091,
+          "ci95": [
+            0.8301886792452831,
+            0.96875
+          ],
+          "percentiles": [
+            2.5,
+            97.5
+          ],
+          "n_resamples": 2000,
+          "n_defined": 2000,
+          "undefined_count": 0,
+          "undefined_fraction": 0.0,
+          "n_groups": 203,
+          "blocked": false,
+          "reason": null,
+          "draws_sha256": "b525b2bbc4deb77922f040723a765284cb17c5e40f1983522b039060857535d8"
+        },
+        "precision[Cancro_bacteriano]": {
+          "estimate": 0.8409090909090909,
+          "ci95": [
+            0.725,
+            0.9444444444444444
+          ],
+          "percentiles": [
+            2.5,
+            97.5
+          ],
+          "n_resamples": 2000,
+          "n_defined": 2000,
+          "undefined_count": 0,
+          "undefined_fraction": 0.0,
+          "n_groups": 203,
+          "blocked": false,
+          "reason": null,
+          "draws_sha256": "b525b2bbc4deb77922f040723a765284cb17c5e40f1983522b039060857535d8"
+        },
+        "recall[Cancro_bacteriano]": {
+          "estimate": 0.8222222222222222,
+          "ci95": [
+            0.7044993857493858,
+            0.9285714285714286
+          ],
+          "percentiles": [
+            2.5,
+            97.5
+          ],
+          "n_resamples": 2000,
+          "n_defined": 2000,
+          "undefined_count": 0,
+          "undefined_fraction": 0.0,
+          "n_groups": 203,
+          "blocked": false,
+          "reason": null,
+          "draws_sha256": "b525b2bbc4deb77922f040723a765284cb17c5e40f1983522b039060857535d8"
+        },
+        "f1[Cancro_bacteriano]": {
+          "estimate": 0.8314606741573034,
+          "ci95": [
+            0.7356237322515213,
+            0.9107187057991512
+          ],
+          "percentiles": [
+            2.5,
+            97.5
+          ],
+          "n_resamples": 2000,
+          "n_defined": 2000,
+          "undefined_count": 0,
+          "undefined_fraction": 0.0,
+          "n_groups": 203,
+          "blocked": false,
+          "reason": null,
+          "draws_sha256": "b525b2bbc4deb77922f040723a765284cb17c5e40f1983522b039060857535d8"
+        },
+        "precision[Costras]": {
+          "estimate": 0.8536585365853658,
+          "ci95": [
+            0.7399782608695652,
+            0.9534883720930234
+          ],
+          "percentiles": [
+            2.5,
+            97.5
+          ],
+          "n_resamples": 2000,
+          "n_defined": 2000,
+          "undefined_count": 0,
+          "undefined_fraction": 0.0,
+          "n_groups": 203,
+          "blocked": false,
+          "reason": null,
+          "draws_sha256": "b525b2bbc4deb77922f040723a765284cb17c5e40f1983522b039060857535d8"
+        },
+        "recall[Costras]": {
+          "estimate": 0.813953488372093,
+          "ci95": [
+            0.6938383045525903,
+            0.923076923076923
+          ],
+          "percentiles": [
+            2.5,
+            97.5
+          ],
+          "n_resamples": 2000,
+          "n_defined": 2000,
+          "undefined_count": 0,
+          "undefined_fraction": 0.0,
+          "n_groups": 203,
+          "blocked": false,
+          "reason": null,
+          "draws_sha256": "b525b2bbc4deb77922f040723a765284cb17c5e40f1983522b039060857535d8"
+        },
+        "f1[Costras]": {
+          "estimate": 0.8333333333333334,
+          "ci95": [
+            0.7396944151738671,
+            0.9111181434599155
+          ],
+          "percentiles": [
+            2.5,
+            97.5
+          ],
+          "n_resamples": 2000,
+          "n_defined": 2000,
+          "undefined_count": 0,
+          "undefined_fraction": 0.0,
+          "n_groups": 203,
+          "blocked": false,
+          "reason": null,
+          "draws_sha256": "b525b2bbc4deb77922f040723a765284cb17c5e40f1983522b039060857535d8"
+        },
+        "precision[Podredumbre_Extremo_tallo]": {
+          "estimate": 0.9761904761904762,
+          "ci95": [
+            0.9210526315789472,
+            1.0
+          ],
+          "percentiles": [
+            2.5,
+            97.5
+          ],
+          "n_resamples": 2000,
+          "n_defined": 2000,
+          "undefined_count": 0,
+          "undefined_fraction": 0.0,
+          "n_groups": 203,
+          "blocked": false,
+          "reason": null,
+          "draws_sha256": "b525b2bbc4deb77922f040723a765284cb17c5e40f1983522b039060857535d8"
+        },
+        "recall[Podredumbre_Extremo_tallo]": {
+          "estimate": 0.9761904761904762,
+          "ci95": [
+            0.9183248299319727,
+            1.0
+          ],
+          "percentiles": [
+            2.5,
+            97.5
+          ],
+          "n_resamples": 2000,
+          "n_defined": 2000,
+          "undefined_count": 0,
+          "undefined_fraction": 0.0,
+          "n_groups": 203,
+          "blocked": false,
+          "reason": null,
+          "draws_sha256": "b525b2bbc4deb77922f040723a765284cb17c5e40f1983522b039060857535d8"
+        },
+        "f1[Podredumbre_Extremo_tallo]": {
+          "estimate": 0.9761904761904762,
+          "ci95": [
+            0.935483870967742,
+            1.0
+          ],
+          "percentiles": [
+            2.5,
+            97.5
+          ],
+          "n_resamples": 2000,
+          "n_defined": 2000,
+          "undefined_count": 0,
+          "undefined_fraction": 0.0,
+          "n_groups": 203,
+          "blocked": false,
+          "reason": null,
+          "draws_sha256": "b525b2bbc4deb77922f040723a765284cb17c5e40f1983522b039060857535d8"
+        },
+        "precision[Saludable]": {
+          "estimate": 0.9722222222222222,
+          "ci95": [
+            0.9111111111111111,
+            1.0
+          ],
+          "percentiles": [
+            2.5,
+            97.5
+          ],
+          "n_resamples": 2000,
+          "n_defined": 2000,
+          "undefined_count": 0,
+          "undefined_fraction": 0.0,
+          "n_groups": 203,
+          "blocked": false,
+          "reason": null,
+          "draws_sha256": "b525b2bbc4deb77922f040723a765284cb17c5e40f1983522b039060857535d8"
+        },
+        "recall[Saludable]": {
+          "estimate": 0.9722222222222222,
+          "ci95": [
+            0.9069767441860466,
+            1.0
+          ],
+          "percentiles": [
+            2.5,
+            97.5
+          ],
+          "n_resamples": 2000,
+          "n_defined": 2000,
+          "undefined_count": 0,
+          "undefined_fraction": 0.0,
+          "n_groups": 203,
+          "blocked": false,
+          "reason": null,
+          "draws_sha256": "b525b2bbc4deb77922f040723a765284cb17c5e40f1983522b039060857535d8"
+        },
+        "f1[Saludable]": {
+          "estimate": 0.9722222222222222,
+          "ci95": [
+            0.9259259259259259,
+            1.0
+          ],
+          "percentiles": [
+            2.5,
+            97.5
+          ],
+          "n_resamples": 2000,
+          "n_defined": 2000,
+          "undefined_count": 0,
+          "undefined_fraction": 0.0,
+          "n_groups": 203,
+          "blocked": false,
+          "reason": null,
+          "draws_sha256": "b525b2bbc4deb77922f040723a765284cb17c5e40f1983522b039060857535d8"
+        }
+      }
+    },
+    "delta_intervals": {
+      "exact_sha_dedup": {
+        "accuracy": {
+          "estimate": -0.004829645240604141,
+          "ci95": [
+            -0.008284479745044532,
+            -0.002164494198456954
+          ],
+          "percentiles": [
+            2.5,
+            97.5
+          ],
+          "n_resamples": 2000,
+          "n_defined": 2000,
+          "undefined_count": 0,
+          "undefined_fraction": 0.0,
+          "n_groups": 203,
+          "blocked": false,
+          "reason": null,
+          "draws_sha256": "b525b2bbc4deb77922f040723a765284cb17c5e40f1983522b039060857535d8"
+        },
+        "macro_f1": {
+          "estimate": -0.0030483616448527817,
+          "ci95": [
+            -0.00601999142583681,
+            -0.0009050374618200186
+          ],
+          "percentiles": [
+            2.5,
+            97.5
+          ],
+          "n_resamples": 2000,
+          "n_defined": 2000,
+          "undefined_count": 0,
+          "undefined_fraction": 0.0,
+          "n_groups": 203,
+          "blocked": false,
+          "reason": null,
+          "draws_sha256": "b525b2bbc4deb77922f040723a765284cb17c5e40f1983522b039060857535d8"
+        },
+        "precision[Antracnosis]": {
+          "estimate": -0.017006802721088454,
+          "ci95": [
+            -0.036225564543309725,
+            -0.003418415579504619
+          ],
+          "percentiles": [
+            2.5,
+            97.5
+          ],
+          "n_resamples": 2000,
+          "n_defined": 2000,
+          "undefined_count": 0,
+          "undefined_fraction": 0.0,
+          "n_groups": 203,
+          "blocked": false,
+          "reason": null,
+          "draws_sha256": "b525b2bbc4deb77922f040723a765284cb17c5e40f1983522b039060857535d8"
+        },
+        "recall[Antracnosis]": {
+          "estimate": -0.0078037904124861335,
+          "ci95": [
+            -0.020931449502878063,
+            0.0
+          ],
+          "percentiles": [
+            2.5,
+            97.5
+          ],
+          "n_resamples": 2000,
+          "n_defined": 2000,
+          "undefined_count": 0,
+          "undefined_fraction": 0.0,
+          "n_groups": 203,
+          "blocked": false,
+          "reason": null,
+          "draws_sha256": "b525b2bbc4deb77922f040723a765284cb17c5e40f1983522b039060857535d8"
+        },
+        "f1[Antracnosis]": {
+          "estimate": -0.012735542560104007,
+          "ci95": [
+            -0.026515092569619925,
+            -0.00337499668285432
+          ],
+          "percentiles": [
+            2.5,
+            97.5
+          ],
+          "n_resamples": 2000,
+          "n_defined": 2000,
+          "undefined_count": 0,
+          "undefined_fraction": 0.0,
+          "n_groups": 203,
+          "blocked": false,
+          "reason": null,
+          "draws_sha256": "b525b2bbc4deb77922f040723a765284cb17c5e40f1983522b039060857535d8"
+        },
+        "precision[Cancro_bacteriano]": {
+          "estimate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "percentiles": [
+            2.5,
+            97.5
+          ],
+          "n_resamples": 2000,
+          "n_defined": 2000,
+          "undefined_count": 0,
+          "undefined_fraction": 0.0,
+          "n_groups": 203,
+          "blocked": false,
+          "reason": null,
+          "draws_sha256": "b525b2bbc4deb77922f040723a765284cb17c5e40f1983522b039060857535d8"
+        },
+        "recall[Cancro_bacteriano]": {
+          "estimate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "percentiles": [
+            2.5,
+            97.5
+          ],
+          "n_resamples": 2000,
+          "n_defined": 2000,
+          "undefined_count": 0,
+          "undefined_fraction": 0.0,
+          "n_groups": 203,
+          "blocked": false,
+          "reason": null,
+          "draws_sha256": "b525b2bbc4deb77922f040723a765284cb17c5e40f1983522b039060857535d8"
+        },
+        "f1[Cancro_bacteriano]": {
+          "estimate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "percentiles": [
+            2.5,
+            97.5
+          ],
+          "n_resamples": 2000,
+          "n_defined": 2000,
+          "undefined_count": 0,
+          "undefined_fraction": 0.0,
+          "n_groups": 203,
+          "blocked": false,
+          "reason": null,
+          "draws_sha256": "b525b2bbc4deb77922f040723a765284cb17c5e40f1983522b039060857535d8"
+        },
+        "precision[Costras]": {
+          "estimate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "percentiles": [
+            2.5,
+            97.5
+          ],
+          "n_resamples": 2000,
+          "n_defined": 2000,
+          "undefined_count": 0,
+          "undefined_fraction": 0.0,
+          "n_groups": 203,
+          "blocked": false,
+          "reason": null,
+          "draws_sha256": "b525b2bbc4deb77922f040723a765284cb17c5e40f1983522b039060857535d8"
+        },
+        "recall[Costras]": {
+          "estimate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "percentiles": [
+            2.5,
+            97.5
+          ],
+          "n_resamples": 2000,
+          "n_defined": 2000,
+          "undefined_count": 0,
+          "undefined_fraction": 0.0,
+          "n_groups": 203,
+          "blocked": false,
+          "reason": null,
+          "draws_sha256": "b525b2bbc4deb77922f040723a765284cb17c5e40f1983522b039060857535d8"
+        },
+        "f1[Costras]": {
+          "estimate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "percentiles": [
+            2.5,
+            97.5
+          ],
+          "n_resamples": 2000,
+          "n_defined": 2000,
+          "undefined_count": 0,
+          "undefined_fraction": 0.0,
+          "n_groups": 203,
+          "blocked": false,
+          "reason": null,
+          "draws_sha256": "b525b2bbc4deb77922f040723a765284cb17c5e40f1983522b039060857535d8"
+        },
+        "precision[Podredumbre_Extremo_tallo]": {
+          "estimate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "percentiles": [
+            2.5,
+            97.5
+          ],
+          "n_resamples": 2000,
+          "n_defined": 2000,
+          "undefined_count": 0,
+          "undefined_fraction": 0.0,
+          "n_groups": 203,
+          "blocked": false,
+          "reason": null,
+          "draws_sha256": "b525b2bbc4deb77922f040723a765284cb17c5e40f1983522b039060857535d8"
+        },
+        "recall[Podredumbre_Extremo_tallo]": {
+          "estimate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "percentiles": [
+            2.5,
+            97.5
+          ],
+          "n_resamples": 2000,
+          "n_defined": 2000,
+          "undefined_count": 0,
+          "undefined_fraction": 0.0,
+          "n_groups": 203,
+          "blocked": false,
+          "reason": null,
+          "draws_sha256": "b525b2bbc4deb77922f040723a765284cb17c5e40f1983522b039060857535d8"
+        },
+        "f1[Podredumbre_Extremo_tallo]": {
+          "estimate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "percentiles": [
+            2.5,
+            97.5
+          ],
+          "n_resamples": 2000,
+          "n_defined": 2000,
+          "undefined_count": 0,
+          "undefined_fraction": 0.0,
+          "n_groups": 203,
+          "blocked": false,
+          "reason": null,
+          "draws_sha256": "b525b2bbc4deb77922f040723a765284cb17c5e40f1983522b039060857535d8"
+        },
+        "precision[Saludable]": {
+          "estimate": -0.0025062656641603454,
+          "ci95": [
+            -0.00932400932400923,
+            0.0
+          ],
+          "percentiles": [
+            2.5,
+            97.5
+          ],
+          "n_resamples": 2000,
+          "n_defined": 2000,
+          "undefined_count": 0,
+          "undefined_fraction": 0.0,
+          "n_groups": 203,
+          "blocked": false,
+          "reason": null,
+          "draws_sha256": "b525b2bbc4deb77922f040723a765284cb17c5e40f1983522b039060857535d8"
+        },
+        "recall[Saludable]": {
+          "estimate": -0.0025062656641603454,
+          "ci95": [
+            -0.009158069592586193,
+            0.0
+          ],
+          "percentiles": [
+            2.5,
+            97.5
+          ],
+          "n_resamples": 2000,
+          "n_defined": 2000,
+          "undefined_count": 0,
+          "undefined_fraction": 0.0,
+          "n_groups": 203,
+          "blocked": false,
+          "reason": null,
+          "draws_sha256": "b525b2bbc4deb77922f040723a765284cb17c5e40f1983522b039060857535d8"
+        },
+        "f1[Saludable]": {
+          "estimate": -0.0025062656641603454,
+          "ci95": [
+            -0.007621125985695964,
+            0.0
+          ],
+          "percentiles": [
+            2.5,
+            97.5
+          ],
+          "n_resamples": 2000,
+          "n_defined": 2000,
+          "undefined_count": 0,
+          "undefined_fraction": 0.0,
+          "n_groups": 203,
+          "blocked": false,
+          "reason": null,
+          "draws_sha256": "b525b2bbc4deb77922f040723a765284cb17c5e40f1983522b039060857535d8"
+        }
+      },
+      "cluster_weighted": {
+        "accuracy": {
+          "estimate": -0.007197966574442716,
+          "ci95": [
+            -0.01242329962838129,
+            -0.0032917453155932863
+          ],
+          "percentiles": [
+            2.5,
+            97.5
+          ],
+          "n_resamples": 2000,
+          "n_defined": 2000,
+          "undefined_count": 0,
+          "undefined_fraction": 0.0,
+          "n_groups": 203,
+          "blocked": false,
+          "reason": null,
+          "draws_sha256": "b525b2bbc4deb77922f040723a765284cb17c5e40f1983522b039060857535d8"
+        },
+        "macro_f1": {
+          "estimate": -0.005013820668655411,
+          "ci95": [
+            -0.009515869501262098,
+            -0.0017227133933469612
+          ],
+          "percentiles": [
+            2.5,
+            97.5
+          ],
+          "n_resamples": 2000,
+          "n_defined": 2000,
+          "undefined_count": 0,
+          "undefined_fraction": 0.0,
+          "n_groups": 203,
+          "blocked": false,
+          "reason": null,
+          "draws_sha256": "b525b2bbc4deb77922f040723a765284cb17c5e40f1983522b039060857535d8"
+        },
+        "precision[Antracnosis]": {
+          "estimate": -0.022959183673469385,
+          "ci95": [
+            -0.048485866503783615,
+            -0.004899604072398281
+          ],
+          "percentiles": [
+            2.5,
+            97.5
+          ],
+          "n_resamples": 2000,
+          "n_defined": 2000,
+          "undefined_count": 0,
+          "undefined_fraction": 0.0,
+          "n_groups": 203,
+          "blocked": false,
+          "reason": null,
+          "draws_sha256": "b525b2bbc4deb77922f040723a765284cb17c5e40f1983522b039060857535d8"
+        },
+        "recall[Antracnosis]": {
+          "estimate": -0.010575793184488869,
+          "ci95": [
+            -0.027331938342675333,
+            0.0
+          ],
+          "percentiles": [
+            2.5,
+            97.5
+          ],
+          "n_resamples": 2000,
+          "n_defined": 2000,
+          "undefined_count": 0,
+          "undefined_fraction": 0.0,
+          "n_groups": 203,
+          "blocked": false,
+          "reason": null,
+          "draws_sha256": "b525b2bbc4deb77922f040723a765284cb17c5e40f1983522b039060857535d8"
+        },
+        "f1[Antracnosis]": {
+          "estimate": -0.017224880382775143,
+          "ci95": [
+            -0.03619909502262442,
+            -0.004661284661284617
+          ],
+          "percentiles": [
+            2.5,
+            97.5
+          ],
+          "n_resamples": 2000,
+          "n_defined": 2000,
+          "undefined_count": 0,
+          "undefined_fraction": 0.0,
+          "n_groups": 203,
+          "blocked": false,
+          "reason": null,
+          "draws_sha256": "b525b2bbc4deb77922f040723a765284cb17c5e40f1983522b039060857535d8"
+        },
+        "precision[Cancro_bacteriano]": {
+          "estimate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "percentiles": [
+            2.5,
+            97.5
+          ],
+          "n_resamples": 2000,
+          "n_defined": 2000,
+          "undefined_count": 0,
+          "undefined_fraction": 0.0,
+          "n_groups": 203,
+          "blocked": false,
+          "reason": null,
+          "draws_sha256": "b525b2bbc4deb77922f040723a765284cb17c5e40f1983522b039060857535d8"
+        },
+        "recall[Cancro_bacteriano]": {
+          "estimate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "percentiles": [
+            2.5,
+            97.5
+          ],
+          "n_resamples": 2000,
+          "n_defined": 2000,
+          "undefined_count": 0,
+          "undefined_fraction": 0.0,
+          "n_groups": 203,
+          "blocked": false,
+          "reason": null,
+          "draws_sha256": "b525b2bbc4deb77922f040723a765284cb17c5e40f1983522b039060857535d8"
+        },
+        "f1[Cancro_bacteriano]": {
+          "estimate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "percentiles": [
+            2.5,
+            97.5
+          ],
+          "n_resamples": 2000,
+          "n_defined": 2000,
+          "undefined_count": 0,
+          "undefined_fraction": 0.0,
+          "n_groups": 203,
+          "blocked": false,
+          "reason": null,
+          "draws_sha256": "b525b2bbc4deb77922f040723a765284cb17c5e40f1983522b039060857535d8"
+        },
+        "precision[Costras]": {
+          "estimate": -0.0034843205574912606,
+          "ci95": [
+            -0.012788543511049901,
+            0.0
+          ],
+          "percentiles": [
+            2.5,
+            97.5
+          ],
+          "n_resamples": 2000,
+          "n_defined": 2000,
+          "undefined_count": 0,
+          "undefined_fraction": 0.0,
+          "n_groups": 203,
+          "blocked": false,
+          "reason": null,
+          "draws_sha256": "b525b2bbc4deb77922f040723a765284cb17c5e40f1983522b039060857535d8"
+        },
+        "recall[Costras]": {
+          "estimate": -0.0042283298097252064,
+          "ci95": [
+            -0.01449310402825662,
+            0.0
+          ],
+          "percentiles": [
+            2.5,
+            97.5
+          ],
+          "n_resamples": 2000,
+          "n_defined": 2000,
+          "undefined_count": 0,
+          "undefined_fraction": 0.0,
+          "n_groups": 203,
+          "blocked": false,
+          "reason": null,
+          "draws_sha256": "b525b2bbc4deb77922f040723a765284cb17c5e40f1983522b039060857535d8"
+        },
+        "f1[Costras]": {
+          "estimate": -0.003875968992248069,
+          "ci95": [
+            -0.013520838447143354,
+            0.0
+          ],
+          "percentiles": [
+            2.5,
+            97.5
+          ],
+          "n_resamples": 2000,
+          "n_defined": 2000,
+          "undefined_count": 0,
+          "undefined_fraction": 0.0,
+          "n_groups": 203,
+          "blocked": false,
+          "reason": null,
+          "draws_sha256": "b525b2bbc4deb77922f040723a765284cb17c5e40f1983522b039060857535d8"
+        },
+        "precision[Podredumbre_Extremo_tallo]": {
+          "estimate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "percentiles": [
+            2.5,
+            97.5
+          ],
+          "n_resamples": 2000,
+          "n_defined": 2000,
+          "undefined_count": 0,
+          "undefined_fraction": 0.0,
+          "n_groups": 203,
+          "blocked": false,
+          "reason": null,
+          "draws_sha256": "b525b2bbc4deb77922f040723a765284cb17c5e40f1983522b039060857535d8"
+        },
+        "recall[Podredumbre_Extremo_tallo]": {
+          "estimate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "percentiles": [
+            2.5,
+            97.5
+          ],
+          "n_resamples": 2000,
+          "n_defined": 2000,
+          "undefined_count": 0,
+          "undefined_fraction": 0.0,
+          "n_groups": 203,
+          "blocked": false,
+          "reason": null,
+          "draws_sha256": "b525b2bbc4deb77922f040723a765284cb17c5e40f1983522b039060857535d8"
+        },
+        "f1[Podredumbre_Extremo_tallo]": {
+          "estimate": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "percentiles": [
+            2.5,
+            97.5
+          ],
+          "n_resamples": 2000,
+          "n_defined": 2000,
+          "undefined_count": 0,
+          "undefined_fraction": 0.0,
+          "n_groups": 203,
+          "blocked": false,
+          "reason": null,
+          "draws_sha256": "b525b2bbc4deb77922f040723a765284cb17c5e40f1983522b039060857535d8"
+        },
+        "precision[Saludable]": {
+          "estimate": -0.003968253968253954,
+          "ci95": [
+            -0.01480458959899747,
+            0.0
+          ],
+          "percentiles": [
+            2.5,
+            97.5
+          ],
+          "n_resamples": 2000,
+          "n_defined": 2000,
+          "undefined_count": 0,
+          "undefined_fraction": 0.0,
+          "n_groups": 203,
+          "blocked": false,
+          "reason": null,
+          "draws_sha256": "b525b2bbc4deb77922f040723a765284cb17c5e40f1983522b039060857535d8"
+        },
+        "recall[Saludable]": {
+          "estimate": -0.003968253968253954,
+          "ci95": [
+            -0.014035087719298178,
+            0.0
+          ],
+          "percentiles": [
+            2.5,
+            97.5
+          ],
+          "n_resamples": 2000,
+          "n_defined": 2000,
+          "undefined_count": 0,
+          "undefined_fraction": 0.0,
+          "n_groups": 203,
+          "blocked": false,
+          "reason": null,
+          "draws_sha256": "b525b2bbc4deb77922f040723a765284cb17c5e40f1983522b039060857535d8"
+        },
+        "f1[Saludable]": {
+          "estimate": -0.003968253968253954,
+          "ci95": [
+            -0.012121764088977171,
+            0.0
+          ],
+          "percentiles": [
+            2.5,
+            97.5
+          ],
+          "n_resamples": 2000,
+          "n_defined": 2000,
+          "undefined_count": 0,
+          "undefined_fraction": 0.0,
+          "n_groups": 203,
+          "blocked": false,
+          "reason": null,
+          "draws_sha256": "b525b2bbc4deb77922f040723a765284cb17c5e40f1983522b039060857535d8"
+        }
+      }
+    }
+  },
+  "draws_file": "model2_bootstrap_draws.json",
+  "notes": [
+    "n clusters and n groups describe operational dependence; they are not demonstrated biological independence nor an effective sample size."
+  ]
+}

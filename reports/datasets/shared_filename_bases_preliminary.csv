@@ -1,0 +1,15 @@
+dataset_id,base,split,source_id,path
+DATA-001,freshMango-29-,test,SRC-009695,SemilleroTI-Mangos/docs/MangosDataset/test/images/freshMango-29-_jpg.rf.c9bea62726b55d07019589d026043e49.jpg
+DATA-001,freshMango-29-,valid,SRC-010791,SemilleroTI-Mangos/docs/MangosDataset/valid/images/freshMango-29-_png.rf.dd210253333e80715224151d87adc473.jpg
+DATA-001,freshMango-182-,train,SRC-009773,SemilleroTI-Mangos/docs/MangosDataset/train/images/freshMango-182-_png.rf.eab4c89ba0dfa0487b5c96fb1400a7bd.jpg
+DATA-001,freshMango-182-,valid,SRC-010763,SemilleroTI-Mangos/docs/MangosDataset/valid/images/freshMango-182-_jpg.rf.471c3b8f13ad3089b60cd5df828f6e60.jpg
+DATA-001,freshMango-211-,train,SRC-009804,SemilleroTI-Mangos/docs/MangosDataset/train/images/freshMango-211-_png.rf.915fb468f6d563048796337f613616e0.jpg
+DATA-001,freshMango-211-,valid,SRC-010768,SemilleroTI-Mangos/docs/MangosDataset/valid/images/freshMango-211-_jpg.rf.d5b7a817d9ebec1077212ab3facc7198.jpg
+DATA-001,freshMango-214-,train,SRC-009809,SemilleroTI-Mangos/docs/MangosDataset/train/images/freshMango-214-_jpg.rf.9e432d57de0dea4545be1398edbf6009.jpg
+DATA-001,freshMango-214-,valid,SRC-010769,SemilleroTI-Mangos/docs/MangosDataset/valid/images/freshMango-214-_png.rf.815f762443f713468a6c796682be0455.jpg
+DATA-001,freshMango-215-,train,SRC-009810,SemilleroTI-Mangos/docs/MangosDataset/train/images/freshMango-215-_jpg.rf.1ef21ed651641d7b21de6088259d5bb4.jpg
+DATA-001,freshMango-215-,valid,SRC-010770,SemilleroTI-Mangos/docs/MangosDataset/valid/images/freshMango-215-_png.rf.9dcdaa04d69a91174c84abe6d419dddd.jpg
+DATA-001,freshMango-22-,train,SRC-009814,SemilleroTI-Mangos/docs/MangosDataset/train/images/freshMango-22-_png.rf.92d17dc6f7c3cfd640bd0e2afeafb838.jpg
+DATA-001,freshMango-22-,valid,SRC-010772,SemilleroTI-Mangos/docs/MangosDataset/valid/images/freshMango-22-_jpg.rf.982e0f93ce119741e860c6476c721c0f.jpg
+DATA-001,freshMango-25-,train,SRC-009837,SemilleroTI-Mangos/docs/MangosDataset/train/images/freshMango-25-_jpg.rf.150175374536bd0aa1868a38dd281fa2.jpg
+DATA-001,freshMango-25-,valid,SRC-010782,SemilleroTI-Mangos/docs/MangosDataset/valid/images/freshMango-25-_png.rf.d7789ce6305648e5195cf328775060ea.jpg

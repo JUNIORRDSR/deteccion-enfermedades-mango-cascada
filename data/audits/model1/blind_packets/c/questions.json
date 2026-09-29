@@ -1,0 +1,127 @@
+{
+  "reviewer": "C",
+  "instructions": "Judge only what you see. Answer every question. For pairs, choose exactly one answer from answer_menu and give a one-sentence rationale describing the visual evidence and a confidence of low, medium or high. For the sequence question, give the number of distinct scenes and the panel numbers after which each change occurs.",
+  "answer_menu": {
+    "NEAR_DUPLICATE": "Same photograph, possibly re-encoded, resized, cropped or colour-shifted.",
+    "POSSIBLE_SEQUENCE_RELATION": "Different photographs or frames of the same physical fruit(s) and the same scene or setup.",
+    "UNRELATED": "Different fruit and different scene."
+  },
+  "do_not_use": {
+    "EXACT_DUPLICATE": "Byte identity is established by hash, never by eye. Do not use.",
+    "CONFIRMED_SEQUENCE_RELATION": "Requires external records, not visual judgement. Do not use."
+  },
+  "questions": [
+    {
+      "question_id": "Q-0c5f39e6ac",
+      "position": 1,
+      "sheet": "Q-0c5f39e6ac.png",
+      "panels": 2,
+      "kind": "pair",
+      "question": "Do panels 1 and 2 show the same photograph, the same fruit and scene, or neither?"
+    },
+    {
+      "question_id": "Q-bd82aada98",
+      "position": 2,
+      "sheet": "Q-bd82aada98.png",
+      "panels": 2,
+      "kind": "pair",
+      "question": "Do panels 1 and 2 show the same photograph, the same fruit and scene, or neither?"
+    },
+    {
+      "question_id": "Q-d9919d257e",
+      "position": 3,
+      "sheet": "Q-d9919d257e.png",
+      "panels": 2,
+      "kind": "pair",
+      "question": "Do panels 1 and 2 show the same photograph, the same fruit and scene, or neither?"
+    },
+    {
+      "question_id": "Q-8a58c62e73",
+      "position": 4,
+      "sheet": "Q-8a58c62e73.png",
+      "panels": 2,
+      "kind": "pair",
+      "question": "Do panels 1 and 2 show the same photograph, the same fruit and scene, or neither?"
+    },
+    {
+      "question_id": "Q-c5a4fa3420",
+      "position": 5,
+      "sheet": "Q-c5a4fa3420.png",
+      "panels": 2,
+      "kind": "pair",
+      "question": "Do panels 1 and 2 show the same photograph, the same fruit and scene, or neither?"
+    },
+    {
+      "question_id": "Q-3ed2c069dd",
+      "position": 6,
+      "sheet": "Q-3ed2c069dd.png",
+      "panels": 2,
+      "kind": "pair",
+      "question": "Do panels 1 and 2 show the same photograph, the same fruit and scene, or neither?"
+    },
+    {
+      "question_id": "Q-a7f3fce081",
+      "position": 7,
+      "sheet": "Q-a7f3fce081.png",
+      "panels": 2,
+      "kind": "pair",
+      "question": "Do panels 1 and 2 show the same photograph, the same fruit and scene, or neither?"
+    },
+    {
+      "question_id": "Q-18aee197f4",
+      "position": 8,
+      "sheet": "Q-18aee197f4.png",
+      "panels": 2,
+      "kind": "pair",
+      "question": "Do panels 1 and 2 show the same photograph, the same fruit and scene, or neither?"
+    },
+    {
+      "question_id": "Q-63194ef915",
+      "position": 9,
+      "sheet": "Q-63194ef915.png",
+      "panels": 2,
+      "kind": "pair",
+      "question": "Do panels 1 and 2 show the same photograph, the same fruit and scene, or neither?"
+    },
+    {
+      "question_id": "Q-10f82e6cfa",
+      "position": 10,
+      "sheet": "Q-10f82e6cfa.png",
+      "panels": 2,
+      "kind": "pair",
+      "question": "Do panels 1 and 2 show the same photograph, the same fruit and scene, or neither?"
+    },
+    {
+      "question_id": "Q-11b3851a39",
+      "position": 11,
+      "sheet": "Q-11b3851a39.png",
+      "panels": 2,
+      "kind": "pair",
+      "question": "Do panels 1 and 2 show the same photograph, the same fruit and scene, or neither?"
+    },
+    {
+      "question_id": "Q-d99026300e",
+      "position": 12,
+      "sheet": "Q-d99026300e.png",
+      "panels": 2,
+      "kind": "pair",
+      "question": "Do panels 1 and 2 show the same photograph, the same fruit and scene, or neither?"
+    },
+    {
+      "question_id": "Q-f87c56a355",
+      "position": 13,
+      "sheet": "Q-f87c56a355.png",
+      "panels": 2,
+      "kind": "pair",
+      "question": "Do panels 1 and 2 show the same photograph, the same fruit and scene, or neither?"
+    },
+    {
+      "question_id": "Q-d7dcf41eab",
+      "position": 14,
+      "sheet": "Q-d7dcf41eab.png",
+      "panels": 2,
+      "kind": "pair",
+      "question": "Do panels 1 and 2 show the same photograph, the same fruit and scene, or neither?"
+    }
+  ]
+}

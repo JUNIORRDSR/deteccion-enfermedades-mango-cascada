@@ -1,0 +1,176 @@
+{
+  "checked_at_utc": "2026-09-18T16:40:03.166257+00:00",
+  "command": [
+    "C:\\Users\\junio\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+    "C:\\Users\\junio\\Downloads\\mango-vision\\ALBUS26_major_revision\\provenance\\commands\\verify_first_phase.py"
+  ],
+  "scope": "First-phase documentary verification; no model inference, training, new split or pHash",
+  "checks": {
+    "legacy": {
+      "files": 11137,
+      "bytes": 940648678,
+      "changed": [],
+      "missing": [],
+      "new_eligible_paths": [],
+      "missing_eligible_paths": [],
+      "mtime_changes": [],
+      "baseline_sha256": "b72041a4f84034dcb5c77dee547805a3d8f0c3f9a86a9851a4979c5a5996a781",
+      "exclusions": [
+        ".git",
+        ".venv",
+        "ALBUS26_major_revision",
+        "__pycache__",
+        "node_modules"
+      ]
+    },
+    "git": [
+      {
+        "repo": "Mango-vision",
+        "command": "git status --short",
+        "exit_code": 0,
+        "stdout": "",
+        "stderr": "",
+        "matches_initial": true
+      },
+      {
+        "repo": "Mango-vision",
+        "command": "git branch --show-current",
+        "exit_code": 0,
+        "stdout": "main\n",
+        "stderr": "",
+        "matches_initial": true
+      },
+      {
+        "repo": "Mango-vision",
+        "command": "git rev-parse HEAD",
+        "exit_code": 0,
+        "stdout": "e7e59d1bce74a7ae12674f5b6068068681e691ce\n",
+        "stderr": "",
+        "matches_initial": true
+      },
+      {
+        "repo": "Mango-vision",
+        "command": "git worktree list --porcelain",
+        "exit_code": 0,
+        "stdout": "worktree C:/Users/junio/Downloads/mango-vision/Mango-vision\nHEAD e7e59d1bce74a7ae12674f5b6068068681e691ce\nbranch refs/heads/main\n\n",
+        "stderr": "",
+        "matches_initial": true
+      },
+      {
+        "repo": "SemilleroTI-Mangos",
+        "command": "git status --short",
+        "exit_code": 0,
+        "stdout": " M api/__pycache__/main.cpython-313.pyc\n M api/routers/__pycache__/history.cpython-313.pyc\n M api/routers/__pycache__/inference.cpython-313.pyc\n M core/__pycache__/config.cpython-313.pyc\n M core/__pycache__/database.cpython-313.pyc\n M core/__pycache__/vision.cpython-313.pyc\n M mango_detecciones.db\n?? core/__pycache__/cascade.cpython-313.pyc\n?? core/cascade.py\n?? data/\n?? docs/MangosDataset/test/labels.cache\n?? models/clasificador_enfermedad.pt\n?? run_cascade.py\n",
+        "stderr": "",
+        "matches_initial": true
+      },
+      {
+        "repo": "SemilleroTI-Mangos",
+        "command": "git branch --show-current",
+        "exit_code": 0,
+        "stdout": "main\n",
+        "stderr": "",
+        "matches_initial": true
+      },
+      {
+        "repo": "SemilleroTI-Mangos",
+        "command": "git rev-parse HEAD",
+        "exit_code": 0,
+        "stdout": "98614804dd967e19a77af9fc58c27364d2e43bc9\n",
+        "stderr": "",
+        "matches_initial": true
+      },
+      {
+        "repo": "SemilleroTI-Mangos",
+        "command": "git worktree list --porcelain",
+        "exit_code": 0,
+        "stdout": "worktree C:/Users/junio/Downloads/mango-vision/SemilleroTI-Mangos\nHEAD 98614804dd967e19a77af9fc58c27364d2e43bc9\nbranch refs/heads/main\n\n",
+        "stderr": "",
+        "matches_initial": true
+      }
+    ],
+    "documentary": {
+      "claims": 50,
+      "reviews": 18,
+      "experiments": 9,
+      "artifacts": 100,
+      "derived_evidence": 3,
+      "tasks": 10,
+      "executive_answers": 17,
+      "required_documents": 19,
+      "all_experiments_reproduced_NO": true,
+      "hashes": {
+        "README.md": "d2570bc80c6dbff918ddc7444650d6dcbf92be67a2edf5f587d11419b326d382",
+        "docs/research/research_charter.md": "91abb15f4db3e39d2662b8624f67166234ecd9c6f7a5b7340ace6b44c52e134c",
+        "docs/research/source_inventory.md": "57c845d59e8960521484d0e5f40babe2c28aeb36eed1dd2d86d3c701bc6d746d",
+        "docs/research/manuscript_genealogy.md": "69f52d94e201484b47449b7692fd765b81594f0487107868f70590827cdb54c1",
+        "docs/research/reviewer_matrix.md": "da91ca3b30f6ec2c614c9e775b705c9a08648ca0b026bbd39840f9f66cad85db",
+        "docs/research/claim_evidence_matrix.csv": "19943624048bc3f42caf529c8f5c6e52b9d24f52cad8610cdfa35f9f8c8a802f",
+        "docs/research/decision_log.md": "0174f7adfef0e7f592853f8647e3471414887a1a7986a01f219dd439d3fe525f",
+        "docs/research/risk_register.md": "d4a174bf8853c171c60bb4674018027296e6823eb7af149f75ac26574e2d90d0",
+        "docs/research/methodology_decisions.md": "6b8dc85df26714fecf45ef6bb0173001d2a5f8bac3f89c83a17482fca2598c86",
+        "docs/research/experiment_log.md": "6d486ec73faeee2003d43ef9797d65ea1f1a25934205f3a1f2c493d81a76e31b",
+        "docs/research/changelog_revision.md": "ec6b335e72361d42de60cd379d9336e65d9b4c9afa4fc9b06b4a07faf29abc8e",
+        "docs/response_to_reviewers.md": "748b5c2a5848f4fcd339a3602b968b740716c97be9e6c87a7d5122940254c826",
+        "reports/spec_self_review.md": "a552352e67d5b19d0a3ac2c9c96f3314b1847f0c07a972b2d0b2a37fa201f469",
+        "reports/plan_self_review.md": "4dfa73801f14ba64ed2becb9678b16febe4dcb25b6af10548c04504a864a8549",
+        "reports/first_phase_executive_report.md": "cde7f60648acec2735a139aa59dc3000174b502e3bf5c859f207ca2326ea57b1",
+        "reports/research_independent_review.md": "928b90a451324b1fcb0e96cd55f57b3726ff6c15cc1a792dcd975717fb09a369",
+        "reports/design_review_resolution.md": "0239aa63da6f9eac1cfe3f4b242651550e6b40c89209c529baf35f555b261fb5",
+        "docs/superpowers/specs/2026-09-17-albus26-major-revision-design.md": "beeaec22060d5865839bf6da9e2bcc93d0a7c5af0676a5f9e92c00348d5d69ca",
+        "docs/superpowers/plans/2026-09-17-albus26-major-revision.md": "9cf27f53ca2b3b3ec0e7ba5b581cb9b0622b958865d964368897fb988a54af58"
+      }
+    },
+    "inventory": {
+      "images": 7016,
+      "counts": {
+        "DATA-001/test": 33,
+        "DATA-001/train": 502,
+        "DATA-001/valid": 134,
+        "DATA-002/unsplit": 1500,
+        "DATA-003/test": 75,
+        "DATA-003/train": 1125,
+        "DATA-003/valid": 300,
+        "DATA-004/test": 219,
+        "DATA-004/train": 1064,
+        "DATA-004/valid": 217,
+        "DATA-005/test": 219,
+        "DATA-005/train": 1064,
+        "DATA-005/val": 217,
+        "DATA-006/test": 17,
+        "DATA-006/train": 121,
+        "DATA-006/valid": 35,
+        "DATA-007/unsplit": 174
+      },
+      "m1_test_instances": {
+        "1": 86,
+        "0": 13
+      },
+      "exact_cross_split_pairs": {
+        "DATA-001": 0,
+        "DATA-003": 41,
+        "DATA-004": 0,
+        "DATA-005": 0
+      },
+      "scope": "Binary identity only; no new perceptual audit"
+    },
+    "existing_csv_arithmetic": {
+      "total": 219,
+      "correct": 199,
+      "accuracy": 0.908675799086758,
+      "macro_f1": 0.9094733436675042,
+      "cancro_f1": 0.8314606741573034,
+      "experimental_reproduction": false
+    },
+    "genealogy": {
+      "pages": 16,
+      "normalized_equal": true,
+      "characters": 33468,
+      "sha256": "9f80a981be79aeab9f9e068c1adc6e1639681aaaaf09e06cdd7c7a7a4920773e",
+      "fresh_extraction": true,
+      "layout_equivalence": false
+    }
+  },
+  "errors": [],
+  "status": "PASS_FIRST_PHASE_DOCUMENTARY"
+}

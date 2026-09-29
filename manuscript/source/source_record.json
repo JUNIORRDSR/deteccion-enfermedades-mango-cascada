@@ -1,0 +1,10 @@
+{
+  "source": "legacy_corpus:Articulo_Mango_ALBUS.docx",
+  "source_sha256": "7a5918854107ce22eec0539bbb6f7c0962685897187e57e1dba2dbb2e570bc86",
+  "expected_source_sha256": "7a5918854107ce22eec0539bbb6f7c0962685897187e57e1dba2dbb2e570bc86",
+  "genealogy": "docs/research/manuscript_genealogy.md GENE-002",
+  "copy": "manuscript/source/Articulo_Mango_ALBUS_revision.docx",
+  "copy_sha256_at_copy": "7a5918854107ce22eec0539bbb6f7c0962685897187e57e1dba2dbb2e570bc86",
+  "reason": "single canonical editable per SPEC section 10; the legacy file stays untouched",
+  "copied_at": "2026-09-23T18:34:40.889433+00:00"
+}

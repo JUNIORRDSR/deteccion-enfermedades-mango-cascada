@@ -1,0 +1,10 @@
+{
+  "data004_images": 1500,
+  "data005_images": 1500,
+  "split_alias": "DATA-004 valid == DATA-005 val",
+  "matched_sha_split_class": 1500,
+  "only_in_data004": 0,
+  "only_in_data005": 0,
+  "class_conflicts_same_sha_split": 0,
+  "full_image_boxes_in_data004": 1500
+}

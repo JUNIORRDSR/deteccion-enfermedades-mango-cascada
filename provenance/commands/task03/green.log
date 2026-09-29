@@ -1,0 +1,22 @@
+test_largest_group_goes_where_it_costs_least_and_is_never_broken (tests.test_split.Algorithm.test_largest_group_goes_where_it_costs_least_and_is_never_broken) ... ok
+test_same_input_same_output (tests.test_split.Algorithm.test_same_input_same_output) ... ok
+test_tie_order_is_train_then_valid_then_test (tests.test_split.Algorithm.test_tie_order_is_train_then_valid_then_test) ... ok
+test_uses_the_whole_instance_vector_not_only_the_first_class (tests.test_split.Algorithm.test_uses_the_whole_instance_vector_not_only_the_first_class)
+A group with 5 Enfermo and 1 Saludable must count both. ... ok
+test_clean_rows_pass (tests.test_split.Atomicity.test_clean_rows_pass) ... ok
+test_confirmed_sequence_cannot_be_split_even_across_groups (tests.test_split.Atomicity.test_confirmed_sequence_cannot_be_split_even_across_groups) ... ok
+test_repeated_image_id_is_rejected (tests.test_split.Atomicity.test_repeated_image_id_is_rejected) ... ok
+test_blocked_partition_raises_rather_than_retrying_seeds (tests.test_split.Blocks.test_blocked_partition_raises_rather_than_retrying_seeds) ... ok
+test_class_absent_from_test_blocks (tests.test_split.Blocks.test_class_absent_from_test_blocks) ... ok
+test_fewer_than_two_independent_groups_per_class_blocks (tests.test_split.Blocks.test_fewer_than_two_independent_groups_per_class_blocks) ... ok
+test_sufficient_partition_has_no_block (tests.test_split.Blocks.test_sufficient_partition_has_no_block) ... ok
+test_assignment_does_not_depend_on_input_order (tests.test_split.BriefFixture.test_assignment_does_not_depend_on_input_order) ... ok
+test_group_crossing_split_is_rejected_with_exact_message (tests.test_split.BriefFixture.test_group_crossing_split_is_rejected_with_exact_message) ... ok
+test_pending_adjudication_blocks_the_freeze (tests.test_split.GroupBuilding.test_pending_adjudication_blocks_the_freeze) ... ok
+test_sequence_hint_and_accepted_relations_are_merged (tests.test_split.GroupBuilding.test_sequence_hint_and_accepted_relations_are_merged) ... ok
+
+----------------------------------------------------------------------
+Ran 15 tests in 0.009s
+
+OK
+exit=0

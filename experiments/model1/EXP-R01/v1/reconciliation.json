@@ -1,0 +1,263 @@
+{
+  "definitive": true,
+  "docker_image": "gcr.io/kaggle-private-byod/python@sha256:37c64f7dd9c54116ecd1bcc88817c5469b88387388fade02bfa8bf3fc647d461",
+  "error": null,
+  "experiment_id": "EXP-R01",
+  "files": {
+    "evidence/data.yaml": {
+      "attested": true,
+      "sha256": "555a1b5eaf70584c1eb486e93b6c59f8484f727d40ef72334b85d95c7f0aa77d"
+    },
+    "evidence/nvidia_smi.stderr.txt": {
+      "attested": true,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "evidence/nvidia_smi.stdout.txt": {
+      "attested": true,
+      "sha256": "7925ff6aa3c0f75ed4b792d59fc4b46fc8ca30d00f724248234805d4598886cc"
+    },
+    "evidence/pip_check.stderr.txt": {
+      "attested": true,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "evidence/pip_check.stdout.txt": {
+      "attested": true,
+      "sha256": "2c99993bdaa1efa61406b281e3c408724a14e714bcaf3dfb4da60af8ec2a044c"
+    },
+    "evidence/pip_config.stderr.txt": {
+      "attested": true,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "evidence/pip_config.stdout.txt": {
+      "attested": true,
+      "sha256": "3f363b7d217c26516cbf275b210d8ded30459c4eb0ebebeb9ca21f7b92de9745"
+    },
+    "evidence/pip_debug.stderr.txt": {
+      "attested": true,
+      "sha256": "40ffb3c51bd62818dedc25f24da335f773814e47dc2b350a1e475fb2c2e172f8"
+    },
+    "evidence/pip_debug.stdout.txt": {
+      "attested": true,
+      "sha256": "63b3922346cb06e408fea362380355a8532b1d5924b2f0a74859df7144129d48"
+    },
+    "evidence/pip_freeze.stderr.txt": {
+      "attested": true,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "evidence/pip_freeze.stdout.txt": {
+      "attested": true,
+      "sha256": "ddbaee9add9594f5296acdfd6c84bfa4daebc7fb9d8fb1bdb2056a3144968da3"
+    },
+    "evidence/pip_install.stderr.txt": {
+      "attested": true,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "evidence/pip_install.stdout.txt": {
+      "attested": true,
+      "sha256": "49c49613ea6816baa7ec78d69c02e841ecbaaf1b8ed4846823f0c69bafc9b506"
+    },
+    "evidence/pip_install_report.json": {
+      "attested": true,
+      "sha256": "e235cfb25b15414937ced3e03643d84b5e949a72c188e4bf71683faa64ea5df8"
+    },
+    "evidence/ultralytics_settings.json": {
+      "attested": true,
+      "sha256": "df2448c0e64c789a8aba63722cbb8e3277d14f777ce13442cbad983479f2f6b7"
+    },
+    "job_log.txt": {
+      "attested": false,
+      "sha256": "7f3c891d3fb5bec7fc99befad8e49966094b419e0574ed3a96631580577a31e4"
+    },
+    "receipt.json": {
+      "attested": false,
+      "sha256": "88df6d50c0938946ded3eee4ef0075c3e6b4974132636a2ccd6b86c404c20240"
+    },
+    "run/epoch_records.jsonl": {
+      "attested": true,
+      "sha256": "6a032bfff40838de30cbc852a3650804fcf8029cdc47f6e345400c2cb0033217"
+    },
+    "run/train/BoxF1_curve.png": {
+      "attested": true,
+      "sha256": "3d155a8adc6dd1e5bb88c8d6ff1819f21dee720f9dfc516eba8ebc46cc39aeba"
+    },
+    "run/train/BoxPR_curve.png": {
+      "attested": true,
+      "sha256": "88df6a5e73d3bb168400008b6236062c4a93c2952dc7dacc585cdaf8292cb563"
+    },
+    "run/train/BoxP_curve.png": {
+      "attested": true,
+      "sha256": "fdaea5ba09b250a667ca64beb451cabcb145a7e0570de452c109612e11903142"
+    },
+    "run/train/BoxR_curve.png": {
+      "attested": true,
+      "sha256": "d2ab4cc87d7502da6a260526a14595bde179c4dd3483080fe5237ffbca472e1e"
+    },
+    "run/train/args.yaml": {
+      "attested": true,
+      "sha256": "df132306e884e3580a070047c1a39deb6364cf5444179b4692586c7975913630"
+    },
+    "run/train/confusion_matrix.png": {
+      "attested": true,
+      "sha256": "9ebb46acef1ab22e8712565b591592c18669d5ca8db84be2584bfaa092655573"
+    },
+    "run/train/confusion_matrix_normalized.png": {
+      "attested": true,
+      "sha256": "d5dc6b059902abbecf711d088184ac5e44087e1de6fea9613aca6fa3e0640d78"
+    },
+    "run/train/labels.jpg": {
+      "attested": true,
+      "sha256": "fdd63208fe93d7055e65c3a2a34f8eafea79e8070322ce1c66b03cc4cdd4f530"
+    },
+    "run/train/results.csv": {
+      "attested": true,
+      "sha256": "092691a4091bf409babb8b257f7184975dc8ded2bcabb9ecd4124c2a62391714"
+    },
+    "run/train/results.png": {
+      "attested": true,
+      "sha256": "f8de6d914b0adb95eeae98debf8d59c10710884d48a1cf4d8f25a31263f0c7a9"
+    },
+    "run/train/train_batch0.jpg": {
+      "attested": true,
+      "sha256": "c238ea2ea10f1e0904ba4db70123900e597f2d4d077408a282ba4da766acfa1d"
+    },
+    "run/train/train_batch1.jpg": {
+      "attested": true,
+      "sha256": "14249549b47fbad085af010c341899caf2f8bae39606608a467227a28c2e5d3a"
+    },
+    "run/train/train_batch2.jpg": {
+      "attested": true,
+      "sha256": "9dc5489da7ba4cf5b8fde2408acfa667f158c75983db19578d46fae208012937"
+    },
+    "run/train/train_batch3920.jpg": {
+      "attested": true,
+      "sha256": "d4754137b38d96609461798d6a0b5897aabb6a44b576482d96dc387e0db22788"
+    },
+    "run/train/train_batch3921.jpg": {
+      "attested": true,
+      "sha256": "b6b0ed5431d5c913eb5e578f2f17e50b45aa3e816b56827c03b59590ca4c0154"
+    },
+    "run/train/train_batch3922.jpg": {
+      "attested": true,
+      "sha256": "2ed4e3cb80f2d044f50464379e4aa2029777881ac3d89375212c40ebf2f5eb44"
+    },
+    "run/train/val_batch0_labels.jpg": {
+      "attested": true,
+      "sha256": "d82a84e7f20feefdff879c84e83ce78c494d77dbd9d8e901b472081d3ae0ea5e"
+    },
+    "run/train/val_batch0_pred.jpg": {
+      "attested": true,
+      "sha256": "960f5e83b4a743425dec3bf667574e70710446927e698b2d934eb12970166392"
+    },
+    "run/train/val_batch1_labels.jpg": {
+      "attested": true,
+      "sha256": "29c8a5edd35b54585b984a9ef091f237c73d7f62724589afcf6f61c679b1fd85"
+    },
+    "run/train/val_batch1_pred.jpg": {
+      "attested": true,
+      "sha256": "9728f33e23359dfa85b472ac293288daac0e34c05bbebd7a1097b013d5bc1867"
+    },
+    "run/train/val_batch2_labels.jpg": {
+      "attested": true,
+      "sha256": "d801b12ea42555aa1b76da28b199e42da5ab912db5a12f8c0e7594a88b7c5d3d"
+    },
+    "run/train/val_batch2_pred.jpg": {
+      "attested": true,
+      "sha256": "bc272e4c05184418c341ea64236167bf2df7be2515c3dae4527f21daa3713e7c"
+    },
+    "run/train/weights/best.pt": {
+      "attested": true,
+      "sha256": "55d88f529d40df5139b52a658faadce8e53e77b322f607aae94223ab196fa269"
+    },
+    "run/train/weights/last.pt": {
+      "attested": true,
+      "sha256": "8ff56618190cd64efa6f00ae3cc8c908ef41c26bcc47301c26d5260d4784120a"
+    },
+    "run/weights/candidates/epoch001.pt": {
+      "attested": true,
+      "sha256": "09e89e94c77b0826f52dd4f455a383b205fc312b875ae493dbbb65d383d049c3"
+    },
+    "run/weights/candidates/epoch002.pt": {
+      "attested": true,
+      "sha256": "0a56c88d4f3f0e1ea6ca61038717cca90910749ee94710fd41c8823509177c33"
+    },
+    "run/weights/candidates/epoch003.pt": {
+      "attested": true,
+      "sha256": "04068a576e8f813238b1da17510d3906a2fdc7ac60393df5eb9fcb399cea4bab"
+    },
+    "run/weights/candidates/epoch006.pt": {
+      "attested": true,
+      "sha256": "80cef33b210836b89865af0578f817f1e747d6d492ef61d1ffdd39968e51fa5a"
+    },
+    "run/weights/candidates/epoch010.pt": {
+      "attested": true,
+      "sha256": "8b0c00ddbcdb9660dbdcbb543f2864f27effbc7b8382f0ee85ed8e214b94f9b4"
+    },
+    "run/weights/candidates/epoch013.pt": {
+      "attested": true,
+      "sha256": "6fed3c8f7d266d6cd2b382a639e1678a8d61e9fa589f3c8c01fbf3eef21b3b7b"
+    },
+    "run/weights/candidates/epoch014.pt": {
+      "attested": true,
+      "sha256": "feacf35b2d84f6bd181f5c95a3fff06d70f21b4b844c65fd7c7524186de41687"
+    },
+    "run/weights/candidates/epoch018.pt": {
+      "attested": true,
+      "sha256": "00b2c877b5806fd318c434581980f255cdd7b607e313343a9e36fbb2658dae56"
+    },
+    "run/weights/candidates/epoch022.pt": {
+      "attested": true,
+      "sha256": "8e8e6342fbc377b20157140468d79790d91a755b14d7a89f642a2ebbf83d9f49"
+    },
+    "run/weights/candidates/epoch024.pt": {
+      "attested": true,
+      "sha256": "db8d43e2ffc24e6dc95fef7949ab0b4d5f15c115f5e20908cf97b1a1d4535784"
+    },
+    "run/weights/candidates/epoch032.pt": {
+      "attested": true,
+      "sha256": "2ab0ab05501d5627085727de4b187d184592059144fd293844ae59c62d4a47c9"
+    },
+    "run/weights/candidates/epoch035.pt": {
+      "attested": true,
+      "sha256": "c2dd410f00885ce9fe5af36f8818197a25489454678dd538fda99b0e61b8dc5c"
+    },
+    "run/weights/candidates/epoch050.pt": {
+      "attested": true,
+      "sha256": "0f6c5084e49e0e843ed6934983e98a403b86bb2752fe73f0ca8f9a54a06a7548"
+    },
+    "run/weights/candidates/epoch077.pt": {
+      "attested": true,
+      "sha256": "872ddaf43d59d627d4e538ae397925e75f45faf1278f540d938398be80330aa5"
+    },
+    "run/weights/candidates/epoch085.pt": {
+      "attested": true,
+      "sha256": "94a21b3163fc98d530ce3d915f49ee8e3e9b04099a44b788e0d2b9c10945ab3f"
+    },
+    "run/weights/candidates/epoch091.pt": {
+      "attested": true,
+      "sha256": "0648da3f3641e3cdb5a1908a092ba892548942836a249bb3b39667f9ae8e8125"
+    },
+    "run/weights/selected.pt": {
+      "attested": true,
+      "sha256": "0648da3f3641e3cdb5a1908a092ba892548942836a249bb3b39667f9ae8e8125"
+    }
+  },
+  "inventory_not_downloaded": [],
+  "kernel_source_sha256": "538bec821d9dde366c5e63e1842cc5cb01069f4bcf8bc6dafe9dea46437c7d96",
+  "mode": "train",
+  "payload_sha256": "b3d90dda5c5f8cb046790080cfaa3460c7c21934c41d9e544e8bda498d881e77",
+  "phase": null,
+  "platform_log_sha256": "d1e1132a26b7fc9df175ae0490a00da2c8d8394c48bf2b344b8b6f7f07a87ae3",
+  "platform_sha256": "a9a508d0165b7f5b00d5d0ebd4bfa85e3e0bbe30718f531a3c36e4f15662e8e6",
+  "platform_status": "COMPLETE",
+  "reason": "definitive",
+  "receipt_sha256": "88df6d50c0938946ded3eee4ef0075c3e6b4974132636a2ccd6b86c404c20240",
+  "render_record_sha256": "04acc3d5203fa8075d90e68d89aaf44a283db734c2a65cb2f7ac2ed5f2586c47",
+  "retry_allowed": false,
+  "stage": "done",
+  "status": "COMPLETE",
+  "unattested": [
+    "job_log.txt",
+    "receipt.json"
+  ],
+  "version": 1
+}

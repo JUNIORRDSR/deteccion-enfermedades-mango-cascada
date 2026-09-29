@@ -1,0 +1,18 @@
+{
+  "model_id": "model1",
+  "class_names": [
+    "Enfermo",
+    "Saludable"
+  ],
+  "positive_class": "Enfermo",
+  "iou_match": 0.5,
+  "nms_iou": 0.6,
+  "max_det": 300,
+  "min_score": 0.001,
+  "imgsz": 640,
+  "threshold_grid": "0.05..0.95 step 0.05, ties to lower",
+  "checkpoint_sha256": "0648da3f3641e3cdb5a1908a092ba892548942836a249bb3b39667f9ae8e8125",
+  "manifest_sha256": "dd9431dd7bbc00c6117baf6a0f6cf49eff8bc55f144016b4a98dbdea049ecf5f",
+  "selection_record_sha256": "4a67bdca43a1c6a782dc6bb172702fcb36ebfcbe9caaa4c73f01808bcb98706c",
+  "training_kernel_version": 1
+}

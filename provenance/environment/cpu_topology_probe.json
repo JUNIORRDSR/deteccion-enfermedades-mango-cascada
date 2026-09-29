@@ -1,0 +1,79 @@
+{
+  "probed_utc": "2026-09-22T15:50:41.746262+00:00",
+  "purpose": "M-03 residual: preserved commands and raw output for CPU topology and benchmark context. Thread controls are set by the benchmark itself in TASK-06 and recorded in its own run record.",
+  "probes": {
+    "processor_name": {
+      "command": "$ErrorActionPreference = 'Stop'; (Get-ItemProperty 'HKLM:\\HARDWARE\\DESCRIPTION\\System\\CentralProcessor\\0').ProcessorNameString",
+      "exit_code": 0,
+      "stdout": "AMD Ryzen 5 7520U with Radeon Graphics",
+      "stderr": "",
+      "problems": [],
+      "state": "MEASURED",
+      "required": true
+    },
+    "topology_cim": {
+      "command": "$ErrorActionPreference = 'Stop'; Get-CimInstance Win32_Processor | Select-Object Name,NumberOfCores,NumberOfLogicalProcessors,MaxClockSpeed | ConvertTo-Json -Compress",
+      "exit_code": 0,
+      "stdout": "{\"Name\":\"AMD Ryzen 5 7520U with Radeon Graphics         \",\"NumberOfCores\":4,\"NumberOfLogicalProcessors\":8,\"MaxClockSpeed\":2801}",
+      "stderr": "",
+      "problems": [],
+      "state": "MEASURED",
+      "required": true
+    },
+    "topology_env": {
+      "command": "$ErrorActionPreference = 'Stop'; $env:NUMBER_OF_PROCESSORS",
+      "exit_code": 0,
+      "stdout": "8",
+      "stderr": "",
+      "problems": [],
+      "state": "MEASURED",
+      "required": true
+    },
+    "logical_registry_count": {
+      "command": "$ErrorActionPreference = 'Stop'; (Get-ChildItem 'HKLM:\\HARDWARE\\DESCRIPTION\\System\\CentralProcessor').Count",
+      "exit_code": 0,
+      "stdout": "8",
+      "stderr": "",
+      "problems": [],
+      "state": "MEASURED",
+      "required": true
+    },
+    "power_plan": {
+      "command": "$ErrorActionPreference = 'Stop'; (Get-CimInstance -Namespace root/cimv2/power -ClassName Win32_PowerPlan -Filter \"IsActive=True\").ElementName",
+      "exit_code": 1,
+      "stdout": "",
+      "stderr": "Get-CimInstance : Solo los administradores tienen permiso para agregar, quitar o configurar el software de servidor \ndurante la sesi\u00a2n remota de Terminal Services. Si desea instalar o modificar software en el servidor p\u00a2ngase en \ncontacto con el administrador de red. \nEn l\u00a1nea: 1 Car\u00a0cter: 35\n+ ...  = 'Stop'; (Get-CimInstance -Namespace root/cimv2/power -ClassName Wi ...\n+                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n    + CategoryInfo          : NotSpecified: (:) [G",
+      "problems": [
+        "exit 1",
+        "stderr not empty",
+        "stdout empty"
+      ],
+      "state": "UNAVAILABLE",
+      "required": false
+    },
+    "os_build": {
+      "command": "$ErrorActionPreference = 'Stop'; Get-CimInstance Win32_OperatingSystem | Select-Object Caption,Version,BuildNumber | ConvertTo-Json -Compress",
+      "exit_code": 0,
+      "stdout": "{\"Caption\":\"Microsoft Windows 11 Home Single Language\",\"Version\":\"10.0.26200\",\"BuildNumber\":\"26200\"}",
+      "stderr": "",
+      "problems": [],
+      "state": "MEASURED",
+      "required": true
+    },
+    "thermal_throttle_hint": {
+      "command": "$ErrorActionPreference = 'Stop'; Get-CimInstance Win32_Processor | Select-Object CurrentClockSpeed,MaxClockSpeed,LoadPercentage | ConvertTo-Json -Compress",
+      "exit_code": 0,
+      "stdout": "{\"CurrentClockSpeed\":2483,\"MaxClockSpeed\":2801,\"LoadPercentage\":19}",
+      "stderr": "",
+      "problems": [],
+      "state": "MEASURED",
+      "required": false
+    }
+  },
+  "failed_required_probes": [],
+  "unavailable_probes": [
+    "power_plan"
+  ],
+  "status": "PARTIAL",
+  "status_meaning": "PASS only when every probe measured a value. PARTIAL means an optional probe is honestly UNAVAILABLE. FAIL means a required probe did not measure. A probe that returns nothing is never PASS."
+}

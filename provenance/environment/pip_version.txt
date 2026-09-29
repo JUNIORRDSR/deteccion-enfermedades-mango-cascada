@@ -1,0 +1,4 @@
+pip 25.0.1 from C:\Users\junio\Downloads\mango-vision\ALBUS26_major_revision\.worktrees\execution\.venv\Lib\site-packages\pip (python 3.12)
+
+
+exit_code=0

@@ -1,0 +1,16 @@
+# Respuesta a la revisión independiente de TASK-05 (ronda 1)
+
+Informe: `reports/execution/task-05-independent-review.md` (NO EJECUTAR; 4 HIGH, 4 MEDIUM, 2 LOW). Cada hallazgo se comprobó en el código antes de corregirlo. Ninguno se rechazó. El cierre lo decide la siguiente revisión.
+
+| hallazgo | verificación propia | cambio |
+|---|---|---|
+| HIGH-01 ejecución no autorizada ni congelada | Cierto: enmienda 008 en PROPOSED_V6, sin manifiesto final ni `checkpoint_sha256` | Es un estado, no un defecto de código. Se cierra con la congelación de TASK-03, la aprobación de la enmienda y el sellado del checkpoint. Hasta entonces no se ejecuta ninguna inferencia |
+| HIGH-02 dos nombres para el umbral | Cierto: el congelador escribía `frozen_threshold` y el renderizador y el enganche de intervalos leían `threshold` | Un solo campo, `threshold`, en el congelador, el lector, el renderizador y los intervalos. Test de integración: la salida real del congelador alimenta `interval_metrics` sin cambios. La lista de F2 pasa a `threshold_grid_values`, para no pisar la declaración `threshold_grid` |
+| HIGH-03 EXP-R03 sin nombres de clase | Cierto: la sensibilidad de M2 exigía `--class-names` | Cada registro de M2 guarda `class_names` en el orden de `model.names`, y la sensibilidad los toma de ahí. Test de integración predictor → `_class_names` |
+| HIGH-04 predicciones de M1 sin vínculo con el kernel y el checkpoint | Cierto | `verify_prediction_run` exige que coincidan el payload del kernel renderizado, el hash del código ejecutado, `status = COMPLETE`, la fase, el checkpoint (recibo, payload y configuración) y los ajustes congelados. `build_predictions.py` escribe `prediction_provenance.json`, y `--score` lo exige junto al sidecar de las predicciones. El resultado lleva esas identidades. Seis tests negativos |
+| MEDIUM-01 entradas sin anclar | Cierto | La configuración lleva `manifest_sha256`: el congelador y la puntuación rechazan otro manifiesto. `read_config` rechaza cualquier cambio de 0,001 / 0,6 / 300 / 640 y de la declaración de la rejilla. M2 sólo acepta `model2_frozen_manifest.csv` con su hash comprometido. Los intervalos de M1 exigen el manifiesto que nombra la configuración congelada |
+| MEDIUM-02 dos AP posibles | Cierto: `predict` imagen a imagen frente a `val` por lotes rectangulares | Se elimina `model.val` del kernel. El único AP es el calculado por `evaluate.py` sobre las detecciones guardadas, con las funciones de Ultralytics 8.4.52 |
+| MEDIUM-03 IoU distinto en el límite | Cierto: 0,5000000000000001 frente a 0,49999991 en el ejemplo del revisor | `_iou` reproduce la aritmética de `box_iou` de Ultralytics (float32, eps 1e-7). Test con el ejemplo del revisor: mismo valor y ningún emparejamiento a 0,5 |
+| MEDIUM-04 modo NMS y contrato de entrada sin registrar | Cierto: YOLO26 tiene `end2end: True`, así que el IoU de NMS no actúa | El recibo registra `end2end`, el contrato de entrada (ruta de archivo, el cargador lee BGR y el preprocesado convierte a RGB) y todos los argumentos de `predict`. El informe dirá que la supresión es la del modelo end-to-end cuando `end2end` sea verdadero |
+| LOW-01 empate exacto de M2 | Cierto | El top-1 sigue el orden de índice del modelo; test de empate |
+| LOW-02 contrato de Wilson | Cierto | Rechaza conteos no enteros o booleanos y `z` no positivo o no finito; test |

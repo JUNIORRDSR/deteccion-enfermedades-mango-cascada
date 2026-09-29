@@ -1,0 +1,270 @@
+{
+ "reviewer": "reviewer-A",
+ "answers": {
+  "Q-5209ad1750": {
+   "decision": "POSSIBLE_SEQUENCE_RELATION",
+   "rationale": "Same yellow mango with the identical cluster of dark marks and black dash at the upper-left shoulder on the same dark cloth, but the fruit sits at a different position and size while the background stays fixed, so these are different shots.",
+   "confidence": "high"
+  },
+  "Q-61bea59cd7": {
+   "decision": "POSSIBLE_SEQUENCE_RELATION",
+   "rationale": "Same red speckled mango on the same corrugated metal sheet with matching shadow, but after alignment the fruit is offset about 8 px against the corrugations and the background shows non-rigid perspective shifts, indicating a second frame rather than a re-encode.",
+   "confidence": "medium"
+  },
+  "Q-d921a2ef78": {
+   "decision": "POSSIBLE_SEQUENCE_RELATION",
+   "rationale": "Same red speckled mango with the same shadow on the same corrugated metal, but the best fit needs a 2 degree rotation and still leaves position-dependent shifts of several pixels in the metal texture, so it is a different frame rather than a resized copy.",
+   "confidence": "medium"
+  },
+  "Q-18834d4a32": {
+   "decision": "UNRELATED",
+   "rationale": "Panel 1 shows two yellow mangoes on a metal tray with a timestamp, panel 2 a single pale mango on pink flower-patterned cloth; fruit and scene both differ.",
+   "confidence": "high"
+  },
+  "Q-eeed15c1a3": {
+   "decision": "UNRELATED",
+   "rationale": "Both mangoes are red-and-yellow on a similar dark cloth, but panel 1 is a broad egg with the blush on its left side while panel 2 is a narrower oval with the blush and speckles on its right, and no individual mark can be matched between them.",
+   "confidence": "low"
+  },
+  "Q-7d27f686e8": {
+   "decision": "POSSIBLE_SEQUENCE_RELATION",
+   "rationale": "Same two mango halves, dead leaves and soil, but panel 2 is rotated about 1 degree and grass blades shift against the stones (parallax), so it is a separate frame of the same scene.",
+   "confidence": "medium"
+  },
+  "Q-2e146be0ef": {
+   "decision": "POSSIBLE_SEQUENCE_RELATION",
+   "rationale": "Same red speckled mango and shadow on the same corrugated metal, but local texture shifts of up to 8 px remain after global alignment and the fruit sits differently relative to the corrugations, indicating a separate frame.",
+   "confidence": "medium"
+  },
+  "Q-a880206883": {
+   "decision": "POSSIBLE_SEQUENCE_RELATION",
+   "rationale": "Same red speckled mango on the same corrugated metal, but alignment needs a 3 degree rotation and leaves inconsistent local shifts across the metal texture, so the panels are different frames of one setup.",
+   "confidence": "medium"
+  },
+  "Q-ff9ba74408": {
+   "decision": "POSSIBLE_SEQUENCE_RELATION",
+   "rationale": "Same split yellow mango with the same crack, dark lesion and brown stripes on the same stony ground, but the camera is rotated about 180 degrees and the viewpoint differs, so no global transform maps one photo onto the other.",
+   "confidence": "high"
+  },
+  "Q-5b8343b2c6": {
+   "decision": "UNRELATED",
+   "rationale": "Panel 1 is an elongated upright red mango with a yellow right edge and dark dots at the top, panel 2 a rounder tilted egg-shaped mango with a greenish spot at its base; outlines and marks differ.",
+   "confidence": "medium"
+  },
+  "Q-aab252e6e0": {
+   "decision": "POSSIBLE_SEQUENCE_RELATION",
+   "rationale": "Same orange-red mango on the same pink flower-patterned cloth, but when the cloth pattern is aligned the fruit outline is doubled and offset by several pixels, so the fruit moved between two separate shots.",
+   "confidence": "medium"
+  },
+  "Q-7b85feb20b": {
+   "decision": "UNRELATED",
+   "rationale": "Panel 1 is a reddish-green speckled mango, panel 2 the plain yellow mango with dark marks at its top; the fruits are clearly different individuals.",
+   "confidence": "high"
+  },
+  "Q-2741318ce1": {
+   "decision": "POSSIBLE_SEQUENCE_RELATION",
+   "rationale": "Same orange mango with the same dark spot below the top and pale mark lower left on the same white paper, but when the outlines are aligned the speckles are offset and panel 2 shows a dark paper edge at the top, so it is a second shot.",
+   "confidence": "medium"
+  },
+  "Q-86f2616362": {
+   "decision": "POSSIBLE_SEQUENCE_RELATION",
+   "rationale": "Same red-and-green mango with matching blush and speckles on the same dark cloth, but it sits at a different place in the frame and the small light specks on the cloth do not line up when the fruit is aligned, so these are different shots.",
+   "confidence": "high"
+  },
+  "Q-dd3776b341": {
+   "decision": "NEAR_DUPLICATE",
+   "rationale": "Same red speckled mango in the same pose on the same dark cloth; panel 2 is an enlarged crop, and after scaling the outline and individual dark speckles line up with the cloth shading.",
+   "confidence": "medium"
+  },
+  "Q-8a0fb6a51c": {
+   "decision": "POSSIBLE_SEQUENCE_RELATION",
+   "rationale": "Same notebook with spiral binding on marble and the same red-yellow mango with a dark tip mark, but with the notebook and marble aligned the fruit is slightly turned and displaced, so the fruit was repositioned between two photos.",
+   "confidence": "high"
+  },
+  "Q-43c5055635": {
+   "decision": "NEAR_DUPLICATE",
+   "rationale": "Same elongated red mango with the same dark speckles in the same pose on white; the panels align with a small scale and shift change and almost no residual.",
+   "confidence": "high"
+  },
+  "Q-7f0d5c3136": {
+   "decision": "POSSIBLE_SEQUENCE_RELATION",
+   "rationale": "Same yellow mango at the same spot on the dark cloth with the background unchanged, but the fruit has been turned about 180 degrees so its red end and dark mottling appear at the opposite end.",
+   "confidence": "medium"
+  },
+  "Q-fa2fe27239": {
+   "decision": "POSSIBLE_SEQUENCE_RELATION",
+   "rationale": "Same round red-orange mango with the same flattened upper-left shoulder and greenish tip on the same white paper with a dark strip along the bottom, but the fruit sits in a different place and its surface shading differs slightly, so it is a separate shot.",
+   "confidence": "medium"
+  },
+  "Q-adef5d1ddc": {
+   "decision": "UNRELATED",
+   "rationale": "Both are red mangoes on white paper, but panel 1 is almost uniformly red while panel 2 is half yellow-green with a dark mark near the top, and apart from a generic dark tip no individual mark matches.",
+   "confidence": "low"
+  },
+  "Q-96b31e25de": {
+   "decision": "UNRELATED",
+   "rationale": "Panel 1 is a yellow mango with a red lower end, panel 2 a narrower red-and-green mango with a different speckle pattern; different fruit.",
+   "confidence": "high"
+  },
+  "Q-7613c2c185": {
+   "decision": "NEAR_DUPLICATE",
+   "rationale": "Same mango halves, leaves, grass and soil in exactly the same arrangement; the panels match pixel for pixel with no geometric change.",
+   "confidence": "high"
+  },
+  "Q-b1338de687": {
+   "decision": "UNRELATED",
+   "rationale": "Panel 1 is the slender yellow mango with the black dash and marks near its top, while panel 2 is a broader egg-shaped yellow mango with only a small cluster of brown dots near its lower edge; the outline and individual marks do not correspond.",
+   "confidence": "low"
+  },
+  "Q-8132faceca": {
+   "decision": "POSSIBLE_SEQUENCE_RELATION",
+   "rationale": "Same yellow mango with identical dark marks at the upper-left shoulder, but it moved on the dark cloth while a small background speck stayed put, so these are different shots.",
+   "confidence": "high"
+  },
+  "Q-5d1bb04703": {
+   "decision": "POSSIBLE_SEQUENCE_RELATION",
+   "rationale": "Same mango with red upper-left blush, dark speckles and a pale patch lower left on the same dark cloth, but it appears smaller and at a different position while the cloth specks stay put, so these are different shots.",
+   "confidence": "high"
+  },
+  "Q-5ee715d969": {
+   "decision": "POSSIBLE_SEQUENCE_RELATION",
+   "rationale": "Same red speckled mango and shadow on the same corrugated metal, but inconsistent local shifts of several pixels remain across the metal texture after global alignment, indicating a separate frame.",
+   "confidence": "medium"
+  },
+  "Q-9d88c91220": {
+   "decision": "UNRELATED",
+   "rationale": "Same dark board on a chair, but panel 1 holds a broad egg-shaped mango lower right and panel 2 a much more elongated mango upper left; the outlines and blush pattern do not match.",
+   "confidence": "medium"
+  },
+  "Q-48014bb4bc": {
+   "decision": "POSSIBLE_SEQUENCE_RELATION",
+   "rationale": "Same elongated yellow mango with red top, speckles and pinkish marks near the lower middle on the same dark board, but it sits at a different place in the frame and the board edge visible in panel 1 is absent in panel 2.",
+   "confidence": "high"
+  },
+  "Q-6894111bc5": {
+   "decision": "NEAR_DUPLICATE",
+   "rationale": "Same yellow mango with red top and identical speckle pattern in an identical pose on the dark cloth; panel 2 is a slightly enlarged crop that aligns with almost no residual.",
+   "confidence": "high"
+  },
+  "Q-44531a45cd": {
+   "decision": "POSSIBLE_SEQUENCE_RELATION",
+   "rationale": "Same yellow mango with the identical black dash and dark mark cluster at the upper-left shoulder, but it lies at a different position and angle on the dark cloth while the cloth shading does not follow it, so these are different shots.",
+   "confidence": "high"
+  },
+  "Q-867f6f5f6b": {
+   "decision": "UNRELATED",
+   "rationale": "Panel 1 is a broad red-orange mango, panel 2 a narrower yellow-green mango with brown speckles along its right edge and a dark spot lower left; shape and marks differ.",
+   "confidence": "medium"
+  },
+  "Q-3cbacbd917": {
+   "decision": "NEAR_DUPLICATE",
+   "rationale": "Same yellow-green mango with the dark lesion near the stem, twigs and green leaf in identical positions; the panels match pixel for pixel with no geometric change.",
+   "confidence": "high"
+  },
+  "Q-b87f9617d1": {
+   "decision": "POSSIBLE_SEQUENCE_RELATION",
+   "rationale": "Same round red mango with the red top, yellow-green base and greenish spot on the same white paper, but the fruit is slightly tilted differently (the base spot and outline shift) so it is a second shot rather than a copy.",
+   "confidence": "medium"
+  },
+  "Q-9690c79165": {
+   "decision": "POSSIBLE_SEQUENCE_RELATION",
+   "rationale": "Same red speckled mango and shadow on the same corrugated metal, but after alignment the metal texture still shows position-dependent shifts of several pixels, so it is a different frame of the same setup.",
+   "confidence": "medium"
+  },
+  "Q-d7902f7f35": {
+   "decision": "UNRELATED",
+   "rationale": "Panel 1 shows yellow mangoes on a metal tray with a timestamp, panel 2 a stock-style basket of mangoes with a cut hedgehog mango on white; different fruit and scene.",
+   "confidence": "high"
+  },
+  "Q-6b5c957f60": {
+   "decision": "POSSIBLE_SEQUENCE_RELATION",
+   "rationale": "Same yellow mango with the identical black dash and dark mark cluster at its upper-left shoulder, but it lies lower right, larger and at a different angle on the same dark cloth, so these are different shots.",
+   "confidence": "high"
+  },
+  "Q-397ccb0854": {
+   "decision": "UNRELATED",
+   "rationale": "Panel 1 is a red-orange mango on white paper, panel 2 a pale green-pink mango on pink flower-patterned cloth; fruit and scene both differ.",
+   "confidence": "high"
+  },
+  "Q-aa6fdcc39d": {
+   "decision": "POSSIBLE_SEQUENCE_RELATION",
+   "rationale": "Same egg-shaped mango with red top, yellow base and greenish spot at the bottom on the same white paper, but it sits in a different place and at a different size, and the fine speckles do not line up exactly after alignment, so it is a second shot.",
+   "confidence": "medium"
+  },
+  "Q-4d5f5a8a54": {
+   "decision": "POSSIBLE_SEQUENCE_RELATION",
+   "rationale": "On the same white paper, panel 1's mango turned 180 degrees matches panel 2's red top, yellow-green base and dark speckles along the right flank, so it looks like the same fruit repositioned rather than a copy.",
+   "confidence": "low"
+  },
+  "Q-e3649651d0": {
+   "decision": "POSSIBLE_SEQUENCE_RELATION",
+   "rationale": "Same yellow mango with the identical black dash and dark mark cluster at its upper-left shoulder on the same dark cloth, but the fruit moved and turned relative to the fixed background, so these are different shots.",
+   "confidence": "high"
+  },
+  "Q-45d90e3a3c": {
+   "decision": "POSSIBLE_SEQUENCE_RELATION",
+   "rationale": "Same red speckled mango on the same corrugated metal, but the fruit surface does not match the aligned background texture exactly and local shifts remain, so it is a separate frame rather than a copy.",
+   "confidence": "medium"
+  },
+  "Q-4f065e0e41": {
+   "decision": "POSSIBLE_SEQUENCE_RELATION",
+   "rationale": "Same red speckled mango on the same corrugated metal, nearly identical framing, but when the metal scratches are aligned the fruit rim and speckles are offset by about 2 px, which points to a second frame rather than a resized copy.",
+   "confidence": "low"
+  },
+  "Q-f6b9fdad1f": {
+   "decision": "UNRELATED",
+   "rationale": "Panel 1 is a green mango hanging on a tree in an orchard, panel 2 a red mango on corrugated metal; different fruit and scene.",
+   "confidence": "high"
+  },
+  "Q-446a406aa6": {
+   "decision": "POSSIBLE_SEQUENCE_RELATION",
+   "rationale": "Both show a red-blushed mango on the same white paper; turned 180 degrees, panel 1's fruit shows the same red end, yellow-green end and dark speckles along one flank as panel 2, which suggests the same fruit repositioned, though the match is weak.",
+   "confidence": "low"
+  },
+  "Q-398b647a1f": {
+   "decision": "UNRELATED",
+   "rationale": "Both are on a similar dark cloth, but panel 1 is the uniformly yellow mango with the black dash marks and panel 2 an orange mango with a red left side and a dark stem mark, so they are different fruit.",
+   "confidence": "medium"
+  },
+  "Q-54285e62dc": {
+   "decision": "POSSIBLE_SEQUENCE_RELATION",
+   "rationale": "Same green-yellow mango with the identical red-brown speckle patch on its left on the same dark board beside marble, but it appears larger and higher in panel 2 while the board edge stays put, so these are different shots.",
+   "confidence": "high"
+  },
+  "Q-9cf69beab0": {
+   "decision": "POSSIBLE_SEQUENCE_RELATION",
+   "rationale": "Same mango with red left flank, brown speckles and a dark stem mark at the top on the same dark cloth, but it is larger and shifted relative to the background specks, so these are different shots.",
+   "confidence": "high"
+  },
+  "Q-3dac37c801": {
+   "decision": "POSSIBLE_SEQUENCE_RELATION",
+   "rationale": "Same yellow mango with the identical black dash and dark marks at its upper-left shoulder on the same dark cloth, but its position and size change relative to the fixed cloth, so these are different shots.",
+   "confidence": "high"
+  },
+  "Q-56e1815809": {
+   "decision": "POSSIBLE_SEQUENCE_RELATION",
+   "rationale": "Same egg-shaped mango with red top, dark speckles at the upper left and greenish spot at the base on the same white paper, but it sits lower and appears larger in panel 2, so it is a different shot.",
+   "confidence": "medium"
+  },
+  "Q-3aa756b6ee": {
+   "decision": "UNRELATED",
+   "rationale": "Both are elongated mangoes on dark cloth, but panel 1 is green at the lower left with an orange top while panel 2 is red on the left and yellow on the right, and no individual marks match even when rotated or mirrored.",
+   "confidence": "low"
+  },
+  "Q-aa16632f5f": {
+   "decision": "POSSIBLE_SEQUENCE_RELATION",
+   "rationale": "Same green-yellow mango with the identical red speckle patches on the same dark cloth, but it sits higher in panel 2 while the cloth shading stays fixed, so these are different shots.",
+   "confidence": "high"
+  },
+  "Q-ec844a0321": {
+   "decision": "POSSIBLE_SEQUENCE_RELATION",
+   "rationale": "Same mango with the red blotches on its left, dark speckles and yellow right side on the same dark cloth, but it appears larger and shifted while the cloth shading does not scale with it, so it is a different shot.",
+   "confidence": "medium"
+  },
+  "Q-36376b2fb3": {
+   "decision": "POSSIBLE_SEQUENCE_RELATION",
+   "rationale": "Same orange mango with the dark spot near its top and pale mark lower left on white paper, but it sits elsewhere in the frame and panel 2 shows a dark paper edge at the top that panel 1 lacks at the corresponding place.",
+   "confidence": "medium"
+  }
+ }
+}

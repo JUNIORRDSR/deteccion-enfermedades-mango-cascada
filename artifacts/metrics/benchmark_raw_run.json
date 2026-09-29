@@ -1,0 +1,77 @@
+{
+  "task": "TASK-06",
+  "recorded_at": "2026-09-28T21:33:51.694765+00:00",
+  "command": "C:\\Users\\junio\\Downloads\\mango-vision\\ALBUS26_major_revision\\.worktrees\\execution\\src\\benchmarks\\run.py --config configs/benchmark.json --out artifacts/metrics/benchmark_raw.csv --report reports/benchmark_report.md",
+  "protocol": {
+    "batch": 1,
+    "precision": "fp32",
+    "m1_imgsz": 640,
+    "m2_imgsz": 224,
+    "warmups_per_image": 10,
+    "iterations_per_image": 100,
+    "torch_threads": 1,
+    "torch_interop_threads": 1,
+    "opencv_threads": 1,
+    "processes": 1,
+    "device": "cpu",
+    "pool_size": 32,
+    "class_names": [
+      "Enfermo",
+      "Saludable"
+    ],
+    "manifest": "data/manifests/model1_clean_manifest.csv",
+    "m2_conf": 0.4,
+    "raspberry_pi_4": "BLOCKED_BY_HARDWARE",
+    "m1_conf": 0.35
+  },
+  "config_sha256": "1e89b424d7da5cd5b26b45d96be553b0c4966f6a4d2dd941ab48213adb04f40c",
+  "manifest_sha256": "dd9431dd7bbc00c6117baf6a0f6cf49eff8bc55f144016b4a98dbdea049ecf5f",
+  "weights": {
+    "m1": {
+      "path": "C:\\Users\\junio\\Downloads\\mango-vision\\ALBUS26_major_revision\\.worktrees\\execution\\experiments\\model1\\EXP-R01\\v1\\run\\weights\\selected.pt",
+      "sha256": "0648da3f3641e3cdb5a1908a092ba892548942836a249bb3b39667f9ae8e8125"
+    },
+    "m2": {
+      "path": "C:\\Users\\junio\\Downloads\\mango-vision\\Mango-vision\\models\\clasificador_enfermedad.pt",
+      "sha256": "e277717e6ca9d7f308d22697550a5a4e80613929acb68eeb790f3304ebfdb08e"
+    }
+  },
+  "pool_file": "artifacts/metrics/benchmark_raw_pool.csv",
+  "pool_sha256": "ae41f90e39968aeea2b17e5c6dd4855d892169029013fc4c420bc11ecd8432a0",
+  "raw_file": "artifacts/metrics/benchmark_raw.csv",
+  "raw_sha256": "2a8a5a68065d71998a12a5f593656a696b271278a89164d9e7c862ef68e48aa5",
+  "channel_order": "BGR",
+  "cascade_source": "Cascade M1 -> crops -> M2, copied from the legacy CLI with only outputs and timers changed.\n\nSource (read-only legacy; never imported or run from here):\n  legacy_corpus Mango-vision/src/inference/infer_cascade.py (SRC-009663, ART-041)\n  legacy git commit e7e59d1bce74a7ae12674f5b6068068681e691ce, file clean at that commit\n  (blob 4f4cbdf0a51a5b9c9611e2fae082e8aea053d649)\n  SHA256 7d672aa40603f61e53afe752fc99779c885af8e1588a4ab6cbb68277bf6a957b\n  COLORS_BY_CLASS from Mango-vision/src/utils/config.py (SRC-009669), same commit,\n  SHA256 63bef8f337cf7c224e61cc5f420373092d0ddb325539521ab70ee68e4fd9c394\n\nCopied: draw_box verbatim, the body of process_frame and the single-image branch of main.\nChanged, only for outputs and timers:\n- cv2.imread(path) is split into a file read and cv2.imdecode(IMREAD_COLOR), the same BGR\n  decode, so reading and decoding are separate timed stages.\n- process_frame is split into three timed stages: the full M1 call; crops + M2 calls; drawing.\n  The source drew each box right after classifying it, so a later overlapping crop could\n  contain the label drawn for an earlier box; here every crop comes from the undrawn frame.\n- cv2.imwrite / cv2.imshow are replaced by cv2.imencode('.jpg') in memory: nothing is written.\n- predict calls pass the frozen protocol explicitly: imgsz (M1 640, M2 224), device,\n  half=False (FP32) and save=False. The source left the M1 imgsz to the checkpoint default.\n- The Ultralytics .speed of every call is returned so it can be recorded as internal time.\nNot copied: argparse, the webcam/video loop, draw_fps, the window, the src.utils.config import.\n\nScientific imports stay at module level as in the source; import this module only after\nsrc.evaluation.provenance.verify_environment.\n\nChannel order: the source passes OpenCV BGR arrays straight to YOLO.predict and does NOT\nconvert BGR to RGB. That is kept (Ultralytics' own file loader also reads BGR).\nM2 runs on every M1 box above the M1 threshold whatever its class, as in the source.",
+  "summary_definition": "benchmark-summary-v1: mean = arithmetic mean; median = middle value, or mean of the two middle values; std = population standard deviation (ddof=0, statistics.pstdev); p95 = linear interpolation between order statistics at 0-based rank (n-1)*0.95 (Hyndman-Fan type 7, NumPy default \"linear\"); min, max and n over the successful measured repetitions",
+  "environment": {
+    "cpu_name": "AMD Ryzen 5 7520U with Radeon Graphics",
+    "machine": "AMD64",
+    "physical_cores": 4,
+    "logical_cores": 8,
+    "ram_bytes": 16407719936,
+    "os": "Windows-11-10.0.26200-SP0",
+    "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+    "executable": "C:\\Users\\junio\\Downloads\\mango-vision\\ALBUS26_major_revision\\.worktrees\\execution\\.venv\\Scripts\\python.exe",
+    "torch": "2.12.0+cpu",
+    "ultralytics": "8.4.52",
+    "opencv": "5.0.0",
+    "numpy": "2.4.4",
+    "torch_threads": 1,
+    "torch_interop_threads": 1,
+    "opencv_threads": 1,
+    "cuda_available": false,
+    "device": "cpu",
+    "thread_env": {
+      "OMP_NUM_THREADS": "1",
+      "MKL_NUM_THREADS": null,
+      "OPENBLAS_NUM_THREADS": null,
+      "CUDA_VISIBLE_DEVICES": null
+    }
+  },
+  "cold_start_ns": {
+    "load_m1_ns": 501972800,
+    "load_m2_ns": 81078600,
+    "first_call_after_load_end_to_end_ns": 1375950800
+  },
+  "warmup_failures": {}
+}

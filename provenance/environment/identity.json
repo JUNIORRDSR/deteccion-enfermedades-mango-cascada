@@ -1,0 +1,77 @@
+{
+  "kind": "RECONSTRUCTED",
+  "python_version": "Python 3.12.14",
+  "python_executable": "C:\\Users\\junio\\Downloads\\mango-vision\\ALBUS26_major_revision\\.worktrees\\execution\\.venv\\Scripts\\python.exe",
+  "pip_version": "pip 25.0.1 from C:\\Users\\junio\\Downloads\\mango-vision\\ALBUS26_major_revision\\.worktrees\\execution\\.venv\\Lib\\site-packages\\pip (python 3.12)",
+  "requested_pins": [
+    "ultralytics==8.4.52",
+    "torch==2.12.0",
+    "torchvision==0.27.0",
+    "numpy==2.4.4",
+    "Pillow==12.2.0",
+    "ImageHash==4.3.2",
+    "scikit-learn==1.8.0"
+  ],
+  "historical_model1_ultralytics": "8.4.39",
+  "reconstructed_ultralytics": "8.4.52",
+  "effective_index_environment": {},
+  "pip_cli_index_options": [],
+  "commands": [
+    {
+      "label": "python_version",
+      "command": "C:\\Users\\junio\\Downloads\\mango-vision\\ALBUS26_major_revision\\.worktrees\\execution\\.venv\\Scripts\\python.exe --version",
+      "exit_code": 0,
+      "log": "python_version.txt"
+    },
+    {
+      "label": "pip_version",
+      "command": "C:\\Users\\junio\\Downloads\\mango-vision\\ALBUS26_major_revision\\.worktrees\\execution\\.venv\\Scripts\\python.exe -m pip --version",
+      "exit_code": 0,
+      "log": "pip_version.txt"
+    },
+    {
+      "label": "pip_config_debug_redacted",
+      "command": "C:\\Users\\junio\\Downloads\\mango-vision\\ALBUS26_major_revision\\.worktrees\\execution\\.venv\\Scripts\\python.exe -m pip config debug",
+      "exit_code": 0,
+      "log": "pip_config_debug_redacted.txt"
+    },
+    {
+      "label": "pip_config_list_redacted",
+      "command": "C:\\Users\\junio\\Downloads\\mango-vision\\ALBUS26_major_revision\\.worktrees\\execution\\.venv\\Scripts\\python.exe -m pip config list",
+      "exit_code": 0,
+      "log": "pip_config_list_redacted.txt"
+    },
+    {
+      "label": "pip_install_redacted",
+      "command": "C:\\Users\\junio\\Downloads\\mango-vision\\ALBUS26_major_revision\\.worktrees\\execution\\.venv\\Scripts\\python.exe -m pip install --report C:\\Users\\junio\\Downloads\\mango-vision\\ALBUS26_major_revision\\.worktrees\\execution\\provenance\\runtime_state\\tmp\\pip-report-vk743yjc.json ultralytics==8.4.52 torch==2.12.0 torchvision==0.27.0 numpy==2.4.4 Pillow==12.2.0 ImageHash==4.3.2 scikit-learn==1.8.0",
+      "exit_code": 0,
+      "log": "pip_install_redacted.txt"
+    },
+    {
+      "label": "pip_check",
+      "command": "C:\\Users\\junio\\Downloads\\mango-vision\\ALBUS26_major_revision\\.worktrees\\execution\\.venv\\Scripts\\python.exe -m pip check",
+      "exit_code": 0,
+      "log": "pip_check.txt"
+    },
+    {
+      "label": "pip_list",
+      "command": "C:\\Users\\junio\\Downloads\\mango-vision\\ALBUS26_major_revision\\.worktrees\\execution\\.venv\\Scripts\\python.exe -m pip list --format=json",
+      "exit_code": 0,
+      "log": "pip_list.txt"
+    },
+    {
+      "label": "pip_freeze",
+      "command": "C:\\Users\\junio\\Downloads\\mango-vision\\ALBUS26_major_revision\\.worktrees\\execution\\.venv\\Scripts\\python.exe -m pip freeze --all",
+      "exit_code": 0,
+      "log": "pip_freeze.txt"
+    },
+    {
+      "label": "gpu_inventory",
+      "command": "powershell -NoProfile -Command Get-CimInstance Win32_VideoController | Select-Object Name,DriverVersion | ConvertTo-Json -Compress",
+      "exit_code": 0,
+      "log": "gpu_inventory.txt"
+    }
+  ],
+  "pip_check_exit_code": 0,
+  "scientific_use_allowed": true
+}

@@ -1,0 +1,19 @@
+# Local execution state and large assets; preserve scientific provenance in registries.
+/.worktrees/
+/.superpowers/
+/.venv/
+/provenance/runtime_state/
+/data/derived/
+/data/raw/
+__pycache__/
+*.pyc
+*.pt
+*.pth
+*.onnx
+*.whl
+*.safetensors
+*.cache
+*.tmp
+
+# Blind review sheets are derived from dataset images; their SHA256 lives in blinding_log.json.
+data/audits/*/blind_packets/**/*.png

@@ -1,0 +1,34 @@
+{
+  "experiment_id": "EXP-R03",
+  "weights_sha256": "e277717e6ca9d7f308d22697550a5a4e80613929acb68eeb790f3304ebfdb08e",
+  "manifest_sha256": "cd4f0d0e428fc3015268b7df541bf705261893c4b5cba0a7ef274e17d0680d92",
+  "imgsz": 224,
+  "rule": "top-1 without rejection",
+  "input_contract": "Ultralytics file-path loader",
+  "model_names": {
+    "0": "Antracnosis",
+    "1": "Cancro_bacteriano",
+    "2": "Costras",
+    "3": "Podredumbre_Extremo_tallo",
+    "4": "Saludable"
+  },
+  "ultralytics": "8.4.52",
+  "torch": "2.12.0+cpu",
+  "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+  "dependencies_outside_checkout": true,
+  "runtime_sha256": "f1a06a70e5af9e606618b4db5321f001ad4e905b3777f528d5b4d37465f9a2c2",
+  "runtime_modules": {
+    "ultralytics": "Lib/site-packages/ultralytics/__init__.py",
+    "torch": "Lib/site-packages/torch/__init__.py"
+  },
+  "environment": "provenance/environment/inference_environment.txt",
+  "environment_sha256": "64086b292d15a63b9418dfba1523b6343c60db2a8ba9a69ca0a17b7f5a345d4b",
+  "images": 219,
+  "predictions_sha256": "e3700dbfd429001039af1572cc0ee33f6e6b92cfd95d8ab0705d6dedf7fd321d",
+  "recorded_at": "2026-09-28T20:59:37.709116+00:00",
+  "config": "configs/evaluation_frozen.json",
+  "config_sha256": "b06081e926d01753cd276d2a3535b2f1e8a5975e7de1db031dc8e786c714e228",
+  "producer": "src/evaluation/predict_model2.py",
+  "producer_sha256": "dc981256842c0e47816cecb77455769de263e2d22ff8d4c7e4cdf21216072b65",
+  "command": "C:\\Users\\junio\\Downloads\\mango-vision\\ALBUS26_major_revision\\.worktrees\\execution\\src\\evaluation\\evaluate.py --model-id model2 --config configs/evaluation_frozen.json --split test --run-dir experiments/model2/EXP-R03"
+}

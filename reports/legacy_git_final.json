@@ -1,0 +1,90 @@
+{
+  "task": "TASK-10 legacy git state",
+  "checks": [
+    {
+      "repo": "Mango-vision",
+      "command": "git rev-parse --show-toplevel",
+      "exit_code": 0,
+      "matches_initial": true
+    },
+    {
+      "repo": "Mango-vision",
+      "command": "git status --short",
+      "exit_code": 0,
+      "matches_initial": true
+    },
+    {
+      "repo": "Mango-vision",
+      "command": "git branch --show-current",
+      "exit_code": 0,
+      "matches_initial": true
+    },
+    {
+      "repo": "Mango-vision",
+      "command": "git rev-parse HEAD",
+      "exit_code": 0,
+      "matches_initial": true
+    },
+    {
+      "repo": "Mango-vision",
+      "command": "git log --oneline -n 20",
+      "exit_code": 0,
+      "matches_initial": true
+    },
+    {
+      "repo": "Mango-vision",
+      "command": "git worktree list --porcelain",
+      "exit_code": 0,
+      "matches_initial": true
+    },
+    {
+      "repo": "Mango-vision",
+      "command": "git rev-parse --git-dir --git-common-dir --show-superproject-working-tree",
+      "exit_code": 0,
+      "matches_initial": true
+    },
+    {
+      "repo": "SemilleroTI-Mangos",
+      "command": "git rev-parse --show-toplevel",
+      "exit_code": 0,
+      "matches_initial": true
+    },
+    {
+      "repo": "SemilleroTI-Mangos",
+      "command": "git status --short",
+      "exit_code": 0,
+      "matches_initial": true
+    },
+    {
+      "repo": "SemilleroTI-Mangos",
+      "command": "git branch --show-current",
+      "exit_code": 0,
+      "matches_initial": true
+    },
+    {
+      "repo": "SemilleroTI-Mangos",
+      "command": "git rev-parse HEAD",
+      "exit_code": 0,
+      "matches_initial": true
+    },
+    {
+      "repo": "SemilleroTI-Mangos",
+      "command": "git log --oneline -n 20",
+      "exit_code": 0,
+      "matches_initial": true
+    },
+    {
+      "repo": "SemilleroTI-Mangos",
+      "command": "git worktree list --porcelain",
+      "exit_code": 0,
+      "matches_initial": true
+    },
+    {
+      "repo": "SemilleroTI-Mangos",
+      "command": "git rev-parse --git-dir --git-common-dir --show-superproject-working-tree",
+      "exit_code": 0,
+      "matches_initial": true
+    }
+  ],
+  "passed": true
+}

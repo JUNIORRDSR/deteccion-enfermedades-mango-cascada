@@ -1,0 +1,9 @@
+{
+  "embedding_model": "ART-004 yolo11n-cls ImageNet base, sha256 c62d41bf9625777760018bf914d2e6cd472420ccd01706d97a61cb6c82502bd7",
+  "images": 669,
+  "pairs_ranked": 223419,
+  "horizon": 40,
+  "cosine_at_rank_1": 0.9984,
+  "cosine_at_horizon": 0.9947,
+  "residual": "pairs below the horizon are not visually reviewed; their relations, if any, are declared residual risk"
+}

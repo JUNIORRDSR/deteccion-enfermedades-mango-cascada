@@ -1,0 +1,48 @@
+test_duplicate_header_column_is_refused (tests.test_provenance_round2.CsvValidation.test_duplicate_header_column_is_refused) ... ok
+test_header_only_file_is_refused (tests.test_provenance_round2.CsvValidation.test_header_only_file_is_refused) ... ok
+test_missing_required_column_is_refused (tests.test_provenance_round2.CsvValidation.test_missing_required_column_is_refused) ... ok
+test_non_utf8_bytes_are_invalid_input_not_a_traceback (tests.test_provenance_round2.CsvValidation.test_non_utf8_bytes_are_invalid_input_not_a_traceback) ... ok
+test_schema_rejects_none_and_non_string_values (tests.test_provenance_round2.CsvValidation.test_schema_rejects_none_and_non_string_values) ... ok
+test_short_row_is_refused_rather_than_yielding_none (tests.test_provenance_round2.CsvValidation.test_short_row_is_refused_rather_than_yielding_none) ... ok
+test_surplus_cells_are_refused (tests.test_provenance_round2.CsvValidation.test_surplus_cells_are_refused) ... ok
+test_file_identity_falls_back_for_missing_paths (tests.test_provenance_round2.HardlinkIdentity.test_file_identity_falls_back_for_missing_paths) ... ok
+test_two_source_ids_cannot_hardlink_to_one_file (tests.test_provenance_round2.HardlinkIdentity.test_two_source_ids_cannot_hardlink_to_one_file) ... ok
+test_external_sys_path_entry_fails_verification (tests.test_provenance_round2.ImportIsolation.test_external_sys_path_entry_fails_verification) ... ok
+test_every_registered_local_artifact_matches_its_bytes (tests.test_provenance_round2.RegistryIntegrity.test_every_registered_local_artifact_matches_its_bytes) ... FAIL
+test_alternate_data_stream_forms_are_refused (tests.test_provenance_round2.RootAndStreamAuthorization.test_alternate_data_stream_forms_are_refused) ... ok
+test_arbitrary_system_root_is_refused (tests.test_provenance_round2.RootAndStreamAuthorization.test_arbitrary_system_root_is_refused) ... ok
+test_code_and_test_trees_are_never_outputs (tests.test_provenance_round2.RootAndStreamAuthorization.test_code_and_test_trees_are_never_outputs) ... ok
+test_root_with_wrong_freeze_digest_is_refused (tests.test_provenance_round2.RootAndStreamAuthorization.test_root_with_wrong_freeze_digest_is_refused) ... ok
+test_undeclared_subtree_is_refused (tests.test_provenance_round2.RootAndStreamAuthorization.test_undeclared_subtree_is_refused) ... ok
+test_additional_key_names_are_scrubbed (tests.test_provenance_round2.SecretShapes.test_additional_key_names_are_scrubbed) ... FAIL
+test_cookie_and_signature_lines_are_scrubbed (tests.test_provenance_round2.SecretShapes.test_cookie_and_signature_lines_are_scrubbed) ... ok
+test_split_name_value_header_records_are_scrubbed (tests.test_provenance_round2.SecretShapes.test_split_name_value_header_records_are_scrubbed) ... ok
+
+======================================================================
+FAIL: test_every_registered_local_artifact_matches_its_bytes (tests.test_provenance_round2.RegistryIntegrity.test_every_registered_local_artifact_matches_its_bytes)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\junio\Downloads\mango-vision\ALBUS26_major_revision\.worktrees\execution\tests\test_provenance_round2.py", line 220, in test_every_registered_local_artifact_matches_its_bytes
+    self.assertEqual(mismatches, [])
+AssertionError: Lists differ: [('ART-103', 'sha256')] != []
+
+First list contains 1 additional elements.
+First extra element 0:
+('ART-103', 'sha256')
+
+- [('ART-103', 'sha256')]
++ []
+
+======================================================================
+FAIL: test_additional_key_names_are_scrubbed (tests.test_provenance_round2.SecretShapes.test_additional_key_names_are_scrubbed)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\junio\Downloads\mango-vision\ALBUS26_major_revision\.worktrees\execution\tests\test_provenance_round2.py", line 162, in test_additional_key_names_are_scrubbed
+    self.assertNotIn(secret, text)
+AssertionError: 'AKID' unexpectedly found in "{'private_key': '[REDACTED]', 'access_key_id': 'AKID', 'auth': '[REDACTED]', 'session_token': '[REDACTED]', 'host': 'files.example'}"
+
+----------------------------------------------------------------------
+Ran 19 tests in 0.251s
+
+FAILED (failures=2)
+exit=1

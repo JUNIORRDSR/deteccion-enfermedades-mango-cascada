@@ -1,0 +1,12 @@
+{
+  "kernel_sha256": "30ba388913a7ca519e6b3541c9c3d885b876dbb2d089608e5785c01a6033ce1b",
+  "kernel_source_sha256": "30ba388913a7ca519e6b3541c9c3d885b876dbb2d089608e5785c01a6033ce1b",
+  "manifest": "data/manifests/model1_clean_manifest.csv",
+  "manifest_sha256": "dd9431dd7bbc00c6117baf6a0f6cf49eff8bc55f144016b4a98dbdea049ecf5f",
+  "payload_sha256": "62b40b6ea9da7107d0abea66682197f9ed681f4735c860deeb0465dd647b199e",
+  "selected_files": 552,
+  "excluded_files": 117,
+  "mode": "capacity",
+  "experiment_id": "KAGGLE-CAPACITY-002",
+  "attempt": 1
+}

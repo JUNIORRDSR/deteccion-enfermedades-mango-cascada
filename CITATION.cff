@@ -1,0 +1,20 @@
+cff-version: 1.2.0
+message: "Si usa este repositorio, cítelo con estos datos."
+title: "Detección y clasificación automatizada de enfermedades en mango: código, pesos y evidencia de la revisión"
+version: 1.0.0
+date-released: 2026-09-28
+license: AGPL-3.0-only
+repository-code: "https://github.com/JUNIORRDSR/deteccion-enfermedades-mango-cascada"
+authors:
+  - family-names: "Villa Bastidas"
+    given-names: "Daniela"
+  - family-names: "Solano Romero"
+    given-names: "Jorge"
+  - family-names: "Molina-Cárdenas"
+    given-names: "Marvin"
+keywords:
+  - mango
+  - fitopatología
+  - YOLO
+  - fuga de datos
+  - visión por computador

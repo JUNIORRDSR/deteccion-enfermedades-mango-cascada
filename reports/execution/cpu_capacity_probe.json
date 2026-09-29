@@ -1,0 +1,24 @@
+{
+  "kind": "NON_SCIENTIFIC_THROUGHPUT_PROBE",
+  "device": "cpu",
+  "torch_threads": 7,
+  "processor": "AMD Ryzen 5 7520U with Radeon Graphics (provenance/environment/cpu_topology_probe.json)",
+  "images_train_plus_val": 636,
+  "test_images_read": 0,
+  "epochs_run": 3,
+  "warmup_epochs_excluded": 1,
+  "epoch_seconds_all": [
+    377.0,
+    328.5,
+    336.1,
+    354.9
+  ],
+  "per_epoch_seconds_median": 336.1,
+  "per_epoch_seconds_upper": 354.9,
+  "projected_150_epochs_hours_upper": 14.79,
+  "projected_150_epochs_hours_with_safety_1_35": 19.96,
+  "wall_seconds_total": 1066.9,
+  "model_retained": false,
+  "metrics_reported": false,
+  "note": "Timings only. The probe model and its metrics are discarded. The real split will have about 443 training images instead of 502, so this over-estimates."
+}

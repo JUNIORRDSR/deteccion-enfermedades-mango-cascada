@@ -1,0 +1,12 @@
+{
+  "kernel_sha256": "e70e79e01993a3f7350f38160bbd74a3fb47010569a3dca5f922d3dbb348a6a6",
+  "kernel_source_sha256": "e70e79e01993a3f7350f38160bbd74a3fb47010569a3dca5f922d3dbb348a6a6",
+  "manifest": "data/manifests/model1_clean_manifest.csv",
+  "manifest_sha256": "dd9431dd7bbc00c6117baf6a0f6cf49eff8bc55f144016b4a98dbdea049ecf5f",
+  "payload_sha256": "b2f78531a0e99db304a22bd291fad136091ee5cee281c3d017658b5d420507da",
+  "selected_files": 113,
+  "excluded_files": 556,
+  "mode": "predict",
+  "experiment_id": "EXP-V01",
+  "attempt": 2
+}

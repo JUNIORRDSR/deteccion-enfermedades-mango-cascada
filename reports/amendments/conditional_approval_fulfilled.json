@@ -1,0 +1,46 @@
+{
+  "decision_id": "DECISION-026",
+  "recorded_at": "2026-09-19T21:22:02.083075+00:00",
+  "user_authorization": "provenance/authorizations/2026-09-18-conditional-approval.txt",
+  "authorization_sha256": "9f4e614bf405424d543df903177a2a5a973dbf8d6af32abf83ea38f4f901e454",
+  "reviewer": "/root/amendment_delta_review",
+  "review_reports": [
+    {
+      "path": "reports/amendments/independent_delta_review.md",
+      "sha256": "c5cbeadf1eec79fef3839aa4d83bcb35830a8118e143833ba68df9aaab7f25b3"
+    },
+    {
+      "path": "reports/amendments/independent_delta_rereview.md",
+      "sha256": "8d3307d483346738e229f5eae90e4d1099470d912e1e638e864956cb2d67fe42"
+    }
+  ],
+  "open_findings": {
+    "HIGH": 0,
+    "MEDIUM": 0,
+    "LOW": 0
+  },
+  "delta_path": "reports/amendments/delta-3990fa7-2e9b009.diff",
+  "delta_sha256": "2cda88c86b1a9e03293d7ae1a56d15423b106fa5d449ccb216c89ec7a720400c",
+  "candidate_commit": "2e9b0090ddf67857f7092c1aba988f9824057984",
+  "documents": [
+    {
+      "kind": "spec",
+      "path": "docs/superpowers/specs/2026-09-17-albus26-major-revision-design.md",
+      "commit": "963b03ecaa6585628f79142ffdddc6992dc238a5",
+      "sha256": "76ef27520460abb7c4c6eee76061adad59e9c6f34f203c1a941f41125d60ec8b",
+      "bytes_equal_git_blob": true
+    },
+    {
+      "kind": "plan",
+      "path": "docs/superpowers/plans/2026-09-17-albus26-major-revision.md",
+      "commit": "2e9b0090ddf67857f7092c1aba988f9824057984",
+      "sha256": "cd547e9e1c0fc6c2ecc3dccb12c6d3062dbc000296e8778341eadc9b32610b43",
+      "bytes_equal_git_blob": true
+    }
+  ],
+  "condition": "INTEGRATION_AND_REVIEW_SATISFIED",
+  "execution_gate": "AWAITING_PROTOCOL_FREEZE",
+  "fresh_verification": "reports/amendments/pre_freeze_document_verification.json",
+  "source_integrity": "reports/amendments/resumed_integrity_2026-09-19_attempt2.json",
+  "new_experiments": false
+}

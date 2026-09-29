@@ -1,0 +1,2578 @@
+{
+  "k": 5,
+  "rule": "merge if at least one reviewer flags a neighbour",
+  "reviewers": {
+    "a": {
+      "Q-79c437827b": {
+        "kind": "residual_query",
+        "query": "SRC-010064",
+        "panel_members": [
+          "SRC-010064",
+          "SRC-010063",
+          "SRC-010062",
+          "SRC-010060",
+          "SRC-010061",
+          "SRC-010002"
+        ]
+      },
+      "Q-bbfbde6a69": {
+        "kind": "residual_query",
+        "query": "SRC-010180",
+        "panel_members": [
+          "SRC-010180",
+          "SRC-010243",
+          "SRC-010150",
+          "SRC-010131",
+          "SRC-010128",
+          "SRC-010129"
+        ]
+      },
+      "Q-f936243afe": {
+        "kind": "residual_query",
+        "query": "SRC-010084",
+        "panel_members": [
+          "SRC-010084",
+          "SRC-010882",
+          "SRC-010057",
+          "SRC-010142",
+          "SRC-010001",
+          "SRC-010856"
+        ]
+      },
+      "Q-5b7fdf550d": {
+        "kind": "residual_query",
+        "query": "SRC-010146",
+        "panel_members": [
+          "SRC-010146",
+          "SRC-010157",
+          "SRC-010244",
+          "SRC-009940",
+          "SRC-009715",
+          "SRC-010002"
+        ]
+      },
+      "Q-ef6c4f9445": {
+        "kind": "residual_query",
+        "query": "SRC-010769",
+        "panel_members": [
+          "SRC-010769",
+          "SRC-010794",
+          "SRC-009908",
+          "SRC-009786",
+          "SRC-009901",
+          "SRC-009803"
+        ]
+      },
+      "Q-74eb3b7be2": {
+        "kind": "residual_query",
+        "query": "SRC-010802",
+        "panel_members": [
+          "SRC-010802",
+          "SRC-009757",
+          "SRC-009758",
+          "SRC-009755",
+          "SRC-009756",
+          "SRC-009753"
+        ]
+      },
+      "Q-7a215bb0b2": {
+        "kind": "residual_query",
+        "query": "SRC-010822",
+        "panel_members": [
+          "SRC-010822",
+          "SRC-009978",
+          "SRC-009706",
+          "SRC-010824",
+          "SRC-009985",
+          "SRC-010005"
+        ]
+      },
+      "Q-e153b142a2": {
+        "kind": "residual_query",
+        "query": "SRC-010867",
+        "panel_members": [
+          "SRC-010867",
+          "SRC-010161",
+          "SRC-010861",
+          "SRC-009960",
+          "SRC-009959",
+          "SRC-010757"
+        ]
+      },
+      "Q-074f9b2200": {
+        "kind": "residual_query",
+        "query": "SRC-010102",
+        "panel_members": [
+          "SRC-010102",
+          "SRC-010127",
+          "SRC-010103",
+          "SRC-010248",
+          "SRC-009975",
+          "SRC-010100"
+        ]
+      },
+      "Q-0ef8000861": {
+        "kind": "residual_query",
+        "query": "SRC-010075",
+        "panel_members": [
+          "SRC-010075",
+          "SRC-009953",
+          "SRC-010116",
+          "SRC-010191",
+          "SRC-010851",
+          "SRC-010117"
+        ]
+      },
+      "Q-530981f9a8": {
+        "kind": "residual_query",
+        "query": "SRC-009806",
+        "panel_members": [
+          "SRC-009806",
+          "SRC-009908",
+          "SRC-010794",
+          "SRC-009911",
+          "SRC-009882",
+          "SRC-009803"
+        ]
+      },
+      "Q-e55be284d0": {
+        "kind": "residual_query",
+        "query": "SRC-010038",
+        "panel_members": [
+          "SRC-010038",
+          "SRC-009935",
+          "SRC-010037",
+          "SRC-010134",
+          "SRC-010833",
+          "SRC-009938"
+        ]
+      },
+      "Q-30e74d8d5e": {
+        "kind": "residual_query",
+        "query": "SRC-009829",
+        "panel_members": [
+          "SRC-009829",
+          "SRC-009911",
+          "SRC-010799",
+          "SRC-009794",
+          "SRC-009846",
+          "SRC-009820"
+        ]
+      },
+      "Q-1f13e6382b": {
+        "kind": "residual_query",
+        "query": "SRC-010008",
+        "panel_members": [
+          "SRC-010008",
+          "SRC-010240",
+          "SRC-010007",
+          "SRC-010828",
+          "SRC-010042",
+          "SRC-010181"
+        ]
+      },
+      "Q-d8b15f9af5": {
+        "kind": "residual_query",
+        "query": "SRC-009917",
+        "panel_members": [
+          "SRC-009917",
+          "SRC-010080",
+          "SRC-010082",
+          "SRC-010808",
+          "SRC-010839",
+          "SRC-010881"
+        ]
+      },
+      "Q-d6203be5c7": {
+        "kind": "residual_query",
+        "query": "SRC-009916",
+        "panel_members": [
+          "SRC-009916",
+          "SRC-010226",
+          "SRC-009921",
+          "SRC-010224",
+          "SRC-010183",
+          "SRC-010217"
+        ]
+      },
+      "Q-ee350bb97f": {
+        "kind": "residual_query",
+        "query": "SRC-010091",
+        "panel_members": [
+          "SRC-010091",
+          "SRC-010090",
+          "SRC-010843",
+          "SRC-010089",
+          "SRC-010076",
+          "SRC-009935"
+        ]
+      },
+      "Q-28dec53dd3": {
+        "kind": "residual_query",
+        "query": "SRC-010812",
+        "panel_members": [
+          "SRC-010812",
+          "SRC-010040",
+          "SRC-009718",
+          "SRC-010168",
+          "SRC-010825",
+          "SRC-010866"
+        ]
+      },
+      "Q-a80269c310": {
+        "kind": "residual_query",
+        "query": "SRC-009771",
+        "panel_members": [
+          "SRC-009771",
+          "SRC-009778",
+          "SRC-009780",
+          "SRC-009781",
+          "SRC-010763",
+          "SRC-009766"
+        ]
+      },
+      "Q-dca22bf2c0": {
+        "kind": "residual_query",
+        "query": "SRC-010792",
+        "panel_members": [
+          "SRC-010792",
+          "SRC-009876",
+          "SRC-009841",
+          "SRC-009853",
+          "SRC-009872",
+          "SRC-009875"
+        ]
+      },
+      "Q-972aeb27e5": {
+        "kind": "residual_query",
+        "query": "SRC-009785",
+        "panel_members": [
+          "SRC-009785",
+          "SRC-009783",
+          "SRC-009689",
+          "SRC-009792",
+          "SRC-009791",
+          "SRC-010765"
+        ]
+      },
+      "Q-0d6fb578b3": {
+        "kind": "residual_query",
+        "query": "SRC-010780",
+        "panel_members": [
+          "SRC-010780",
+          "SRC-009838",
+          "SRC-009861",
+          "SRC-009824",
+          "SRC-009876",
+          "SRC-009862"
+        ]
+      },
+      "Q-e962698698": {
+        "kind": "residual_query",
+        "query": "SRC-009855",
+        "panel_members": [
+          "SRC-009855",
+          "SRC-009858",
+          "SRC-009859",
+          "SRC-010789",
+          "SRC-009868",
+          "SRC-009883"
+        ]
+      },
+      "Q-9dd79be1f3": {
+        "kind": "residual_query",
+        "query": "SRC-009987",
+        "panel_members": [
+          "SRC-009987",
+          "SRC-009927",
+          "SRC-009997",
+          "SRC-010063",
+          "SRC-009996",
+          "SRC-010144"
+        ]
+      },
+      "Q-d2dbaa0105": {
+        "kind": "residual_query",
+        "query": "SRC-010772",
+        "panel_members": [
+          "SRC-010772",
+          "SRC-009828",
+          "SRC-009788",
+          "SRC-009889",
+          "SRC-009881",
+          "SRC-009789"
+        ]
+      },
+      "Q-bc832ed0ec": {
+        "kind": "residual_query",
+        "query": "SRC-009986",
+        "panel_members": [
+          "SRC-009986",
+          "SRC-009927",
+          "SRC-009996",
+          "SRC-010063",
+          "SRC-009997",
+          "SRC-010019"
+        ]
+      },
+      "Q-64b84c12d1": {
+        "kind": "residual_query",
+        "query": "SRC-009696",
+        "panel_members": [
+          "SRC-009696",
+          "SRC-009861",
+          "SRC-009838",
+          "SRC-009836",
+          "SRC-009824",
+          "SRC-010795"
+        ]
+      },
+      "Q-60e6df5b83": {
+        "kind": "residual_query",
+        "query": "SRC-009945",
+        "panel_members": [
+          "SRC-009945",
+          "SRC-010104",
+          "SRC-009975",
+          "SRC-010127",
+          "SRC-010815",
+          "SRC-010851"
+        ]
+      },
+      "Q-4e9094b536": {
+        "kind": "residual_query",
+        "query": "SRC-009930",
+        "panel_members": [
+          "SRC-009930",
+          "SRC-010066",
+          "SRC-010836",
+          "SRC-009991",
+          "SRC-010866",
+          "SRC-010817"
+        ]
+      },
+      "Q-023e4d0ff8": {
+        "kind": "residual_query",
+        "query": "SRC-009874",
+        "panel_members": [
+          "SRC-009874",
+          "SRC-009875",
+          "SRC-009871",
+          "SRC-009870",
+          "SRC-009872",
+          "SRC-010788"
+        ]
+      },
+      "Q-f1ac4c5049": {
+        "kind": "residual_query",
+        "query": "SRC-010819",
+        "panel_members": [
+          "SRC-010819",
+          "SRC-010253",
+          "SRC-010204",
+          "SRC-009717",
+          "SRC-010872",
+          "SRC-010250"
+        ]
+      },
+      "Q-408c2a4a7c": {
+        "kind": "residual_query",
+        "query": "SRC-010200",
+        "panel_members": [
+          "SRC-010200",
+          "SRC-010201",
+          "SRC-010821",
+          "SRC-010204",
+          "SRC-010199",
+          "SRC-010253"
+        ]
+      },
+      "Q-c98e96b0e9": {
+        "kind": "control_negative",
+        "query": "SRC-010250",
+        "panel_members": [
+          "SRC-010250",
+          "SRC-010007",
+          "SRC-009689",
+          "SRC-009820",
+          "SRC-009853",
+          "SRC-010062"
+        ]
+      },
+      "Q-4701580d7b": {
+        "kind": "residual_query",
+        "query": "SRC-009952",
+        "panel_members": [
+          "SRC-009952",
+          "SRC-010110",
+          "SRC-010111",
+          "SRC-010114",
+          "SRC-010109",
+          "SRC-010815"
+        ]
+      },
+      "Q-d0dbd00db2": {
+        "kind": "residual_query",
+        "query": "SRC-009795",
+        "panel_members": [
+          "SRC-009795",
+          "SRC-009784",
+          "SRC-009689",
+          "SRC-009783",
+          "SRC-010765",
+          "SRC-009791"
+        ]
+      },
+      "Q-cdde3cc90a": {
+        "kind": "residual_query",
+        "query": "SRC-010118",
+        "panel_members": [
+          "SRC-010118",
+          "SRC-009975",
+          "SRC-010248",
+          "SRC-010100",
+          "SRC-010870",
+          "SRC-010125"
+        ]
+      },
+      "Q-9ebf99e4b9": {
+        "kind": "residual_query",
+        "query": "SRC-010077",
+        "panel_members": [
+          "SRC-010077",
+          "SRC-010078",
+          "SRC-010076",
+          "SRC-010838",
+          "SRC-010845",
+          "SRC-010080"
+        ]
+      },
+      "Q-d405db6a4c": {
+        "kind": "residual_query",
+        "query": "SRC-010018",
+        "panel_members": [
+          "SRC-010018",
+          "SRC-010017",
+          "SRC-010813",
+          "SRC-010237",
+          "SRC-009996",
+          "SRC-009997"
+        ]
+      },
+      "Q-eb79fa749b": {
+        "kind": "residual_query",
+        "query": "SRC-010203",
+        "panel_members": [
+          "SRC-010203",
+          "SRC-010204",
+          "SRC-010205",
+          "SRC-010216",
+          "SRC-009717",
+          "SRC-010198"
+        ]
+      },
+      "Q-1fb51564f9": {
+        "kind": "residual_query",
+        "query": "SRC-010036",
+        "panel_members": [
+          "SRC-010036",
+          "SRC-010035",
+          "SRC-009708",
+          "SRC-010828",
+          "SRC-009711",
+          "SRC-010007"
+        ]
+      },
+      "Q-b516c4b3d3": {
+        "kind": "residual_query",
+        "query": "SRC-010113",
+        "panel_members": [
+          "SRC-010113",
+          "SRC-010248",
+          "SRC-010889",
+          "SRC-010854",
+          "SRC-010888",
+          "SRC-010099"
+        ]
+      },
+      "Q-eab69611f8": {
+        "kind": "residual_query",
+        "query": "SRC-010221",
+        "panel_members": [
+          "SRC-010221",
+          "SRC-010206",
+          "SRC-010251",
+          "SRC-010874",
+          "SRC-010227",
+          "SRC-010242"
+        ]
+      },
+      "Q-3dd514472b": {
+        "kind": "residual_query",
+        "query": "SRC-009752",
+        "panel_members": [
+          "SRC-009752",
+          "SRC-009753",
+          "SRC-009805",
+          "SRC-009834",
+          "SRC-009918",
+          "SRC-009756"
+        ]
+      },
+      "Q-65bde44f09": {
+        "kind": "residual_query",
+        "query": "SRC-009965",
+        "panel_members": [
+          "SRC-009965",
+          "SRC-009969",
+          "SRC-010871",
+          "SRC-010217",
+          "SRC-009968",
+          "SRC-010215"
+        ]
+      },
+      "Q-fa7f0fbf0f": {
+        "kind": "residual_query",
+        "query": "SRC-010212",
+        "panel_members": [
+          "SRC-010212",
+          "SRC-010215",
+          "SRC-010821",
+          "SRC-010205",
+          "SRC-010204",
+          "SRC-010185"
+        ]
+      },
+      "Q-763044dd95": {
+        "kind": "residual_query",
+        "query": "SRC-010791",
+        "panel_members": [
+          "SRC-010791",
+          "SRC-009911",
+          "SRC-010799",
+          "SRC-009794",
+          "SRC-009820",
+          "SRC-009846"
+        ]
+      },
+      "Q-3b39ab5f00": {
+        "kind": "residual_query",
+        "query": "SRC-010807",
+        "panel_members": [
+          "SRC-010807",
+          "SRC-010066",
+          "SRC-010836",
+          "SRC-009991",
+          "SRC-010866",
+          "SRC-010817"
+        ]
+      },
+      "Q-2eb96d391c": {
+        "kind": "residual_query",
+        "query": "SRC-009943",
+        "panel_members": [
+          "SRC-009943",
+          "SRC-010248",
+          "SRC-010100",
+          "SRC-010121",
+          "SRC-009950",
+          "SRC-010850"
+        ]
+      },
+      "Q-ea0646ea44": {
+        "kind": "residual_query",
+        "query": "SRC-009800",
+        "panel_members": [
+          "SRC-009800",
+          "SRC-009889",
+          "SRC-009828",
+          "SRC-009789",
+          "SRC-009695",
+          "SRC-010793"
+        ]
+      },
+      "Q-992c01b8fd": {
+        "kind": "residual_query",
+        "query": "SRC-010039",
+        "panel_members": [
+          "SRC-010039",
+          "SRC-009935",
+          "SRC-010037",
+          "SRC-010134",
+          "SRC-010833",
+          "SRC-009938"
+        ]
+      },
+      "Q-434da27d4f": {
+        "kind": "residual_query",
+        "query": "SRC-010831",
+        "panel_members": [
+          "SRC-010831",
+          "SRC-010040",
+          "SRC-009718",
+          "SRC-010042",
+          "SRC-010138",
+          "SRC-010168"
+        ]
+      },
+      "Q-f103252227": {
+        "kind": "residual_query",
+        "query": "SRC-009808",
+        "panel_members": [
+          "SRC-009808",
+          "SRC-009820",
+          "SRC-009814",
+          "SRC-010799",
+          "SRC-009769",
+          "SRC-010770"
+        ]
+      },
+      "Q-6401bbbd32": {
+        "kind": "residual_query",
+        "query": "SRC-010022",
+        "panel_members": [
+          "SRC-010022",
+          "SRC-010023",
+          "SRC-009937",
+          "SRC-009997",
+          "SRC-009939",
+          "SRC-010144"
+        ]
+      },
+      "Q-a1f9903c75": {
+        "kind": "residual_query",
+        "query": "SRC-010835",
+        "panel_members": [
+          "SRC-010835",
+          "SRC-010053",
+          "SRC-010055",
+          "SRC-010059",
+          "SRC-009933",
+          "SRC-010818"
+        ]
+      },
+      "Q-5efb8028fb": {
+        "kind": "residual_query",
+        "query": "SRC-010083",
+        "panel_members": [
+          "SRC-010083",
+          "SRC-009710",
+          "SRC-010082",
+          "SRC-010107",
+          "SRC-010881",
+          "SRC-010197"
+        ]
+      },
+      "Q-91ac28d77c": {
+        "kind": "residual_query",
+        "query": "SRC-009955",
+        "panel_members": [
+          "SRC-009955",
+          "SRC-010196",
+          "SRC-010125",
+          "SRC-010870",
+          "SRC-009975",
+          "SRC-010248"
+        ]
+      },
+      "Q-fd6b85eb38": {
+        "kind": "residual_query",
+        "query": "SRC-009914",
+        "panel_members": [
+          "SRC-009914",
+          "SRC-009759",
+          "SRC-009758",
+          "SRC-009756",
+          "SRC-009755",
+          "SRC-009757"
+        ]
+      },
+      "Q-77fe20c195": {
+        "kind": "residual_query",
+        "query": "SRC-009810",
+        "panel_members": [
+          "SRC-009810",
+          "SRC-010779",
+          "SRC-010771",
+          "SRC-009823",
+          "SRC-009807",
+          "SRC-009822"
+        ]
+      },
+      "Q-33b62767c9": {
+        "kind": "residual_query",
+        "query": "SRC-010179",
+        "panel_members": [
+          "SRC-010179",
+          "SRC-010756",
+          "SRC-009703",
+          "SRC-010178",
+          "SRC-010866",
+          "SRC-010243"
+        ]
+      },
+      "Q-8569815e07": {
+        "kind": "residual_query",
+        "query": "SRC-010840",
+        "panel_members": [
+          "SRC-010840",
+          "SRC-010882",
+          "SRC-010142",
+          "SRC-010062",
+          "SRC-010030",
+          "SRC-010060"
+        ]
+      },
+      "Q-cb0ecd1b75": {
+        "kind": "residual_query",
+        "query": "SRC-010782",
+        "panel_members": [
+          "SRC-010782",
+          "SRC-009773",
+          "SRC-009890",
+          "SRC-009901",
+          "SRC-009908",
+          "SRC-009769"
+        ]
+      },
+      "Q-4fe6b88cb6": {
+        "kind": "residual_query",
+        "query": "SRC-009999",
+        "panel_members": [
+          "SRC-009999",
+          "SRC-009998",
+          "SRC-010170",
+          "SRC-010886",
+          "SRC-009963",
+          "SRC-010057"
+        ]
+      },
+      "Q-05afcd2f2e": {
+        "kind": "residual_query",
+        "query": "SRC-009688",
+        "panel_members": [
+          "SRC-009688",
+          "SRC-009784",
+          "SRC-010765",
+          "SRC-009791",
+          "SRC-009689",
+          "SRC-009783"
+        ]
+      },
+      "Q-354cd21e2d": {
+        "kind": "residual_query",
+        "query": "SRC-010141",
+        "panel_members": [
+          "SRC-010141",
+          "SRC-010154",
+          "SRC-010143",
+          "SRC-010155",
+          "SRC-010142",
+          "SRC-010181"
+        ]
+      },
+      "Q-3708049640": {
+        "kind": "residual_query",
+        "query": "SRC-009972",
+        "panel_members": [
+          "SRC-009972",
+          "SRC-010821",
+          "SRC-010871",
+          "SRC-009968",
+          "SRC-010253",
+          "SRC-009969"
+        ]
+      },
+      "Q-d8915e5ca5": {
+        "kind": "residual_query",
+        "query": "SRC-009919",
+        "panel_members": [
+          "SRC-009919",
+          "SRC-009923",
+          "SRC-009921",
+          "SRC-009805",
+          "SRC-010226",
+          "SRC-010217"
+        ]
+      },
+      "Q-294daf3cc9": {
+        "kind": "residual_query",
+        "query": "SRC-010158",
+        "panel_members": [
+          "SRC-010158",
+          "SRC-009963",
+          "SRC-010156",
+          "SRC-010174",
+          "SRC-009715",
+          "SRC-010150"
+        ]
+      },
+      "Q-b339a221a1": {
+        "kind": "residual_query",
+        "query": "SRC-009910",
+        "panel_members": [
+          "SRC-009910",
+          "SRC-009866",
+          "SRC-009890",
+          "SRC-009901",
+          "SRC-009769",
+          "SRC-010770"
+        ]
+      },
+      "Q-6675857192": {
+        "kind": "residual_query",
+        "query": "SRC-010095",
+        "panel_members": [
+          "SRC-010095",
+          "SRC-009929",
+          "SRC-010847",
+          "SRC-010024",
+          "SRC-010087",
+          "SRC-010239"
+        ]
+      },
+      "Q-135ce63f64": {
+        "kind": "residual_query",
+        "query": "SRC-009995",
+        "panel_members": [
+          "SRC-009995",
+          "SRC-009994",
+          "SRC-010002",
+          "SRC-009997",
+          "SRC-010062",
+          "SRC-010019"
+        ]
+      },
+      "Q-3388dedf10": {
+        "kind": "control_positive",
+        "query": "SRC-010049",
+        "panel_members": [
+          "SRC-010049",
+          "SRC-010072",
+          "SRC-009862",
+          "SRC-010108",
+          "SRC-010833",
+          "SRC-010845"
+        ]
+      },
+      "Q-a3d0e7a451": {
+        "kind": "residual_query",
+        "query": "SRC-009698",
+        "panel_members": [
+          "SRC-009698",
+          "SRC-009898",
+          "SRC-009897",
+          "SRC-010796",
+          "SRC-009887",
+          "SRC-009697"
+        ]
+      },
+      "Q-c5e995d444": {
+        "kind": "residual_query",
+        "query": "SRC-009925",
+        "panel_members": [
+          "SRC-009925",
+          "SRC-010239",
+          "SRC-010025",
+          "SRC-010024",
+          "SRC-010759",
+          "SRC-009711"
+        ]
+      },
+      "Q-90c5ff528b": {
+        "kind": "control_positive",
+        "query": "SRC-010049",
+        "panel_members": [
+          "SRC-010049",
+          "SRC-009988",
+          "SRC-010231",
+          "SRC-010886",
+          "SRC-010817",
+          "SRC-010072"
+        ]
+      },
+      "Q-51824d8d8f": {
+        "kind": "residual_query",
+        "query": "SRC-009699",
+        "panel_members": [
+          "SRC-009699",
+          "SRC-009893",
+          "SRC-009898",
+          "SRC-010797",
+          "SRC-010798",
+          "SRC-009887"
+        ]
+      },
+      "Q-576f87ec45": {
+        "kind": "residual_query",
+        "query": "SRC-009754",
+        "panel_members": [
+          "SRC-009754",
+          "SRC-009757",
+          "SRC-009755",
+          "SRC-009758",
+          "SRC-009756",
+          "SRC-009753"
+        ]
+      },
+      "Q-cce886bb3d": {
+        "kind": "residual_query",
+        "query": "SRC-009761",
+        "panel_members": [
+          "SRC-009761",
+          "SRC-009703",
+          "SRC-010756",
+          "SRC-010866",
+          "SRC-010178",
+          "SRC-010243"
+        ]
+      },
+      "Q-038dfb7508": {
+        "kind": "residual_query",
+        "query": "SRC-010165",
+        "panel_members": [
+          "SRC-010165",
+          "SRC-010181",
+          "SRC-009962",
+          "SRC-009958",
+          "SRC-009961",
+          "SRC-010166"
+        ]
+      },
+      "Q-d77e13812b": {
+        "kind": "residual_query",
+        "query": "SRC-009694",
+        "panel_members": [
+          "SRC-009694",
+          "SRC-009860",
+          "SRC-009876",
+          "SRC-009875",
+          "SRC-009862",
+          "SRC-010788"
+        ]
+      },
+      "Q-a4d81ef694": {
+        "kind": "residual_query",
+        "query": "SRC-010228",
+        "panel_members": [
+          "SRC-010228",
+          "SRC-010215",
+          "SRC-010226",
+          "SRC-010224",
+          "SRC-009969",
+          "SRC-010227"
+        ]
+      },
+      "Q-e9c20784b9": {
+        "kind": "residual_query",
+        "query": "SRC-009839",
+        "panel_members": [
+          "SRC-009839",
+          "SRC-009693",
+          "SRC-009835",
+          "SRC-009833",
+          "SRC-009812",
+          "SRC-009832"
+        ]
+      },
+      "Q-9db5381b09": {
+        "kind": "residual_query",
+        "query": "SRC-010827",
+        "panel_members": [
+          "SRC-010827",
+          "SRC-009994",
+          "SRC-010002",
+          "SRC-009997",
+          "SRC-010062",
+          "SRC-010019"
+        ]
+      },
+      "Q-52bd78abc1": {
+        "kind": "residual_query",
+        "query": "SRC-010814",
+        "panel_members": [
+          "SRC-010814",
+          "SRC-010133",
+          "SRC-010134",
+          "SRC-010138",
+          "SRC-010029",
+          "SRC-010136"
+        ]
+      },
+      "Q-64a5463e63": {
+        "kind": "residual_query",
+        "query": "SRC-010065",
+        "panel_members": [
+          "SRC-010065",
+          "SRC-010066",
+          "SRC-010836",
+          "SRC-009991",
+          "SRC-010825",
+          "SRC-009996"
+        ]
+      },
+      "Q-10b04c9055": {
+        "kind": "residual_query",
+        "query": "SRC-010220",
+        "panel_members": [
+          "SRC-010220",
+          "SRC-010206",
+          "SRC-010204",
+          "SRC-010251",
+          "SRC-010242",
+          "SRC-010205"
+        ]
+      },
+      "Q-99cc8d91c4": {
+        "kind": "residual_query",
+        "query": "SRC-009709",
+        "panel_members": [
+          "SRC-009709",
+          "SRC-010053",
+          "SRC-010055",
+          "SRC-009933",
+          "SRC-010818",
+          "SRC-010059"
+        ]
+      },
+      "Q-be1f7b7a59": {
+        "kind": "residual_query",
+        "query": "SRC-010766",
+        "panel_members": [
+          "SRC-010766",
+          "SRC-010765",
+          "SRC-009689",
+          "SRC-009791",
+          "SRC-009792",
+          "SRC-009783"
+        ]
+      },
+      "Q-97bf56f405": {
+        "kind": "residual_query",
+        "query": "SRC-010173",
+        "panel_members": [
+          "SRC-010173",
+          "SRC-010174",
+          "SRC-009760",
+          "SRC-010155",
+          "SRC-010157",
+          "SRC-010153"
+        ]
+      },
+      "Q-3855cfc594": {
+        "kind": "residual_query",
+        "query": "SRC-009790",
+        "panel_members": [
+          "SRC-009790",
+          "SRC-010767",
+          "SRC-009689",
+          "SRC-009787",
+          "SRC-009791",
+          "SRC-009792"
+        ]
+      },
+      "Q-422ef1ab5f": {
+        "kind": "residual_query",
+        "query": "SRC-009819",
+        "panel_members": [
+          "SRC-009819",
+          "SRC-009788",
+          "SRC-009828",
+          "SRC-009881",
+          "SRC-009856",
+          "SRC-009900"
+        ]
+      },
+      "Q-595fd91024": {
+        "kind": "residual_query",
+        "query": "SRC-009979",
+        "panel_members": [
+          "SRC-009979",
+          "SRC-009978",
+          "SRC-009706",
+          "SRC-010824",
+          "SRC-010157",
+          "SRC-010823"
+        ]
+      },
+      "Q-2c529b2f5e": {
+        "kind": "residual_query",
+        "query": "SRC-010885",
+        "panel_members": [
+          "SRC-010885",
+          "SRC-009998",
+          "SRC-010057",
+          "SRC-010170",
+          "SRC-010169",
+          "SRC-010177"
+        ]
+      },
+      "Q-9ab9d9ce5d": {
+        "kind": "residual_query",
+        "query": "SRC-009793",
+        "panel_members": [
+          "SRC-009793",
+          "SRC-009784",
+          "SRC-009783",
+          "SRC-009791",
+          "SRC-009689",
+          "SRC-010765"
+        ]
+      },
+      "Q-5eb183f37a": {
+        "kind": "residual_query",
+        "query": "SRC-010849",
+        "panel_members": [
+          "SRC-010849",
+          "SRC-010066",
+          "SRC-010836",
+          "SRC-009991",
+          "SRC-010825",
+          "SRC-010866"
+        ]
+      },
+      "Q-98c02e010c": {
+        "kind": "residual_query",
+        "query": "SRC-010225",
+        "panel_members": [
+          "SRC-010225",
+          "SRC-009966",
+          "SRC-010226",
+          "SRC-010227",
+          "SRC-010871",
+          "SRC-010224"
+        ]
+      },
+      "Q-047f6dee0e": {
+        "kind": "residual_query",
+        "query": "SRC-010762",
+        "panel_members": [
+          "SRC-010762",
+          "SRC-009780",
+          "SRC-009778",
+          "SRC-009781",
+          "SRC-010763",
+          "SRC-009766"
+        ]
+      },
+      "Q-16c81b510a": {
+        "kind": "residual_query",
+        "query": "SRC-010112",
+        "panel_members": [
+          "SRC-010112",
+          "SRC-010248",
+          "SRC-010889",
+          "SRC-010854",
+          "SRC-010888",
+          "SRC-010104"
+        ]
+      },
+      "Q-a3d9bb2925": {
+        "kind": "residual_query",
+        "query": "SRC-010875",
+        "panel_members": [
+          "SRC-010875",
+          "SRC-010226",
+          "SRC-009966",
+          "SRC-010204",
+          "SRC-010227",
+          "SRC-010205"
+        ]
+      },
+      "Q-d10005c7a5": {
+        "kind": "residual_query",
+        "query": "SRC-009886",
+        "panel_members": [
+          "SRC-009886",
+          "SRC-009895",
+          "SRC-009903",
+          "SRC-009697",
+          "SRC-009894",
+          "SRC-009902"
+        ]
+      },
+      "Q-566354870c": {
+        "kind": "residual_query",
+        "query": "SRC-009904",
+        "panel_members": [
+          "SRC-009904",
+          "SRC-009905",
+          "SRC-009894",
+          "SRC-009903",
+          "SRC-009895",
+          "SRC-009902"
+        ]
+      },
+      "Q-cb087977ac": {
+        "kind": "residual_query",
+        "query": "SRC-010219",
+        "panel_members": [
+          "SRC-010219",
+          "SRC-010253",
+          "SRC-009717",
+          "SRC-010872",
+          "SRC-010821",
+          "SRC-010204"
+        ]
+      },
+      "Q-8e550718ad": {
+        "kind": "residual_query",
+        "query": "SRC-010152",
+        "panel_members": [
+          "SRC-010152",
+          "SRC-010162",
+          "SRC-010181",
+          "SRC-009763",
+          "SRC-010145",
+          "SRC-010182"
+        ]
+      },
+      "Q-b7b9b3fffa": {
+        "kind": "control_negative",
+        "query": "SRC-009840",
+        "panel_members": [
+          "SRC-009840",
+          "SRC-010761",
+          "SRC-009702",
+          "SRC-010815",
+          "SRC-010097",
+          "SRC-009971"
+        ]
+      },
+      "Q-f6cbe1953c": {
+        "kind": "residual_query",
+        "query": "SRC-010106",
+        "panel_members": [
+          "SRC-010106",
+          "SRC-010105",
+          "SRC-009948",
+          "SRC-010888",
+          "SRC-010108",
+          "SRC-010120"
+        ]
+      },
+      "Q-48f6f30d54": {
+        "kind": "residual_query",
+        "query": "SRC-010865",
+        "panel_members": [
+          "SRC-010865",
+          "SRC-010181",
+          "SRC-010159",
+          "SRC-010858",
+          "SRC-009962",
+          "SRC-009958"
+        ]
+      },
+      "Q-d1ba1f31cb": {
+        "kind": "residual_query",
+        "query": "SRC-010186",
+        "panel_members": [
+          "SRC-010186",
+          "SRC-010187",
+          "SRC-009973",
+          "SRC-010188",
+          "SRC-009967",
+          "SRC-010218"
+        ]
+      },
+      "Q-46c3dd66b1": {
+        "kind": "residual_query",
+        "query": "SRC-010098",
+        "panel_members": [
+          "SRC-010098",
+          "SRC-010100",
+          "SRC-010099",
+          "SRC-010104",
+          "SRC-010850",
+          "SRC-009942"
+        ]
+      }
+    },
+    "b": {
+      "Q-b842a51f71": {
+        "kind": "residual_query",
+        "query": "SRC-010173",
+        "panel_members": [
+          "SRC-010173",
+          "SRC-010174",
+          "SRC-009760",
+          "SRC-010155",
+          "SRC-010157",
+          "SRC-010153"
+        ]
+      },
+      "Q-b95e51dad1": {
+        "kind": "residual_query",
+        "query": "SRC-009699",
+        "panel_members": [
+          "SRC-009699",
+          "SRC-009893",
+          "SRC-009898",
+          "SRC-010797",
+          "SRC-010798",
+          "SRC-009887"
+        ]
+      },
+      "Q-53fd4eb6e7": {
+        "kind": "residual_query",
+        "query": "SRC-009945",
+        "panel_members": [
+          "SRC-009945",
+          "SRC-010104",
+          "SRC-009975",
+          "SRC-010127",
+          "SRC-010815",
+          "SRC-010851"
+        ]
+      },
+      "Q-4bf03239a6": {
+        "kind": "residual_query",
+        "query": "SRC-009855",
+        "panel_members": [
+          "SRC-009855",
+          "SRC-009858",
+          "SRC-009859",
+          "SRC-010789",
+          "SRC-009868",
+          "SRC-009883"
+        ]
+      },
+      "Q-c0af9716ce": {
+        "kind": "residual_query",
+        "query": "SRC-010807",
+        "panel_members": [
+          "SRC-010807",
+          "SRC-010066",
+          "SRC-010836",
+          "SRC-009991",
+          "SRC-010866",
+          "SRC-010817"
+        ]
+      },
+      "Q-64be9a7a68": {
+        "kind": "residual_query",
+        "query": "SRC-010865",
+        "panel_members": [
+          "SRC-010865",
+          "SRC-010181",
+          "SRC-010159",
+          "SRC-010858",
+          "SRC-009962",
+          "SRC-009958"
+        ]
+      },
+      "Q-180bffb0dc": {
+        "kind": "residual_query",
+        "query": "SRC-010812",
+        "panel_members": [
+          "SRC-010812",
+          "SRC-010040",
+          "SRC-009718",
+          "SRC-010168",
+          "SRC-010825",
+          "SRC-010866"
+        ]
+      },
+      "Q-85c314d66e": {
+        "kind": "residual_query",
+        "query": "SRC-010814",
+        "panel_members": [
+          "SRC-010814",
+          "SRC-010133",
+          "SRC-010134",
+          "SRC-010138",
+          "SRC-010029",
+          "SRC-010136"
+        ]
+      },
+      "Q-653fd776bc": {
+        "kind": "residual_query",
+        "query": "SRC-009810",
+        "panel_members": [
+          "SRC-009810",
+          "SRC-010779",
+          "SRC-010771",
+          "SRC-009823",
+          "SRC-009807",
+          "SRC-009822"
+        ]
+      },
+      "Q-39662b5328": {
+        "kind": "residual_query",
+        "query": "SRC-010146",
+        "panel_members": [
+          "SRC-010146",
+          "SRC-010157",
+          "SRC-010244",
+          "SRC-009940",
+          "SRC-009715",
+          "SRC-010002"
+        ]
+      },
+      "Q-b15819bb77": {
+        "kind": "residual_query",
+        "query": "SRC-009930",
+        "panel_members": [
+          "SRC-009930",
+          "SRC-010066",
+          "SRC-010836",
+          "SRC-009991",
+          "SRC-010866",
+          "SRC-010817"
+        ]
+      },
+      "Q-4fbbe58e91": {
+        "kind": "residual_query",
+        "query": "SRC-009806",
+        "panel_members": [
+          "SRC-009806",
+          "SRC-009908",
+          "SRC-010794",
+          "SRC-009911",
+          "SRC-009882",
+          "SRC-009803"
+        ]
+      },
+      "Q-595ce4b544": {
+        "kind": "residual_query",
+        "query": "SRC-009752",
+        "panel_members": [
+          "SRC-009752",
+          "SRC-009753",
+          "SRC-009805",
+          "SRC-009834",
+          "SRC-009918",
+          "SRC-009756"
+        ]
+      },
+      "Q-20b421519c": {
+        "kind": "residual_query",
+        "query": "SRC-009916",
+        "panel_members": [
+          "SRC-009916",
+          "SRC-010226",
+          "SRC-009921",
+          "SRC-010224",
+          "SRC-010183",
+          "SRC-010217"
+        ]
+      },
+      "Q-aacfdf9cd5": {
+        "kind": "residual_query",
+        "query": "SRC-010022",
+        "panel_members": [
+          "SRC-010022",
+          "SRC-010023",
+          "SRC-009937",
+          "SRC-009997",
+          "SRC-009939",
+          "SRC-010144"
+        ]
+      },
+      "Q-5ddbd5bfb5": {
+        "kind": "residual_query",
+        "query": "SRC-010106",
+        "panel_members": [
+          "SRC-010106",
+          "SRC-010105",
+          "SRC-009948",
+          "SRC-010888",
+          "SRC-010108",
+          "SRC-010120"
+        ]
+      },
+      "Q-c79eb92316": {
+        "kind": "residual_query",
+        "query": "SRC-010098",
+        "panel_members": [
+          "SRC-010098",
+          "SRC-010100",
+          "SRC-010099",
+          "SRC-010104",
+          "SRC-010850",
+          "SRC-009942"
+        ]
+      },
+      "Q-cfda4c238a": {
+        "kind": "residual_query",
+        "query": "SRC-009995",
+        "panel_members": [
+          "SRC-009995",
+          "SRC-009994",
+          "SRC-010002",
+          "SRC-009997",
+          "SRC-010062",
+          "SRC-010019"
+        ]
+      },
+      "Q-52f9315414": {
+        "kind": "residual_query",
+        "query": "SRC-009795",
+        "panel_members": [
+          "SRC-009795",
+          "SRC-009784",
+          "SRC-009689",
+          "SRC-009783",
+          "SRC-010765",
+          "SRC-009791"
+        ]
+      },
+      "Q-f8ae0be1ad": {
+        "kind": "residual_query",
+        "query": "SRC-009965",
+        "panel_members": [
+          "SRC-009965",
+          "SRC-009969",
+          "SRC-010871",
+          "SRC-010217",
+          "SRC-009968",
+          "SRC-010215"
+        ]
+      },
+      "Q-d32b45451c": {
+        "kind": "residual_query",
+        "query": "SRC-010819",
+        "panel_members": [
+          "SRC-010819",
+          "SRC-010253",
+          "SRC-010204",
+          "SRC-009717",
+          "SRC-010872",
+          "SRC-010250"
+        ]
+      },
+      "Q-94c456a23f": {
+        "kind": "residual_query",
+        "query": "SRC-009972",
+        "panel_members": [
+          "SRC-009972",
+          "SRC-010821",
+          "SRC-010871",
+          "SRC-009968",
+          "SRC-010253",
+          "SRC-009969"
+        ]
+      },
+      "Q-a677c45e18": {
+        "kind": "residual_query",
+        "query": "SRC-010065",
+        "panel_members": [
+          "SRC-010065",
+          "SRC-010066",
+          "SRC-010836",
+          "SRC-009991",
+          "SRC-010825",
+          "SRC-009996"
+        ]
+      },
+      "Q-f0331f7a1c": {
+        "kind": "residual_query",
+        "query": "SRC-010885",
+        "panel_members": [
+          "SRC-010885",
+          "SRC-009998",
+          "SRC-010057",
+          "SRC-010170",
+          "SRC-010169",
+          "SRC-010177"
+        ]
+      },
+      "Q-a449a2b023": {
+        "kind": "residual_query",
+        "query": "SRC-010077",
+        "panel_members": [
+          "SRC-010077",
+          "SRC-010078",
+          "SRC-010076",
+          "SRC-010838",
+          "SRC-010845",
+          "SRC-010080"
+        ]
+      },
+      "Q-9d060cef2b": {
+        "kind": "residual_query",
+        "query": "SRC-010036",
+        "panel_members": [
+          "SRC-010036",
+          "SRC-010035",
+          "SRC-009708",
+          "SRC-010828",
+          "SRC-009711",
+          "SRC-010007"
+        ]
+      },
+      "Q-b9648a6ea0": {
+        "kind": "control_positive",
+        "query": "SRC-010049",
+        "panel_members": [
+          "SRC-010049",
+          "SRC-010072",
+          "SRC-009862",
+          "SRC-010108",
+          "SRC-010833",
+          "SRC-010845"
+        ]
+      },
+      "Q-690fb3fb11": {
+        "kind": "residual_query",
+        "query": "SRC-010225",
+        "panel_members": [
+          "SRC-010225",
+          "SRC-009966",
+          "SRC-010226",
+          "SRC-010227",
+          "SRC-010871",
+          "SRC-010224"
+        ]
+      },
+      "Q-92ed5e5001": {
+        "kind": "residual_query",
+        "query": "SRC-010180",
+        "panel_members": [
+          "SRC-010180",
+          "SRC-010243",
+          "SRC-010150",
+          "SRC-010131",
+          "SRC-010128",
+          "SRC-010129"
+        ]
+      },
+      "Q-cdb6e923e0": {
+        "kind": "residual_query",
+        "query": "SRC-010835",
+        "panel_members": [
+          "SRC-010835",
+          "SRC-010053",
+          "SRC-010055",
+          "SRC-010059",
+          "SRC-009933",
+          "SRC-010818"
+        ]
+      },
+      "Q-07a315b837": {
+        "kind": "residual_query",
+        "query": "SRC-010083",
+        "panel_members": [
+          "SRC-010083",
+          "SRC-009710",
+          "SRC-010082",
+          "SRC-010107",
+          "SRC-010881",
+          "SRC-010197"
+        ]
+      },
+      "Q-5faeff6faa": {
+        "kind": "residual_query",
+        "query": "SRC-009829",
+        "panel_members": [
+          "SRC-009829",
+          "SRC-009911",
+          "SRC-010799",
+          "SRC-009794",
+          "SRC-009846",
+          "SRC-009820"
+        ]
+      },
+      "Q-9dd52e61e9": {
+        "kind": "residual_query",
+        "query": "SRC-009987",
+        "panel_members": [
+          "SRC-009987",
+          "SRC-009927",
+          "SRC-009997",
+          "SRC-010063",
+          "SRC-009996",
+          "SRC-010144"
+        ]
+      },
+      "Q-5b6f97aefb": {
+        "kind": "residual_query",
+        "query": "SRC-009886",
+        "panel_members": [
+          "SRC-009886",
+          "SRC-009895",
+          "SRC-009903",
+          "SRC-009697",
+          "SRC-009894",
+          "SRC-009902"
+        ]
+      },
+      "Q-a8701d6730": {
+        "kind": "residual_query",
+        "query": "SRC-009874",
+        "panel_members": [
+          "SRC-009874",
+          "SRC-009875",
+          "SRC-009871",
+          "SRC-009870",
+          "SRC-009872",
+          "SRC-010788"
+        ]
+      },
+      "Q-38a18e3d26": {
+        "kind": "residual_query",
+        "query": "SRC-009808",
+        "panel_members": [
+          "SRC-009808",
+          "SRC-009820",
+          "SRC-009814",
+          "SRC-010799",
+          "SRC-009769",
+          "SRC-010770"
+        ]
+      },
+      "Q-a26f583287": {
+        "kind": "residual_query",
+        "query": "SRC-009793",
+        "panel_members": [
+          "SRC-009793",
+          "SRC-009784",
+          "SRC-009783",
+          "SRC-009791",
+          "SRC-009689",
+          "SRC-010765"
+        ]
+      },
+      "Q-38b9e6b6ed": {
+        "kind": "residual_query",
+        "query": "SRC-010064",
+        "panel_members": [
+          "SRC-010064",
+          "SRC-010063",
+          "SRC-010062",
+          "SRC-010060",
+          "SRC-010061",
+          "SRC-010002"
+        ]
+      },
+      "Q-d6b211a8cc": {
+        "kind": "residual_query",
+        "query": "SRC-010849",
+        "panel_members": [
+          "SRC-010849",
+          "SRC-010066",
+          "SRC-010836",
+          "SRC-009991",
+          "SRC-010825",
+          "SRC-010866"
+        ]
+      },
+      "Q-7e78a980eb": {
+        "kind": "control_negative",
+        "query": "SRC-009840",
+        "panel_members": [
+          "SRC-009840",
+          "SRC-010761",
+          "SRC-009702",
+          "SRC-010815",
+          "SRC-010097",
+          "SRC-009971"
+        ]
+      },
+      "Q-11ca1064c5": {
+        "kind": "residual_query",
+        "query": "SRC-009904",
+        "panel_members": [
+          "SRC-009904",
+          "SRC-009905",
+          "SRC-009894",
+          "SRC-009903",
+          "SRC-009895",
+          "SRC-009902"
+        ]
+      },
+      "Q-3bfb1b1e09": {
+        "kind": "residual_query",
+        "query": "SRC-010141",
+        "panel_members": [
+          "SRC-010141",
+          "SRC-010154",
+          "SRC-010143",
+          "SRC-010155",
+          "SRC-010142",
+          "SRC-010181"
+        ]
+      },
+      "Q-592938bb28": {
+        "kind": "residual_query",
+        "query": "SRC-010212",
+        "panel_members": [
+          "SRC-010212",
+          "SRC-010215",
+          "SRC-010821",
+          "SRC-010205",
+          "SRC-010204",
+          "SRC-010185"
+        ]
+      },
+      "Q-97f6444c83": {
+        "kind": "residual_query",
+        "query": "SRC-009925",
+        "panel_members": [
+          "SRC-009925",
+          "SRC-010239",
+          "SRC-010025",
+          "SRC-010024",
+          "SRC-010759",
+          "SRC-009711"
+        ]
+      },
+      "Q-ea379eeb83": {
+        "kind": "residual_query",
+        "query": "SRC-010772",
+        "panel_members": [
+          "SRC-010772",
+          "SRC-009828",
+          "SRC-009788",
+          "SRC-009889",
+          "SRC-009881",
+          "SRC-009789"
+        ]
+      },
+      "Q-a6cfb83f99": {
+        "kind": "residual_query",
+        "query": "SRC-009999",
+        "panel_members": [
+          "SRC-009999",
+          "SRC-009998",
+          "SRC-010170",
+          "SRC-010886",
+          "SRC-009963",
+          "SRC-010057"
+        ]
+      },
+      "Q-60cca27978": {
+        "kind": "residual_query",
+        "query": "SRC-010762",
+        "panel_members": [
+          "SRC-010762",
+          "SRC-009780",
+          "SRC-009778",
+          "SRC-009781",
+          "SRC-010763",
+          "SRC-009766"
+        ]
+      },
+      "Q-a3d2d67650": {
+        "kind": "residual_query",
+        "query": "SRC-009979",
+        "panel_members": [
+          "SRC-009979",
+          "SRC-009978",
+          "SRC-009706",
+          "SRC-010824",
+          "SRC-010157",
+          "SRC-010823"
+        ]
+      },
+      "Q-dd7aab1da4": {
+        "kind": "residual_query",
+        "query": "SRC-010221",
+        "panel_members": [
+          "SRC-010221",
+          "SRC-010206",
+          "SRC-010251",
+          "SRC-010874",
+          "SRC-010227",
+          "SRC-010242"
+        ]
+      },
+      "Q-0606a6d9cc": {
+        "kind": "residual_query",
+        "query": "SRC-009709",
+        "panel_members": [
+          "SRC-009709",
+          "SRC-010053",
+          "SRC-010055",
+          "SRC-009933",
+          "SRC-010818",
+          "SRC-010059"
+        ]
+      },
+      "Q-aa67a14e20": {
+        "kind": "residual_query",
+        "query": "SRC-009943",
+        "panel_members": [
+          "SRC-009943",
+          "SRC-010248",
+          "SRC-010100",
+          "SRC-010121",
+          "SRC-009950",
+          "SRC-010850"
+        ]
+      },
+      "Q-cad78eee79": {
+        "kind": "residual_query",
+        "query": "SRC-010091",
+        "panel_members": [
+          "SRC-010091",
+          "SRC-010090",
+          "SRC-010843",
+          "SRC-010089",
+          "SRC-010076",
+          "SRC-009935"
+        ]
+      },
+      "Q-2480ad6929": {
+        "kind": "residual_query",
+        "query": "SRC-010822",
+        "panel_members": [
+          "SRC-010822",
+          "SRC-009978",
+          "SRC-009706",
+          "SRC-010824",
+          "SRC-009985",
+          "SRC-010005"
+        ]
+      },
+      "Q-eb7945e8fc": {
+        "kind": "residual_query",
+        "query": "SRC-009698",
+        "panel_members": [
+          "SRC-009698",
+          "SRC-009898",
+          "SRC-009897",
+          "SRC-010796",
+          "SRC-009887",
+          "SRC-009697"
+        ]
+      },
+      "Q-061b63afaf": {
+        "kind": "residual_query",
+        "query": "SRC-010875",
+        "panel_members": [
+          "SRC-010875",
+          "SRC-010226",
+          "SRC-009966",
+          "SRC-010204",
+          "SRC-010227",
+          "SRC-010205"
+        ]
+      },
+      "Q-83b3f859bc": {
+        "kind": "residual_query",
+        "query": "SRC-009785",
+        "panel_members": [
+          "SRC-009785",
+          "SRC-009783",
+          "SRC-009689",
+          "SRC-009792",
+          "SRC-009791",
+          "SRC-010765"
+        ]
+      },
+      "Q-0ab43cb1aa": {
+        "kind": "residual_query",
+        "query": "SRC-010831",
+        "panel_members": [
+          "SRC-010831",
+          "SRC-010040",
+          "SRC-009718",
+          "SRC-010042",
+          "SRC-010138",
+          "SRC-010168"
+        ]
+      },
+      "Q-c5b7406367": {
+        "kind": "residual_query",
+        "query": "SRC-009986",
+        "panel_members": [
+          "SRC-009986",
+          "SRC-009927",
+          "SRC-009996",
+          "SRC-010063",
+          "SRC-009997",
+          "SRC-010019"
+        ]
+      },
+      "Q-b7b6450ffe": {
+        "kind": "residual_query",
+        "query": "SRC-010179",
+        "panel_members": [
+          "SRC-010179",
+          "SRC-010756",
+          "SRC-009703",
+          "SRC-010178",
+          "SRC-010866",
+          "SRC-010243"
+        ]
+      },
+      "Q-1b9509a8d1": {
+        "kind": "residual_query",
+        "query": "SRC-010827",
+        "panel_members": [
+          "SRC-010827",
+          "SRC-009994",
+          "SRC-010002",
+          "SRC-009997",
+          "SRC-010062",
+          "SRC-010019"
+        ]
+      },
+      "Q-8f368afa09": {
+        "kind": "control_negative",
+        "query": "SRC-010250",
+        "panel_members": [
+          "SRC-010250",
+          "SRC-010007",
+          "SRC-009689",
+          "SRC-009820",
+          "SRC-009853",
+          "SRC-010062"
+        ]
+      },
+      "Q-8becf7735b": {
+        "kind": "residual_query",
+        "query": "SRC-009761",
+        "panel_members": [
+          "SRC-009761",
+          "SRC-009703",
+          "SRC-010756",
+          "SRC-010866",
+          "SRC-010178",
+          "SRC-010243"
+        ]
+      },
+      "Q-0b75d07905": {
+        "kind": "residual_query",
+        "query": "SRC-010118",
+        "panel_members": [
+          "SRC-010118",
+          "SRC-009975",
+          "SRC-010248",
+          "SRC-010100",
+          "SRC-010870",
+          "SRC-010125"
+        ]
+      },
+      "Q-757f045dcd": {
+        "kind": "residual_query",
+        "query": "SRC-010158",
+        "panel_members": [
+          "SRC-010158",
+          "SRC-009963",
+          "SRC-010156",
+          "SRC-010174",
+          "SRC-009715",
+          "SRC-010150"
+        ]
+      },
+      "Q-682fc94ce2": {
+        "kind": "residual_query",
+        "query": "SRC-009800",
+        "panel_members": [
+          "SRC-009800",
+          "SRC-009889",
+          "SRC-009828",
+          "SRC-009789",
+          "SRC-009695",
+          "SRC-010793"
+        ]
+      },
+      "Q-25e9228269": {
+        "kind": "residual_query",
+        "query": "SRC-010792",
+        "panel_members": [
+          "SRC-010792",
+          "SRC-009876",
+          "SRC-009841",
+          "SRC-009853",
+          "SRC-009872",
+          "SRC-009875"
+        ]
+      },
+      "Q-1bd0c6c7cb": {
+        "kind": "residual_query",
+        "query": "SRC-010084",
+        "panel_members": [
+          "SRC-010084",
+          "SRC-010882",
+          "SRC-010057",
+          "SRC-010142",
+          "SRC-010001",
+          "SRC-010856"
+        ]
+      },
+      "Q-5397222055": {
+        "kind": "residual_query",
+        "query": "SRC-010200",
+        "panel_members": [
+          "SRC-010200",
+          "SRC-010201",
+          "SRC-010821",
+          "SRC-010204",
+          "SRC-010199",
+          "SRC-010253"
+        ]
+      },
+      "Q-1887e67add": {
+        "kind": "residual_query",
+        "query": "SRC-009917",
+        "panel_members": [
+          "SRC-009917",
+          "SRC-010080",
+          "SRC-010082",
+          "SRC-010808",
+          "SRC-010839",
+          "SRC-010881"
+        ]
+      },
+      "Q-d59928e3e7": {
+        "kind": "residual_query",
+        "query": "SRC-010219",
+        "panel_members": [
+          "SRC-010219",
+          "SRC-010253",
+          "SRC-009717",
+          "SRC-010872",
+          "SRC-010821",
+          "SRC-010204"
+        ]
+      },
+      "Q-17af80d43e": {
+        "kind": "residual_query",
+        "query": "SRC-010791",
+        "panel_members": [
+          "SRC-010791",
+          "SRC-009911",
+          "SRC-010799",
+          "SRC-009794",
+          "SRC-009820",
+          "SRC-009846"
+        ]
+      },
+      "Q-9992b998bd": {
+        "kind": "residual_query",
+        "query": "SRC-009696",
+        "panel_members": [
+          "SRC-009696",
+          "SRC-009861",
+          "SRC-009838",
+          "SRC-009836",
+          "SRC-009824",
+          "SRC-010795"
+        ]
+      },
+      "Q-ee4886d154": {
+        "kind": "residual_query",
+        "query": "SRC-009790",
+        "panel_members": [
+          "SRC-009790",
+          "SRC-010767",
+          "SRC-009689",
+          "SRC-009787",
+          "SRC-009791",
+          "SRC-009792"
+        ]
+      },
+      "Q-baed05b819": {
+        "kind": "residual_query",
+        "query": "SRC-010075",
+        "panel_members": [
+          "SRC-010075",
+          "SRC-009953",
+          "SRC-010116",
+          "SRC-010191",
+          "SRC-010851",
+          "SRC-010117"
+        ]
+      },
+      "Q-d236ef8c5c": {
+        "kind": "residual_query",
+        "query": "SRC-010766",
+        "panel_members": [
+          "SRC-010766",
+          "SRC-010765",
+          "SRC-009689",
+          "SRC-009791",
+          "SRC-009792",
+          "SRC-009783"
+        ]
+      },
+      "Q-39bd3a4122": {
+        "kind": "residual_query",
+        "query": "SRC-010152",
+        "panel_members": [
+          "SRC-010152",
+          "SRC-010162",
+          "SRC-010181",
+          "SRC-009763",
+          "SRC-010145",
+          "SRC-010182"
+        ]
+      },
+      "Q-8a9a87c89d": {
+        "kind": "residual_query",
+        "query": "SRC-009771",
+        "panel_members": [
+          "SRC-009771",
+          "SRC-009778",
+          "SRC-009780",
+          "SRC-009781",
+          "SRC-010763",
+          "SRC-009766"
+        ]
+      },
+      "Q-a9dd01b694": {
+        "kind": "residual_query",
+        "query": "SRC-009910",
+        "panel_members": [
+          "SRC-009910",
+          "SRC-009866",
+          "SRC-009890",
+          "SRC-009901",
+          "SRC-009769",
+          "SRC-010770"
+        ]
+      },
+      "Q-38ed62bf4d": {
+        "kind": "residual_query",
+        "query": "SRC-010203",
+        "panel_members": [
+          "SRC-010203",
+          "SRC-010204",
+          "SRC-010205",
+          "SRC-010216",
+          "SRC-009717",
+          "SRC-010198"
+        ]
+      },
+      "Q-722f0bf301": {
+        "kind": "residual_query",
+        "query": "SRC-009754",
+        "panel_members": [
+          "SRC-009754",
+          "SRC-009757",
+          "SRC-009755",
+          "SRC-009758",
+          "SRC-009756",
+          "SRC-009753"
+        ]
+      },
+      "Q-1aeabe9e62": {
+        "kind": "residual_query",
+        "query": "SRC-009914",
+        "panel_members": [
+          "SRC-009914",
+          "SRC-009759",
+          "SRC-009758",
+          "SRC-009756",
+          "SRC-009755",
+          "SRC-009757"
+        ]
+      },
+      "Q-d9dee53a99": {
+        "kind": "residual_query",
+        "query": "SRC-010008",
+        "panel_members": [
+          "SRC-010008",
+          "SRC-010240",
+          "SRC-010007",
+          "SRC-010828",
+          "SRC-010042",
+          "SRC-010181"
+        ]
+      },
+      "Q-536bf74f04": {
+        "kind": "residual_query",
+        "query": "SRC-009839",
+        "panel_members": [
+          "SRC-009839",
+          "SRC-009693",
+          "SRC-009835",
+          "SRC-009833",
+          "SRC-009812",
+          "SRC-009832"
+        ]
+      },
+      "Q-908ce08166": {
+        "kind": "residual_query",
+        "query": "SRC-010840",
+        "panel_members": [
+          "SRC-010840",
+          "SRC-010882",
+          "SRC-010142",
+          "SRC-010062",
+          "SRC-010030",
+          "SRC-010060"
+        ]
+      },
+      "Q-ad842fc5bf": {
+        "kind": "residual_query",
+        "query": "SRC-010095",
+        "panel_members": [
+          "SRC-010095",
+          "SRC-009929",
+          "SRC-010847",
+          "SRC-010024",
+          "SRC-010087",
+          "SRC-010239"
+        ]
+      },
+      "Q-d8a2c09270": {
+        "kind": "residual_query",
+        "query": "SRC-010867",
+        "panel_members": [
+          "SRC-010867",
+          "SRC-010161",
+          "SRC-010861",
+          "SRC-009960",
+          "SRC-009959",
+          "SRC-010757"
+        ]
+      },
+      "Q-b7e07d18c8": {
+        "kind": "residual_query",
+        "query": "SRC-010228",
+        "panel_members": [
+          "SRC-010228",
+          "SRC-010215",
+          "SRC-010226",
+          "SRC-010224",
+          "SRC-009969",
+          "SRC-010227"
+        ]
+      },
+      "Q-66aa8af6f8": {
+        "kind": "control_positive",
+        "query": "SRC-010049",
+        "panel_members": [
+          "SRC-010049",
+          "SRC-009988",
+          "SRC-010231",
+          "SRC-010886",
+          "SRC-010817",
+          "SRC-010072"
+        ]
+      },
+      "Q-e147f5a989": {
+        "kind": "residual_query",
+        "query": "SRC-009688",
+        "panel_members": [
+          "SRC-009688",
+          "SRC-009784",
+          "SRC-010765",
+          "SRC-009791",
+          "SRC-009689",
+          "SRC-009783"
+        ]
+      },
+      "Q-9f18d84bcf": {
+        "kind": "residual_query",
+        "query": "SRC-010186",
+        "panel_members": [
+          "SRC-010186",
+          "SRC-010187",
+          "SRC-009973",
+          "SRC-010188",
+          "SRC-009967",
+          "SRC-010218"
+        ]
+      },
+      "Q-4caafabdbc": {
+        "kind": "residual_query",
+        "query": "SRC-009919",
+        "panel_members": [
+          "SRC-009919",
+          "SRC-009923",
+          "SRC-009921",
+          "SRC-009805",
+          "SRC-010226",
+          "SRC-010217"
+        ]
+      },
+      "Q-c381df9404": {
+        "kind": "residual_query",
+        "query": "SRC-010220",
+        "panel_members": [
+          "SRC-010220",
+          "SRC-010206",
+          "SRC-010204",
+          "SRC-010251",
+          "SRC-010242",
+          "SRC-010205"
+        ]
+      },
+      "Q-837dee9c72": {
+        "kind": "residual_query",
+        "query": "SRC-010802",
+        "panel_members": [
+          "SRC-010802",
+          "SRC-009757",
+          "SRC-009758",
+          "SRC-009755",
+          "SRC-009756",
+          "SRC-009753"
+        ]
+      },
+      "Q-42638a1af1": {
+        "kind": "residual_query",
+        "query": "SRC-010102",
+        "panel_members": [
+          "SRC-010102",
+          "SRC-010127",
+          "SRC-010103",
+          "SRC-010248",
+          "SRC-009975",
+          "SRC-010100"
+        ]
+      },
+      "Q-bd48bcede3": {
+        "kind": "residual_query",
+        "query": "SRC-010769",
+        "panel_members": [
+          "SRC-010769",
+          "SRC-010794",
+          "SRC-009908",
+          "SRC-009786",
+          "SRC-009901",
+          "SRC-009803"
+        ]
+      },
+      "Q-f828d05d71": {
+        "kind": "residual_query",
+        "query": "SRC-009955",
+        "panel_members": [
+          "SRC-009955",
+          "SRC-010196",
+          "SRC-010125",
+          "SRC-010870",
+          "SRC-009975",
+          "SRC-010248"
+        ]
+      },
+      "Q-55ac9bf3e5": {
+        "kind": "residual_query",
+        "query": "SRC-010113",
+        "panel_members": [
+          "SRC-010113",
+          "SRC-010248",
+          "SRC-010889",
+          "SRC-010854",
+          "SRC-010888",
+          "SRC-010099"
+        ]
+      },
+      "Q-24da2e4fa3": {
+        "kind": "residual_query",
+        "query": "SRC-010038",
+        "panel_members": [
+          "SRC-010038",
+          "SRC-009935",
+          "SRC-010037",
+          "SRC-010134",
+          "SRC-010833",
+          "SRC-009938"
+        ]
+      },
+      "Q-fb1a6c6813": {
+        "kind": "residual_query",
+        "query": "SRC-009694",
+        "panel_members": [
+          "SRC-009694",
+          "SRC-009860",
+          "SRC-009876",
+          "SRC-009875",
+          "SRC-009862",
+          "SRC-010788"
+        ]
+      },
+      "Q-b69e331903": {
+        "kind": "residual_query",
+        "query": "SRC-010039",
+        "panel_members": [
+          "SRC-010039",
+          "SRC-009935",
+          "SRC-010037",
+          "SRC-010134",
+          "SRC-010833",
+          "SRC-009938"
+        ]
+      },
+      "Q-cb3f685c63": {
+        "kind": "residual_query",
+        "query": "SRC-009819",
+        "panel_members": [
+          "SRC-009819",
+          "SRC-009788",
+          "SRC-009828",
+          "SRC-009881",
+          "SRC-009856",
+          "SRC-009900"
+        ]
+      },
+      "Q-7621e591e5": {
+        "kind": "residual_query",
+        "query": "SRC-010018",
+        "panel_members": [
+          "SRC-010018",
+          "SRC-010017",
+          "SRC-010813",
+          "SRC-010237",
+          "SRC-009996",
+          "SRC-009997"
+        ]
+      },
+      "Q-b4310090f6": {
+        "kind": "residual_query",
+        "query": "SRC-010782",
+        "panel_members": [
+          "SRC-010782",
+          "SRC-009773",
+          "SRC-009890",
+          "SRC-009901",
+          "SRC-009908",
+          "SRC-009769"
+        ]
+      },
+      "Q-661ad71530": {
+        "kind": "residual_query",
+        "query": "SRC-010165",
+        "panel_members": [
+          "SRC-010165",
+          "SRC-010181",
+          "SRC-009962",
+          "SRC-009958",
+          "SRC-009961",
+          "SRC-010166"
+        ]
+      },
+      "Q-974424572d": {
+        "kind": "residual_query",
+        "query": "SRC-010780",
+        "panel_members": [
+          "SRC-010780",
+          "SRC-009838",
+          "SRC-009861",
+          "SRC-009824",
+          "SRC-009876",
+          "SRC-009862"
+        ]
+      },
+      "Q-a7b9078899": {
+        "kind": "residual_query",
+        "query": "SRC-009952",
+        "panel_members": [
+          "SRC-009952",
+          "SRC-010110",
+          "SRC-010111",
+          "SRC-010114",
+          "SRC-010109",
+          "SRC-010815"
+        ]
+      },
+      "Q-99ea621c8f": {
+        "kind": "residual_query",
+        "query": "SRC-010112",
+        "panel_members": [
+          "SRC-010112",
+          "SRC-010248",
+          "SRC-010889",
+          "SRC-010854",
+          "SRC-010888",
+          "SRC-010104"
+        ]
+      }
+    }
+  }
+}

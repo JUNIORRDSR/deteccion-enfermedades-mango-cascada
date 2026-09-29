@@ -1,0 +1,63 @@
+[{"stream_name":"stdout","time":35.205115278,"data":"Creating new Ultralytics Settings v0.0.6 file ✅ \n"}
+,{"stream_name":"stdout","time":35.205159686,"data":"View Ultralytics Settings with 'yolo settings' or at '/tmp/ultralytics_cfg/Ultralytics/settings.json'\n"}
+,{"stream_name":"stdout","time":35.20516457,"data":"Update Settings with 'yolo settings key=value', i.e. 'yolo settings runs_dir=path/to/dir'. For help see https://docs.ultralytics.com/quickstart/#ultralytics-settings.\n"}
+,{"stream_name":"stdout","time":42.689835069,"data":"\r\u001b[KDownloading https://ultralytics.com/assets/Arial.ttf to '/tmp/ultralytics_cfg/Ultralytics/Arial.ttf': 100% ━━━━━━━━━━━━ 755.1KB 10.1MB/s 0.1s\n"}
+,{"stream_name":"stdout","time":112.327139436,"data":"{\n"}
+,{"stream_name":"stdout","time":112.327209381,"data":"  \"payload_sha256\": \"48a82379ca4e0ac01c4df3481c64ac5e4a0f67c08ab296dd3ed60a7d13804608\",\n"}
+,{"stream_name":"stdout","time":112.327216717,"data":"  \"mode\": \"capacity\",\n"}
+,{"stream_name":"stdout","time":112.327223982,"data":"  \"phase\": null,\n"}
+,{"stream_name":"stdout","time":112.327232211,"data":"  \"experiment_id\": \"KAGGLE-CAPACITY-001\",\n"}
+,{"stream_name":"stdout","time":112.327235903,"data":"  \"started_unix\": 1790190922.535334,\n"}
+,{"stream_name":"stdout","time":112.327239493,"data":"  \"kernel_source_sha256\": \"8fe32e2a292eaf2669322448e0c73ceae9c9c4f31d36a9d003b79e000386c259\",\n"}
+,{"stream_name":"stdout","time":112.327243244,"data":"  \"kernel_source_method\": \"main_file\",\n"}
+,{"stream_name":"stdout","time":112.327246709,"data":"  \"stage\": \"done\",\n"}
+,{"stream_name":"stdout","time":112.327250304,"data":"  \"test_evaluated\": false,\n"}
+,{"stream_name":"stdout","time":112.327253778,"data":"  \"pip_install\": {\n"}
+,{"stream_name":"stdout","time":112.327273988,"data":"    \"command\": [\n"}
+,{"stream_name":"stdout","time":112.327280386,"data":"      \"/usr/bin/python3\",\n"}
+,{"stream_name":"stdout","time":112.327286055,"data":"      \"-m\",\n"}
+,{"stream_name":"stdout","time":112.327291937,"data":"      \"pip\",\n"}
+,{"stream_name":"stdout","time":112.327297353,"data":"      \"install\",\n"}
+,{"stream_name":"stdout","time":112.327302295,"data":"      \"-q\",\n"}
+,{"stream_name":"stdout","time":112.327307135,"data":"      \"--report\",\n"}
+,{"stream_name":"stdout","time":112.32731205,"data":"      \"/kaggle/working/evidence/pip_install_report.json\",\n"}
+,{"stream_name":"stdout","time":112.32731717,"data":"      \"ultralytics==8.4.52\"\n"}
+,{"stream_name":"stdout","time":112.327322235,"data":"    ],\n"}
+,{"stream_name":"stdout","time":112.327332641,"data":"    \"exit_code\": 0,\n"}
+,{"stream_name":"stdout","time":112.327336402,"data":"    \"stdout_sha256\": \"d4be5fd23f50620c97296a77b3511bb6436d5c083c70cd03b2f9ae93e04b2350\",\n"}
+,{"stream_name":"stdout","time":112.327340021,"data":"    \"stderr_sha256\": \"e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855\"\n"}
+,{"stream_name":"stdout","time":112.327343455,"data":"  },\n"}
+,{"stream_name":"stdout","time":112.327346801,"data":"  \"files_digest\": \"888f1a6a67b7a938a1cdd8da112cf69c006acc0d3696868b8c93f569662ebe23\",\n"}
+,{"stream_name":"stdout","time":112.327350343,"data":"  \"base_sha256\": \"9b09cc8bf347f0fc8a5f7657480587f25db09b34bf33b0652110fb03a8ad4fef\",\n"}
+,{"stream_name":"stdout","time":112.327357844,"data":"  \"font_sha256\": \"525979822591a3447cfc49d943d6f7683508e25543407871c0ed8fed05fd2bd9\",\n"}
+,{"stream_name":"stdout","time":112.327377476,"data":"  \"setup_seconds\": 32.44972348213196,\n"}
+,{"stream_name":"stdout","time":112.327383883,"data":"  \"capacity\": {\n"}
+,{"stream_name":"stdout","time":112.327389496,"data":"    \"rule\": \"setup + max(epochs 2..n) * epochs * safety \u003c= limit\",\n"}
+,{"stream_name":"stdout","time":112.327410281,"data":"    \"epoch_seconds\": [\n"}
+,{"stream_name":"stdout","time":112.327414585,"data":"      46.55747580528259,\n"}
+,{"stream_name":"stdout","time":112.327418371,"data":"      7.197272062301636,\n"}
+,{"stream_name":"stdout","time":112.327422287,"data":"      6.979163408279419,\n"}
+,{"stream_name":"stdout","time":112.327425958,"data":"      7.694455862045288\n"}
+,{"stream_name":"stdout","time":112.327429648,"data":"    ],\n"}
+,{"stream_name":"stdout","time":112.327433298,"data":"    \"per_epoch_seconds\": 7.694455862045288,\n"}
+,{"stream_name":"stdout","time":112.327437176,"data":"    \"setup_seconds\": 32.44972348213196,\n"}
+,{"stream_name":"stdout","time":112.327441,"data":"    \"epochs\": 150,\n"}
+,{"stream_name":"stdout","time":112.327444797,"data":"    \"safety\": 1.35,\n"}
+,{"stream_name":"stdout","time":112.327450626,"data":"    \"projected_seconds\": 1590.5770355463028,\n"}
+,{"stream_name":"stdout","time":112.327497039,"data":"    \"limit_seconds\": 43200,\n"}
+,{"stream_name":"stdout","time":112.327504848,"data":"    \"fits\": true,\n"}
+,{"stream_name":"stdout","time":112.327508851,"data":"    \"peak_allocated_bytes\": 2576580608,\n"}
+,{"stream_name":"stdout","time":112.327512766,"data":"    \"peak_reserved_bytes\": 3332374528,\n"}
+,{"stream_name":"stdout","time":112.327516555,"data":"    \"run_dir_bytes\": 16971336,\n"}
+,{"stream_name":"stdout","time":112.327520396,"data":"    \"disk_free_bytes\": 1100140138496\n"}
+,{"stream_name":"stdout","time":112.327524199,"data":"  },\n"}
+,{"stream_name":"stdout","time":112.3275279,"data":"  \"status\": \"COMPLETE\",\n"}
+,{"stream_name":"stdout","time":112.3275318,"data":"  \"finished_unix\": 1790191032.491946\n"}
+,{"stream_name":"stdout","time":112.327535685,"data":"}\n"}
+,{"stream_name":"stderr","time":117.835998121,"data":"/usr/local/lib/python3.12/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
+,{"stream_name":"stderr","time":117.836048658,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":118.11005609,"data":"/usr/local/lib/python3.12/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
+,{"stream_name":"stderr","time":118.110085907,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":118.770863474,"data":"[NbConvertApp] Converting notebook __script__.ipynb to html\n"}
+,{"stream_name":"stderr","time":119.716113762,"data":"[NbConvertApp] Writing 426512 bytes to __results__.html\n"}
+]

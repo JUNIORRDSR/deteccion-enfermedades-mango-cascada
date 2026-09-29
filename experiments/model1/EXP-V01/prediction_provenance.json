@@ -1,0 +1,47 @@
+{
+  "checkpoint_sha256": "0648da3f3641e3cdb5a1908a092ba892548942836a249bb3b39667f9ae8e8125",
+  "phase": "valid",
+  "payload_sha256": "b2f78531a0e99db304a22bd291fad136091ee5cee281c3d017658b5d420507da",
+  "kernel_source_sha256": "ae2ee4e815d659732e4116990b3fbc05bdb24c9118538b64949e423f594e73f8",
+  "predictions_raw_sha256": "c184fed7aa7863adbc8841757072852f1e62cfbfa6aeb15615549b7bf7679ff5",
+  "inference": {
+    "imgsz": 640,
+    "max_det": 300,
+    "min_score": 0.001,
+    "nms_iou": 0.6
+  },
+  "config_sha256": "f736ef865a6b6c5a030e39c7f004774d0cebb3b4fe44e319a2a2e4859fb4959c",
+  "manifest_sha256": "dd9431dd7bbc00c6117baf6a0f6cf49eff8bc55f144016b4a98dbdea049ecf5f",
+  "end2end": true,
+  "agnostic_nms": false,
+  "single_cls": false,
+  "effective_suppression": "end-to-end one-to-one head: no NMS, the iou argument is inert",
+  "input_contract": "file path given to Ultralytics predict: the loader reads BGR and preprocessing converts to RGB; rect letterbox at imgsz",
+  "model_names": {
+    "0": "Enfermo",
+    "1": "Saludable"
+  },
+  "predict_args": {
+    "conf": 0.001,
+    "iou": 0.6,
+    "max_det": 300,
+    "imgsz": 640,
+    "device": "0",
+    "half": false,
+    "batch": 1
+  },
+  "experiment_id": "EXP-V01",
+  "receipt_status": "COMPLETE",
+  "receipt_stage": "done",
+  "receipt_error": null,
+  "predictions_sha256": "a35c76ba7380b17fc1266a5d1d1b32b6b3c1db948e142ad42fab653755b359dc",
+  "images": 113,
+  "selection_record_sha256": "4a67bdca43a1c6a782dc6bb172702fcb36ebfcbe9caaa4c73f01808bcb98706c",
+  "training_kernel_version": 1,
+  "attempt": {
+    "experiment_id": "EXP-V01",
+    "attempt": 2,
+    "reconciliation_sha256": "9ee24d58a50fd475d094d96f63f076ca84f98beedc83825a417309ee271d1366",
+    "receipt_sha256": "ee93ac698246b5093e9a01536678ef62b30282022f446f53160c413c4caab3a5"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "metrics_dir": "artifacts\\metrics",
+  "numbers": [],
+  "editorial": [],
+  "claims": [],
+  "language_unreviewed": [],
+  "language_reviewed": [
+    {
+      "paragraph": 75,
+      "match": "libre de fuga",
+      "context": "nación entre particiones. No se afirma que el conjunto esté libre de fuga: pueden quedar relaciones de mismo fruto que ningún generad",
+      "reviewed": true
+    }
+  ],
+  "checked_numbers": 165
+}

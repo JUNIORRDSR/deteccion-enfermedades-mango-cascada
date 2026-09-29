@@ -1,0 +1,41 @@
+{
+  "protocol": "SPEC section 8 (REVIEW-07/08), plan TASK-06",
+  "batch": 1,
+  "precision": "fp32",
+  "m1_imgsz": 640,
+  "m2_imgsz": 224,
+  "warmups_per_image": 10,
+  "iterations_per_image": 100,
+  "torch_threads": 1,
+  "torch_interop_threads": 1,
+  "opencv_threads": 1,
+  "processes": 1,
+  "device": "cpu",
+  "pool_size": 32,
+  "class_names": [
+    "Enfermo",
+    "Saludable"
+  ],
+  "manifest": "data/manifests/model1_clean_manifest.csv",
+  "m1_weights": {
+    "artifact_id": "EXP-R01 selected",
+    "logical_root": "revision",
+    "logical_path": "experiments/model1/EXP-R01/v1/run/weights/selected.pt",
+    "sha256": "0648da3f3641e3cdb5a1908a092ba892548942836a249bb3b39667f9ae8e8125"
+  },
+  "m1_conf": 0.35,
+  "m2_weights": {
+    "artifact_id": "ART-002",
+    "logical_root": "legacy_corpus",
+    "logical_path": "Mango-vision/models/clasificador_enfermedad.pt",
+    "sha256": "e277717e6ca9d7f308d22697550a5a4e80613929acb68eeb790f3304ebfdb08e"
+  },
+  "m2_conf": 0.4,
+  "raspberry_pi_4": "BLOCKED_BY_HARDWARE",
+  "notes": {
+    "m1_weights": "the EXP-R01 checkpoint sealed in experiments/model1/EXP-R01/selection_record.json",
+    "m1_conf": "threshold of configs/evaluation_frozen.json (sha256 b06081e926d01753cd276d2a3535b2f1e8a5975e7de1db031dc8e786c714e228), copied by provenance/commands/task06/set_benchmark_conf.py",
+    "m2_conf": "declared candidate: the legacy component default CONF_CLASSIFICATION=0.4; below it the box is drawn as Desconocido. Not tuned on test",
+    "opencv_threads": "threads 1 of SPEC section 8 applied to OpenCV too (decode, drawing, encoding, Ultralytics letterbox)"
+  }
+}

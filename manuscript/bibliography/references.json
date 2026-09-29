@@ -1,0 +1,222 @@
+[
+  {
+    "id": "barhate2025",
+    "status": "CORRECTED",
+    "apa7": "Barhate, P., Barhate, B., & Joshi, M. (2025). MangoDHDS: A dataset of diseased and healthy mangoes of 1.5 K images (Versión 1) [Conjunto de datos]. Mendeley Data. https://doi.org/10.17632/b4nrw5hyyc.1",
+    "doi": "10.17632/b4nrw5hyyc.1",
+    "url": "https://data.mendeley.com/datasets/b4nrw5hyyc/1",
+    "version": "1",
+    "evidence_url": "https://api.datacite.org/dois/10.17632/b4nrw5hyyc.1",
+    "access_date": "2026-09-23"
+  },
+  {
+    "id": "buja2021",
+    "status": "VERIFIED",
+    "apa7": "Buja, I., Sabella, E., Monteduro, A. G., Chiriacò, M. S., De Bellis, L., Luvisi, A., & Maruccio, G. (2021). Advances in plant disease detection and monitoring: From traditional assays to in-field diagnostics. Sensors, 21(6), 2129. https://doi.org/10.3390/s21062129",
+    "doi": "10.3390/s21062129",
+    "url": "",
+    "version": "",
+    "evidence_url": "https://api.crossref.org/works/10.3390/s21062129",
+    "access_date": "2026-09-23"
+  },
+  {
+    "id": "cerna2024",
+    "status": "VERIFIED",
+    "apa7": "Cerna Grados, L. A. (2024). Clasificación de mangos dataset [Conjunto de datos, licencia CC BY 4.0]. Roboflow Universe. Recuperado el 23 de septiembre de 2026, de https://universe.roboflow.com/luigui-andre-cerna-grados-dpsrr/clasificacion-de-mangos",
+    "doi": "",
+    "url": "https://universe.roboflow.com/luigui-andre-cerna-grados-dpsrr/clasificacion-de-mangos",
+    "version": "no recuperable (13 versiones publicadas)",
+    "evidence_url": "https://universe.roboflow.com/luigui-andre-cerna-grados-dpsrr/clasificacion-de-mangos",
+    "access_date": "2026-09-23"
+  },
+  {
+    "id": "ciofini2022",
+    "status": "VERIFIED",
+    "apa7": "Ciofini, A., Negrini, F., Baroncelli, R., & Baraldi, E. (2022). Management of post-harvest anthracnose: Current approaches and future perspectives. Plants, 11(14), 1856. https://doi.org/10.3390/plants11141856",
+    "doi": "10.3390/plants11141856",
+    "url": "",
+    "version": "",
+    "evidence_url": "https://api.crossref.org/works/10.3390/plants11141856",
+    "access_date": "2026-09-23"
+  },
+  {
+    "id": "villabastidas2026",
+    "status": "CORRECTED",
+    "apa7": "DANNs Workspace. (2026). Mango disease dataset (Versión 1) [Conjunto de datos, licencia CC BY 4.0]. Roboflow Universe. Recuperado el 23 de septiembre de 2026, de https://universe.roboflow.com/danns-workspace-qzudp/mango-disease-4orzk",
+    "doi": "",
+    "url": "https://universe.roboflow.com/danns-workspace-qzudp/mango-disease-4orzk",
+    "version": "1",
+    "evidence_url": "https://universe.roboflow.com/danns-workspace-qzudp/mango-disease-4orzk",
+    "access_date": "2026-09-23"
+  },
+  {
+    "id": "dofuor2023",
+    "status": "CORRECTED",
+    "apa7": "Dofuor, A. K., Quartey, N. K.-A., Osabutey, A. F., Antwi-Agyakwa, A. K., Asante, K., Boateng, B. O., Ablormeti, F. K., Lutuf, H., Osei-Owusu, J., Osei, J. H. N., Ekloh, W., Loh, S. K., Honger, J. O., Aidoo, O. F., & Ninsin, K. D. (2023). Mango anthracnose disease: The current situation and direction for future research. Frontiers in Microbiology, 14, 1168203. https://doi.org/10.3389/fmicb.2023.1168203",
+    "doi": "10.3389/fmicb.2023.1168203",
+    "url": "",
+    "version": "",
+    "evidence_url": "https://api.crossref.org/works/10.3389/fmicb.2023.1168203",
+    "access_date": "2026-09-23"
+  },
+  {
+    "id": "hati2023",
+    "status": "CORRECTED",
+    "apa7": "Hati, A. J., & Singh, R. R. (2023). AI-driven pheno-parenting: A deep learning based plant phenotyping trait analysis model on a novel soilless farming dataset. IEEE Access, 11, 35298–35314. https://doi.org/10.1109/ACCESS.2023.3265195",
+    "doi": "10.1109/ACCESS.2023.3265195",
+    "url": "",
+    "version": "",
+    "evidence_url": "https://api.crossref.org/works/10.1109/ACCESS.2023.3265195",
+    "access_date": "2026-09-23"
+  },
+  {
+    "id": "intel2022",
+    "status": "CORRECTED",
+    "apa7": "Intel Corporation. (2022). Intel RealSense product family D400 series: Datasheet (Documento 337029-012, Rev. 012). https://www.realsenseai.com/wp-content/uploads/2022/03/Intel-RealSense-D400-Series-Datasheet-March-2022.pdf",
+    "doi": "",
+    "url": "https://www.realsenseai.com/wp-content/uploads/2022/03/Intel-RealSense-D400-Series-Datasheet-March-2022.pdf",
+    "version": "Revision 012 (marzo 2022)",
+    "evidence_url": "https://www.realsenseai.com/wp-content/uploads/2022/03/Intel-RealSense-D400-Series-Datasheet-March-2022.pdf",
+    "access_date": "2026-09-23"
+  },
+  {
+    "id": "iqbal2024",
+    "status": "CORRECTED",
+    "apa7": "Iqbal, S., Atiq, M., Fayyaz, M., Zakria, M., Rajput, N. A., Aasma, Kachelo, G. A., Ahmad, I., Usman, M., & Mehmood, A. (2024). Powdery mildew of mango: Current status, perspective and emerging tools for management. Agricultural Sciences Journal, 6(1), 92–101. https://doi.org/10.56520/asj.v6i1.365",
+    "doi": "10.56520/asj.v6i1.365",
+    "url": "",
+    "version": "",
+    "evidence_url": "https://api.crossref.org/works/10.56520/asj.v6i1.365",
+    "access_date": "2026-09-23"
+  },
+  {
+    "id": "jairos2026",
+    "status": "VERIFIED",
+    "apa7": "Jairos Workspace. (2026). mangoUnhealty dataset (Versión 2) [Conjunto de datos, licencia CC BY 4.0]. Roboflow Universe. Recuperado el 23 de septiembre de 2026, de https://universe.roboflow.com/jairos-workspace-cbeeq/mangounhealty/dataset/2",
+    "doi": "",
+    "url": "https://universe.roboflow.com/jairos-workspace-cbeeq/mangounhealty/dataset/2",
+    "version": "2 (generada 2026-04-18 4:47 p. m.)",
+    "evidence_url": "https://universe.roboflow.com/jairos-workspace-cbeeq/mangounhealty/dataset/2",
+    "access_date": "2026-09-23"
+  },
+  {
+    "id": "jin2021",
+    "status": "CORRECTED",
+    "apa7": "Jin, X., Zarco-Tejada, P. J., Schmidhalter, U., Reynolds, M. P., Hawkesford, M. J., Varshney, R. K., Yang, T., Nie, C., Li, Z., Ming, B., Xiao, Y., Xie, Y., & Li, S. (2021). High-throughput estimation of crop traits: A review of ground and aerial phenotyping platforms. IEEE Geoscience and Remote Sensing Magazine, 9(1), 200–231. https://doi.org/10.1109/MGRS.2020.2998816",
+    "doi": "10.1109/MGRS.2020.2998816",
+    "url": "",
+    "version": "",
+    "evidence_url": "https://api.crossref.org/works/10.1109/MGRS.2020.2998816",
+    "access_date": "2026-09-23"
+  },
+  {
+    "id": "jocher_ultralytics",
+    "status": "CORRECTED",
+    "apa7": "Jocher, G., Qiu, J., & Chaurasia, A. (2026). Ultralytics YOLO (Versión 8.4.52) [Software]. GitHub. https://github.com/ultralytics/ultralytics/releases/tag/v8.4.52",
+    "doi": "",
+    "url": "https://github.com/ultralytics/ultralytics/releases/tag/v8.4.52",
+    "version": "8.4.52",
+    "evidence_url": "https://github.com/ultralytics/ultralytics/releases/tag/v8.4.52",
+    "access_date": "2026-09-23"
+  },
+  {
+    "id": "kapoor2023",
+    "status": "VERIFIED",
+    "apa7": "Kapoor, S., & Narayanan, A. (2023). Leakage and the reproducibility crisis in machine-learning-based science. Patterns, 4(9), 100804. https://doi.org/10.1016/j.patter.2023.100804",
+    "doi": "10.1016/j.patter.2023.100804",
+    "url": "",
+    "version": "",
+    "evidence_url": "https://api.crossref.org/works/10.1016/j.patter.2023.100804",
+    "access_date": "2026-09-23"
+  },
+  {
+    "id": "khakimov2022",
+    "status": "VERIFIED",
+    "apa7": "Khakimov, A., Salakhutdinov, I., Omolikov, A., & Utaganov, S. (2022). Traditional and current-prospective methods of agricultural plant diseases detection: A review. IOP Conference Series: Earth and Environmental Science, 951(1), 012002. https://doi.org/10.1088/1755-1315/951/1/012002",
+    "doi": "10.1088/1755-1315/951/1/012002",
+    "url": "",
+    "version": "",
+    "evidence_url": "https://api.crossref.org/works/10.1088/1755-1315/951/1/012002",
+    "access_date": "2026-09-23"
+  },
+  {
+    "id": "liu2021",
+    "status": "VERIFIED",
+    "apa7": "Liu, J., & Wang, X. (2021). Plant diseases and pests detection based on deep learning: A review. Plant Methods, 17(1), 22. https://doi.org/10.1186/s13007-021-00722-9",
+    "doi": "10.1186/s13007-021-00722-9",
+    "url": "",
+    "version": "",
+    "evidence_url": "https://api.crossref.org/works/10.1186/s13007-021-00722-9",
+    "access_date": "2026-09-23"
+  },
+  {
+    "id": "padilla2020",
+    "status": "VERIFIED",
+    "apa7": "Padilla, R., Netto, S. L., & da Silva, E. A. B. (2020). A survey on performance metrics for object-detection algorithms. En 2020 International Conference on Systems, Signals and Image Processing (IWSSIP) (pp. 237–242). IEEE. https://doi.org/10.1109/IWSSIP48289.2020.9145130",
+    "doi": "10.1109/IWSSIP48289.2020.9145130",
+    "url": "",
+    "version": "",
+    "evidence_url": "https://api.crossref.org/works/10.1109/IWSSIP48289.2020.9145130",
+    "access_date": "2026-09-23"
+  },
+  {
+    "id": "paulus2019",
+    "status": "VERIFIED",
+    "apa7": "Paulus, S. (2019). Measuring crops in 3D: Using geometry for plant phenotyping. Plant Methods, 15(1), 103. https://doi.org/10.1186/s13007-019-0490-0",
+    "doi": "10.1186/s13007-019-0490-0",
+    "url": "",
+    "version": "",
+    "evidence_url": "https://api.crossref.org/works/10.1186/s13007-019-0490-0",
+    "access_date": "2026-09-23"
+  },
+  {
+    "id": "redmon2016",
+    "status": "VERIFIED",
+    "apa7": "Redmon, J., Divvala, S., Girshick, R., & Farhadi, A. (2016). You only look once: Unified, real-time object detection. En 2016 IEEE Conference on Computer Vision and Pattern Recognition (CVPR) (pp. 779–788). IEEE. https://doi.org/10.1109/CVPR.2016.91",
+    "doi": "10.1109/CVPR.2016.91",
+    "url": "",
+    "version": "",
+    "evidence_url": "https://api.crossref.org/works/10.1109/CVPR.2016.91",
+    "access_date": "2026-09-23"
+  },
+  {
+    "id": "savary2019",
+    "status": "VERIFIED",
+    "apa7": "Savary, S., Willocquet, L., Pethybridge, S. J., Esker, P., McRoberts, N., & Nelson, A. (2019). The global burden of pathogens and pests on major food crops. Nature Ecology & Evolution, 3(3), 430–439. https://doi.org/10.1038/s41559-018-0793-y",
+    "doi": "10.1038/s41559-018-0793-y",
+    "url": "",
+    "version": "",
+    "evidence_url": "https://api.crossref.org/works/10.1038/s41559-018-0793-y",
+    "access_date": "2026-09-23"
+  },
+  {
+    "id": "venbrux2023",
+    "status": "VERIFIED",
+    "apa7": "Venbrux, M., Crauwels, S., & Rediers, H. (2023). Current and emerging trends in techniques for plant pathogen detection. Frontiers in Plant Science, 14, 1120968. https://doi.org/10.3389/fpls.2023.1120968",
+    "doi": "10.3389/fpls.2023.1120968",
+    "url": "",
+    "version": "",
+    "evidence_url": "https://api.crossref.org/works/10.3389/fpls.2023.1120968",
+    "access_date": "2026-09-23"
+  },
+  {
+    "id": "villabastidas2026_repo",
+    "status": "VERIFIED",
+    "apa7": "Villa Bastidas, D., Solano Romero, J., & Molina-Cárdenas, M. (2026). Detección y clasificación automatizada de enfermedades en mango: código, pesos y evidencia de la revisión (Versión 1.0.0) [Software]. GitHub. https://github.com/JUNIORRDSR/deteccion-enfermedades-mango-cascada/releases/tag/v1.0.0",
+    "doi": "",
+    "url": "https://github.com/JUNIORRDSR/deteccion-enfermedades-mango-cascada/releases/tag/v1.0.0",
+    "version": "1.0.0",
+    "evidence_url": "https://github.com/JUNIORRDSR/deteccion-enfermedades-mango-cascada",
+    "access_date": "2026-09-28"
+  },
+  {
+    "id": "zauner2010",
+    "status": "VERIFIED",
+    "apa7": "Zauner, C. (2010). Implementation and benchmarking of perceptual image hash functions [Tesis de maestría, Upper Austria University of Applied Sciences, Hagenberg Campus]. https://www.phash.org/docs/pubs/thesis_zauner.pdf",
+    "doi": "",
+    "url": "https://www.phash.org/docs/pubs/thesis_zauner.pdf",
+    "version": "",
+    "evidence_url": "https://zauner.nllk.net/research/",
+    "access_date": "2026-09-23"
+  }
+]

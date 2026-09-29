@@ -1,0 +1,42 @@
+{
+  "task": "TASK-03",
+  "status": "FROZEN",
+  "manifest_path": "data/manifests/model1_clean_manifest.csv",
+  "manifest_sha256": "dd9431dd7bbc00c6117baf6a0f6cf49eff8bc55f144016b4a98dbdea049ecf5f",
+  "grouping_rule": "SPEC section 5 frozen rule: the sakit_mp4 montage is one group (option A); PROTOCOL-AMENDMENT-009 withdrawn (DECISION-032)",
+  "inputs": {
+    "data/audits/model1/adjudications.csv": "cb8cd65cf9e20d47987beef0dadb0a883698eb2fc85042cc09a857a49978985a",
+    "data/audits/model1/adjudication_resolution.csv": "e85c585e41b9d22b4f28f84de44bb7aa1d1a59d579097b3632bbece816224c99",
+    "data/audits/model1/clusters.csv": "297ae1e826489efd34610d3e0bcf4fd0dc856d2ed9a7348ac7293f23b7a86331",
+    "data/audits/model1/extra_relations.csv": "7a430004159c0c6c84305f8516ce31c5e5f440cbb3b9771abfd41513d14c1613",
+    "data/audits/model1/supplementary_adjudications.csv": "558658174cce9fd987557fb5f1e1e638214dfa77ccb86e8728aefad0635c2a3b",
+    "data/audits/model1/supplementary_resolution.csv": "f3224fa83b7b73d8a9cd48c29eadecb6cddd52ab5e85a4b68b85e837ebf773fa",
+    "data/audits/model1/supplementary_relations.csv": "872ae18ee2a687f9f0013a39105b398b45d593e41ba11b5aa4b22877822e9f88",
+    "data/manifests/legacy_dataset_inventory.csv": "91c80e1817095e5df90493573dc7004f2a24a28502af4d4ab8681afa547f5166",
+    "src/leakage_audit/split.py": "5a6ed7462185ccee4de9da9bee079dceebff61d74b90ec35f7f06744f6251430"
+  },
+  "missing_inputs": [],
+  "command": "python -m src.leakage_audit.split --audit data/audits/model1 --seed 42 --ratios 0.70 0.15 0.15 --extra-relations data/audits/model1/supplementary_relations.csv --out data/manifests/model1_clean_manifest.csv --proposal reports/model1_split_proposal.md",
+  "counts": {
+    "train": {
+      "images": 439,
+      "groups": 8
+    },
+    "valid": {
+      "images": 113,
+      "groups": 93
+    },
+    "test": {
+      "images": 117,
+      "groups": 98
+    }
+  },
+  "recorded_at": "2026-09-23T18:59:37.313058+00:00",
+  "independent_review": {
+    "report": "reports/amendments/gate-review-exp-r01.md",
+    "report_sha256": "e1e5f76245c24465fbed64462b98afef396c3526245de2c588bfac55a35984e1",
+    "part": "B",
+    "verdict": "ACCEPTABLE as the data input of EXP-R01",
+    "replayed_manifest_sha256": "dd9431dd7bbc00c6117baf6a0f6cf49eff8bc55f144016b4a98dbdea049ecf5f"
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "probed_at_utc": "2026-09-21",
+  "probe": "mcp__kaggle__get_accelerator_quota",
+  "raw_response": {
+    "quota_refresh_time": "2026-09-26T00:00:00Z",
+    "gpu_quota": {
+      "time_used": "0s",
+      "time_reserved": "0s",
+      "total_time_allowed": "108000s",
+      "minimum_time_allowed": "108000s",
+      "has_ever_run": true
+    },
+    "tpu_quota": {
+      "time_used": "0s",
+      "time_reserved": "0s",
+      "total_time_allowed": "72000s",
+      "minimum_time_allowed": "72000s"
+    }
+  },
+  "interpretation": "GPU budget 108000 s (30 h) available, 0 s consumed, refreshing 2026-09-26T00:00:00Z. Observed capability, not a guarantee that a specific accelerator shape is schedulable at run time; the effective device is recorded from inside each notebook.",
+  "local_alternative": "provenance/environment/hardware.json records no NVIDIA GPU and no CUDA runtime (nvidia-smi exit 127); YOLO training locally would be CPU-only.",
+  "status": "OBSERVED"
+}

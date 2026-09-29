@@ -1,0 +1,23 @@
+# pip configuration, redacted (TASK-01)
+# Consolidation of the two capture files at the stable path the frozen brief names.
+# Redaction via src.evaluation.provenance.sanitize_text: hosts kept, secrets removed.
+
+## pip_config_debug_redacted.txt
+env_var:
+  PIP_CACHE_DIR='C:\\Users\\junio\\Downloads\\mango-vision\\ALBUS26_major_revision\\.worktrees\\execution\\provenance\\runtime_state\\pip'
+env:
+global:
+  C:\ProgramData\pip\pip.ini, exists: False
+site:
+  C:\Users\junio\Downloads\mango-vision\ALBUS26_major_revision\.worktrees\execution\.venv\pip.ini, exists: False
+user:
+  C:\Users\junio\pip\pip.ini, exists: False
+  C:\Users\junio\AppData\Roaming\pip\pip.ini, exists: False
+
+exit_code=0
+
+
+## pip_config_list_redacted.txt
+:env:.cache-dir='C:\\Users\\junio\\Downloads\\mango-vision\\ALBUS26_major_revision\\.worktrees\\execution\\provenance\\runtime_state\\pip'
+
+exit_code=0

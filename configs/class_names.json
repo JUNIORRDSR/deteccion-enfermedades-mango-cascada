@@ -1,0 +1,92 @@
+{
+  "model1": {
+    "sources": {
+      "SemilleroTI-Mangos/docs/MangosDataset/data.yaml": [
+        "Enfermo",
+        "Saludable"
+      ],
+      "experiments/model1/EXP-R01/v1/evidence/data.yaml": [
+        "Enfermo",
+        "Saludable"
+      ],
+      "experiments/model1/EXP-R01/v1/run/weights/selected.pt": [
+        "Enfermo",
+        "Saludable"
+      ],
+      "src/evaluation/kaggle_job.py:M1_MODEL_NAMES": [
+        "Enfermo",
+        "Saludable"
+      ]
+    },
+    "source_sha256": {
+      "experiments/model1/EXP-R01/v1/run/weights/selected.pt": "0648da3f3641e3cdb5a1908a092ba892548942836a249bb3b39667f9ae8e8125"
+    },
+    "classes": [
+      {
+        "id": 0,
+        "model_name": "Enfermo",
+        "editorial": "Enfermo"
+      },
+      {
+        "id": 1,
+        "model_name": "Saludable",
+        "editorial": "Saludable"
+      }
+    ]
+  },
+  "model2": {
+    "sources": {
+      "Mango-vision/models/clasificador_enfermedad.pt": [
+        "Antracnosis",
+        "Cancro_bacteriano",
+        "Costras",
+        "Podredumbre_Extremo_tallo",
+        "Saludable"
+      ],
+      "src/evaluation/predict_model2.py:CLASS_NAMES": [
+        "Antracnosis",
+        "Cancro_bacteriano",
+        "Costras",
+        "Podredumbre_Extremo_tallo",
+        "Saludable"
+      ]
+    },
+    "source_sha256": {
+      "Mango-vision/models/clasificador_enfermedad.pt": "e277717e6ca9d7f308d22697550a5a4e80613929acb68eeb790f3304ebfdb08e",
+      "MangoDHDS/Labels.csv": "1cc1dd03a5796c77836cf8b31ab6dc1ad132d8405ccf10cf1d5d4070564d21eb"
+    },
+    "classes": [
+      {
+        "id": 0,
+        "model_name": "Antracnosis",
+        "mangodhds_label": "Anthracnose",
+        "editorial": "Antracnosis"
+      },
+      {
+        "id": 1,
+        "model_name": "Cancro_bacteriano",
+        "mangodhds_label": "Bacterial Canker",
+        "editorial": "Cancro bacteriano"
+      },
+      {
+        "id": 2,
+        "model_name": "Costras",
+        "mangodhds_label": "Scab",
+        "editorial": "Costras"
+      },
+      {
+        "id": 3,
+        "model_name": "Podredumbre_Extremo_tallo",
+        "mangodhds_label": "Stem End Rot",
+        "editorial": "Podredumbre del extremo del tallo"
+      },
+      {
+        "id": 4,
+        "model_name": "Saludable",
+        "mangodhds_label": "Healthy",
+        "editorial": "Saludable"
+      }
+    ]
+  },
+  "rule": "model_name is the index label of the weights; editorial is the only name the manuscript uses; mangodhds_label appears once, in section 3.1, as the source name."
+}

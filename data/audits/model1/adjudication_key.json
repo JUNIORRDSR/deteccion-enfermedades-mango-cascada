@@ -1,0 +1,1318 @@
+{
+  "seed": 42,
+  "reviewers": {
+    "a": {
+      "Q-f70f0696a9": {
+        "candidate_id": "CAND-021",
+        "panel_members": [
+          "SRC-009925",
+          "SRC-009941",
+          "SRC-010818",
+          "SRC-009983",
+          "SRC-010004",
+          "SRC-010027",
+          "SRC-010049",
+          "SRC-010072",
+          "SRC-010092",
+          "SRC-010111",
+          "SRC-010131",
+          "SRC-010154",
+          "SRC-010173",
+          "SRC-010869",
+          "SRC-010218",
+          "SRC-010235"
+        ]
+      },
+      "Q-4bc379f05a": {
+        "candidate_id": "CAND-011",
+        "panel_members": [
+          "SRC-009785",
+          "SRC-010766"
+        ]
+      },
+      "Q-a4cc5d2cb4": {
+        "candidate_id": "CAND-008",
+        "panel_members": [
+          "SRC-009771",
+          "SRC-010762"
+        ]
+      },
+      "Q-e4836caa57": {
+        "candidate_id": "CAND-006",
+        "panel_members": [
+          "SRC-010079",
+          "SRC-010839"
+        ]
+      },
+      "Q-109f454d4b": {
+        "candidate_id": "CAND-009",
+        "panel_members": [
+          "SRC-009765",
+          "SRC-009808"
+        ]
+      },
+      "Q-27558e3857": {
+        "candidate_id": "CAND-027",
+        "panel_members": [
+          "SRC-009688",
+          "SRC-009793"
+        ]
+      },
+      "Q-7897b9dc53": {
+        "candidate_id": "CAND-005",
+        "panel_members": [
+          "SRC-009930",
+          "SRC-010849"
+        ]
+      },
+      "Q-d05c9221ad": {
+        "candidate_id": "CAND-033",
+        "panel_members": [
+          "SRC-009884",
+          "SRC-010795"
+        ]
+      },
+      "Q-b2fc91b354": {
+        "candidate_id": "CAND-018",
+        "panel_members": [
+          "SRC-010085",
+          "SRC-010841"
+        ]
+      },
+      "Q-f3a20e04bc": {
+        "candidate_id": "CAND-028",
+        "panel_members": [
+          "SRC-009837",
+          "SRC-010782"
+        ]
+      },
+      "Q-5710c9526e": {
+        "candidate_id": "CAND-007",
+        "panel_members": [
+          "SRC-009979",
+          "SRC-010822"
+        ]
+      },
+      "Q-c8bd78f551": {
+        "candidate_id": "CAND-024",
+        "panel_members": [
+          "SRC-009773",
+          "SRC-010763"
+        ]
+      },
+      "Q-abba98c88e": {
+        "candidate_id": "CAND-002",
+        "panel_members": [
+          "SRC-009804",
+          "SRC-010768"
+        ]
+      },
+      "Q-85a2e1349b": {
+        "candidate_id": "CAND-032",
+        "panel_members": [
+          "SRC-009695",
+          "SRC-010791"
+        ]
+      },
+      "Q-9624ab60ef": {
+        "candidate_id": "CAND-035",
+        "panel_members": [
+          "SRC-009800",
+          "SRC-010772"
+        ]
+      },
+      "Q-85511d2475": {
+        "candidate_id": "CAND-013",
+        "panel_members": [
+          "SRC-009970",
+          "SRC-009971"
+        ]
+      },
+      "Q-2830c280cb": {
+        "candidate_id": "CAND-029",
+        "panel_members": [
+          "SRC-009810",
+          "SRC-010770"
+        ]
+      },
+      "Q-cc8ebff34f": {
+        "candidate_id": "CAND-031",
+        "panel_members": [
+          "SRC-009995",
+          "SRC-010827"
+        ]
+      },
+      "Q-776ab1fdda": {
+        "candidate_id": "CAND-034",
+        "panel_members": [
+          "SRC-009814",
+          "SRC-010772"
+        ]
+      },
+      "Q-64fc429c4e": {
+        "candidate_id": "CAND-014",
+        "panel_members": [
+          "SRC-009689",
+          "SRC-009783"
+        ]
+      },
+      "Q-d945ba2a56": {
+        "candidate_id": "CAND-017",
+        "panel_members": [
+          "SRC-009696",
+          "SRC-010780"
+        ]
+      },
+      "Q-b59a676b04": {
+        "candidate_id": "CAND-001",
+        "panel_members": [
+          "SRC-009764",
+          "SRC-009897"
+        ]
+      },
+      "Q-d3f0ebc944": {
+        "candidate_id": "CAND-025",
+        "panel_members": [
+          "SRC-009711",
+          "SRC-010879"
+        ]
+      },
+      "Q-1961102661": {
+        "candidate_id": "CAND-016",
+        "panel_members": [
+          "SRC-009689",
+          "SRC-009784"
+        ]
+      },
+      "Q-ff6fce2ad7": {
+        "candidate_id": "CAND-020",
+        "panel_members": [
+          "SRC-009709",
+          "SRC-010835"
+        ]
+      },
+      "Q-f2071bad33": {
+        "candidate_id": "CAND-015",
+        "panel_members": [
+          "SRC-010155",
+          "SRC-010156"
+        ]
+      },
+      "Q-3ab1e985ef": {
+        "candidate_id": "CAND-004",
+        "panel_members": [
+          "SRC-009791",
+          "SRC-010765"
+        ]
+      },
+      "Q-1a2c2b5a7c": {
+        "candidate_id": "CAND-026",
+        "panel_members": [
+          "SRC-009809",
+          "SRC-010769"
+        ]
+      },
+      "Q-b02bb0762b": {
+        "candidate_id": "CAND-023",
+        "panel_members": [
+          "SRC-009807",
+          "SRC-010771"
+        ]
+      },
+      "Q-2c2a292e0e": {
+        "candidate_id": "CAND-022",
+        "panel_members": [
+          "SRC-009789",
+          "SRC-010763"
+        ]
+      },
+      "Q-be8bd7c51d": {
+        "candidate_id": "CAND-012",
+        "panel_members": [
+          "SRC-009694",
+          "SRC-009912"
+        ]
+      },
+      "Q-40449453b0": {
+        "candidate_id": "CAND-030",
+        "panel_members": [
+          "SRC-009783",
+          "SRC-010765"
+        ]
+      },
+      "Q-2761808d05": {
+        "candidate_id": "CAND-010",
+        "panel_members": [
+          "SRC-010079",
+          "SRC-010808"
+        ]
+      },
+      "Q-132c69896c": {
+        "candidate_id": "CAND-019",
+        "panel_members": [
+          "SRC-009754",
+          "SRC-010802"
+        ]
+      },
+      "Q-9aafb2fb07": {
+        "candidate_id": "CAND-003",
+        "panel_members": [
+          "SRC-009930",
+          "SRC-010807"
+        ]
+      }
+    },
+    "b": {
+      "Q-1da432168d": {
+        "candidate_id": "CAND-023",
+        "panel_members": [
+          "SRC-009807",
+          "SRC-010771"
+        ]
+      },
+      "Q-d930d98ddd": {
+        "candidate_id": "CAND-035",
+        "panel_members": [
+          "SRC-009800",
+          "SRC-010772"
+        ]
+      },
+      "Q-1866745614": {
+        "candidate_id": "CAND-014",
+        "panel_members": [
+          "SRC-009689",
+          "SRC-009783"
+        ]
+      },
+      "Q-6492374182": {
+        "candidate_id": "CAND-007",
+        "panel_members": [
+          "SRC-009979",
+          "SRC-010822"
+        ]
+      },
+      "Q-34364e3d17": {
+        "candidate_id": "CAND-021",
+        "panel_members": [
+          "SRC-009925",
+          "SRC-009941",
+          "SRC-010818",
+          "SRC-009983",
+          "SRC-010004",
+          "SRC-010027",
+          "SRC-010049",
+          "SRC-010072",
+          "SRC-010092",
+          "SRC-010111",
+          "SRC-010131",
+          "SRC-010154",
+          "SRC-010173",
+          "SRC-010869",
+          "SRC-010218",
+          "SRC-010235"
+        ]
+      },
+      "Q-f3e810498f": {
+        "candidate_id": "CAND-024",
+        "panel_members": [
+          "SRC-009773",
+          "SRC-010763"
+        ]
+      },
+      "Q-dd908ae74d": {
+        "candidate_id": "CAND-018",
+        "panel_members": [
+          "SRC-010085",
+          "SRC-010841"
+        ]
+      },
+      "Q-197e91cc16": {
+        "candidate_id": "CAND-016",
+        "panel_members": [
+          "SRC-009689",
+          "SRC-009784"
+        ]
+      },
+      "Q-b8da6da149": {
+        "candidate_id": "CAND-009",
+        "panel_members": [
+          "SRC-009765",
+          "SRC-009808"
+        ]
+      },
+      "Q-a151283757": {
+        "candidate_id": "CAND-015",
+        "panel_members": [
+          "SRC-010155",
+          "SRC-010156"
+        ]
+      },
+      "Q-a1ef7bb395": {
+        "candidate_id": "CAND-003",
+        "panel_members": [
+          "SRC-009930",
+          "SRC-010807"
+        ]
+      },
+      "Q-244286735b": {
+        "candidate_id": "CAND-020",
+        "panel_members": [
+          "SRC-009709",
+          "SRC-010835"
+        ]
+      },
+      "Q-58542f5653": {
+        "candidate_id": "CAND-005",
+        "panel_members": [
+          "SRC-009930",
+          "SRC-010849"
+        ]
+      },
+      "Q-329e77a8f5": {
+        "candidate_id": "CAND-022",
+        "panel_members": [
+          "SRC-009789",
+          "SRC-010763"
+        ]
+      },
+      "Q-b02736f4ee": {
+        "candidate_id": "CAND-002",
+        "panel_members": [
+          "SRC-009804",
+          "SRC-010768"
+        ]
+      },
+      "Q-4778ecd4fb": {
+        "candidate_id": "CAND-032",
+        "panel_members": [
+          "SRC-009695",
+          "SRC-010791"
+        ]
+      },
+      "Q-70c2e57844": {
+        "candidate_id": "CAND-011",
+        "panel_members": [
+          "SRC-009785",
+          "SRC-010766"
+        ]
+      },
+      "Q-a9956d8054": {
+        "candidate_id": "CAND-025",
+        "panel_members": [
+          "SRC-009711",
+          "SRC-010879"
+        ]
+      },
+      "Q-e5e7b7548a": {
+        "candidate_id": "CAND-031",
+        "panel_members": [
+          "SRC-009995",
+          "SRC-010827"
+        ]
+      },
+      "Q-c034374223": {
+        "candidate_id": "CAND-029",
+        "panel_members": [
+          "SRC-009810",
+          "SRC-010770"
+        ]
+      },
+      "Q-154792cf88": {
+        "candidate_id": "CAND-017",
+        "panel_members": [
+          "SRC-009696",
+          "SRC-010780"
+        ]
+      },
+      "Q-2858f50bc1": {
+        "candidate_id": "CAND-006",
+        "panel_members": [
+          "SRC-010079",
+          "SRC-010839"
+        ]
+      },
+      "Q-711c6a5833": {
+        "candidate_id": "CAND-026",
+        "panel_members": [
+          "SRC-009809",
+          "SRC-010769"
+        ]
+      },
+      "Q-ce65e193fb": {
+        "candidate_id": "CAND-028",
+        "panel_members": [
+          "SRC-009837",
+          "SRC-010782"
+        ]
+      },
+      "Q-0427f42736": {
+        "candidate_id": "CAND-019",
+        "panel_members": [
+          "SRC-009754",
+          "SRC-010802"
+        ]
+      },
+      "Q-124ecb2ca5": {
+        "candidate_id": "CAND-004",
+        "panel_members": [
+          "SRC-009791",
+          "SRC-010765"
+        ]
+      },
+      "Q-657b9405e9": {
+        "candidate_id": "CAND-030",
+        "panel_members": [
+          "SRC-009783",
+          "SRC-010765"
+        ]
+      },
+      "Q-a13adc5a4e": {
+        "candidate_id": "CAND-001",
+        "panel_members": [
+          "SRC-009764",
+          "SRC-009897"
+        ]
+      },
+      "Q-2add6b7114": {
+        "candidate_id": "CAND-010",
+        "panel_members": [
+          "SRC-010079",
+          "SRC-010808"
+        ]
+      },
+      "Q-2ae2196e3c": {
+        "candidate_id": "CAND-033",
+        "panel_members": [
+          "SRC-009884",
+          "SRC-010795"
+        ]
+      },
+      "Q-c336ace64d": {
+        "candidate_id": "CAND-013",
+        "panel_members": [
+          "SRC-009970",
+          "SRC-009971"
+        ]
+      },
+      "Q-f2ca4aaca6": {
+        "candidate_id": "CAND-012",
+        "panel_members": [
+          "SRC-009694",
+          "SRC-009912"
+        ]
+      },
+      "Q-44cf092b02": {
+        "candidate_id": "CAND-008",
+        "panel_members": [
+          "SRC-009771",
+          "SRC-010762"
+        ]
+      },
+      "Q-9344e5cbd4": {
+        "candidate_id": "CAND-034",
+        "panel_members": [
+          "SRC-009814",
+          "SRC-010772"
+        ]
+      },
+      "Q-5007e8423d": {
+        "candidate_id": "CAND-027",
+        "panel_members": [
+          "SRC-009688",
+          "SRC-009793"
+        ]
+      }
+    },
+    "c": {
+      "Q-0c5f39e6ac": {
+        "candidate_id": "CAND-030"
+      },
+      "Q-bd82aada98": {
+        "candidate_id": "CAND-011"
+      },
+      "Q-d9919d257e": {
+        "candidate_id": "CAND-010"
+      },
+      "Q-8a58c62e73": {
+        "candidate_id": "CAND-016"
+      },
+      "Q-c5a4fa3420": {
+        "candidate_id": "CAND-025"
+      },
+      "Q-3ed2c069dd": {
+        "candidate_id": "CAND-004"
+      },
+      "Q-a7f3fce081": {
+        "candidate_id": "CAND-005"
+      },
+      "Q-18aee197f4": {
+        "candidate_id": "CAND-018"
+      },
+      "Q-63194ef915": {
+        "candidate_id": "CAND-027"
+      },
+      "Q-10f82e6cfa": {
+        "candidate_id": "CAND-007"
+      },
+      "Q-11b3851a39": {
+        "candidate_id": "CAND-020"
+      },
+      "Q-d99026300e": {
+        "candidate_id": "CAND-008"
+      },
+      "Q-f87c56a355": {
+        "candidate_id": "CAND-033"
+      },
+      "Q-d7dcf41eab": {
+        "candidate_id": "CAND-014"
+      }
+    }
+  },
+  "candidates": [
+    {
+      "category": "control_negative",
+      "member_ids": [
+        "SRC-009764",
+        "SRC-009897"
+      ],
+      "reason": "unrelated images of different classes",
+      "candidate_id": "CAND-001"
+    },
+    {
+      "category": "documentary_family",
+      "member_ids": [
+        "SRC-009804",
+        "SRC-010768"
+      ],
+      "reason": "same filename base in two splits; pHash distance above the candidate band",
+      "candidate_id": "CAND-002"
+    },
+    {
+      "category": "threshold_cross_split",
+      "member_ids": [
+        "SRC-009930",
+        "SRC-010807"
+      ],
+      "reason": "pHash Hamming 0 across train/valid",
+      "candidate_id": "CAND-003"
+    },
+    {
+      "category": "band_cross_split",
+      "member_ids": [
+        "SRC-009791",
+        "SRC-010765"
+      ],
+      "reason": "sensitivity band, Hamming 10 across train/valid",
+      "candidate_id": "CAND-004"
+    },
+    {
+      "category": "band_cross_split",
+      "member_ids": [
+        "SRC-009930",
+        "SRC-010849"
+      ],
+      "reason": "sensitivity band, Hamming 6 across train/valid",
+      "candidate_id": "CAND-005"
+    },
+    {
+      "category": "threshold_cross_split",
+      "member_ids": [
+        "SRC-010079",
+        "SRC-010839"
+      ],
+      "reason": "pHash Hamming 0 across train/valid",
+      "candidate_id": "CAND-006"
+    },
+    {
+      "category": "band_cross_split",
+      "member_ids": [
+        "SRC-009979",
+        "SRC-010822"
+      ],
+      "reason": "sensitivity band, Hamming 10 across train/valid",
+      "candidate_id": "CAND-007"
+    },
+    {
+      "category": "threshold_cross_split",
+      "member_ids": [
+        "SRC-009771",
+        "SRC-010762"
+      ],
+      "reason": "pHash Hamming 2 across train/valid",
+      "candidate_id": "CAND-008"
+    },
+    {
+      "category": "control_negative",
+      "member_ids": [
+        "SRC-009765",
+        "SRC-009808"
+      ],
+      "reason": "unrelated images of different classes",
+      "candidate_id": "CAND-009"
+    },
+    {
+      "category": "band_cross_split",
+      "member_ids": [
+        "SRC-010079",
+        "SRC-010808"
+      ],
+      "reason": "sensitivity band, Hamming 8 across train/valid",
+      "candidate_id": "CAND-010"
+    },
+    {
+      "category": "band_cross_split",
+      "member_ids": [
+        "SRC-009785",
+        "SRC-010766"
+      ],
+      "reason": "sensitivity band, Hamming 8 across train/valid",
+      "candidate_id": "CAND-011"
+    },
+    {
+      "category": "control_negative",
+      "member_ids": [
+        "SRC-009694",
+        "SRC-009912"
+      ],
+      "reason": "unrelated images of different classes",
+      "candidate_id": "CAND-012"
+    },
+    {
+      "category": "control_positive",
+      "member_ids": [
+        "SRC-009970",
+        "SRC-009971"
+      ],
+      "reason": "consecutive frames of one video, same split",
+      "candidate_id": "CAND-013"
+    },
+    {
+      "category": "band_cross_split",
+      "member_ids": [
+        "SRC-009689",
+        "SRC-009783"
+      ],
+      "reason": "sensitivity band, Hamming 10 across test/train",
+      "candidate_id": "CAND-014"
+    },
+    {
+      "category": "control_positive",
+      "member_ids": [
+        "SRC-010155",
+        "SRC-010156"
+      ],
+      "reason": "consecutive frames of one video, same split",
+      "candidate_id": "CAND-015"
+    },
+    {
+      "category": "band_cross_split",
+      "member_ids": [
+        "SRC-009689",
+        "SRC-009784"
+      ],
+      "reason": "sensitivity band, Hamming 8 across test/train",
+      "candidate_id": "CAND-016"
+    },
+    {
+      "category": "band_cross_split",
+      "member_ids": [
+        "SRC-009696",
+        "SRC-010780"
+      ],
+      "reason": "sensitivity band, Hamming 10 across test/valid",
+      "candidate_id": "CAND-017"
+    },
+    {
+      "category": "band_cross_split",
+      "member_ids": [
+        "SRC-010085",
+        "SRC-010841"
+      ],
+      "reason": "sensitivity band, Hamming 10 across train/valid",
+      "candidate_id": "CAND-018"
+    },
+    {
+      "category": "threshold_cross_split",
+      "member_ids": [
+        "SRC-009754",
+        "SRC-010802"
+      ],
+      "reason": "pHash Hamming 4 across train/valid",
+      "candidate_id": "CAND-019"
+    },
+    {
+      "category": "band_cross_split",
+      "member_ids": [
+        "SRC-009709",
+        "SRC-010835"
+      ],
+      "reason": "sensitivity band, Hamming 8 across test/valid",
+      "candidate_id": "CAND-020"
+    },
+    {
+      "category": "sequence_cluster",
+      "member_ids": [
+        "SRC-009925",
+        "SRC-010805",
+        "SRC-009926",
+        "SRC-009927",
+        "SRC-009928",
+        "SRC-010806",
+        "SRC-009929",
+        "SRC-009930",
+        "SRC-010807",
+        "SRC-010808",
+        "SRC-009931",
+        "SRC-009932",
+        "SRC-010809",
+        "SRC-009933",
+        "SRC-010810",
+        "SRC-010811",
+        "SRC-009934",
+        "SRC-009935",
+        "SRC-010812",
+        "SRC-009701",
+        "SRC-010813",
+        "SRC-009936",
+        "SRC-009937",
+        "SRC-009938",
+        "SRC-009939",
+        "SRC-009702",
+        "SRC-009940",
+        "SRC-009941",
+        "SRC-010814",
+        "SRC-009942",
+        "SRC-009943",
+        "SRC-009944",
+        "SRC-009945",
+        "SRC-009946",
+        "SRC-009947",
+        "SRC-009948",
+        "SRC-009949",
+        "SRC-010815",
+        "SRC-009950",
+        "SRC-009951",
+        "SRC-009952",
+        "SRC-009953",
+        "SRC-010816",
+        "SRC-009954",
+        "SRC-009955",
+        "SRC-009956",
+        "SRC-009703",
+        "SRC-010817",
+        "SRC-009957",
+        "SRC-009958",
+        "SRC-009959",
+        "SRC-009960",
+        "SRC-009961",
+        "SRC-009962",
+        "SRC-010818",
+        "SRC-009963",
+        "SRC-009964",
+        "SRC-009965",
+        "SRC-009966",
+        "SRC-009967",
+        "SRC-010819",
+        "SRC-010820",
+        "SRC-009968",
+        "SRC-009969",
+        "SRC-009970",
+        "SRC-009971",
+        "SRC-010821",
+        "SRC-009972",
+        "SRC-009704",
+        "SRC-009973",
+        "SRC-009974",
+        "SRC-009705",
+        "SRC-009975",
+        "SRC-009976",
+        "SRC-009977",
+        "SRC-009978",
+        "SRC-009979",
+        "SRC-010822",
+        "SRC-009980",
+        "SRC-009981",
+        "SRC-009982",
+        "SRC-009983",
+        "SRC-009984",
+        "SRC-010823",
+        "SRC-009985",
+        "SRC-010824",
+        "SRC-009986",
+        "SRC-009987",
+        "SRC-009988",
+        "SRC-009989",
+        "SRC-009990",
+        "SRC-010825",
+        "SRC-009991",
+        "SRC-009992",
+        "SRC-009993",
+        "SRC-010826",
+        "SRC-009994",
+        "SRC-009995",
+        "SRC-010827",
+        "SRC-009996",
+        "SRC-009997",
+        "SRC-009706",
+        "SRC-009998",
+        "SRC-009999",
+        "SRC-010000",
+        "SRC-010001",
+        "SRC-010002",
+        "SRC-010003",
+        "SRC-010004",
+        "SRC-010005",
+        "SRC-010006",
+        "SRC-010007",
+        "SRC-010828",
+        "SRC-010008",
+        "SRC-010009",
+        "SRC-010010",
+        "SRC-010011",
+        "SRC-010012",
+        "SRC-010013",
+        "SRC-010829",
+        "SRC-010014",
+        "SRC-010830",
+        "SRC-010015",
+        "SRC-010016",
+        "SRC-010017",
+        "SRC-010018",
+        "SRC-010019",
+        "SRC-010020",
+        "SRC-010021",
+        "SRC-010022",
+        "SRC-010023",
+        "SRC-010024",
+        "SRC-010025",
+        "SRC-009707",
+        "SRC-010026",
+        "SRC-010027",
+        "SRC-010028",
+        "SRC-010029",
+        "SRC-010030",
+        "SRC-010031",
+        "SRC-010032",
+        "SRC-010033",
+        "SRC-010034",
+        "SRC-010035",
+        "SRC-009708",
+        "SRC-010036",
+        "SRC-010037",
+        "SRC-010038",
+        "SRC-010039",
+        "SRC-010831",
+        "SRC-010040",
+        "SRC-010832",
+        "SRC-010041",
+        "SRC-010042",
+        "SRC-010043",
+        "SRC-010044",
+        "SRC-010045",
+        "SRC-010833",
+        "SRC-010046",
+        "SRC-010047",
+        "SRC-010834",
+        "SRC-010048",
+        "SRC-010049",
+        "SRC-010050",
+        "SRC-010051",
+        "SRC-010052",
+        "SRC-009709",
+        "SRC-010053",
+        "SRC-010835",
+        "SRC-010054",
+        "SRC-010055",
+        "SRC-010056",
+        "SRC-010057",
+        "SRC-010058",
+        "SRC-010059",
+        "SRC-010060",
+        "SRC-010061",
+        "SRC-010062",
+        "SRC-010063",
+        "SRC-010064",
+        "SRC-010065",
+        "SRC-010066",
+        "SRC-010836",
+        "SRC-010067",
+        "SRC-010068",
+        "SRC-010069",
+        "SRC-010070",
+        "SRC-010071",
+        "SRC-010837",
+        "SRC-010072",
+        "SRC-010073",
+        "SRC-010074",
+        "SRC-010075",
+        "SRC-010076",
+        "SRC-010838",
+        "SRC-010077",
+        "SRC-010078",
+        "SRC-010839",
+        "SRC-010079",
+        "SRC-010080",
+        "SRC-010081",
+        "SRC-010082",
+        "SRC-009710",
+        "SRC-010083",
+        "SRC-010840",
+        "SRC-010084",
+        "SRC-010085",
+        "SRC-010841",
+        "SRC-010842",
+        "SRC-010086",
+        "SRC-010087",
+        "SRC-010088",
+        "SRC-010089",
+        "SRC-010090",
+        "SRC-010091",
+        "SRC-010843",
+        "SRC-010092",
+        "SRC-010844",
+        "SRC-010093",
+        "SRC-010845",
+        "SRC-010846",
+        "SRC-009711",
+        "SRC-010094",
+        "SRC-010847",
+        "SRC-010095",
+        "SRC-010096",
+        "SRC-010097",
+        "SRC-010848",
+        "SRC-010849",
+        "SRC-010098",
+        "SRC-010099",
+        "SRC-010100",
+        "SRC-010101",
+        "SRC-009712",
+        "SRC-010102",
+        "SRC-010103",
+        "SRC-010104",
+        "SRC-010105",
+        "SRC-010106",
+        "SRC-010107",
+        "SRC-010108",
+        "SRC-010109",
+        "SRC-010110",
+        "SRC-010111",
+        "SRC-010850",
+        "SRC-010112",
+        "SRC-010113",
+        "SRC-010851",
+        "SRC-010114",
+        "SRC-010115",
+        "SRC-010852",
+        "SRC-010116",
+        "SRC-010117",
+        "SRC-010118",
+        "SRC-009713",
+        "SRC-010119",
+        "SRC-009714",
+        "SRC-010120",
+        "SRC-010121",
+        "SRC-010122",
+        "SRC-010853",
+        "SRC-010123",
+        "SRC-010124",
+        "SRC-010125",
+        "SRC-010126",
+        "SRC-010127",
+        "SRC-010854",
+        "SRC-010128",
+        "SRC-010129",
+        "SRC-010130",
+        "SRC-010131",
+        "SRC-010132",
+        "SRC-010133",
+        "SRC-010134",
+        "SRC-010135",
+        "SRC-010136",
+        "SRC-010137",
+        "SRC-010138",
+        "SRC-010139",
+        "SRC-010140",
+        "SRC-010141",
+        "SRC-010142",
+        "SRC-010143",
+        "SRC-010144",
+        "SRC-010145",
+        "SRC-010146",
+        "SRC-010855",
+        "SRC-010147",
+        "SRC-009715",
+        "SRC-010148",
+        "SRC-010856",
+        "SRC-010857",
+        "SRC-010149",
+        "SRC-010150",
+        "SRC-010151",
+        "SRC-010152",
+        "SRC-010153",
+        "SRC-010154",
+        "SRC-010155",
+        "SRC-010156",
+        "SRC-010157",
+        "SRC-010158",
+        "SRC-010858",
+        "SRC-010159",
+        "SRC-010859",
+        "SRC-010160",
+        "SRC-010860",
+        "SRC-010861",
+        "SRC-010161",
+        "SRC-010162",
+        "SRC-010862",
+        "SRC-010163",
+        "SRC-010863",
+        "SRC-010164",
+        "SRC-010165",
+        "SRC-010166",
+        "SRC-010167",
+        "SRC-010168",
+        "SRC-010864",
+        "SRC-010169",
+        "SRC-010170",
+        "SRC-010865",
+        "SRC-010171",
+        "SRC-010172",
+        "SRC-010173",
+        "SRC-010174",
+        "SRC-010175",
+        "SRC-010176",
+        "SRC-010177",
+        "SRC-010866",
+        "SRC-010178",
+        "SRC-010179",
+        "SRC-010180",
+        "SRC-010181",
+        "SRC-010182",
+        "SRC-010867",
+        "SRC-010868",
+        "SRC-010183",
+        "SRC-010184",
+        "SRC-010185",
+        "SRC-010186",
+        "SRC-010187",
+        "SRC-010188",
+        "SRC-010189",
+        "SRC-009716",
+        "SRC-010190",
+        "SRC-010191",
+        "SRC-010192",
+        "SRC-010193",
+        "SRC-010194",
+        "SRC-010195",
+        "SRC-010869",
+        "SRC-010196",
+        "SRC-010870",
+        "SRC-010197",
+        "SRC-010198",
+        "SRC-010871",
+        "SRC-010199",
+        "SRC-010200",
+        "SRC-010201",
+        "SRC-010202",
+        "SRC-010203",
+        "SRC-010204",
+        "SRC-010872",
+        "SRC-010205",
+        "SRC-010206",
+        "SRC-010207",
+        "SRC-010208",
+        "SRC-010209",
+        "SRC-010210",
+        "SRC-010211",
+        "SRC-010212",
+        "SRC-010213",
+        "SRC-010214",
+        "SRC-010873",
+        "SRC-010215",
+        "SRC-010216",
+        "SRC-010217",
+        "SRC-010218",
+        "SRC-010219",
+        "SRC-009717",
+        "SRC-010220",
+        "SRC-010221",
+        "SRC-010874",
+        "SRC-010222",
+        "SRC-010223",
+        "SRC-010224",
+        "SRC-010225",
+        "SRC-010226",
+        "SRC-010227",
+        "SRC-010228",
+        "SRC-010229",
+        "SRC-010875",
+        "SRC-010230",
+        "SRC-010876",
+        "SRC-010231",
+        "SRC-010877",
+        "SRC-010878",
+        "SRC-010232",
+        "SRC-010879",
+        "SRC-010233",
+        "SRC-010234",
+        "SRC-010880",
+        "SRC-010881",
+        "SRC-010882",
+        "SRC-010235",
+        "SRC-010883",
+        "SRC-010884",
+        "SRC-009718",
+        "SRC-010236",
+        "SRC-010237",
+        "SRC-010238",
+        "SRC-010239",
+        "SRC-010885",
+        "SRC-010240",
+        "SRC-010241",
+        "SRC-010242",
+        "SRC-010886",
+        "SRC-010243",
+        "SRC-010244",
+        "SRC-010245",
+        "SRC-010246",
+        "SRC-010247",
+        "SRC-010248",
+        "SRC-010887",
+        "SRC-010249",
+        "SRC-010888",
+        "SRC-010889",
+        "SRC-010250",
+        "SRC-010251",
+        "SRC-010252",
+        "SRC-010253"
+      ],
+      "reason": "all frames named sakit_mp4, one contiguous frame numbering",
+      "candidate_id": "CAND-021"
+    },
+    {
+      "category": "band_cross_split",
+      "member_ids": [
+        "SRC-009789",
+        "SRC-010763"
+      ],
+      "reason": "sensitivity band, Hamming 10 across train/valid",
+      "candidate_id": "CAND-022"
+    },
+    {
+      "category": "band_cross_split",
+      "member_ids": [
+        "SRC-009807",
+        "SRC-010771"
+      ],
+      "reason": "sensitivity band, Hamming 10 across train/valid",
+      "candidate_id": "CAND-023"
+    },
+    {
+      "category": "documentary_family",
+      "member_ids": [
+        "SRC-009773",
+        "SRC-010763"
+      ],
+      "reason": "same filename base in two splits; pHash distance above the candidate band",
+      "candidate_id": "CAND-024"
+    },
+    {
+      "category": "band_cross_split",
+      "member_ids": [
+        "SRC-009711",
+        "SRC-010879"
+      ],
+      "reason": "sensitivity band, Hamming 6 across test/valid",
+      "candidate_id": "CAND-025"
+    },
+    {
+      "category": "documentary_family",
+      "member_ids": [
+        "SRC-009809",
+        "SRC-010769"
+      ],
+      "reason": "same filename base in two splits; pHash distance above the candidate band",
+      "candidate_id": "CAND-026"
+    },
+    {
+      "category": "band_cross_split",
+      "member_ids": [
+        "SRC-009688",
+        "SRC-009793"
+      ],
+      "reason": "sensitivity band, Hamming 10 across test/train",
+      "candidate_id": "CAND-027"
+    },
+    {
+      "category": "documentary_family",
+      "member_ids": [
+        "SRC-009837",
+        "SRC-010782"
+      ],
+      "reason": "same filename base in two splits; pHash distance above the candidate band",
+      "candidate_id": "CAND-028"
+    },
+    {
+      "category": "documentary_family",
+      "member_ids": [
+        "SRC-009810",
+        "SRC-010770"
+      ],
+      "reason": "same filename base in two splits; pHash distance above the candidate band",
+      "candidate_id": "CAND-029"
+    },
+    {
+      "category": "band_cross_split",
+      "member_ids": [
+        "SRC-009783",
+        "SRC-010765"
+      ],
+      "reason": "sensitivity band, Hamming 6 across train/valid",
+      "candidate_id": "CAND-030"
+    },
+    {
+      "category": "threshold_cross_split",
+      "member_ids": [
+        "SRC-009995",
+        "SRC-010827"
+      ],
+      "reason": "pHash Hamming 0 across train/valid",
+      "candidate_id": "CAND-031"
+    },
+    {
+      "category": "documentary_family",
+      "member_ids": [
+        "SRC-009695",
+        "SRC-010791"
+      ],
+      "reason": "same filename base in two splits; pHash distance above the candidate band",
+      "candidate_id": "CAND-032"
+    },
+    {
+      "category": "band_cross_split",
+      "member_ids": [
+        "SRC-009884",
+        "SRC-010795"
+      ],
+      "reason": "sensitivity band, Hamming 10 across train/valid",
+      "candidate_id": "CAND-033"
+    },
+    {
+      "category": "documentary_family",
+      "member_ids": [
+        "SRC-009814",
+        "SRC-010772"
+      ],
+      "reason": "same filename base in two splits; pHash distance above the candidate band",
+      "candidate_id": "CAND-034"
+    },
+    {
+      "category": "threshold_cross_split",
+      "member_ids": [
+        "SRC-009800",
+        "SRC-010772"
+      ],
+      "reason": "pHash Hamming 4 across train/valid",
+      "candidate_id": "CAND-035"
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "checked_at_utc": "2026-09-18T16:42:03.888803+00:00",
+  "status": "READY_FOR_REVIEW",
+  "executive_local_links": 39,
+  "all_links_exist": true,
+  "independently_reviewed_spec_plan_executive_hashes_unchanged": true,
+  "first_phase_verification_sha256": "0c09d5164743ef493f18e6df2e61e68e5529126a9af728a50a2fb54175d55e26",
+  "final_validation_report_exists": true,
+  "scientific_revision_done": false,
+  "human_approval": "PENDING"
+}

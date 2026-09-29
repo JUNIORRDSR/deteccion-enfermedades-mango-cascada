@@ -1,0 +1,17 @@
+{
+  "TEMP": "C:\\Users\\junio\\Downloads\\mango-vision\\ALBUS26_major_revision\\.worktrees\\execution\\provenance\\runtime_state\\tmp",
+  "TMP": "C:\\Users\\junio\\Downloads\\mango-vision\\ALBUS26_major_revision\\.worktrees\\execution\\provenance\\runtime_state\\tmp",
+  "YOLO_CONFIG_DIR": "C:\\Users\\junio\\Downloads\\mango-vision\\ALBUS26_major_revision\\.worktrees\\execution\\provenance\\runtime_state\\ultralytics",
+  "PIP_CACHE_DIR": "C:\\Users\\junio\\Downloads\\mango-vision\\ALBUS26_major_revision\\.worktrees\\execution\\provenance\\runtime_state\\pip",
+  "TORCH_HOME": "C:\\Users\\junio\\Downloads\\mango-vision\\ALBUS26_major_revision\\.worktrees\\execution\\provenance\\runtime_state\\torch",
+  "XDG_CACHE_HOME": "C:\\Users\\junio\\Downloads\\mango-vision\\ALBUS26_major_revision\\.worktrees\\execution\\provenance\\runtime_state\\cache",
+  "MPLCONFIGDIR": "C:\\Users\\junio\\Downloads\\mango-vision\\ALBUS26_major_revision\\.worktrees\\execution\\provenance\\runtime_state\\matplotlib",
+  "HF_HOME": "C:\\Users\\junio\\Downloads\\mango-vision\\ALBUS26_major_revision\\.worktrees\\execution\\provenance\\runtime_state\\huggingface",
+  "NUMBA_CACHE_DIR": "C:\\Users\\junio\\Downloads\\mango-vision\\ALBUS26_major_revision\\.worktrees\\execution\\provenance\\runtime_state\\numba",
+  "PYTHONUSERBASE": "C:\\Users\\junio\\Downloads\\mango-vision\\ALBUS26_major_revision\\.worktrees\\execution\\provenance\\runtime_state\\python_user",
+  "PYTHONDONTWRITEBYTECODE": "1",
+  "PYTHONNOUSERSITE": "1",
+  "WANDB_DISABLED": "true",
+  "WANDB_MODE": "disabled",
+  "COMET_MODE": "DISABLED"
+}

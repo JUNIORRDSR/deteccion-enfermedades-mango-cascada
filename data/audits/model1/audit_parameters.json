@@ -1,0 +1,26 @@
+{
+  "dataset_id": "DATA-001",
+  "algorithm_version": 1,
+  "phash": {
+    "library": "ImageHash",
+    "version": "4.3.2",
+    "pillow": "12.2.0",
+    "hash_size": 8,
+    "highfreq_factor": 4,
+    "convert": "RGB",
+    "exif_orientation_applied": false,
+    "autocrop": false
+  },
+  "hamming_lt": 5,
+  "candidate_max": 10,
+  "manifest_sha256": "91c80e1817095e5df90493573dc7004f2a24a28502af4d4ab8681afa547f5166",
+  "n_images": 669,
+  "n_pairs_within_threshold": 12,
+  "n_candidates_in_band": 42,
+  "n_cross_split_clusters": 6,
+  "limits": [
+    "zero detected pairs would not prove biological independence",
+    "a cluster is an operational grouping, not a demonstrated independent unit",
+    "Hamming 0 is not byte identity; SHA256 equality is reported separately"
+  ]
+}

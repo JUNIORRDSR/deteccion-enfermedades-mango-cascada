@@ -1,0 +1,1 @@
+{"kernel": "jorgesolanodev/albus26-m1-kaggle-capacity-001", "kernel_id": 135563175, "version": 1, "platform_status": "ERROR", "stage": "download", "cause": "split string mis-transcribed by hand into the kernel text (a run of t of wrong length); detected by select() before any model was built", "model_built": false, "predictions": false}

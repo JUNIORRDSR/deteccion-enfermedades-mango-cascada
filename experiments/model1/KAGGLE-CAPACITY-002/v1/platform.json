@@ -1,0 +1,32 @@
+{
+  "kernel": "jorgesolanodev/albus26-m1-kaggle-capacity-002",
+  "kernel_id": 135894682,
+  "version": 1,
+  "session_id": 352828665,
+  "status": "COMPLETE",
+  "docker_image": "gcr.io/kaggle-private-byod/python@sha256:37c64f7dd9c54116ecd1bcc88817c5469b88387388fade02bfa8bf3fc647d461",
+  "machine_shape": "NvidiaTeslaT4",
+  "is_private": true,
+  "enable_internet": true,
+  "outputs": [
+    "evidence/data.yaml",
+    "evidence/nvidia_smi.stderr.txt",
+    "evidence/nvidia_smi.stdout.txt",
+    "evidence/pip_check.stderr.txt",
+    "evidence/pip_check.stdout.txt",
+    "evidence/pip_config.stderr.txt",
+    "evidence/pip_config.stdout.txt",
+    "evidence/pip_debug.stderr.txt",
+    "evidence/pip_debug.stdout.txt",
+    "evidence/pip_freeze.stderr.txt",
+    "evidence/pip_freeze.stdout.txt",
+    "evidence/pip_install.stderr.txt",
+    "evidence/pip_install.stdout.txt",
+    "evidence/pip_install_report.json",
+    "evidence/ultralytics_settings.json",
+    "job_log.txt",
+    "receipt.json"
+  ],
+  "log_file": "platform_log.json",
+  "sources": "Kaggle MCP get_notebook_info, get_notebook_session_status and list_notebook_session_output, retrieved 2026-09-25"
+}

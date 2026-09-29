@@ -1,0 +1,12 @@
+env_var:
+  PIP_CACHE_DIR='C:\\Users\\junio\\Downloads\\mango-vision\\ALBUS26_major_revision\\.worktrees\\execution\\provenance\\runtime_state\\pip'
+env:
+global:
+  C:\ProgramData\pip\pip.ini, exists: False
+site:
+  C:\Users\junio\Downloads\mango-vision\ALBUS26_major_revision\.worktrees\execution\.venv\pip.ini, exists: False
+user:
+  C:\Users\junio\pip\pip.ini, exists: False
+  C:\Users\junio\AppData\Roaming\pip\pip.ini, exists: False
+
+exit_code=0

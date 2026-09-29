@@ -1,0 +1,1230 @@
+{
+  "seed": 4242,
+  "reviewers": {
+    "a": {
+      "Q-5209ad1750": {
+        "candidate_id": "SUPP-048",
+        "panel_members": [
+          "SRC-009848",
+          "SRC-009851"
+        ]
+      },
+      "Q-61bea59cd7": {
+        "candidate_id": "SUPP-040",
+        "panel_members": [
+          "SRC-009689",
+          "SRC-009785"
+        ]
+      },
+      "Q-d921a2ef78": {
+        "candidate_id": "SUPP-044",
+        "panel_members": [
+          "SRC-009783",
+          "SRC-009792"
+        ]
+      },
+      "Q-18834d4a32": {
+        "candidate_id": "SUPP-033",
+        "panel_members": [
+          "SRC-009773",
+          "SRC-010763"
+        ]
+      },
+      "Q-eeed15c1a3": {
+        "candidate_id": "SUPP-023",
+        "panel_members": [
+          "SRC-009809",
+          "SRC-009835"
+        ]
+      },
+      "Q-7d27f686e8": {
+        "candidate_id": "SUPP-035",
+        "panel_members": [
+          "SRC-010807",
+          "SRC-010849"
+        ]
+      },
+      "Q-2e146be0ef": {
+        "candidate_id": "SUPP-012",
+        "panel_members": [
+          "SRC-010765",
+          "SRC-010766"
+        ]
+      },
+      "Q-a880206883": {
+        "candidate_id": "SUPP-030",
+        "panel_members": [
+          "SRC-009689",
+          "SRC-009791"
+        ]
+      },
+      "Q-ff9ba74408": {
+        "candidate_id": "SUPP-011",
+        "panel_members": [
+          "SRC-010049",
+          "SRC-010072"
+        ]
+      },
+      "Q-5b8343b2c6": {
+        "candidate_id": "SUPP-053",
+        "panel_members": [
+          "SRC-009909",
+          "SRC-010793"
+        ]
+      },
+      "Q-aab252e6e0": {
+        "candidate_id": "SUPP-005",
+        "panel_members": [
+          "SRC-009776",
+          "SRC-009777"
+        ]
+      },
+      "Q-7b85feb20b": {
+        "candidate_id": "SUPP-017",
+        "panel_members": [
+          "SRC-009835",
+          "SRC-009849"
+        ]
+      },
+      "Q-2741318ce1": {
+        "candidate_id": "SUPP-020",
+        "panel_members": [
+          "SRC-009891",
+          "SRC-010796"
+        ]
+      },
+      "Q-86f2616362": {
+        "candidate_id": "SUPP-049",
+        "panel_members": [
+          "SRC-009816",
+          "SRC-010774"
+        ]
+      },
+      "Q-dd3776b341": {
+        "candidate_id": "SUPP-018",
+        "panel_members": [
+          "SRC-009826",
+          "SRC-009827"
+        ]
+      },
+      "Q-8a0fb6a51c": {
+        "candidate_id": "SUPP-014",
+        "panel_members": [
+          "SRC-009818",
+          "SRC-009821"
+        ]
+      },
+      "Q-43c5055635": {
+        "candidate_id": "SUPP-052",
+        "panel_members": [
+          "SRC-009907",
+          "SRC-009909"
+        ]
+      },
+      "Q-7f0d5c3136": {
+        "candidate_id": "SUPP-047",
+        "panel_members": [
+          "SRC-009863",
+          "SRC-009867"
+        ]
+      },
+      "Q-fa2fe27239": {
+        "candidate_id": "SUPP-010",
+        "panel_members": [
+          "SRC-009788",
+          "SRC-009881"
+        ]
+      },
+      "Q-adef5d1ddc": {
+        "candidate_id": "SUPP-039",
+        "panel_members": [
+          "SRC-009819",
+          "SRC-009899"
+        ]
+      },
+      "Q-96b31e25de": {
+        "candidate_id": "SUPP-025",
+        "panel_members": [
+          "SRC-009867",
+          "SRC-010775"
+        ]
+      },
+      "Q-7613c2c185": {
+        "candidate_id": "SUPP-050",
+        "panel_members": [
+          "SRC-009930",
+          "SRC-010807"
+        ]
+      },
+      "Q-b1338de687": {
+        "candidate_id": "SUPP-008",
+        "panel_members": [
+          "SRC-009848",
+          "SRC-010786"
+        ]
+      },
+      "Q-8132faceca": {
+        "candidate_id": "SUPP-031",
+        "panel_members": [
+          "SRC-009849",
+          "SRC-009851"
+        ]
+      },
+      "Q-5d1bb04703": {
+        "candidate_id": "SUPP-016",
+        "panel_members": [
+          "SRC-009809",
+          "SRC-009811"
+        ]
+      },
+      "Q-5ee715d969": {
+        "candidate_id": "SUPP-002",
+        "panel_members": [
+          "SRC-009783",
+          "SRC-009785"
+        ]
+      },
+      "Q-9d88c91220": {
+        "candidate_id": "SUPP-045",
+        "panel_members": [
+          "SRC-009878",
+          "SRC-009883"
+        ]
+      },
+      "Q-48014bb4bc": {
+        "candidate_id": "SUPP-037",
+        "panel_members": [
+          "SRC-009872",
+          "SRC-009873"
+        ]
+      },
+      "Q-6894111bc5": {
+        "candidate_id": "SUPP-046",
+        "panel_members": [
+          "SRC-009863",
+          "SRC-009864"
+        ]
+      },
+      "Q-44531a45cd": {
+        "candidate_id": "SUPP-036",
+        "panel_members": [
+          "SRC-009849",
+          "SRC-009850"
+        ]
+      },
+      "Q-867f6f5f6b": {
+        "candidate_id": "SUPP-004",
+        "panel_members": [
+          "SRC-009827",
+          "SRC-010783"
+        ]
+      },
+      "Q-3cbacbd917": {
+        "candidate_id": "SUPP-028",
+        "panel_members": [
+          "SRC-010079",
+          "SRC-010839"
+        ]
+      },
+      "Q-b87f9617d1": {
+        "candidate_id": "SUPP-019",
+        "panel_members": [
+          "SRC-009695",
+          "SRC-009889"
+        ]
+      },
+      "Q-9690c79165": {
+        "candidate_id": "SUPP-009",
+        "panel_members": [
+          "SRC-009783",
+          "SRC-009791"
+        ]
+      },
+      "Q-d7902f7f35": {
+        "candidate_id": "SUPP-026",
+        "panel_members": [
+          "SRC-009804",
+          "SRC-010768"
+        ]
+      },
+      "Q-6b5c957f60": {
+        "candidate_id": "SUPP-027",
+        "panel_members": [
+          "SRC-009848",
+          "SRC-009850"
+        ]
+      },
+      "Q-397ccb0854": {
+        "candidate_id": "SUPP-038",
+        "panel_members": [
+          "SRC-009789",
+          "SRC-010763"
+        ]
+      },
+      "Q-aa6fdcc39d": {
+        "candidate_id": "SUPP-043",
+        "panel_members": [
+          "SRC-009889",
+          "SRC-010793"
+        ]
+      },
+      "Q-4d5f5a8a54": {
+        "candidate_id": "SUPP-041",
+        "panel_members": [
+          "SRC-009800",
+          "SRC-009889"
+        ]
+      },
+      "Q-e3649651d0": {
+        "candidate_id": "SUPP-003",
+        "panel_members": [
+          "SRC-009850",
+          "SRC-009851"
+        ]
+      },
+      "Q-45d90e3a3c": {
+        "candidate_id": "SUPP-015",
+        "panel_members": [
+          "SRC-009791",
+          "SRC-009792"
+        ]
+      },
+      "Q-4f065e0e41": {
+        "candidate_id": "SUPP-006",
+        "panel_members": [
+          "SRC-009796",
+          "SRC-009797"
+        ]
+      },
+      "Q-f6b9fdad1f": {
+        "candidate_id": "SUPP-022",
+        "panel_members": [
+          "SRC-009714",
+          "SRC-010765"
+        ]
+      },
+      "Q-446a406aa6": {
+        "candidate_id": "SUPP-021",
+        "panel_members": [
+          "SRC-009789",
+          "SRC-010793"
+        ]
+      },
+      "Q-398b647a1f": {
+        "candidate_id": "SUPP-042",
+        "panel_members": [
+          "SRC-009850",
+          "SRC-010775"
+        ]
+      },
+      "Q-54285e62dc": {
+        "candidate_id": "SUPP-013",
+        "panel_members": [
+          "SRC-009830",
+          "SRC-009831"
+        ]
+      },
+      "Q-9cf69beab0": {
+        "candidate_id": "SUPP-007",
+        "panel_members": [
+          "SRC-010775",
+          "SRC-010776"
+        ]
+      },
+      "Q-3dac37c801": {
+        "candidate_id": "SUPP-032",
+        "panel_members": [
+          "SRC-009848",
+          "SRC-009849"
+        ]
+      },
+      "Q-56e1815809": {
+        "candidate_id": "SUPP-024",
+        "panel_members": [
+          "SRC-009695",
+          "SRC-010793"
+        ]
+      },
+      "Q-3aa756b6ee": {
+        "candidate_id": "SUPP-051",
+        "panel_members": [
+          "SRC-009816",
+          "SRC-010775"
+        ]
+      },
+      "Q-aa16632f5f": {
+        "candidate_id": "SUPP-001",
+        "panel_members": [
+          "SRC-009832",
+          "SRC-009833"
+        ]
+      },
+      "Q-ec844a0321": {
+        "candidate_id": "SUPP-029",
+        "panel_members": [
+          "SRC-009692",
+          "SRC-009834"
+        ]
+      },
+      "Q-36376b2fb3": {
+        "candidate_id": "SUPP-034",
+        "panel_members": [
+          "SRC-009892",
+          "SRC-010796"
+        ]
+      }
+    },
+    "b": {
+      "Q-b2d2f02265": {
+        "candidate_id": "SUPP-020",
+        "panel_members": [
+          "SRC-009891",
+          "SRC-010796"
+        ]
+      },
+      "Q-59414cb3aa": {
+        "candidate_id": "SUPP-049",
+        "panel_members": [
+          "SRC-009816",
+          "SRC-010774"
+        ]
+      },
+      "Q-ef068b7b9e": {
+        "candidate_id": "SUPP-001",
+        "panel_members": [
+          "SRC-009832",
+          "SRC-009833"
+        ]
+      },
+      "Q-f0b93c7df3": {
+        "candidate_id": "SUPP-051",
+        "panel_members": [
+          "SRC-009816",
+          "SRC-010775"
+        ]
+      },
+      "Q-15e6213bf9": {
+        "candidate_id": "SUPP-042",
+        "panel_members": [
+          "SRC-009850",
+          "SRC-010775"
+        ]
+      },
+      "Q-0cb670a691": {
+        "candidate_id": "SUPP-035",
+        "panel_members": [
+          "SRC-010807",
+          "SRC-010849"
+        ]
+      },
+      "Q-f08d4f95ac": {
+        "candidate_id": "SUPP-008",
+        "panel_members": [
+          "SRC-009848",
+          "SRC-010786"
+        ]
+      },
+      "Q-51f0eb9022": {
+        "candidate_id": "SUPP-033",
+        "panel_members": [
+          "SRC-009773",
+          "SRC-010763"
+        ]
+      },
+      "Q-d8a7915f49": {
+        "candidate_id": "SUPP-040",
+        "panel_members": [
+          "SRC-009689",
+          "SRC-009785"
+        ]
+      },
+      "Q-c1873875b9": {
+        "candidate_id": "SUPP-037",
+        "panel_members": [
+          "SRC-009872",
+          "SRC-009873"
+        ]
+      },
+      "Q-b06ac9b832": {
+        "candidate_id": "SUPP-047",
+        "panel_members": [
+          "SRC-009863",
+          "SRC-009867"
+        ]
+      },
+      "Q-2da3e31b8b": {
+        "candidate_id": "SUPP-048",
+        "panel_members": [
+          "SRC-009848",
+          "SRC-009851"
+        ]
+      },
+      "Q-f9cbd51188": {
+        "candidate_id": "SUPP-045",
+        "panel_members": [
+          "SRC-009878",
+          "SRC-009883"
+        ]
+      },
+      "Q-3e376b8090": {
+        "candidate_id": "SUPP-053",
+        "panel_members": [
+          "SRC-009909",
+          "SRC-010793"
+        ]
+      },
+      "Q-59ea79413d": {
+        "candidate_id": "SUPP-010",
+        "panel_members": [
+          "SRC-009788",
+          "SRC-009881"
+        ]
+      },
+      "Q-45a99fc2fc": {
+        "candidate_id": "SUPP-017",
+        "panel_members": [
+          "SRC-009835",
+          "SRC-009849"
+        ]
+      },
+      "Q-b02a343358": {
+        "candidate_id": "SUPP-038",
+        "panel_members": [
+          "SRC-009789",
+          "SRC-010763"
+        ]
+      },
+      "Q-056cd7d4dc": {
+        "candidate_id": "SUPP-003",
+        "panel_members": [
+          "SRC-009850",
+          "SRC-009851"
+        ]
+      },
+      "Q-e64098536f": {
+        "candidate_id": "SUPP-030",
+        "panel_members": [
+          "SRC-009689",
+          "SRC-009791"
+        ]
+      },
+      "Q-79648f45f4": {
+        "candidate_id": "SUPP-050",
+        "panel_members": [
+          "SRC-009930",
+          "SRC-010807"
+        ]
+      },
+      "Q-0c5331b4f7": {
+        "candidate_id": "SUPP-004",
+        "panel_members": [
+          "SRC-009827",
+          "SRC-010783"
+        ]
+      },
+      "Q-a4edc5ecac": {
+        "candidate_id": "SUPP-034",
+        "panel_members": [
+          "SRC-009892",
+          "SRC-010796"
+        ]
+      },
+      "Q-52d83f4f02": {
+        "candidate_id": "SUPP-043",
+        "panel_members": [
+          "SRC-009889",
+          "SRC-010793"
+        ]
+      },
+      "Q-910f387828": {
+        "candidate_id": "SUPP-011",
+        "panel_members": [
+          "SRC-010049",
+          "SRC-010072"
+        ]
+      },
+      "Q-c5548aec97": {
+        "candidate_id": "SUPP-006",
+        "panel_members": [
+          "SRC-009796",
+          "SRC-009797"
+        ]
+      },
+      "Q-9138e63631": {
+        "candidate_id": "SUPP-016",
+        "panel_members": [
+          "SRC-009809",
+          "SRC-009811"
+        ]
+      },
+      "Q-5bbc0616f3": {
+        "candidate_id": "SUPP-025",
+        "panel_members": [
+          "SRC-009867",
+          "SRC-010775"
+        ]
+      },
+      "Q-2ae2596570": {
+        "candidate_id": "SUPP-002",
+        "panel_members": [
+          "SRC-009783",
+          "SRC-009785"
+        ]
+      },
+      "Q-8df7efa413": {
+        "candidate_id": "SUPP-019",
+        "panel_members": [
+          "SRC-009695",
+          "SRC-009889"
+        ]
+      },
+      "Q-5dedc04b85": {
+        "candidate_id": "SUPP-009",
+        "panel_members": [
+          "SRC-009783",
+          "SRC-009791"
+        ]
+      },
+      "Q-2d4e04edc5": {
+        "candidate_id": "SUPP-044",
+        "panel_members": [
+          "SRC-009783",
+          "SRC-009792"
+        ]
+      },
+      "Q-a012fada5d": {
+        "candidate_id": "SUPP-012",
+        "panel_members": [
+          "SRC-010765",
+          "SRC-010766"
+        ]
+      },
+      "Q-36f319be0e": {
+        "candidate_id": "SUPP-013",
+        "panel_members": [
+          "SRC-009830",
+          "SRC-009831"
+        ]
+      },
+      "Q-1ec3d4e552": {
+        "candidate_id": "SUPP-005",
+        "panel_members": [
+          "SRC-009776",
+          "SRC-009777"
+        ]
+      },
+      "Q-422b30ec74": {
+        "candidate_id": "SUPP-023",
+        "panel_members": [
+          "SRC-009809",
+          "SRC-009835"
+        ]
+      },
+      "Q-74b43b765e": {
+        "candidate_id": "SUPP-046",
+        "panel_members": [
+          "SRC-009863",
+          "SRC-009864"
+        ]
+      },
+      "Q-fb51b76f93": {
+        "candidate_id": "SUPP-024",
+        "panel_members": [
+          "SRC-009695",
+          "SRC-010793"
+        ]
+      },
+      "Q-34bbdb0f9e": {
+        "candidate_id": "SUPP-036",
+        "panel_members": [
+          "SRC-009849",
+          "SRC-009850"
+        ]
+      },
+      "Q-114e496cd0": {
+        "candidate_id": "SUPP-007",
+        "panel_members": [
+          "SRC-010775",
+          "SRC-010776"
+        ]
+      },
+      "Q-1d8bf1fa4d": {
+        "candidate_id": "SUPP-039",
+        "panel_members": [
+          "SRC-009819",
+          "SRC-009899"
+        ]
+      },
+      "Q-69db94ceea": {
+        "candidate_id": "SUPP-029",
+        "panel_members": [
+          "SRC-009692",
+          "SRC-009834"
+        ]
+      },
+      "Q-e3e88f0cc8": {
+        "candidate_id": "SUPP-027",
+        "panel_members": [
+          "SRC-009848",
+          "SRC-009850"
+        ]
+      },
+      "Q-29901c6d31": {
+        "candidate_id": "SUPP-028",
+        "panel_members": [
+          "SRC-010079",
+          "SRC-010839"
+        ]
+      },
+      "Q-49a617f4c9": {
+        "candidate_id": "SUPP-052",
+        "panel_members": [
+          "SRC-009907",
+          "SRC-009909"
+        ]
+      },
+      "Q-afc0f0153c": {
+        "candidate_id": "SUPP-032",
+        "panel_members": [
+          "SRC-009848",
+          "SRC-009849"
+        ]
+      },
+      "Q-45b512a9c5": {
+        "candidate_id": "SUPP-022",
+        "panel_members": [
+          "SRC-009714",
+          "SRC-010765"
+        ]
+      },
+      "Q-d09e7b335e": {
+        "candidate_id": "SUPP-021",
+        "panel_members": [
+          "SRC-009789",
+          "SRC-010793"
+        ]
+      },
+      "Q-bbdc0c1806": {
+        "candidate_id": "SUPP-026",
+        "panel_members": [
+          "SRC-009804",
+          "SRC-010768"
+        ]
+      },
+      "Q-0119983bf1": {
+        "candidate_id": "SUPP-041",
+        "panel_members": [
+          "SRC-009800",
+          "SRC-009889"
+        ]
+      },
+      "Q-9f4be1596a": {
+        "candidate_id": "SUPP-014",
+        "panel_members": [
+          "SRC-009818",
+          "SRC-009821"
+        ]
+      },
+      "Q-ae7f010c41": {
+        "candidate_id": "SUPP-018",
+        "panel_members": [
+          "SRC-009826",
+          "SRC-009827"
+        ]
+      },
+      "Q-3006456b4c": {
+        "candidate_id": "SUPP-031",
+        "panel_members": [
+          "SRC-009849",
+          "SRC-009851"
+        ]
+      },
+      "Q-a8cda11c84": {
+        "candidate_id": "SUPP-015",
+        "panel_members": [
+          "SRC-009791",
+          "SRC-009792"
+        ]
+      }
+    }
+  },
+  "candidates": [
+    {
+      "category": "embedding",
+      "reason": "ART-004 embedding cosine 0.997769",
+      "member_ids": [
+        "SRC-009832",
+        "SRC-009833"
+      ],
+      "candidate_id": "SUPP-001"
+    },
+    {
+      "category": "embedding",
+      "reason": "ART-004 embedding cosine 0.996116",
+      "member_ids": [
+        "SRC-009783",
+        "SRC-009785"
+      ],
+      "candidate_id": "SUPP-002"
+    },
+    {
+      "category": "embedding",
+      "reason": "ART-004 embedding cosine 0.996001",
+      "member_ids": [
+        "SRC-009850",
+        "SRC-009851"
+      ],
+      "candidate_id": "SUPP-003"
+    },
+    {
+      "category": "rotation",
+      "reason": "rotation-invariant pHash distance 10",
+      "member_ids": [
+        "SRC-009827",
+        "SRC-010783"
+      ],
+      "candidate_id": "SUPP-004"
+    },
+    {
+      "category": "embedding",
+      "reason": "ART-004 embedding cosine 0.996247",
+      "member_ids": [
+        "SRC-009776",
+        "SRC-009777"
+      ],
+      "candidate_id": "SUPP-005"
+    },
+    {
+      "category": "embedding",
+      "reason": "ART-004 embedding cosine 0.994910",
+      "member_ids": [
+        "SRC-009796",
+        "SRC-009797"
+      ],
+      "candidate_id": "SUPP-006"
+    },
+    {
+      "category": "embedding",
+      "reason": "ART-004 embedding cosine 0.996820",
+      "member_ids": [
+        "SRC-010775",
+        "SRC-010776"
+      ],
+      "candidate_id": "SUPP-007"
+    },
+    {
+      "category": "embedding",
+      "reason": "ART-004 embedding cosine 0.994906",
+      "member_ids": [
+        "SRC-009848",
+        "SRC-010786"
+      ],
+      "candidate_id": "SUPP-008"
+    },
+    {
+      "category": "embedding",
+      "reason": "ART-004 embedding cosine 0.996709",
+      "member_ids": [
+        "SRC-009783",
+        "SRC-009791"
+      ],
+      "candidate_id": "SUPP-009"
+    },
+    {
+      "category": "embedding",
+      "reason": "ART-004 embedding cosine 0.997389",
+      "member_ids": [
+        "SRC-009788",
+        "SRC-009881"
+      ],
+      "candidate_id": "SUPP-010"
+    },
+    {
+      "category": "control_positive",
+      "member_ids": [
+        "SRC-010049",
+        "SRC-010072"
+      ],
+      "reason": "consistency: same fruit, different photograph, both reviewers",
+      "candidate_id": "SUPP-011"
+    },
+    {
+      "category": "embedding",
+      "reason": "ART-004 embedding cosine 0.996111",
+      "member_ids": [
+        "SRC-010765",
+        "SRC-010766"
+      ],
+      "candidate_id": "SUPP-012"
+    },
+    {
+      "category": "embedding",
+      "reason": "ART-004 embedding cosine 0.995210",
+      "member_ids": [
+        "SRC-009830",
+        "SRC-009831"
+      ],
+      "candidate_id": "SUPP-013"
+    },
+    {
+      "category": "embedding",
+      "reason": "ART-004 embedding cosine 0.995503",
+      "member_ids": [
+        "SRC-009818",
+        "SRC-009821"
+      ],
+      "candidate_id": "SUPP-014"
+    },
+    {
+      "category": "embedding",
+      "reason": "ART-004 embedding cosine 0.995313",
+      "member_ids": [
+        "SRC-009791",
+        "SRC-009792"
+      ],
+      "candidate_id": "SUPP-015"
+    },
+    {
+      "category": "embedding",
+      "reason": "ART-004 embedding cosine 0.994734",
+      "member_ids": [
+        "SRC-009809",
+        "SRC-009811"
+      ],
+      "candidate_id": "SUPP-016"
+    },
+    {
+      "category": "rotation",
+      "reason": "rotation-invariant pHash distance 10",
+      "member_ids": [
+        "SRC-009835",
+        "SRC-009849"
+      ],
+      "candidate_id": "SUPP-017"
+    },
+    {
+      "category": "embedding",
+      "reason": "ART-004 embedding cosine 0.995773",
+      "member_ids": [
+        "SRC-009826",
+        "SRC-009827"
+      ],
+      "candidate_id": "SUPP-018"
+    },
+    {
+      "category": "embedding",
+      "reason": "ART-004 embedding cosine 0.997583",
+      "member_ids": [
+        "SRC-009695",
+        "SRC-009889"
+      ],
+      "candidate_id": "SUPP-019"
+    },
+    {
+      "category": "embedding",
+      "reason": "ART-004 embedding cosine 0.995976",
+      "member_ids": [
+        "SRC-009891",
+        "SRC-010796"
+      ],
+      "candidate_id": "SUPP-020"
+    },
+    {
+      "category": "embedding",
+      "reason": "ART-004 embedding cosine 0.995001",
+      "member_ids": [
+        "SRC-009789",
+        "SRC-010793"
+      ],
+      "candidate_id": "SUPP-021"
+    },
+    {
+      "category": "rotation",
+      "reason": "rotation-invariant pHash distance 10",
+      "member_ids": [
+        "SRC-009714",
+        "SRC-010765"
+      ],
+      "candidate_id": "SUPP-022"
+    },
+    {
+      "category": "embedding",
+      "reason": "ART-004 embedding cosine 0.994729",
+      "member_ids": [
+        "SRC-009809",
+        "SRC-009835"
+      ],
+      "candidate_id": "SUPP-023"
+    },
+    {
+      "category": "embedding",
+      "reason": "ART-004 embedding cosine 0.996745",
+      "member_ids": [
+        "SRC-009695",
+        "SRC-010793"
+      ],
+      "candidate_id": "SUPP-024"
+    },
+    {
+      "category": "embedding",
+      "reason": "ART-004 embedding cosine 0.994770",
+      "member_ids": [
+        "SRC-009867",
+        "SRC-010775"
+      ],
+      "candidate_id": "SUPP-025"
+    },
+    {
+      "category": "control_negative",
+      "member_ids": [
+        "SRC-009804",
+        "SRC-010768"
+      ],
+      "reason": "consistency: CAND-002 both UNRELATED",
+      "candidate_id": "SUPP-026"
+    },
+    {
+      "category": "embedding",
+      "reason": "ART-004 embedding cosine 0.995063",
+      "member_ids": [
+        "SRC-009848",
+        "SRC-009850"
+      ],
+      "candidate_id": "SUPP-027"
+    },
+    {
+      "category": "control_positive",
+      "member_ids": [
+        "SRC-010079",
+        "SRC-010839"
+      ],
+      "reason": "consistency: CAND-006 both NEAR_DUPLICATE",
+      "candidate_id": "SUPP-028"
+    },
+    {
+      "category": "embedding",
+      "reason": "ART-004 embedding cosine 0.995452",
+      "member_ids": [
+        "SRC-009692",
+        "SRC-009834"
+      ],
+      "candidate_id": "SUPP-029"
+    },
+    {
+      "category": "embedding",
+      "reason": "ART-004 embedding cosine 0.996589",
+      "member_ids": [
+        "SRC-009689",
+        "SRC-009791"
+      ],
+      "candidate_id": "SUPP-030"
+    },
+    {
+      "category": "embedding",
+      "reason": "ART-004 embedding cosine 0.996212",
+      "member_ids": [
+        "SRC-009849",
+        "SRC-009851"
+      ],
+      "candidate_id": "SUPP-031"
+    },
+    {
+      "category": "embedding",
+      "reason": "ART-004 embedding cosine 0.996995",
+      "member_ids": [
+        "SRC-009848",
+        "SRC-009849"
+      ],
+      "candidate_id": "SUPP-032"
+    },
+    {
+      "category": "control_negative",
+      "member_ids": [
+        "SRC-009773",
+        "SRC-010763"
+      ],
+      "reason": "consistency: CAND-024 both UNRELATED",
+      "candidate_id": "SUPP-033"
+    },
+    {
+      "category": "embedding",
+      "reason": "ART-004 embedding cosine 0.995267",
+      "member_ids": [
+        "SRC-009892",
+        "SRC-010796"
+      ],
+      "candidate_id": "SUPP-034"
+    },
+    {
+      "category": "embedding",
+      "reason": "ART-004 embedding cosine 0.994677",
+      "member_ids": [
+        "SRC-010807",
+        "SRC-010849"
+      ],
+      "candidate_id": "SUPP-035"
+    },
+    {
+      "category": "embedding",
+      "reason": "ART-004 embedding cosine 0.996876",
+      "member_ids": [
+        "SRC-009849",
+        "SRC-009850"
+      ],
+      "candidate_id": "SUPP-036"
+    },
+    {
+      "category": "embedding",
+      "reason": "ART-004 embedding cosine 0.994789",
+      "member_ids": [
+        "SRC-009872",
+        "SRC-009873"
+      ],
+      "candidate_id": "SUPP-037"
+    },
+    {
+      "category": "control_negative",
+      "member_ids": [
+        "SRC-009789",
+        "SRC-010763"
+      ],
+      "reason": "consistency: CAND-022 both UNRELATED",
+      "candidate_id": "SUPP-038"
+    },
+    {
+      "category": "rotation",
+      "reason": "rotation-invariant pHash distance 10",
+      "member_ids": [
+        "SRC-009819",
+        "SRC-009899"
+      ],
+      "candidate_id": "SUPP-039"
+    },
+    {
+      "category": "embedding",
+      "reason": "ART-004 embedding cosine 0.995804",
+      "member_ids": [
+        "SRC-009689",
+        "SRC-009785"
+      ],
+      "candidate_id": "SUPP-040"
+    },
+    {
+      "category": "embedding",
+      "reason": "ART-004 embedding cosine 0.994916",
+      "member_ids": [
+        "SRC-009800",
+        "SRC-009889"
+      ],
+      "candidate_id": "SUPP-041"
+    },
+    {
+      "category": "rotation",
+      "reason": "rotation-invariant pHash distance 8",
+      "member_ids": [
+        "SRC-009850",
+        "SRC-010775"
+      ],
+      "candidate_id": "SUPP-042"
+    },
+    {
+      "category": "embedding",
+      "reason": "ART-004 embedding cosine 0.995159",
+      "member_ids": [
+        "SRC-009889",
+        "SRC-010793"
+      ],
+      "candidate_id": "SUPP-043"
+    },
+    {
+      "category": "embedding",
+      "reason": "ART-004 embedding cosine 0.994736",
+      "member_ids": [
+        "SRC-009783",
+        "SRC-009792"
+      ],
+      "candidate_id": "SUPP-044"
+    },
+    {
+      "category": "rotation",
+      "reason": "rotation-invariant pHash distance 10",
+      "member_ids": [
+        "SRC-009878",
+        "SRC-009883"
+      ],
+      "candidate_id": "SUPP-045"
+    },
+    {
+      "category": "embedding",
+      "reason": "ART-004 embedding cosine 0.998095",
+      "member_ids": [
+        "SRC-009863",
+        "SRC-009864"
+      ],
+      "candidate_id": "SUPP-046"
+    },
+    {
+      "category": "embedding",
+      "reason": "ART-004 embedding cosine 0.996828",
+      "member_ids": [
+        "SRC-009863",
+        "SRC-009867"
+      ],
+      "candidate_id": "SUPP-047"
+    },
+    {
+      "category": "embedding",
+      "reason": "ART-004 embedding cosine 0.996822",
+      "member_ids": [
+        "SRC-009848",
+        "SRC-009851"
+      ],
+      "candidate_id": "SUPP-048"
+    },
+    {
+      "category": "embedding",
+      "reason": "ART-004 embedding cosine 0.996788",
+      "member_ids": [
+        "SRC-009816",
+        "SRC-010774"
+      ],
+      "candidate_id": "SUPP-049"
+    },
+    {
+      "category": "control_positive",
+      "member_ids": [
+        "SRC-009930",
+        "SRC-010807"
+      ],
+      "reason": "consistency: CAND-003 both NEAR_DUPLICATE",
+      "candidate_id": "SUPP-050"
+    },
+    {
+      "category": "rotation",
+      "reason": "rotation-invariant pHash distance 10",
+      "member_ids": [
+        "SRC-009816",
+        "SRC-010775"
+      ],
+      "candidate_id": "SUPP-051"
+    },
+    {
+      "category": "embedding",
+      "reason": "ART-004 embedding cosine 0.998437",
+      "member_ids": [
+        "SRC-009907",
+        "SRC-009909"
+      ],
+      "candidate_id": "SUPP-052"
+    },
+    {
+      "category": "embedding",
+      "reason": "ART-004 embedding cosine 0.994870",
+      "member_ids": [
+        "SRC-009909",
+        "SRC-010793"
+      ],
+      "candidate_id": "SUPP-053"
+    }
+  ]
+}

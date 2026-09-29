@@ -1,0 +1,8 @@
+source_id_a,source_id_b,plain_distance,invariant_distance,split_a,split_b,cross_split,in_threshold,review_decision
+SRC-009714,SRC-010765,30,10,test,valid,true,false,PENDING_ADJUDICATION
+SRC-009816,SRC-010775,34,10,train,valid,true,false,PENDING_ADJUDICATION
+SRC-009819,SRC-009899,28,10,train,train,false,false,PENDING_ADJUDICATION
+SRC-009827,SRC-010783,30,10,train,valid,true,false,PENDING_ADJUDICATION
+SRC-009835,SRC-009849,28,10,train,train,false,false,PENDING_ADJUDICATION
+SRC-009850,SRC-010775,34,8,train,valid,true,false,PENDING_ADJUDICATION
+SRC-009878,SRC-009883,12,10,train,train,false,false,PENDING_ADJUDICATION

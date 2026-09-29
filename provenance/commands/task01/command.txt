@@ -1,0 +1,34 @@
+# TASK-01 commands, self-contained
+#
+# Every command is run from the authorized checkout root below, in a NEW process.
+# No command depends on variables exported by a previous shell: each entrypoint calls
+# configure_environment(root) and verify_environment(root) before any scientific import.
+#
+# root       : C:\Users\junio\Downloads\mango-vision\ALBUS26_major_revision\.worktrees\execution
+# executable : C:\Users\junio\Downloads\mango-vision\ALBUS26_major_revision\.worktrees\execution\.venv\Scripts\python.exe
+
+Set-Location -LiteralPath 'C:\Users\junio\Downloads\mango-vision\ALBUS26_major_revision\.worktrees\execution'
+
+# unit tests -> provenance/commands/task01/green.log
+& .\.venv\Scripts\python.exe -m unittest tests.test_provenance tests.test_provenance_hardening -v
+
+# source verification -> provenance/commands/task01/source_verification.log
+& .\.venv\Scripts\python.exe -m src.evaluation.provenance --source-manifest provenance\source_manifest.csv --source-locations provenance\source_locations.csv --root-mapping configs\root_mapping.json --out reports\source_verification.json
+
+# runtime containment -> provenance/commands/task01/runtime_paths.log
+& .\.venv\Scripts\python.exe provenance\commands\task01\verify_runtime_paths.py
+
+# environment capture and reconstruction -> provenance/environment/*
+# NOTE: this step CREATES .venv and installs packages. It is listed for completeness of
+#       the TASK-01 artifact set; re-running it replaces the reconstructed environment.
+& .\.venv\Scripts\python.exe provenance\commands\task01\install_reconstructed.py
+
+# cpu topology and benchmark context -> provenance/environment/cpu_topology_probe.json
+& .\.venv\Scripts\python.exe provenance\commands\task01\probe_cpu_topology.py
+
+# artifact registry regeneration -> provenance/artifact_registry.csv
+& .\.venv\Scripts\python.exe provenance\commands\task01\register_artifacts.py
+
+# Startup isolation: every entrypoint above calls configure_environment(root) and
+# verify_environment(root) before importing any scientific runtime. Do not rely on
+# variables exported by a previous shell.

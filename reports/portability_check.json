@@ -1,0 +1,140 @@
+{
+  "task": "TASK-10 portability",
+  "sample": [
+    {
+      "source_id": "SRC-009649",
+      "logical_root": "legacy_corpus",
+      "logical_path": "Mango-vision/src/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "source_id": "SRC-009650",
+      "logical_root": "legacy_corpus",
+      "logical_path": "Mango-vision/src/data_prep/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "source_id": "SRC-009657",
+      "logical_root": "legacy_corpus",
+      "logical_path": "Mango-vision/src/evaluation/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "source_id": "SRC-009661",
+      "logical_root": "legacy_corpus",
+      "logical_path": "Mango-vision/src/inference/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "source_id": "SRC-009664",
+      "logical_root": "legacy_corpus",
+      "logical_path": "Mango-vision/src/training/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "source_id": "SRC-009668",
+      "logical_root": "legacy_corpus",
+      "logical_path": "Mango-vision/src/utils/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "source_id": "SRC-009670",
+      "logical_root": "legacy_corpus",
+      "logical_path": "SemilleroTI-Mangos/.gitignore",
+      "sha256": "d454f56e37f92c68b35710ec64a3b48d51eee6f7f573b64ac4d37c999a0731b2"
+    },
+    {
+      "source_id": "SRC-000017",
+      "logical_root": "legacy_corpus",
+      "logical_path": "requirements.txt",
+      "sha256": "8c83cb7b17581c8f935f3cffe759296b0a2e348dd9b9913a671aa20d785dbda2"
+    },
+    {
+      "source_id": "SRC-000539",
+      "logical_root": "legacy_corpus",
+      "logical_path": "Mango-vision/DatasetMango_YOLO/test/labels/An115.txt",
+      "sha256": "27d35d983ad87fda5aca52b7fcdbd37dfb7f39c9714e0dc23b74c100e9a85cff"
+    },
+    {
+      "source_id": "SRC-000540",
+      "logical_root": "legacy_corpus",
+      "logical_path": "Mango-vision/DatasetMango_YOLO/test/labels/An122.txt",
+      "sha256": "27d35d983ad87fda5aca52b7fcdbd37dfb7f39c9714e0dc23b74c100e9a85cff"
+    },
+    {
+      "source_id": "SRC-000541",
+      "logical_root": "legacy_corpus",
+      "logical_path": "Mango-vision/DatasetMango_YOLO/test/labels/An183.txt",
+      "sha256": "27d35d983ad87fda5aca52b7fcdbd37dfb7f39c9714e0dc23b74c100e9a85cff"
+    },
+    {
+      "source_id": "SRC-000542",
+      "logical_root": "legacy_corpus",
+      "logical_path": "Mango-vision/DatasetMango_YOLO/test/labels/An196.txt",
+      "sha256": "27d35d983ad87fda5aca52b7fcdbd37dfb7f39c9714e0dc23b74c100e9a85cff"
+    },
+    {
+      "source_id": "SRC-000543",
+      "logical_root": "legacy_corpus",
+      "logical_path": "Mango-vision/DatasetMango_YOLO/test/labels/An225.txt",
+      "sha256": "27d35d983ad87fda5aca52b7fcdbd37dfb7f39c9714e0dc23b74c100e9a85cff"
+    },
+    {
+      "source_id": "SRC-000544",
+      "logical_root": "legacy_corpus",
+      "logical_path": "Mango-vision/DatasetMango_YOLO/test/labels/An231.txt",
+      "sha256": "27d35d983ad87fda5aca52b7fcdbd37dfb7f39c9714e0dc23b74c100e9a85cff"
+    },
+    {
+      "source_id": "SRC-000545",
+      "logical_root": "legacy_corpus",
+      "logical_path": "Mango-vision/DatasetMango_YOLO/test/labels/An235.txt",
+      "sha256": "27d35d983ad87fda5aca52b7fcdbd37dfb7f39c9714e0dc23b74c100e9a85cff"
+    },
+    {
+      "source_id": "SRC-000546",
+      "logical_root": "legacy_corpus",
+      "logical_path": "Mango-vision/DatasetMango_YOLO/test/labels/An240.txt",
+      "sha256": "27d35d983ad87fda5aca52b7fcdbd37dfb7f39c9714e0dc23b74c100e9a85cff"
+    },
+    {
+      "source_id": "SRC-000547",
+      "logical_root": "legacy_corpus",
+      "logical_path": "Mango-vision/DatasetMango_YOLO/test/labels/An249.txt",
+      "sha256": "27d35d983ad87fda5aca52b7fcdbd37dfb7f39c9714e0dc23b74c100e9a85cff"
+    },
+    {
+      "source_id": "SRC-000548",
+      "logical_root": "legacy_corpus",
+      "logical_path": "Mango-vision/DatasetMango_YOLO/test/labels/An258.txt",
+      "sha256": "27d35d983ad87fda5aca52b7fcdbd37dfb7f39c9714e0dc23b74c100e9a85cff"
+    },
+    {
+      "source_id": "SRC-000549",
+      "logical_root": "legacy_corpus",
+      "logical_path": "Mango-vision/DatasetMango_YOLO/test/labels/An280.txt",
+      "sha256": "27d35d983ad87fda5aca52b7fcdbd37dfb7f39c9714e0dc23b74c100e9a85cff"
+    },
+    {
+      "source_id": "SRC-000550",
+      "logical_root": "legacy_corpus",
+      "logical_path": "Mango-vision/DatasetMango_YOLO/test/labels/An46.txt",
+      "sha256": "27d35d983ad87fda5aca52b7fcdbd37dfb7f39c9714e0dc23b74c100e9a85cff"
+    }
+  ],
+  "mapping_roots": [
+    "external_mail",
+    "legacy_corpus",
+    "revision"
+  ],
+  "checks": {
+    "alternate_prefix_same_sha256": true,
+    "missing_root_fails": true,
+    "escaping_path_fails": true,
+    "absolute_path_fails": true,
+    "absent_file_fails": true,
+    "altered_byte_detected": true
+  },
+  "passed": true,
+  "note": "the local absolute paths of this machine are local data, not part of the identity"
+}

@@ -1,0 +1,3 @@
+:env:.cache-dir='C:\\Users\\junio\\Downloads\\mango-vision\\ALBUS26_major_revision\\.worktrees\\execution\\provenance\\runtime_state\\pip'
+
+exit_code=0

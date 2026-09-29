@@ -1,0 +1,40 @@
+{
+  "mode": "capacity",
+  "kernel_version": 2,
+  "receipt_sha256": "20bdf8e8b531c79c9c87543a8b1daa1a45a01b4932b38d609a4a60a079c316bb",
+  "payload_sha256": "48a82379ca4e0ac01c4df3481c64ac5e4a0f67c08ab296dd3ed60a7d13804608",
+  "kernel_source_sha256": "8fe32e2a292eaf2669322448e0c73ceae9c9c4f31d36a9d003b79e000386c259",
+  "kernel_source_method": "main_file",
+  "files_verified": 552,
+  "environment": {
+    "python": "3.12.13 (main, Mar  4 2026, 09:23:07) [GCC 11.4.0]",
+    "torch": "2.10.0+cu128",
+    "cuda": "12.8",
+    "cudnn": 91002,
+    "ultralytics": "8.4.52",
+    "gpus": [
+      "Tesla T4",
+      "Tesla T4"
+    ]
+  },
+  "capacity": {
+    "rule": "setup + max(epochs 2..n) * epochs * safety <= limit",
+    "epoch_seconds": [
+      46.55747580528259,
+      7.197272062301636,
+      6.979163408279419,
+      7.694455862045288
+    ],
+    "per_epoch_seconds": 7.694455862045288,
+    "setup_seconds": 32.44972348213196,
+    "epochs": 150,
+    "safety": 1.35,
+    "projected_seconds": 1590.5770355463028,
+    "limit_seconds": 43200,
+    "fits": true,
+    "peak_allocated_bytes": 2576580608,
+    "peak_reserved_bytes": 3332374528,
+    "run_dir_bytes": 16971336,
+    "disk_free_bytes": 1100140138496
+  }
+}

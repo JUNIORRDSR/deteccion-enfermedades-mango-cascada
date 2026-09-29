@@ -1,0 +1,73 @@
+{
+  "environment": {
+    "kind": "RECONSTRUCTED",
+    "python": "3.12.14",
+    "ultralytics": "8.4.52",
+    "historical_model1_ultralytics": "8.4.39"
+  },
+  "source_manifest_sha256": "b72041a4f84034dcb5c77dee547805a3d8f0c3f9a86a9851a4979c5a5996a781",
+  "weights": [
+    {
+      "artifact_id": "ART-001",
+      "source_id": "SRC-011053",
+      "logical_root": "legacy_corpus",
+      "logical_path": "SemilleroTI-Mangos/models/best.pt",
+      "local_absolute_path": "C:\\Users\\junio\\Downloads\\mango-vision\\SemilleroTI-Mangos\\models\\best.pt",
+      "sha256": "595fa3ea9b0670f63289529bde3333124ff1179588b52fbe16c9c454b6e488de",
+      "status": "PRESENT_HASH_PENDING_VERIFICATION"
+    },
+    {
+      "artifact_id": "ART-002",
+      "source_id": "SRC-009644",
+      "logical_root": "legacy_corpus",
+      "logical_path": "Mango-vision/models/clasificador_enfermedad.pt",
+      "local_absolute_path": "C:\\Users\\junio\\Downloads\\mango-vision\\Mango-vision\\models\\clasificador_enfermedad.pt",
+      "sha256": "e277717e6ca9d7f308d22697550a5a4e80613929acb68eeb790f3304ebfdb08e",
+      "status": "PRESENT_HASH_PENDING_VERIFICATION"
+    },
+    {
+      "artifact_id": "ART-003",
+      "source_id": "SRC-011054",
+      "logical_root": "legacy_corpus",
+      "logical_path": "SemilleroTI-Mangos/models/clasificador_enfermedad.pt",
+      "local_absolute_path": "C:\\Users\\junio\\Downloads\\mango-vision\\SemilleroTI-Mangos\\models\\clasificador_enfermedad.pt",
+      "sha256": "e277717e6ca9d7f308d22697550a5a4e80613929acb68eeb790f3304ebfdb08e",
+      "status": "PRESENT_HASH_PENDING_VERIFICATION"
+    },
+    {
+      "artifact_id": "ART-004",
+      "source_id": "SRC-000113",
+      "logical_root": "legacy_corpus",
+      "logical_path": "Mango-vision/yolo11n-cls.pt",
+      "local_absolute_path": "C:\\Users\\junio\\Downloads\\mango-vision\\Mango-vision\\yolo11n-cls.pt",
+      "sha256": "c62d41bf9625777760018bf914d2e6cd472420ccd01706d97a61cb6c82502bd7",
+      "status": "PRESENT_HASH_PENDING_VERIFICATION"
+    }
+  ],
+  "datasets": [
+    {
+      "dataset_id": "DATA-001",
+      "logical_root": "legacy_corpus",
+      "logical_path": "SemilleroTI-Mangos/docs/MangosDataset",
+      "inventory": "data/manifests/legacy_dataset_inventory.csv"
+    },
+    {
+      "dataset_id": "DATA-004",
+      "logical_root": "legacy_corpus",
+      "logical_path": "Mango-vision/DatasetMango_YOLO_clean",
+      "inventory": "data/manifests/legacy_dataset_inventory.csv"
+    },
+    {
+      "dataset_id": "DATA-005",
+      "logical_root": "legacy_corpus",
+      "logical_path": "Mango-vision/DatasetMango_YOLO_cls",
+      "inventory": "data/manifests/legacy_dataset_inventory.csv"
+    }
+  ],
+  "model1_base_checkpoint": {
+    "name": "yolo26n.pt",
+    "status": "BLOCKED_MISSING_BASE_CHECKPOINT",
+    "source_id": null,
+    "sha256": null
+  }
+}

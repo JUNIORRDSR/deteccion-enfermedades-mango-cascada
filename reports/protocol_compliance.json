@@ -1,0 +1,106 @@
+{
+  "task": "TASK-10 protocol compliance",
+  "protocol": {
+    "protocol_id": "ALBUS26-116-PROTOCOL-001",
+    "freeze_commit": "7d0f9985cce73740cfa2ae26154971b55282ad52",
+    "freeze_files": ["provenance/protocol_freeze.json", "provenance/protocol_freeze.md"]
+  },
+  "status_values": {
+    "SATISFIED": "the requirement is met with the listed evidence",
+    "SATISFIED_WITH_DECLARED_LIMIT": "met, with a limitation declared in the manuscript or the decision log",
+    "WITHDRAWN": "the amendment was withdrawn and the frozen rule applies",
+    "BLOCKED": "cannot be met with the available hardware or ground truth; never reported as validated"
+  },
+  "amendments": [
+    {
+      "id": "AMENDMENT-01",
+      "requirement": "Git as the only ledger, exact baseline, local worktree and commits, BASE..HEAD review, legacy read-only with hashes and status equal to the initial ones",
+      "status": "SATISFIED",
+      "evidence": ["reports/legacy_final_verification.json (11137 files, 0 discrepancies)",
+                   "reports/legacy_git_final.json (14 of 14 git outputs equal provenance/repository_initial_state.md)",
+                   "branch revision/execute-approved-plan, local only; no push, merge or publication"]
+    },
+    {
+      "id": "AMENDMENT-02",
+      "requirement": "Freeze before new observations, commit and SHA, complete rules, historical test declared, append-only amendments, protocol verified per run",
+      "status": "SATISFIED",
+      "evidence": ["provenance/protocol_freeze.json and .md at the freeze commit",
+                   "provenance/test_access_log.csv (TEST-ACCESS-001 to 005)",
+                   "provenance/protocol_amendments/ (008 versioned with its reviews; 009 withdrawn, kept)",
+                   "configs/evaluation_frozen.json committed in 96a5991 before the EXP-R02 kernel existed (reports/execution/task-05-execution-audit.md, section 4)"]
+    },
+    {
+      "id": "AMENDMENT-03",
+      "requirement": "Two blind A/B passes with a separate resolution, explicit agreement, relevant coverage; documentary provenance first",
+      "status": "SATISFIED_WITH_DECLARED_LIMIT",
+      "evidence": ["data/audits/model1/blind_packets/{a,b,c}/", "data/audits/model1/blinding_log.json",
+                   "data/audits/model1/adjudications.csv", "data/audits/model1/adjudication_resolution.csv",
+                   "data/audits/model1/supplementary_adjudications.csv", "reports/execution/task-02-audit-report.md"],
+      "declared_limits": ["the A, B and C passes were Claude agents in separate instances, not human reviewers; blinding by instruction, not access control (manuscript 3.3.1 and REVIEW-01, pass 2f)",
+                          "both first-round agents missed the two positive controls and disagreed on 14 of 35 units; the supplementary agents disagreed on 38 of 47 pairs",
+                          "human re-adjudication is open (reports/final_adversarial_review.md, H-01)"]
+    },
+    {
+      "id": "AMENDMENT-04",
+      "requirement": "M2: counts and distribution, principal image-weighted estimand, exact-SHA and cluster-weighted secondaries, paired deltas with intervals, undefined values and independence limits",
+      "status": "SATISFIED",
+      "evidence": ["artifacts/metrics/model2_sensitivity.json", "artifacts/metrics/model2_sensitivity.csv",
+                   "artifacts/metrics/model2_sensitivity_confusions.json", "artifacts/metrics/model2_bootstrap_draws.json",
+                   "reports/model2_duplicate_sensitivity.md", "manuscript section 4.2.3 (pass 2d)"]
+    },
+    {
+      "id": "AMENDMENT-05",
+      "requirement": "Full environment identity, configs without secrets, reports with hashes, root mapping by logical root and path, portable verification",
+      "status": "SATISFIED",
+      "evidence": ["provenance/environment/inference_environment.txt, inference_runtime.txt, inference_interpreter.json",
+                   "receipts of EXP-R01, EXP-V01 and EXP-R02 with the Kaggle environment",
+                   "configs/root_mapping.json and provenance/source_locations.csv",
+                   "reports/portability_check.json (alternate prefix, missing root, escaping path, altered byte)"]
+    },
+    {
+      "id": "AMENDMENT-06",
+      "requirement": "Early and efficient detection: a prior criterion or neutralization, no retrospective benchmark to save a claim",
+      "status": "SATISFIED",
+      "evidence": ["reports/editorial_claim_audit.csv (ED-01 to ED-03, ED-10 to ED-12, ED-18, ED-19)",
+                   "manuscript title, abstract, section 1 (temporal premise removed in pass 2d), 3.4 (nano variant without an efficiency or edge claim, pass 2e), 5.4, 6.2 and 7 (RGB-D and Raspberry Pi 4 as unevaluated future work, pass 2e)",
+                   "reports/benchmark_report.md is descriptive, without comparator or efficiency claim",
+                   "docs/response_to_reviewers.md REVIEW-10"]
+    },
+    {
+      "id": "AMENDMENT-07",
+      "requirement": "Contamination language with algorithm, parameters, evidence and limits; no universal independence, no clean-without-duplicates claim",
+      "status": "SATISFIED",
+      "evidence": ["manuscript 3.3.1 («No se afirma que el conjunto esté libre de fuga»), 4.2.3 and 7",
+                   "abstract, 4.2.1 and 7 name MangoDHDS_clean without «limpio/limpia» as a leakage verdict (pass 2e)",
+                   "reports/manuscript_consistency.json (no unreviewed leakage wording; the scan covers «limpio/limpia» since pass 2e)",
+                   "reports/editorial_claim_audit.csv (ED-09, ED-14, ED-17, ED-20)"]
+    },
+    {
+      "id": "PROTOCOL-AMENDMENT-008",
+      "requirement": "Kaggle as compute venue for M1 training and inference, with the retry policy, attempt ledger, test discipline and the inference approval of section 5.1",
+      "status": "SATISFIED_WITH_DECLARED_LIMIT",
+      "evidence": ["provenance/protocol_amendments/PROTOCOL-AMENDMENT-008-kaggle-compute.json (inference_approval version 10)",
+                   "reports/execution/task-05-independent-review-round*.md",
+                   "reports/execution/task-05-execution-audit.md (valid; DECISION-039 and round-12 residuals closed)",
+                   "docs/research/decision_log.md DECISION-037 to DECISION-039"],
+      "declared_limits": ["no independent custodian; the committed repository is the root of trust",
+                          "prediction kernels launched from the Kaggle web editor, whose executed source carries one cell-marker line (DECISION-039)",
+                          "local tampering routes on the evaluation machine remain a declared limitation"]
+    },
+    {
+      "id": "PROTOCOL-AMENDMENT-009",
+      "requirement": "Montage grouping",
+      "status": "WITHDRAWN",
+      "evidence": ["provenance/protocol_amendments/PROTOCOL-AMENDMENT-009-montage-grouping.md (withdrawn 2026-09-23; primary partition by the frozen rule)",
+                   "reports/amendments/gate-review-exp-r01.md part B (partition A accepted)"]
+    }
+  ],
+  "blocked": [
+    {"review": "REVIEW-08", "item": "Raspberry Pi 4 latency", "status": "BLOCKED", "reason": "BLOCKED_BY_HARDWARE; the claim is retracted in the manuscript"},
+    {"review": "REVIEW-12 and REVIEW-13", "item": "end-to-end cascade metric", "status": "BLOCKED", "reason": "BLOCKED_BY_GROUND_TRUTH; the metric and its evaluator are defined, no value is reported"}
+  ],
+  "pending_author": [],
+  "resolved_author": [
+    {"claim": "CLAIM-042", "item": "publication of the audit code", "resolution": "public repository https://github.com/JUNIORRDSR/deteccion-enfermedades-mango-cascada (v1.0.0, AGPL-3.0) with code, manifests, predictions and the weights of both models, cited in the abstract, 3.6, 5.3 and the data availability statement (pass 2f)"}
+  ]
+}

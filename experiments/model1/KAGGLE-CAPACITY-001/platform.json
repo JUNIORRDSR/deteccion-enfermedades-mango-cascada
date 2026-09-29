@@ -1,0 +1,23 @@
+{
+  "kernel": "jorgesolanodev/albus26-m1-kaggle-capacity-001",
+  "kernel_id": 135563175,
+  "version": 2,
+  "session_id": 352222603,
+  "status": "COMPLETE",
+  "docker_image": "gcr.io/kaggle-private-byod/python@sha256:37c64f7dd9c54116ecd1bcc88817c5469b88387388fade02bfa8bf3fc647d461",
+  "machine_shape": "NvidiaTeslaT4",
+  "is_private": true,
+  "enable_internet": true,
+  "outputs": [
+    "evidence/data.yaml", "evidence/nvidia_smi.stderr.txt", "evidence/nvidia_smi.stdout.txt",
+    "evidence/pip_check.stderr.txt", "evidence/pip_check.stdout.txt",
+    "evidence/pip_config.stderr.txt", "evidence/pip_config.stdout.txt",
+    "evidence/pip_debug.stderr.txt", "evidence/pip_debug.stdout.txt",
+    "evidence/pip_freeze.stderr.txt", "evidence/pip_freeze.stdout.txt",
+    "evidence/pip_install.stderr.txt", "evidence/pip_install.stdout.txt",
+    "evidence/pip_install_report.json", "receipt.json"
+  ],
+  "log_file": "platform_log.json",
+  "sources": "Kaggle MCP get_notebook_info, get_notebook_session_status and list_notebook_session_output, retrieved 2026-09-25",
+  "note": "Recorded after the fact for a non-scientific probe. The attempt-1 platform status and log (version 1) were not retained before the retry: the platform no longer serves version 1 outputs (list_notebook_session_output: version label 1 not found). Its local record is attempt1/receipt.json, attempt1/kernel.py, attempt1/render_record.json and attempt1/attempt.json."
+}

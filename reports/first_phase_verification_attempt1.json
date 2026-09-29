@@ -1,0 +1,97 @@
+{
+  "checked_at_utc": "2026-09-18T16:34:47.414014+00:00",
+  "command": [
+    "C:\\Users\\junio\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+    "C:\\Users\\junio\\Downloads\\mango-vision\\ALBUS26_major_revision\\provenance\\commands\\verify_first_phase.py"
+  ],
+  "scope": "First-phase documentary verification; no model inference, training, new split or pHash",
+  "checks": {
+    "legacy": {
+      "files": 11137,
+      "bytes": 940648678,
+      "changed": [],
+      "missing": [],
+      "new_eligible_paths": [],
+      "missing_eligible_paths": [],
+      "mtime_changes": [],
+      "baseline_sha256": "b72041a4f84034dcb5c77dee547805a3d8f0c3f9a86a9851a4979c5a5996a781",
+      "exclusions": [
+        ".git",
+        ".venv",
+        "ALBUS26_major_revision",
+        "__pycache__",
+        "node_modules"
+      ]
+    },
+    "git": [
+      {
+        "repo": "Mango-vision",
+        "command": "git status --short",
+        "exit_code": 0,
+        "stdout": "",
+        "stderr": "",
+        "matches_initial": true
+      },
+      {
+        "repo": "Mango-vision",
+        "command": "git branch --show-current",
+        "exit_code": 0,
+        "stdout": "main\n",
+        "stderr": "",
+        "matches_initial": true
+      },
+      {
+        "repo": "Mango-vision",
+        "command": "git rev-parse HEAD",
+        "exit_code": 0,
+        "stdout": "e7e59d1bce74a7ae12674f5b6068068681e691ce\n",
+        "stderr": "",
+        "matches_initial": true
+      },
+      {
+        "repo": "Mango-vision",
+        "command": "git worktree list --porcelain",
+        "exit_code": 0,
+        "stdout": "worktree C:/Users/junio/Downloads/mango-vision/Mango-vision\nHEAD e7e59d1bce74a7ae12674f5b6068068681e691ce\nbranch refs/heads/main\n\n",
+        "stderr": "",
+        "matches_initial": true
+      },
+      {
+        "repo": "SemilleroTI-Mangos",
+        "command": "git status --short",
+        "exit_code": 0,
+        "stdout": " M api/__pycache__/main.cpython-313.pyc\n M api/routers/__pycache__/history.cpython-313.pyc\n M api/routers/__pycache__/inference.cpython-313.pyc\n M core/__pycache__/config.cpython-313.pyc\n M core/__pycache__/database.cpython-313.pyc\n M core/__pycache__/vision.cpython-313.pyc\n M mango_detecciones.db\n?? core/__pycache__/cascade.cpython-313.pyc\n?? core/cascade.py\n?? data/\n?? docs/MangosDataset/test/labels.cache\n?? models/clasificador_enfermedad.pt\n?? run_cascade.py\n",
+        "stderr": "",
+        "matches_initial": true
+      },
+      {
+        "repo": "SemilleroTI-Mangos",
+        "command": "git branch --show-current",
+        "exit_code": 0,
+        "stdout": "main\n",
+        "stderr": "",
+        "matches_initial": true
+      },
+      {
+        "repo": "SemilleroTI-Mangos",
+        "command": "git rev-parse HEAD",
+        "exit_code": 0,
+        "stdout": "98614804dd967e19a77af9fc58c27364d2e43bc9\n",
+        "stderr": "",
+        "matches_initial": true
+      },
+      {
+        "repo": "SemilleroTI-Mangos",
+        "command": "git worktree list --porcelain",
+        "exit_code": 0,
+        "stdout": "worktree C:/Users/junio/Downloads/mango-vision/SemilleroTI-Mangos\nHEAD 98614804dd967e19a77af9fc58c27364d2e43bc9\nbranch refs/heads/main\n\n",
+        "stderr": "",
+        "matches_initial": true
+      }
+    ]
+  },
+  "errors": [
+    "AssertionError: ART-095"
+  ],
+  "status": "FAIL"
+}

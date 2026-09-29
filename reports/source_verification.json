@@ -1,0 +1,22 @@
+{
+  "manifest_count": 11137,
+  "checked_count": 11137,
+  "uniqueness_method": "resolved pathname via os.path.normcase(os.path.realpath(...)) AND OS file identity (st_dev, st_ino) for existing files",
+  "uniqueness_limits": [
+    "SUBST, mapped network drives, 8.3 short-name aliases and unsupported reparse points were not exercised on this host and are not claimed",
+    "identity is observed during validation and the hash is read again during verification; a replacement between those two observations is not detected (TOCTOU, declared residual)",
+    "file_identity falls back to the canonical pathname on ANY OSError, not only on a missing file, so an operational stat failure degrades to a weaker comparison",
+    "nonzero st_dev/st_ino are trusted without a capability check; on non-NTFS, network or synthetic-inode filesystems this may not be a physical identity",
+    "the guard confines writers by path policy; it does not take an OS-level write inventory, so a writer that bypasses the helper is not detected by this report"
+  ],
+  "schema_enforced": [
+    "source_id",
+    "logical_root",
+    "logical_path",
+    "sha256",
+    "local_absolute_path"
+  ],
+  "csv_validation": "header required, unique, exact row width, no surplus or absent cells",
+  "discrepancy_count": 0,
+  "discrepancies": []
+}

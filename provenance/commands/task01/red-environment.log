@@ -1,0 +1,17 @@
+test_environment_initializes_system_temp_and_detects_missing_yolo (tests.test_provenance.ProvenanceTests.test_environment_initializes_system_temp_and_detects_missing_yolo) ... ERROR
+
+======================================================================
+ERROR: test_environment_initializes_system_temp_and_detects_missing_yolo (tests.test_provenance.ProvenanceTests.test_environment_initializes_system_temp_and_detects_missing_yolo)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\junio\Downloads\mango-vision\ALBUS26_major_revision\.worktrees\execution\tests\test_provenance.py", line 87, in test_environment_initializes_system_temp_and_detects_missing_yolo
+    values = configure_environment(Path(d))
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\junio\Downloads\mango-vision\ALBUS26_major_revision\.worktrees\execution\src\evaluation\provenance.py", line 50, in configure_environment
+    raise ValueError(f'{name} outside configured workspace: {existing}')
+ValueError: TEMP outside configured workspace: C:\Users\junio\AppData\Local\Temp
+
+----------------------------------------------------------------------
+Ran 1 test in 0.027s
+
+FAILED (errors=1)

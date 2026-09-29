@@ -1,0 +1,33 @@
+test_eight_transforms_and_identity_first (tests.test_leakage.RotationInvariance.test_eight_transforms_and_identity_first) ... ERROR
+test_mirror_is_covered (tests.test_leakage.RotationInvariance.test_mirror_is_covered) ... ERROR
+test_rotated_copy_is_far_for_plain_phash_and_near_for_the_invariant (tests.test_leakage.RotationInvariance.test_rotated_copy_is_far_for_plain_phash_and_near_for_the_invariant) ... ERROR
+
+======================================================================
+ERROR: test_eight_transforms_and_identity_first (tests.test_leakage.RotationInvariance.test_eight_transforms_and_identity_first)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\junio\Downloads\mango-vision\ALBUS26_major_revision\.worktrees\execution\tests\test_leakage.py", line 310, in test_eight_transforms_and_identity_first
+    from src.leakage_audit.audit import dihedral_hashes
+ImportError: cannot import name 'dihedral_hashes' from 'src.leakage_audit.audit' (C:\Users\junio\Downloads\mango-vision\ALBUS26_major_revision\.worktrees\execution\src\leakage_audit\audit.py)
+
+======================================================================
+ERROR: test_mirror_is_covered (tests.test_leakage.RotationInvariance.test_mirror_is_covered)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\junio\Downloads\mango-vision\ALBUS26_major_revision\.worktrees\execution\tests\test_leakage.py", line 303, in test_mirror_is_covered
+    from src.leakage_audit.audit import dihedral_hashes, rotation_invariant_distance
+ImportError: cannot import name 'dihedral_hashes' from 'src.leakage_audit.audit' (C:\Users\junio\Downloads\mango-vision\ALBUS26_major_revision\.worktrees\execution\src\leakage_audit\audit.py)
+
+======================================================================
+ERROR: test_rotated_copy_is_far_for_plain_phash_and_near_for_the_invariant (tests.test_leakage.RotationInvariance.test_rotated_copy_is_far_for_plain_phash_and_near_for_the_invariant)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\junio\Downloads\mango-vision\ALBUS26_major_revision\.worktrees\execution\tests\test_leakage.py", line 293, in test_rotated_copy_is_far_for_plain_phash_and_near_for_the_invariant
+    from src.leakage_audit.audit import dihedral_hashes, rotation_invariant_distance
+ImportError: cannot import name 'dihedral_hashes' from 'src.leakage_audit.audit' (C:\Users\junio\Downloads\mango-vision\ALBUS26_major_revision\.worktrees\execution\src\leakage_audit\audit.py)
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.002s
+
+FAILED (errors=3)
+exit=1

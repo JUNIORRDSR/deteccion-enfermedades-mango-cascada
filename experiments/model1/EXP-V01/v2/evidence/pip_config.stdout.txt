@@ -1,0 +1,4 @@
+global.disable-pip-version-check='True'
+global.log='/var/log/pip.log'
+global.root-user-action='ignore'
+list.format='columns'

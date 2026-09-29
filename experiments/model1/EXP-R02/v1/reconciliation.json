@@ -1,0 +1,91 @@
+{
+  "definitive": true,
+  "docker_image": "gcr.io/kaggle-private-byod/python@sha256:37c64f7dd9c54116ecd1bcc88817c5469b88387388fade02bfa8bf3fc647d461",
+  "error": null,
+  "experiment_id": "EXP-R02",
+  "files": {
+    "evidence/nvidia_smi.stderr.txt": {
+      "attested": true,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "evidence/nvidia_smi.stdout.txt": {
+      "attested": true,
+      "sha256": "7925ff6aa3c0f75ed4b792d59fc4b46fc8ca30d00f724248234805d4598886cc"
+    },
+    "evidence/pip_check.stderr.txt": {
+      "attested": true,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "evidence/pip_check.stdout.txt": {
+      "attested": true,
+      "sha256": "2c99993bdaa1efa61406b281e3c408724a14e714bcaf3dfb4da60af8ec2a044c"
+    },
+    "evidence/pip_config.stderr.txt": {
+      "attested": true,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "evidence/pip_config.stdout.txt": {
+      "attested": true,
+      "sha256": "3f363b7d217c26516cbf275b210d8ded30459c4eb0ebebeb9ca21f7b92de9745"
+    },
+    "evidence/pip_debug.stderr.txt": {
+      "attested": true,
+      "sha256": "40ffb3c51bd62818dedc25f24da335f773814e47dc2b350a1e475fb2c2e172f8"
+    },
+    "evidence/pip_debug.stdout.txt": {
+      "attested": true,
+      "sha256": "63b3922346cb06e408fea362380355a8532b1d5924b2f0a74859df7144129d48"
+    },
+    "evidence/pip_freeze.stderr.txt": {
+      "attested": true,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "evidence/pip_freeze.stdout.txt": {
+      "attested": true,
+      "sha256": "ddbaee9add9594f5296acdfd6c84bfa4daebc7fb9d8fb1bdb2056a3144968da3"
+    },
+    "evidence/pip_install.stderr.txt": {
+      "attested": true,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "evidence/pip_install.stdout.txt": {
+      "attested": true,
+      "sha256": "81969a64f20007dbec15a9eb7715e8a06c35c2a7170ac7aa3ea32362a5944559"
+    },
+    "evidence/pip_install_report.json": {
+      "attested": true,
+      "sha256": "e235cfb25b15414937ced3e03643d84b5e949a72c188e4bf71683faa64ea5df8"
+    },
+    "job_log.txt": {
+      "attested": false,
+      "sha256": "05c8c45a771c12287d0798435f21511585a0fb5a22222a100327fd98db848691"
+    },
+    "predictions_raw.jsonl": {
+      "attested": true,
+      "sha256": "e64c273f7083c03184cf88687ce1c51973f2970dace8242c9b4b27f5cb9d04a8"
+    },
+    "receipt.json": {
+      "attested": false,
+      "sha256": "5a7107dbb6b08803b3b71cf9953499503d4760280148c483bb245d1987e6daa8"
+    }
+  },
+  "inventory_not_downloaded": [],
+  "kernel_source_sha256": "9c8971a509674f9e7c888a8d83a247bccbe24e4ea9c3e6d3f01a83d3c65c330a",
+  "mode": "predict",
+  "payload_sha256": "30fd8691a1f30d8f20be3fb7ab517e70d065df8f9401c731ba1d311c83189eaa",
+  "phase": "test",
+  "platform_log_sha256": "59f0f94094d5ee7f1d50f8bc50033b3cf8357bb128ef6b21c2f6812fea180b65",
+  "platform_sha256": "5b085654acb2afa292d28bfd5a6d967cd3cb962474622b5effdf1cfae84fced2",
+  "platform_status": "COMPLETE",
+  "reason": "definitive",
+  "receipt_sha256": "5a7107dbb6b08803b3b71cf9953499503d4760280148c483bb245d1987e6daa8",
+  "render_record_sha256": "6735987ac6932be30e6c45e074c8bf393daa465b62b1ccd90d0aa9b95ddd31cf",
+  "retry_allowed": false,
+  "stage": "done",
+  "status": "COMPLETE",
+  "unattested": [
+    "job_log.txt",
+    "receipt.json"
+  ],
+  "version": 1
+}

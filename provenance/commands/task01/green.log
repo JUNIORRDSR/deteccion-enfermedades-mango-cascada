@@ -1,0 +1,80 @@
+test_environment_initializes_system_temp_and_detects_missing_yolo (tests.test_provenance.ProvenanceTests.test_environment_initializes_system_temp_and_detects_missing_yolo) ... ok
+test_environment_rejects_external_path (tests.test_provenance.ProvenanceTests.test_environment_rejects_external_path) ... ok
+test_hash_and_output_boundaries (tests.test_provenance.ProvenanceTests.test_hash_and_output_boundaries) ... ok
+test_manifest_coverage_and_duplicate_rejected (tests.test_provenance.ProvenanceTests.test_manifest_coverage_and_duplicate_rejected) ... ok
+test_portable_resolution_and_identity (tests.test_provenance.ProvenanceTests.test_portable_resolution_and_identity) ... ok
+test_redaction_preserves_host (tests.test_provenance.ProvenanceTests.test_redaction_preserves_host) ... ok
+test_two_ids_cannot_map_one_logical_file (tests.test_provenance.ProvenanceTests.test_two_ids_cannot_map_one_logical_file) ... ok
+test_backslash_and_case_alias_is_rejected (tests.test_provenance_hardening.CanonicalUniqueness.test_backslash_and_case_alias_is_rejected) ... ok
+test_distinct_files_still_pass (tests.test_provenance_hardening.CanonicalUniqueness.test_distinct_files_still_pass) ... ok
+test_dot_segment_alias_is_rejected (tests.test_provenance_hardening.CanonicalUniqueness.test_dot_segment_alias_is_rejected) ... ok
+test_empty_manifest_is_not_a_clean_result (tests.test_provenance_hardening.CanonicalUniqueness.test_empty_manifest_is_not_a_clean_result) ... ok
+test_two_roots_mapped_to_one_directory_is_rejected (tests.test_provenance_hardening.CanonicalUniqueness.test_two_roots_mapped_to_one_directory_is_rejected) ... ok
+test_non_path_isolation_variable_is_checked (tests.test_provenance_hardening.EnvironmentIsolation.test_non_path_isolation_variable_is_checked) ... ok
+test_missing_source_is_a_discrepancy_not_a_crash (tests.test_provenance_hardening.ErrorClassification.test_missing_source_is_a_discrepancy_not_a_crash) ... ok
+test_root_mapping_must_be_a_string_map (tests.test_provenance_hardening.ErrorClassification.test_root_mapping_must_be_a_string_map) ... ok
+test_unexpected_oserror_propagates (tests.test_provenance_hardening.ErrorClassification.test_unexpected_oserror_propagates) ... ok
+test_header_and_bare_userinfo_forms_are_scrubbed (tests.test_provenance_hardening.Redaction.test_header_and_bare_userinfo_forms_are_scrubbed) ... ok
+test_structured_secret_keys_are_scrubbed_by_key (tests.test_provenance_hardening.Redaction.test_structured_secret_keys_are_scrubbed_by_key) ... ok
+test_blank_value_and_bad_hash_are_refused (tests.test_provenance_hardening.SidecarSchema.test_blank_value_and_bad_hash_are_refused) ... ok
+test_local_absolute_path_must_match_the_resolved_target (tests.test_provenance_hardening.SidecarSchema.test_local_absolute_path_must_match_the_resolved_target) ... ok
+test_missing_local_absolute_path_is_refused (tests.test_provenance_hardening.SidecarSchema.test_missing_local_absolute_path_is_refused) ... ok
+test_authorized_root_requires_the_freeze_digest_not_its_name (tests.test_provenance_hardening.WriteAuthorization.test_authorized_root_requires_the_freeze_digest_not_its_name) ... ok
+test_canonical_collapses_aliases (tests.test_provenance_hardening.WriteAuthorization.test_canonical_collapses_aliases) ... ok
+test_create_run_enforces_containment (tests.test_provenance_hardening.WriteAuthorization.test_create_run_enforces_containment) ... ok
+test_escape_still_refused_and_normal_output_allowed (tests.test_provenance_hardening.WriteAuthorization.test_escape_still_refused_and_normal_output_allowed) ... ok
+test_protected_inputs_are_refused_as_output (tests.test_provenance_hardening.WriteAuthorization.test_protected_inputs_are_refused_as_output) ... ok
+test_reserved_device_names_are_refused (tests.test_provenance_hardening.WriteAuthorization.test_reserved_device_names_are_refused) ... ok
+test_trailing_dot_or_space_alias_is_refused (tests.test_provenance_hardening.WriteAuthorization.test_trailing_dot_or_space_alias_is_refused) ... ok
+test_duplicate_header_column_is_refused (tests.test_provenance_round2.CsvValidation.test_duplicate_header_column_is_refused) ... ok
+test_header_only_file_is_refused (tests.test_provenance_round2.CsvValidation.test_header_only_file_is_refused) ... ok
+test_missing_required_column_is_refused (tests.test_provenance_round2.CsvValidation.test_missing_required_column_is_refused) ... ok
+test_non_utf8_bytes_are_invalid_input_not_a_traceback (tests.test_provenance_round2.CsvValidation.test_non_utf8_bytes_are_invalid_input_not_a_traceback) ... ok
+test_schema_rejects_none_and_non_string_values (tests.test_provenance_round2.CsvValidation.test_schema_rejects_none_and_non_string_values) ... ok
+test_short_row_is_refused_rather_than_yielding_none (tests.test_provenance_round2.CsvValidation.test_short_row_is_refused_rather_than_yielding_none) ... ok
+test_surplus_cells_are_refused (tests.test_provenance_round2.CsvValidation.test_surplus_cells_are_refused) ... ok
+test_file_identity_falls_back_for_missing_paths (tests.test_provenance_round2.HardlinkIdentity.test_file_identity_falls_back_for_missing_paths) ... ok
+test_two_source_ids_cannot_hardlink_to_one_file (tests.test_provenance_round2.HardlinkIdentity.test_two_source_ids_cannot_hardlink_to_one_file) ... ok
+test_external_sys_path_entry_fails_verification (tests.test_provenance_round2.ImportIsolation.test_external_sys_path_entry_fails_verification) ... ok
+test_registry_is_structurally_valid_and_locally_consistent (tests.test_provenance_round2.RegistryIntegrity.test_registry_is_structurally_valid_and_locally_consistent)
+Finding N5: skipping unresolvable rows let the registry drift silently. ... ok
+test_alternate_data_stream_forms_are_refused (tests.test_provenance_round2.RootAndStreamAuthorization.test_alternate_data_stream_forms_are_refused) ... ok
+test_arbitrary_system_root_is_refused (tests.test_provenance_round2.RootAndStreamAuthorization.test_arbitrary_system_root_is_refused) ... ok
+test_code_and_test_trees_are_never_outputs (tests.test_provenance_round2.RootAndStreamAuthorization.test_code_and_test_trees_are_never_outputs) ... ok
+test_root_with_wrong_freeze_digest_is_refused (tests.test_provenance_round2.RootAndStreamAuthorization.test_root_with_wrong_freeze_digest_is_refused) ... ok
+test_undeclared_subtree_is_refused (tests.test_provenance_round2.RootAndStreamAuthorization.test_undeclared_subtree_is_refused) ... ok
+test_additional_runtime_modules_are_covered (tests.test_provenance_round2.Round3Contracts.test_additional_runtime_modules_are_covered) ... ok
+test_directory_is_not_a_file_destination (tests.test_provenance_round2.Round3Contracts.test_directory_is_not_a_file_destination) ... ok
+test_frozen_design_documents_are_protected_from_the_guard (tests.test_provenance_round2.Round3Contracts.test_frozen_design_documents_are_protected_from_the_guard)
+The gravest round-3 finding: docs/ was an output subtree. ... ok
+test_nul_byte_and_stray_bom_are_refused (tests.test_provenance_round2.Round3Contracts.test_nul_byte_and_stray_bom_are_refused) ... ok
+test_quoted_newline_in_csv_is_preserved_not_silently_joined (tests.test_provenance_round2.Round3Contracts.test_quoted_newline_in_csv_is_preserved_not_silently_joined)
+Finding N3: splitlines() turned a quoted newline into a different value. ... ok
+test_sibling_prefix_path_is_not_inside_the_checkout (tests.test_provenance_round2.Round3Contracts.test_sibling_prefix_path_is_not_inside_the_checkout)
+Finding N4: '<checkout>-evil' passed a string-prefix check. ... ok
+test_unmatched_quote_is_refused (tests.test_provenance_round2.Round3Contracts.test_unmatched_quote_is_refused) ... ok
+test_additional_key_names_are_scrubbed (tests.test_provenance_round2.SecretShapes.test_additional_key_names_are_scrubbed) ... ok
+test_cookie_and_signature_lines_are_scrubbed (tests.test_provenance_round2.SecretShapes.test_cookie_and_signature_lines_are_scrubbed) ... ok
+test_split_name_value_header_records_are_scrubbed (tests.test_provenance_round2.SecretShapes.test_split_name_value_header_records_are_scrubbed) ... ok
+test_allowlist_rejects_bad_entries (tests.test_kaggle_inputs.Grammar.test_allowlist_rejects_bad_entries) ... ok
+test_link_violation_accepts_a_plain_file (tests.test_kaggle_inputs.Grammar.test_link_violation_accepts_a_plain_file) ... ok
+test_txt_and_yaml_are_parsed_and_others_are_not (tests.test_kaggle_inputs.Grammar.test_txt_and_yaml_are_parsed_and_others_are_not) ... ok
+test_clean_payload_passes (tests.test_kaggle_inputs.ValidatorContract.test_clean_payload_passes) ... ok
+test_download_field_in_yaml_fails (tests.test_kaggle_inputs.ValidatorContract.test_download_field_in_yaml_fails) ... ok
+test_excluded_group_fails (tests.test_kaggle_inputs.ValidatorContract.test_excluded_group_fails) ... ok
+test_excluded_hash_under_another_name_fails (tests.test_kaggle_inputs.ValidatorContract.test_excluded_hash_under_another_name_fails)
+A renamed test image keeps its bytes; the anti-join by id would miss it. ... ok
+test_fatal_root_unset_is_a_violation (tests.test_kaggle_inputs.ValidatorContract.test_fatal_root_unset_is_a_violation) ... ok
+test_hardlink_is_rejected (tests.test_kaggle_inputs.ValidatorContract.test_hardlink_is_rejected) ... ok
+test_hash_mismatch_fails (tests.test_kaggle_inputs.ValidatorContract.test_hash_mismatch_fails) ... ok
+test_null_effective_resource_version_is_fatal (tests.test_kaggle_inputs.ValidatorContract.test_null_effective_resource_version_is_fatal) ... ok
+test_test_entry_in_training_yaml_fails (tests.test_kaggle_inputs.ValidatorContract.test_test_entry_in_training_yaml_fails) ... ok
+test_test_split_in_training_phase_fails (tests.test_kaggle_inputs.ValidatorContract.test_test_split_in_training_phase_fails) ... ok
+test_undeclared_file_fails (tests.test_kaggle_inputs.ValidatorContract.test_undeclared_file_fails) ... ok
+test_unknown_extension_is_rejected_not_ignored (tests.test_kaggle_inputs.ValidatorContract.test_unknown_extension_is_rejected_not_ignored) ... ok
+
+----------------------------------------------------------------------
+Ran 69 tests in 16.275s
+
+OK
+green exit=0

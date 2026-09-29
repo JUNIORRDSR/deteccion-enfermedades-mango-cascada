@@ -1,0 +1,15 @@
+{
+  "n_images": 669,
+  "n_unique_sha": 669,
+  "n_clusters": 657,
+  "n_groups": 234,
+  "cluster_size_distribution": {
+    "1": 645,
+    "2": 12
+  },
+  "min_cluster_size": 1,
+  "median_cluster_size": 1,
+  "max_cluster_size": 2,
+  "discordant_class_sha": [],
+  "interpretation": "These counts describe operational dependence between files. They are not a demonstrated effective sample size, and a cluster count is not an independence count."
+}

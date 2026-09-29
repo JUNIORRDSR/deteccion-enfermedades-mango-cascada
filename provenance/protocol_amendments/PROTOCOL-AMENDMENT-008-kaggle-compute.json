@@ -1,0 +1,297 @@
+{
+  "amendment_id": "PROTOCOL-AMENDMENT-008",
+  "version": 8,
+  "title": "Kaggle compute venue for M1 training and inference",
+  "recorded_at": "2026-09-23T12:00:00+00:00",
+  "state": "APPROVED",
+  "execution_permitted": "EXP-R01 training, non-scientific probes, and the TASK-05 inference sequence for the snapshot below",
+  "inference_approved": true,
+  "inference_approval": {
+    "version": 10,
+    "section": "5.1",
+    "state": "APPROVED",
+    "review": "reports/execution/task-05-independent-review-round12.md",
+    "review_sha256": "6a246c3ec03c3e9fbe876da8d501773cadc8d09e87888327267f3e93b595c57b",
+    "decision": "docs/research/decision_log.md DECISION-037, DECISION-039",
+    "approved_by": "principal investigator in the session chat, 2026-09-28, after twelve independent TASK-05 rounds; re-approved the same day for the DECISION-039 snapshot",
+    "residual": "NEW-HIGH-05 (round 12) was a python._pth planted in the .venv; it is refused since 42270fa, which no independent round re-reviewed. DECISION-039 (the executed source may carry the one cell marker the Kaggle web editor prepends) was not independently reviewed either. Every other finding is closed. Further local tampering routes on this machine remain a declared limitation, not an observed effect.",
+    "responds_to": [
+      "reports/execution/task-05-independent-review-round4.md",
+      "reports/execution/task-05-independent-review-round5.md",
+      "reports/execution/task-05-independent-review-round6.md",
+      "reports/execution/task-05-independent-review-round7.md",
+      "reports/execution/task-05-independent-review-round8.md",
+      "reports/execution/task-05-independent-review-round9.md",
+      "reports/execution/task-05-independent-review-round10.md",
+      "reports/execution/task-05-independent-review-round11.md",
+      "reports/execution/task-05-independent-review-round12.md"
+    ],
+    "m1": {
+      "configs/evaluation.json": "f736ef865a6b6c5a030e39c7f004774d0cebb3b4fe44e319a2a2e4859fb4959c",
+      "data/manifests/model1_clean_manifest.csv": "dd9431dd7bbc00c6117baf6a0f6cf49eff8bc55f144016b4a98dbdea049ecf5f",
+      "data/manifests/model1_clean_manifest.csv.sha256": "8775c8a591cb18041486cc4dcab3dfe51efc7850e9d2b13561ad4fffc0473032",
+      "data/manifests/model1_clean_manifest.freeze.json": "e8f05cfafb99069399fcfab24d589db712d8388c1ff4b4202ee1b509cdbdbbbf",
+      "experiments/model1/EXP-R01/selection_record.json": "4a67bdca43a1c6a782dc6bb172702fcb36ebfcbe9caaa4c73f01808bcb98706c",
+      "provenance/environment/inference_environment.txt": "64086b292d15a63b9418dfba1523b6343c60db2a8ba9a69ca0a17b7f5a345d4b",
+      "provenance/environment/inference_runtime.txt": "f1a06a70e5af9e606618b4db5321f001ad4e905b3777f528d5b4d37465f9a2c2",
+      "provenance/environment/inference_interpreter.json": "081c3099444279a8a95633f585a25c671ac94549c923700bac613ee27e928545",
+      "src/evaluation/evaluate.py": "396d50ae6b8242a7da900771e3d3dd95de97e6697730e59cd91d777b38869084",
+      "src/statistics/intervals.py": "0b482eff99fbdb57293d3996efba52b5e6758bf328ff42fc02da79f05912b4ae",
+      "src/evaluation/kaggle_job.py": "9aecd22da3e733c82b4504f1c435b935d18ac90815bbdc6b3751854121d22574",
+      "src/evaluation/authority.py": "ac49f56e297fffae03e82a7e0d320b849a9124fa45b918cdb19f65864b97f705",
+      "provenance/commands/task04/verify_kaggle_run.py": "ed6015b68f5cb08579c3ad224e61ae2fac9ecb5e679d958321283318f01a658e"
+    },
+    "m2": {
+      "data/manifests/model2_frozen_manifest.csv": "cd4f0d0e428fc3015268b7df541bf705261893c4b5cba0a7ef274e17d0680d92",
+      "data/manifests/model2_frozen_manifest.csv.sha256": "3b2dff6fdd6131edd377cecb948e3c09083667454803f68f5de93023dcfe2655",
+      "src/evaluation/predict_model2.py": "dc981256842c0e47816cecb77455769de263e2d22ff8d4c7e4cdf21216072b65",
+      "provenance/environment/inference_environment.txt": "64086b292d15a63b9418dfba1523b6343c60db2a8ba9a69ca0a17b7f5a345d4b",
+      "provenance/environment/inference_runtime.txt": "f1a06a70e5af9e606618b4db5321f001ad4e905b3777f528d5b4d37465f9a2c2",
+      "provenance/environment/inference_interpreter.json": "081c3099444279a8a95633f585a25c671ac94549c923700bac613ee27e928545",
+      "src/statistics/intervals.py": "0b482eff99fbdb57293d3996efba52b5e6758bf328ff42fc02da79f05912b4ae",
+      "src/evaluation/authority.py": "ac49f56e297fffae03e82a7e0d320b849a9124fa45b918cdb19f65864b97f705"
+    }
+  },
+  "approval": {
+    "scope": "EXP-R01 training",
+    "version": 8,
+    "review": "reports/amendments/amendment-008-independent-review-round8.md",
+    "recorded_at": "2026-09-27",
+    "inference": "approved for the section 5.1 snapshot by the principal investigator on 2026-09-28 (inference_approval, DECISION-037, re-approved for DECISION-039)"
+  },
+  "approved_code": {
+    "trainer": "src/evaluation/train_model1.py",
+    "trainer_sha256": "9dd613910d4d1cbcb2a4326fad74f9cf9a8abed733d7e3dc8b7be45b1c309f84",
+    "job": "src/evaluation/kaggle_job.py",
+    "job_sha256": "9aecd22da3e733c82b4504f1c435b935d18ac90815bbdc6b3751854121d22574"
+  },
+  "trust_root": {
+    "freeze_record": "data/manifests/model1_clean_manifest.freeze.json",
+    "checked_by": "check_bindings before rendering; verify_receipt after the run"
+  },
+  "session_limit": {
+    "seconds": 43200,
+    "source": "https://www.kaggle.com/docs/notebooks",
+    "accessed": "2026-09-23"
+  },
+  "approval_scope": "EXP-R01 training; the TASK-05 inference sequence (EXP-V01, the operating-point freeze, EXP-R02, EXP-R03 and the interval commands) for the exact inference_approval snapshot",
+  "closure_authority": "Only an independent review may record closure.",
+  "base_protocol": {
+    "protocol_id": "ALBUS26-116-PROTOCOL-001",
+    "commit": "7d0f9985cce73740cfa2ae26154971b55282ad52",
+    "sha256_json": "6d5aa3ff47cba97f8ecd0dd15683bb96f0d53146f3af1ce1e95bf24cec7cbc8b",
+    "sha256_md": "1a41b1aa684e26e5853aae31369c5200b29ae25a70bc383e3f0bd3ef136058be",
+    "modified_by_this_amendment": false
+  },
+  "modifies": [
+    "SPEC section 7: training environment inside the workspace",
+    "plan TASK-04: propose CPU if it is the only device"
+  ],
+  "user_decision": [
+    "DECISION-031",
+    "DECISION-033"
+  ],
+  "local_cpu_viable": true,
+  "local_cpu_evidence": "DECISION-030, reports/execution/cpu_capacity_probe.json",
+  "inputs": {
+    "uploads": 0,
+    "attached_datasets_in_training": 0,
+    "source_repo": "DANN-MAGE/SemilleroTI-Mangos",
+    "source_commit": "98614804dd967e19a77af9fc58c27364d2e43bc9",
+    "job": "src/evaluation/kaggle_job.py",
+    "job_sha256": "9aecd22da3e733c82b4504f1c435b935d18ac90815bbdc6b3751854121d22574",
+    "renderer": "provenance/commands/task04/render_kaggle_job.py",
+    "renderer_sha256": "423fa9b8fcc3c549b33310c57264a7c3273032beddf1d1fab8ad9a1b20d5da64",
+    "verifier": "provenance/commands/task04/verify_kaggle_run.py",
+    "verifier_sha256": "ed6015b68f5cb08579c3ad224e61ae2fac9ecb5e679d958321283318f01a658e",
+    "tests": "tests/test_kaggle_job.py",
+    "tests_sha256": "fae46737562a4ae7226c7341b6def4a9a580e777814ae5ebf7ddcd2f2ac02100",
+    "verifier_tests": "tests/test_verify_kaggle_run.py",
+    "verifier_tests_sha256": "b0458fdb1d5c25870dd5a55f56a8c54135b4679ae62eaed752dadfbad7da99d5"
+  },
+  "base_checkpoint": {
+    "artifact_id": "ART-106",
+    "url": "https://github.com/ultralytics/assets/releases/download/v8.4.0/yolo26n.pt",
+    "sha256": "9b09cc8bf347f0fc8a5f7657480587f25db09b34bf33b0652110fb03a8ad4fef",
+    "size": 5544453
+  },
+  "probe": {
+    "experiment_id": "KAGGLE-PROBE-001",
+    "kernel": "jorgesolanodev/albus26-m1-kaggle-probe-001",
+    "kernel_id": 135462618,
+    "version": 1,
+    "status": "COMPLETE",
+    "model_built": false,
+    "inference": false,
+    "receipt": "experiments/model1/KAGGLE-PROBE-001/receipt.json",
+    "receipt_sha256": "f075fcb4fbaab2331ab88d363d7e0bd900a9d75445de5b2c0858029ff50b2e6b",
+    "deviation": "run before approval, against the v4 text, at the explicit user request to validate feasibility"
+  },
+  "test_discipline": {
+    "custodian": null,
+    "controls": [
+      "no free parameter in the test session",
+      "sealed commit of configs/evaluation_frozen.json before the test kernel exists",
+      "single kernel albus26-m1-exp-r02; later versions only as retry_policy allows",
+      "account kernel list before and after",
+      "provenance/test_access_log.csv"
+    ],
+    "residual": "no independent custodian, identical to the local venue; declared as a limitation"
+  },
+  "retry_policy": {
+    "max_versions": 3,
+    "retry_stages": {
+      "capacity": [
+        "start",
+        "environment",
+        "download",
+        "base"
+      ],
+      "train": [
+        "start",
+        "environment",
+        "download",
+        "base"
+      ],
+      "predict": [
+        "start",
+        "environment",
+        "download",
+        "predict"
+      ]
+    },
+    "retry_requires": [
+      "the previous version is in the committed ledger with its receipt, platform status, platform log and outputs list",
+      "receipt status FAILED and platform status ERROR",
+      "the failed stage is a retry stage of its mode",
+      "no model output: no .pt, epoch_records.jsonl or predictions_raw.jsonl",
+      "no line of the platform or job log matches metric_pattern"
+    ],
+    "never_retried": [
+      "operator cancellation or any platform status other than ERROR",
+      "termination without a FAILED receipt (hard cut, timeout)",
+      "a failure after the model is built or training started",
+      "any version after a COMPLETE one"
+    ],
+    "definitive": "the first COMPLETE version; for predict, the first version that reaches predictions_written, whatever happens next",
+    "metric_pattern": "mAP50|fitness|metrics/"
+  },
+  "experiments": {
+    "by_mode": {
+      "train": "EXP-R01",
+      "valid": "EXP-V01",
+      "test": "EXP-R02"
+    },
+    "capacity_prefix": "KAGGLE-CAPACITY-"
+  },
+  "attempt_layout": {
+    "directory": "experiments/model1/<EXP>/v<N>/",
+    "ledger": "experiments/model1/<EXP>/attempts.jsonl",
+    "reconciled_by": "provenance/commands/task04/verify_kaggle_run.py",
+    "enforced_by": "render_kaggle_job.attempt_dir and kaggle_job.check_attempt"
+  },
+  "pip_check_rule": {
+    "roots": [
+      "ultralytics",
+      "torch",
+      "torchvision"
+    ],
+    "blocks": "an unparsed line, or a conflict whose dependent package is in the dependency closure of the roots",
+    "exit_zero_accepts": [
+      "",
+      "No broken requirements found."
+    ],
+    "stage": "environment, before any data download"
+  },
+  "capacity_evidence": {
+    "dir": "experiments/model1/KAGGLE-CAPACITY-001",
+    "retained": "evidence/, platform.json, platform_log.json, attempts.jsonl",
+    "checked_by": "render_kaggle_job.capacity_retained before EXP-R01"
+  },
+  "test_exposure": {
+    "observed_before_freeze": true,
+    "log": "provenance/test_access_log.csv"
+  },
+  "retired_v4_artifacts": [
+    "src/evaluation/kaggle_inputs.py",
+    "tests/test_kaggle_inputs.py",
+    "configs/kaggle_input_schema.json",
+    "configs/capacity_plan.json",
+    "configs/prediction_transfer_schema.json"
+  ],
+  "independent_reviews": [
+    {
+      "version": 1,
+      "report": "reports/amendments/amendment-008-independent-review.md",
+      "verdict": "DO_NOT_APPROVE",
+      "high": 6,
+      "medium": 3
+    },
+    {
+      "version": 2,
+      "report": "reports/amendments/amendment-008-independent-rereview.md",
+      "verdict": "DO_NOT_APPROVE",
+      "high": 5,
+      "medium": 4
+    },
+    {
+      "version": 3,
+      "report": "reports/amendments/amendment-008-independent-review-round3.md",
+      "verdict": "DO_NOT_APPROVE",
+      "high": 2,
+      "medium": 3
+    },
+    {
+      "version": 4,
+      "report": "reports/amendments/amendment-008-independent-review-round4.md",
+      "report_sha256": "b4b0fe70e3fa90c5cbbcac30f4401bc961956190f35d6fdc664f24318df13a6b",
+      "verdict": "DO_NOT_APPROVE",
+      "high": 2,
+      "medium": 2
+    },
+    {
+      "version": 5,
+      "report": "reports/amendments/amendment-008-independent-review-round5.md",
+      "report_sha256": "030a3c36166e582385b1de36bc2a58810bc99d254d6d2374117ecf8273717257",
+      "verdict": "DO_NOT_APPROVE",
+      "high": 2,
+      "medium": 3
+    },
+    {
+      "version": 6,
+      "report": "reports/amendments/gate-review-exp-r01.md",
+      "report_sha256": "e1e5f76245c24465fbed64462b98afef396c3526245de2c588bfac55a35984e1",
+      "part": "A",
+      "verdict": "DO_NOT_APPROVE",
+      "high": 1,
+      "medium": 2,
+      "low": 1
+    },
+    {
+      "version": 7,
+      "report": "reports/amendments/amendment-008-independent-review-round7.md",
+      "report_sha256": "90fccb0b797a79c4e1ec927fc8feab87f74feaab6b78e2c5a8717f21e38e57eb",
+      "verdict": "DO_NOT_APPROVE",
+      "high": 1,
+      "medium": 2,
+      "low": 1
+    },
+    {
+      "version": 8,
+      "report": "reports/amendments/amendment-008-independent-review-round8.md",
+      "report_sha256": "0eecd5d23d41c127055aced940b740e4aff3f6b847709f47eb156b618fc1e36d",
+      "verdict": "APPROVE_EXP_R01_TRAINING",
+      "high": 0,
+      "medium": 0,
+      "low": 2
+    }
+  ],
+  "runs_must_cite": [
+    "7d0f9985cce73740cfa2ae26154971b55282ad52",
+    "PROTOCOL-AMENDMENT-008 version 8"
+  ],
+  "document": {
+    "path": "provenance/protocol_amendments/PROTOCOL-AMENDMENT-008-kaggle-compute.md",
+    "sha256": "17d94ac3ae336dc607fa23dc6d6ad3c8c635954f939ae9cffd677d177b31e63c"
+  }
+}

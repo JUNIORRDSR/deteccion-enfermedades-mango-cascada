@@ -1,0 +1,359 @@
+Apruebo conceptualmente la SPEC y el plan, pero la aprobación para comenzar
+TASK-01 queda condicionada a incorporar y verificar las siguientes enmiendas.
+No ejecutes todavía TASK-01.
+
+Quiero que estas enmiendas se incorporen formalmente a la SPEC y al plan, se
+registren en decision_log, se vuelva a ejecutar el self-review y se haga una
+revisión independiente fresca del delta. Si esa revisión no encuentra
+hallazgos HIGH/MEDIUM abiertos, considera entonces aprobados GATE B y GATE C
+y comienza la ejecución mediante Superpowers Subagent-Driven Development.
+
+No cambies ningún archivo legacy.
+
+======================================================================
+AMENDMENT-01 — GIT CANÓNICO DEL WORKSPACE DE REVISIÓN
+======================================================================
+
+Existe una incompatibilidad operativa que quiero resolver antes de implementar:
+
+- Mango-vision y SemilleroTI-Mangos son repositorios legacy independientes.
+- ambos deben permanecer de sólo lectura;
+- ALBUS26_major_revision no posee actualmente una historia Git canónica;
+- Subagent-Driven Development depende de diffs, commits, ledger y revisiones
+  precisas por tarea.
+
+Por tanto, estás autorizado a:
+
+1. Inicializar un NUEVO repositorio Git exclusivamente dentro de:
+
+   C:\Users\junio\Downloads\mango-vision\ALBUS26_major_revision
+
+2. Este Git nuevo NO debe incluir ni modificar los repos legacy.
+
+3. Realizar un commit baseline que represente exactamente la primera fase
+   documental aprobada.
+
+4. Crear una rama/worktree de ejecución según la skill
+   superpowers:using-git-worktrees si es técnicamente aplicable al nuevo repo.
+
+5. Realizar commits LOCALES pequeños por tarea dentro de este nuevo repositorio,
+   siguiendo Superpowers.
+
+NO estás autorizado a:
+
+- push;
+- merge hacia repos externos;
+- publicar;
+- modificar .git de Mango-vision;
+- modificar .git de SemilleroTI-Mangos;
+- incorporar datasets/pesos gigantes al Git si no deben versionarse.
+
+Datasets, checkpoints y artefactos grandes deben quedar en manifests/registries,
+con hashes, o mediante una estrategia local apropiada y documentada.
+
+Si Git LFS no es necesario, no lo introduzcas.
+
+Verifica después que ambos repos legacy mantienen exactamente el estado inicial.
+
+======================================================================
+AMENDMENT-02 — PROTOCOL FREEZE / PRE-REGISTRO INTERNO
+======================================================================
+
+Antes de producir NUEVAS observaciones experimentales crea un snapshot inmutable
+del protocolo aprobado.
+
+Debe registrar al menos:
+
+- commit Git de la SPEC;
+- commit Git del plan;
+- SHA256 de SPEC;
+- SHA256 del plan;
+- algoritmo de auditoría;
+- parámetros pHash;
+- criterios de agrupamiento;
+- algoritmo de split;
+- seed;
+- métricas primarias/secundarias;
+- checkpoint-selection rule;
+- operating-point-selection rule;
+- bootstrap;
+- benchmark protocol;
+- reglas de acceso a test.
+
+Crear, por ejemplo:
+
+provenance/protocol_freeze.md
+provenance/protocol_freeze.json
+
+Una vez congelado, cualquier cambio material debe producir:
+
+PROTOCOL-AMENDMENT-XXX
+
+con:
+
+- timestamp;
+- protocolo anterior;
+- modificación;
+- evidencia que obligó al cambio;
+- si test había sido observado;
+- impacto potencial;
+- decisión;
+- reviewer independiente.
+
+NO modifiques silenciosamente el protocolo después de observar resultados.
+
+Una corrección de bug demostrada mediante TDD puede cambiar implementación,
+pero si altera resultados científicos debe quedar registrada también como
+protocol deviation/amendment según corresponda.
+
+======================================================================
+AMENDMENT-03 — ADJUDICACIÓN INDEPENDIENTE DE NEAR-DUPLICATES
+======================================================================
+
+Fortalece TASK-02.
+
+Los candidatos relevantes:
+
+- cross-split;
+- clusters grandes;
+- clases conflictivas;
+- posibles secuencias;
+- casos en banda Hamming 5–10 usados para análisis de sensibilidad;
+
+deben someterse, cuando requieran juicio visual, a DOS pasadas independientes.
+
+Los revisores no deben recibir:
+
+- resultados del modelo;
+- métricas;
+- información de si aceptar/rechazar el par mejora el balance;
+- consecuencias sobre mAP/F1;
+- conclusiones del primer revisor.
+
+Cuando sea posible, ocultar también el split durante la primera clasificación
+visual y añadirlo sólo durante el análisis cross-split posterior.
+
+Registrar:
+
+candidate_id
+reviewer_a
+reviewer_b
+agreement
+final_adjudication
+evidence
+rationale
+
+Si existe desacuerdo, aplicar una adjudicación separada y documentada.
+
+No convertir consenso de agentes en ground truth biológico.
+La procedencia documental sigue teniendo prioridad sobre semejanza visual.
+
+======================================================================
+AMENDMENT-04 — M2: DUPLICADOS INTRA-SPLIT Y TAMAÑO EFECTIVO
+======================================================================
+
+La arqueología encontró 1.500 archivos pero 1.400 SHA únicos y duplicados que,
+aunque estén coasignados y no generen fuga cross-split, reducen independencia
+efectiva.
+
+Añade a TASK-02/TASK-05 un análisis de sensibilidad de M2.
+
+Conservar como resultado principal la métrica definida en el protocolo si su
+validez se mantiene, pero reportar adicionalmente:
+
+- n imágenes;
+- n SHA únicos;
+- n clusters;
+- distribución de tamaños de clusters;
+- métricas image-weighted;
+- métricas deduplicadas o cluster-weighted apropiadamente definidas;
+- diferencia entre ambas;
+- CI agrupado si procede.
+
+No llames a MangoDHDS_clean "sin duplicados".
+
+Usar una formulación exacta como:
+
+"sin contaminación cross-split detectada bajo el protocolo especificado"
+
+si eso es lo que realmente demuestra la auditoría.
+
+No reentrenes M2 automáticamente por existir duplicados dentro de un mismo
+split. Primero determina el efecto y aplica la regla de enmienda existente si
+surge un problema metodológico adicional.
+
+======================================================================
+AMENDMENT-05 — REPRODUCIBILIDAD DEL ENTORNO
+======================================================================
+
+Amplía TASK-01.
+
+Además de pip freeze registra:
+
+- python --version;
+- python executable;
+- pip --version;
+- pip config;
+- package index utilizado;
+- `pip install --report`;
+- `pip check`;
+- paquetes instalados en JSON;
+- wheel/build identificado cuando sea posible;
+- hashes de paquetes descargados cuando sea razonablemente obtenible;
+- OS/build;
+- CPU;
+- RAM;
+- GPU;
+- driver;
+- CUDA runtime cuando exista;
+- variables de entorno relevantes.
+
+No asumir que resolver los mismos version pins dentro de varios meses produce
+los mismos bytes.
+
+Separar:
+
+logical_path / SRC-ID
+
+de:
+
+local_absolute_path
+
+Los manifiestos deben poder reconstruirse con un root mapping para que
+`C:\Users\junio\...` no sea parte indispensable del método científico.
+
+Las rutas absolutas locales pueden conservarse como evidencia de esta ejecución.
+
+======================================================================
+AMENDMENT-06 — REVISAR TAMBIÉN EL CLAIM "EFICIENTE"
+======================================================================
+
+TASK-09 debe auditar tanto:
+
+"DETECCIÓN TEMPRANA"
+
+como:
+
+"EFICIENTE"
+
+en título, resumen, contribuciones y conclusión.
+
+Un benchmark descriptivo sobre un único modelo/hardware no demuestra por sí
+mismo eficiencia comparativa.
+
+Mantener "eficiente" solamente si queda una definición operacional previa,
+un criterio verificable o un comparador adecuado que lo sostenga.
+
+En caso contrario, reemplazar por una descripción neutral como:
+
+"automatizada"
+"visual"
+"mediante una arquitectura en cascada"
+
+según lo que respalde el estudio.
+
+No diseñar un benchmark retrospectivo únicamente para salvar la palabra
+"eficiente".
+
+======================================================================
+AMENDMENT-07 — LENGUAJE SOBRE LEAKAGE
+======================================================================
+
+Normaliza desde ahora la terminología científica:
+
+Evitar afirmaciones absolutas como:
+
+"dataset libre de fuga"
+"split libre de fuga"
+"independencia demostrada"
+
+cuando el método sólo permite establecer ausencia de contaminación DETECTADA
+según ciertos criterios.
+
+Reportar siempre:
+
+- qué forma de fuga se evaluó;
+- algoritmo;
+- parámetros;
+- evidencia de origen/secuencia;
+- límites;
+- relaciones que no pueden excluirse.
+
+Por ejemplo:
+
+"no se detectó contaminación cross-split mediante SHA-256, pHash bajo el
+umbral preespecificado y agrupamiento conservador por origen disponible".
+
+No interpretar esto como independencia biológica universal.
+
+======================================================================
+REVISIÓN DE LAS ENMIENDAS
+======================================================================
+
+Después de modificar SPEC y plan:
+
+1. genera diff exacto contra los artefactos que acabo de aprobar
+   conceptualmente;
+2. ejecuta self-review de SPEC;
+3. ejecuta self-review del plan;
+4. ejecuta revisión independiente fresca únicamente del delta y de sus efectos
+   sobre el resto del diseño;
+5. verifica correspondencia REVIEW ↔ TASK;
+6. verifica ausencia de contradicciones;
+7. verifica que no modificaste legacy.
+
+Si existe un hallazgo HIGH/MEDIUM, resuélvelo antes de ejecutar TASK-01.
+
+Si no existen hallazgos HIGH/MEDIUM pendientes:
+
+- registra mi aprobación en decision_log;
+- congela el protocolo;
+- considera GATE B = SATISFIED;
+- considera GATE C = SATISFIED;
+- comienza TASK-01;
+- ejecuta TASK-01→TASK-10 mediante
+  superpowers:subagent-driven-development;
+- implementador fresco por tarea;
+- revisión independiente de cumplimiento de SPEC y calidad después de cada
+  tarea;
+- TDD para software científico;
+- systematic-debugging para resultados inesperados;
+- verification-before-completion antes de cada claim de finalización.
+
+No me pidas aprobación entre tareas ordinarias ya cubiertas por esta SPEC/plan.
+
+DETENTE únicamente si:
+
+1. se requiere una acción destructiva o externa;
+2. se requiere push/merge/publicación;
+3. falta una evidencia que haga que todas las alternativas científicas sean
+   especulación;
+4. aparece un hallazgo que exige cambiar materialmente el protocolo después de
+   haber observado el test;
+5. una enmienda afecta la interpretación primaria del estudio.
+
+Los bloqueos ya previstos —Raspberry Pi, GT conjunto, reproducción histórica
+M1 exacta— NO deben detener todo el trabajo. Documenta su estado correctamente,
+continúa con las partes independientes y modera/retira claims según la SPEC.
+
+Al finalizar quiero:
+
+- manuscrito revisado;
+- PDF renderizado;
+- response_to_reviewers;
+- todos los manifests;
+- auditorías;
+- predicciones;
+- métricas;
+- intervalos;
+- benchmark verificable;
+- bibliography audit;
+- claim-evidence matrix final;
+- REVIEW matrix final;
+- protocol freeze + amendments;
+- reproducción;
+- revisión adversarial independiente;
+- final_validation_report.
+
+La palabra DONE sólo puede utilizarse después de
+verification-before-completion con evidencia fresca.

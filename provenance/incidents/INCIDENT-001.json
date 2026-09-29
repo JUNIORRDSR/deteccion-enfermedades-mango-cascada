@@ -1,0 +1,62 @@
+{
+  "incident_id": "INCIDENT-001",
+  "recorded_utc": "2026-09-22T04:16:52.479046+00:00",
+  "discovered_by": "independent adversarial review finding 3 HIGH, reports/execution/task-01-independent-review.md",
+  "cause": "provenance/commands/task01/verify_runtime_paths.py import_unguarded child imported ultralytics with YOLO_CONFIG_DIR stripped and then called SETTINGS.update, so Ultralytics wrote its settings file to the user profile fallback outside the authorized checkout. The verifier asserted the escape instead of preventing it and still reported PASS.",
+  "files": [
+    {
+      "path": "C:/Users/junio/AppData/Roaming/Ultralytics/settings.json",
+      "state": "PRESENT",
+      "size_bytes": 841,
+      "sha256": "2a89226a6eb44d60c907c474122d43c0898eb46b6d58edf11c5b9e30d83364e7",
+      "mtime_utc": "2026-09-22T02:56:35.879794+00:00",
+      "preserved_copy": "provenance/incidents/INCIDENT-001-e003832ff1d0.settings.json",
+      "contains": [
+        "workspace absolute paths",
+        "ultralytics machine uuid",
+        "seven remote integrations left enabled: clearml, comet, dvc, hub, mlflow, neptune, raytune"
+      ]
+    },
+    {
+      "path": "C:/Users/junio/AppData/Local/Packages/Claude_pzs8sxrjxfjjc/LocalCache/Roaming/Ultralytics/settings.json",
+      "state": "PRESENT",
+      "size_bytes": 841,
+      "sha256": "2a89226a6eb44d60c907c474122d43c0898eb46b6d58edf11c5b9e30d83364e7",
+      "mtime_utc": "2026-09-22T02:56:35.879794+00:00",
+      "preserved_copy": "provenance/incidents/INCIDENT-001-0d3f84c6506c.settings.json",
+      "contains": [
+        "workspace absolute paths",
+        "ultralytics machine uuid",
+        "seven remote integrations left enabled: clearml, comet, dvc, hub, mlflow, neptune, raytune"
+      ]
+    },
+    {
+      "path": "C:/tmp/Ultralytics/settings.json",
+      "state": "PRESENT",
+      "size_bytes": 737,
+      "sha256": "04f343a69166c9a9c9b2b9b4051e4857098a10538945ca851d50712710fe59c8",
+      "mtime_utc": "2026-09-22T04:25:56.778619+00:00",
+      "preserved_copy": "provenance/incidents/INCIDENT-001-68059df8007c.settings.json",
+      "cause": "second escape, during the first repair attempt: the profile fixture env vars were set but the AppData/Roaming directory was not created, so is_dir_writeable failed and get_user_config_dir fell through to its /tmp branch, which on Windows is C:/tmp. Fixed by pre-creating the fixture subdirectories.",
+      "contains": [
+        "ultralytics default settings",
+        "machine uuid"
+      ]
+    }
+  ],
+  "disposition": "PENDING_OWNER_DECISION for three files outside the authorized workspace. Deleting them is an external action under SPEC section 11 stop rule 1 and is not attempted. Copies and hashes are preserved here either way.",
+  "blocking_effect": "TASK-01 cannot pass its review gate while this stands. No scientific run may start from this environment until the verifier prevents the escape and every effective runtime writer is proven contained.",
+  "repair": {
+    "script": "provenance/commands/task01/verify_runtime_paths.py",
+    "status": "PASS with real containment, exit 0",
+    "guarded_mode": "all ten remote integrations off, zero escaped paths",
+    "unguarded_mode": "observed inside provenance/runtime_state/profile_fixture; the real profile is not written",
+    "forbidden_sinks_asserted": [
+      "%APPDATA%",
+      "%LOCALAPPDATA%",
+      "C:/tmp"
+    ],
+    "verified_after_repair_utc": "2026-09-22T04:28:53.885133+00:00"
+  },
+  "new_observation": "ultralytics performs a network probe at import time: ONLINE = is_online() in ultralytics/utils/__init__.py. Recorded as ultralytics_online_probe_at_import=true in runtime_path_report.json. This matters for any requirement that a scientific run be network-disabled."
+}

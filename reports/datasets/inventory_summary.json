@@ -1,0 +1,214 @@
+{
+  "source_manifest": "C:\\Users\\junio\\Downloads\\mango-vision\\ALBUS26_major_revision\\provenance\\source_manifest.csv",
+  "image_total": 7016,
+  "datasets": [
+    {
+      "dataset_id": "DATA-001",
+      "root": "SemilleroTI-Mangos/docs/MangosDataset",
+      "exists": true,
+      "image_files": 669,
+      "label_files": 669,
+      "all_files": 1340,
+      "file_types": {
+        ".yaml": 1,
+        ".cache": 1,
+        ".jpg": 669,
+        ".txt": 669
+      }
+    },
+    {
+      "dataset_id": "DATA-002",
+      "root": "Mango-vision/MangoDHDS A Dataset of Diseased and Healthy Mangoe",
+      "exists": true,
+      "image_files": 1500,
+      "label_files": 0,
+      "all_files": 1502,
+      "file_types": {
+        ".csv": 1,
+        ".txt": 1,
+        ".jpg": 1500
+      }
+    },
+    {
+      "dataset_id": "DATA-003",
+      "root": "Mango-vision/DatasetMango_YOLO",
+      "exists": true,
+      "image_files": 1500,
+      "label_files": 1500,
+      "all_files": 3001,
+      "file_types": {
+        ".yaml": 1,
+        ".jpg": 1500,
+        ".txt": 1500
+      }
+    },
+    {
+      "dataset_id": "DATA-004",
+      "root": "Mango-vision/DatasetMango_YOLO_clean",
+      "exists": true,
+      "image_files": 1500,
+      "label_files": 1500,
+      "all_files": 3001,
+      "file_types": {
+        ".yaml": 1,
+        ".jpg": 1500,
+        ".txt": 1500
+      }
+    },
+    {
+      "dataset_id": "DATA-005",
+      "root": "Mango-vision/DatasetMango_YOLO_cls",
+      "exists": true,
+      "image_files": 1500,
+      "label_files": 0,
+      "all_files": 1502,
+      "file_types": {
+        ".cache": 2,
+        ".jpg": 1500
+      }
+    },
+    {
+      "dataset_id": "DATA-006",
+      "root": "Mango-vision/DatasetMango_Propias",
+      "exists": true,
+      "image_files": 173,
+      "label_files": 173,
+      "all_files": 349,
+      "file_types": {
+        ".txt": 175,
+        ".yaml": 1,
+        ".jpg": 173
+      }
+    },
+    {
+      "dataset_id": "DATA-007",
+      "root": "Mango-vision/Datasets Sucios personal",
+      "exists": true,
+      "image_files": 174,
+      "label_files": 0,
+      "all_files": 174,
+      "file_types": {
+        ".jpg": 174
+      }
+    },
+    {
+      "dataset_id": "DATA-008",
+      "root": "Mango-vision/DatasetMango_Detector",
+      "exists": false,
+      "image_files": 0,
+      "label_files": 0,
+      "all_files": 0,
+      "file_types": {}
+    }
+  ],
+  "exact_duplicates": [
+    {
+      "dataset_id": "DATA-001",
+      "unique_byte_hashes": 669,
+      "duplicate_groups": 0,
+      "files_in_duplicate_groups": 0,
+      "cross_split_pairs": 0,
+      "cross_split_pair_counts": {}
+    },
+    {
+      "dataset_id": "DATA-002",
+      "unique_byte_hashes": 1400,
+      "duplicate_groups": 100,
+      "files_in_duplicate_groups": 200,
+      "cross_split_pairs": 0,
+      "cross_split_pair_counts": {}
+    },
+    {
+      "dataset_id": "DATA-003",
+      "unique_byte_hashes": 1400,
+      "duplicate_groups": 100,
+      "files_in_duplicate_groups": 200,
+      "cross_split_pairs": 41,
+      "cross_split_pair_counts": {
+        "test|train": 10,
+        "test|valid": 2,
+        "train|valid": 29
+      }
+    },
+    {
+      "dataset_id": "DATA-004",
+      "unique_byte_hashes": 1400,
+      "duplicate_groups": 100,
+      "files_in_duplicate_groups": 200,
+      "cross_split_pairs": 0,
+      "cross_split_pair_counts": {}
+    },
+    {
+      "dataset_id": "DATA-005",
+      "unique_byte_hashes": 1400,
+      "duplicate_groups": 100,
+      "files_in_duplicate_groups": 200,
+      "cross_split_pairs": 0,
+      "cross_split_pair_counts": {}
+    },
+    {
+      "dataset_id": "DATA-006",
+      "unique_byte_hashes": 173,
+      "duplicate_groups": 0,
+      "files_in_duplicate_groups": 0,
+      "cross_split_pairs": 0,
+      "cross_split_pair_counts": {}
+    },
+    {
+      "dataset_id": "DATA-007",
+      "unique_byte_hashes": 174,
+      "duplicate_groups": 0,
+      "files_in_duplicate_groups": 0,
+      "cross_split_pairs": 0,
+      "cross_split_pair_counts": {}
+    },
+    {
+      "dataset_id": "DATA-008",
+      "unique_byte_hashes": 0,
+      "duplicate_groups": 0,
+      "files_in_duplicate_groups": 0,
+      "cross_split_pairs": 0,
+      "cross_split_pair_counts": {}
+    }
+  ],
+  "structural_issues": 0,
+  "notebooks": [
+    {
+      "path": "Mango-vision/notebooks/01_exploracion_dataset.ipynb",
+      "source_id": "SRC-009645",
+      "cells": 6,
+      "output_objects": 0,
+      "executed_cells": 0
+    },
+    {
+      "path": "Mango-vision/notebooks/02_entrenamiento_cls.ipynb",
+      "source_id": "SRC-009646",
+      "cells": 4,
+      "output_objects": 0,
+      "executed_cells": 0
+    },
+    {
+      "path": "Mango-vision/notebooks/03_entrenamiento_det.ipynb",
+      "source_id": "SRC-009647",
+      "cells": 3,
+      "output_objects": 0,
+      "executed_cells": 0
+    },
+    {
+      "path": "Mango-vision/notebooks/04_evaluacion.ipynb",
+      "source_id": "SRC-009648",
+      "cells": 6,
+      "output_objects": 0,
+      "executed_cells": 0
+    }
+  ],
+  "historical_phash_pairs": 76,
+  "historical_distance_counts": {
+    "0": 60,
+    "2": 7,
+    "4": 9
+  },
+  "historical_pairs_exact_bytes": 41,
+  "historical_pairs_still_cross_split_DATA004": 0,
+  "historical_pairs_still_cross_split_DATA005": 0
+}

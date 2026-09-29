@@ -1,0 +1,11 @@
+{
+  "incident_id": "INCIDENT-002",
+  "recorded_utc": "2026-09-23T14:00:00+00:00",
+  "discovered_by": "the TASK-08 implementer reported it in its own final report",
+  "cause": "The first test request of the bibliography audit to the Crossref REST API carried the user's email address in the User-Agent header (Crossref's optional 'polite pool' convention). The user's instructions forbid sending that address to an unrelated service without explicit permission.",
+  "files": [],
+  "disposition": "Not reversible: the address reached Crossref once. Every later request used a generic header. The address appears in no file of the repository (checked with a search of the TASK-08 outputs).",
+  "blocking_effect": "None on the science. Reported to the user.",
+  "repair": "Future briefs to agents state explicitly that no personal identifier may be sent in any request header, parameter or body.",
+  "new_observation": "Instruction-level privacy rules must be repeated in every agent brief; agents do not inherit them."
+}

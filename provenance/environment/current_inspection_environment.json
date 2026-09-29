@@ -1,0 +1,48 @@
+{
+  "captured_utc": "2026-09-17T21:46:11.158782+00:00",
+  "purpose": "current inspection host metadata; NOT historical training environment",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "inspection_python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+  "inspection_executable": "C:\\Users\\junio\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+  "legacy_environments": [
+    {
+      "root": "C:\\Users\\junio\\Downloads\\mango-vision\\.venv",
+      "pyvenv_cfg": "home = C:\\Users\\junio\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\ninclude-system-site-packages = false\nversion = 3.13.13\nexecutable = C:\\Users\\junio\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\python.exe\ncommand = C:\\Users\\junio\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\python.exe -m venv C:\\Users\\junio\\Downloads\\mango-vision\\.venv\n",
+      "packages": {}
+    },
+    {
+      "root": "C:\\Users\\junio\\Downloads\\mango-vision\\SemilleroTI-Mangos\\.venv",
+      "pyvenv_cfg": "home = C:\\Users\\junio\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\ninclude-system-site-packages = false\nversion = 3.13.13\nexecutable = C:\\Users\\junio\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\python.exe\ncommand = C:\\Users\\junio\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\python.exe -m venv C:\\Users\\junio\\Downloads\\mango-vision\\SemilleroTI-Mangos\\.venv\n",
+      "packages": {
+        "ImageHash-4.3.2.dist-info": {
+          "Name": "ImageHash",
+          "Version": "4.3.2"
+        },
+        "numpy-2.4.4.dist-info": {
+          "Name": "numpy",
+          "Version": "2.4.4"
+        },
+        "pillow-12.2.0.dist-info": {
+          "Name": "pillow",
+          "Version": "12.2.0"
+        },
+        "scikit_learn-1.8.0.dist-info": {
+          "Name": "scikit-learn",
+          "Version": "1.8.0"
+        },
+        "torch-2.12.0.dist-info": {
+          "Name": "torch",
+          "Version": "2.12.0"
+        },
+        "torchvision-0.27.0.dist-info": {
+          "Name": "torchvision",
+          "Version": "0.27.0"
+        },
+        "ultralytics-8.4.52.dist-info": {
+          "Name": "ultralytics",
+          "Version": "8.4.52"
+        }
+      }
+    }
+  ]
+}

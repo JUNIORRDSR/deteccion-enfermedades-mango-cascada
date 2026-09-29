@@ -1,0 +1,156 @@
+{
+  "model_id": "model1",
+  "class_names": [
+    "Enfermo",
+    "Saludable"
+  ],
+  "positive_class": "Enfermo",
+  "iou_match": 0.5,
+  "nms_iou": 0.6,
+  "max_det": 300,
+  "min_score": 0.001,
+  "imgsz": 640,
+  "threshold_grid": "0.05..0.95 step 0.05, ties to lower",
+  "checkpoint_sha256": "0648da3f3641e3cdb5a1908a092ba892548942836a249bb3b39667f9ae8e8125",
+  "manifest_sha256": "dd9431dd7bbc00c6117baf6a0f6cf49eff8bc55f144016b4a98dbdea049ecf5f",
+  "selection_record_sha256": "4a67bdca43a1c6a782dc6bb172702fcb36ebfcbe9caaa4c73f01808bcb98706c",
+  "training_kernel_version": 1,
+  "threshold": 0.35,
+  "threshold_rule": "threshold maximising F2 = 5PR/(4P+R) of the positive class on validation records over 0.05..0.95 step 0.05; undefined F2 is skipped; ties go to the lower threshold",
+  "threshold_f2": 0.8843537414965986,
+  "threshold_grid_values": [
+    {
+      "threshold": 0.05,
+      "f2": 0.8125
+    },
+    {
+      "threshold": 0.1,
+      "f2": 0.8441558441558441
+    },
+    {
+      "threshold": 0.15,
+      "f2": 0.8552631578947367
+    },
+    {
+      "threshold": 0.2,
+      "f2": 0.8724832214765099
+    },
+    {
+      "threshold": 0.25,
+      "f2": 0.8783783783783786
+    },
+    {
+      "threshold": 0.3,
+      "f2": 0.8783783783783786
+    },
+    {
+      "threshold": 0.35,
+      "f2": 0.8843537414965986
+    },
+    {
+      "threshold": 0.4,
+      "f2": 0.8843537414965986
+    },
+    {
+      "threshold": 0.45,
+      "f2": 0.8843537414965986
+    },
+    {
+      "threshold": 0.5,
+      "f2": 0.8561643835616438
+    },
+    {
+      "threshold": 0.55,
+      "f2": 0.8561643835616438
+    },
+    {
+      "threshold": 0.6,
+      "f2": 0.8561643835616438
+    },
+    {
+      "threshold": 0.65,
+      "f2": 0.8561643835616438
+    },
+    {
+      "threshold": 0.7,
+      "f2": 0.8275862068965517
+    },
+    {
+      "threshold": 0.75,
+      "f2": 0.7986111111111112
+    },
+    {
+      "threshold": 0.8,
+      "f2": 0.7394366197183099
+    },
+    {
+      "threshold": 0.85,
+      "f2": 0.7446808510638298
+    },
+    {
+      "threshold": 0.9,
+      "f2": 0.683453237410072
+    },
+    {
+      "threshold": 0.95,
+      "f2": 0.4887218045112782
+    }
+  ],
+  "validation_predictions_sha256": "a35c76ba7380b17fc1266a5d1d1b32b6b3c1db948e142ad42fab653755b359dc",
+  "source_config_sha256": "f736ef865a6b6c5a030e39c7f004774d0cebb3b4fe44e319a2a2e4859fb4959c",
+  "code_sha256": {
+    "src/evaluation/evaluate.py": "396d50ae6b8242a7da900771e3d3dd95de97e6697730e59cd91d777b38869084",
+    "src/statistics/intervals.py": "0b482eff99fbdb57293d3996efba52b5e6758bf328ff42fc02da79f05912b4ae",
+    "src/evaluation/kaggle_job.py": "9aecd22da3e733c82b4504f1c435b935d18ac90815bbdc6b3751854121d22574",
+    "src/evaluation/authority.py": "ac49f56e297fffae03e82a7e0d320b849a9124fa45b918cdb19f65864b97f705",
+    "provenance/commands/task04/verify_kaggle_run.py": "ed6015b68f5cb08579c3ad224e61ae2fac9ecb5e679d958321283318f01a658e"
+  },
+  "test_selection_digest": "bb1b572f014fafa6cbe910c54f55ec705d2ca752ba77b59e542ee8e4d70ca75b",
+  "validation_provenance": {
+    "checkpoint_sha256": "0648da3f3641e3cdb5a1908a092ba892548942836a249bb3b39667f9ae8e8125",
+    "phase": "valid",
+    "payload_sha256": "b2f78531a0e99db304a22bd291fad136091ee5cee281c3d017658b5d420507da",
+    "kernel_source_sha256": "ae2ee4e815d659732e4116990b3fbc05bdb24c9118538b64949e423f594e73f8",
+    "predictions_raw_sha256": "c184fed7aa7863adbc8841757072852f1e62cfbfa6aeb15615549b7bf7679ff5",
+    "inference": {
+      "imgsz": 640,
+      "max_det": 300,
+      "min_score": 0.001,
+      "nms_iou": 0.6
+    },
+    "config_sha256": "f736ef865a6b6c5a030e39c7f004774d0cebb3b4fe44e319a2a2e4859fb4959c",
+    "manifest_sha256": "dd9431dd7bbc00c6117baf6a0f6cf49eff8bc55f144016b4a98dbdea049ecf5f",
+    "end2end": true,
+    "agnostic_nms": false,
+    "single_cls": false,
+    "effective_suppression": "end-to-end one-to-one head: no NMS, the iou argument is inert",
+    "input_contract": "file path given to Ultralytics predict: the loader reads BGR and preprocessing converts to RGB; rect letterbox at imgsz",
+    "model_names": {
+      "0": "Enfermo",
+      "1": "Saludable"
+    },
+    "predict_args": {
+      "conf": 0.001,
+      "iou": 0.6,
+      "max_det": 300,
+      "imgsz": 640,
+      "device": "0",
+      "half": false,
+      "batch": 1
+    },
+    "experiment_id": "EXP-V01",
+    "receipt_status": "COMPLETE",
+    "receipt_stage": "done",
+    "receipt_error": null,
+    "predictions_sha256": "a35c76ba7380b17fc1266a5d1d1b32b6b3c1db948e142ad42fab653755b359dc",
+    "images": 113,
+    "selection_record_sha256": "4a67bdca43a1c6a782dc6bb172702fcb36ebfcbe9caaa4c73f01808bcb98706c",
+    "training_kernel_version": 1,
+    "attempt": {
+      "experiment_id": "EXP-V01",
+      "attempt": 2,
+      "reconciliation_sha256": "9ee24d58a50fd475d094d96f63f076ca84f98beedc83825a417309ee271d1366",
+      "receipt_sha256": "ee93ac698246b5093e9a01536678ef62b30282022f446f53160c413c4caab3a5"
+    }
+  }
+}

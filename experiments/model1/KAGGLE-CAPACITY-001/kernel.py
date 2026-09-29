@@ -1,0 +1,738 @@
+"""Self-contained Kaggle job for M1 (PROTOCOL-AMENDMENT-008). Standard library only.
+
+Nothing is uploaded. The corpus is read from the public commit that holds DATA-001; the
+job receives a closed payload fixed locally from the FROZEN manifest:
+- the digest of the sorted image-path list, so the commit is the expected corpus;
+- one character per image (t train, v valid, p predict, x not in this phase), so test
+  images are never requested in a training session;
+- the digest of every selected (path, image SHA256, label SHA256 with LF line endings);
+- the official digest of the base checkpoint and the exact trainer source.
+Every downloaded file is also checked against the git blob SHA-1 of the commit tree.
+
+The kernel cannot know the manifest, so the root of trust is local and checked twice:
+check_bindings (before rendering: the frozen manifest and the approved code hashes) and
+verify_receipt (after the run: exactly the phase's files, the rendered payload and the
+executed source). `render` writes this file with PAYLOAD filled in.
+"""
+
+import hashlib
+import json
+import os
+import platform
+import shutil
+import subprocess
+import sys
+import time
+import traceback
+import urllib.request
+from concurrent.futures import ThreadPoolExecutor
+from pathlib import Path
+
+PAYLOAD = json.loads('{"base": {"sha256": "9b09cc8bf347f0fc8a5f7657480587f25db09b34bf33b0652110fb03a8ad4fef", "size": 5544453, "url": "https://github.com/ultralytics/assets/releases/download/v8.4.0/yolo26n.pt"}, "commit": "98614804dd967e19a77af9fc58c27364d2e43bc9", "config": {"amendments": ["PROTOCOL-AMENDMENT-008"], "batch": 16, "device": "0", "epochs": 3, "experiment_id": "KAGGLE-CAPACITY-001", "imgsz": 640, "optimizer": "auto", "patience": 100, "seed": 0, "venue": "kaggle", "workers": 2}, "experiment_id": "KAGGLE-CAPACITY-001", "files_digest": "888f1a6a67b7a938a1cdd8da112cf69c006acc0d3696868b8c93f569662ebe23", "font_url": "https://github.com/ultralytics/assets/releases/download/v0.0.0/Arial.ttf", "integrations_off": ["sync", "clearml", "comet", "dvc", "hub", "mlflow", "neptune", "raytune", "tensorboard", "wandb"], "manifest_sha256": "dd9431dd7bbc00c6117baf6a0f6cf49eff8bc55f144016b4a98dbdea049ecf5f", "mode": "capacity", "paths_digest": "56a5280554e48e9472e0e235b2b136ae314ee22f3ad52e16d69513cfb002c6a1", "repo": "DANN-MAGE/SemilleroTI-Mangos", "split": "x3v4t2x1v1x3v1t18v1x1v1x1v1x4v1x1v1x3v1x4v3x3v2x1v5x1v1x2v3x1v2x3v1x1v1x4v3x3v1x2v1x1t1v1x1v2x1v1x1v3x1v3x2v4x2v4x1v1x6v1x1v3x5v4x1v2x1v2x3v1x1v1x2v1x2v3x2t1x2v2x2v1x4t1x4v3x1v1x1v1x3v3x2v3x1v1t329x3v3x2v6x1v1x1v1x3v2x1v2x2v2x1v1x1v1t2x3v3x1v2x1v2x1t85", "trainer_sha256": "9dd613910d4d1cbcb2a4326fad74f9cf9a8abed733d7e3dc8b7be45b1c309f84", "ultralytics": "8.4.52"}')
+PREFIX = 'docs/MangosDataset/'
+SPLIT_DIRS = ('train', 'valid', 'test')
+CODES = {'t': 'train', 'v': 'val', 'p': 'predict', 'x': None}
+# Environment variables worth keeping; everything else (tokens included) is never read.
+ENV_WHITELIST = ('CUDA_VERSION', 'CUDA_VISIBLE_DEVICES', 'CUBLAS_WORKSPACE_CONFIG',
+                 'KAGGLE_KERNEL_RUN_TYPE', 'NVIDIA_DRIVER_CAPABILITIES', 'NVIDIA_VISIBLE_DEVICES',
+                 'OMP_NUM_THREADS', 'PYTHONHASHSEED', 'YOLO_CONFIG_DIR', 'YOLO_OFFLINE')
+
+
+class JobRejected(Exception):
+    """An input that must stop the job rather than be worked around."""
+
+
+def sha256(data: bytes) -> str:
+    return hashlib.sha256(data).hexdigest()
+
+
+def lf(data: bytes) -> bytes:
+    return data.replace(b'\r\n', b'\n')
+
+
+def source_sha256(text: str) -> str:
+    """Hash of a source text with only line endings and trailing newlines normalised."""
+    return sha256((text.replace('\r\n', '\n').rstrip('\n') + '\n').encode('utf-8'))
+
+
+def image_paths(tree: dict) -> list[str]:
+    if tree.get('truncated') is not False:
+        raise JobRejected('the commit tree listing is truncated or malformed')
+    return sorted(e['path'] for e in tree['tree'] if e['type'] == 'blob'
+                  and any(e['path'].startswith(f'{PREFIX}{s}/images/') for s in SPLIT_DIRS))
+
+
+def label_path(image: str) -> str:
+    return image.replace('/images/', '/labels/', 1).rsplit('.', 1)[0] + '.txt'
+
+
+def rle(codes: str) -> str:
+    """Run-length form of a split string ('tttvx' -> 't3v1x1'), short enough to transcribe;
+    the capacity probe failed once on a hand-copied run of 376 't' (KAGGLE-CAPACITY-001 v1)."""
+    out, i = [], 0
+    while i < len(codes):
+        j = i
+        while j < len(codes) and codes[j] == codes[i]:
+            j += 1
+        out.append(f'{codes[i]}{j - i}')
+        i = j
+    return ''.join(out)
+
+
+def unrle(text: str) -> str:
+    import re
+    if not re.fullmatch(r'([a-z][1-9][0-9]*)+', text):
+        raise JobRejected('the split encoding is malformed')
+    return ''.join(code * int(n) for code, n in re.findall(r'([a-z])([0-9]+)', text))
+
+
+def select(paths: list[str], split: str) -> dict[str, str]:
+    if len(split) != len(paths) or set(split) - set(CODES):
+        raise JobRejected('the split string does not cover the corpus image by image')
+    return {p: CODES[c] for p, c in zip(paths, split) if CODES[c]}
+
+
+def digest(lines: list[tuple[str, str, str]]) -> str:
+    return sha256(''.join('\t'.join(line) + '\n' for line in sorted(lines)).encode())
+
+
+def check_blob(path: str, data: bytes, expected_sha1: str) -> None:
+    if hashlib.sha1(b'blob %d\0' % len(data) + data).hexdigest() != expected_sha1:
+        raise JobRejected(f'bytes of {path} differ from the commit tree')
+
+
+def split_string(rows: list[dict]) -> str:
+    """Local side: one code per image, in sorted repository-path order."""
+    code = {'train': 't', 'valid': 'v', 'test': 'x'}
+    ordered = sorted((r['path'].split('/', 1)[1], r['proposed_split']) for r in rows)
+    return ''.join(code[s] for _, s in ordered)
+
+
+def check_bindings(manifest_path: str, manifest_sha: str, trainer_sha: str, job_sha: str,
+                   approved: dict) -> None:
+    """Local side, before rendering: only the frozen manifest and the approved code."""
+    if (manifest_path != approved['manifest_path']
+            or manifest_sha != approved['manifest_sha256']):
+        raise JobRejected(f'manifest {manifest_path} is not the frozen, recorded manifest')
+    if trainer_sha != approved['trainer_sha256']:
+        raise JobRejected('trainer source differs from the approved hash')
+    if job_sha != approved['job_sha256']:
+        raise JobRejected('job source differs from the approved hash')
+
+
+def authorize(mode: str, amendment: dict, selection: dict | None = None,
+              checkpoint: str | None = None) -> None:
+    """Local side, before rendering (TASK-05 review round 2 HIGH-01): what the venue amendment
+    permits. capacity: non-scientific, allowed while proposed. train: the amendment approved.
+    predict: approved, inference explicitly approved, and the checkpoint the one the committed
+    EXP-R01 selection record sealed."""
+    approved = amendment.get('state') == 'APPROVED'
+    if mode == 'capacity':
+        if not approved and amendment.get('execution_permitted') != 'non_scientific_probes_only':
+            raise JobRejected('the amendment does not permit a non-scientific probe')
+    elif mode == 'train':
+        if not approved:
+            raise JobRejected('training needs the venue amendment APPROVED')
+    elif mode == 'predict':
+        if not approved or amendment.get('inference_approved') is not True:
+            raise JobRejected('inference needs the amendment APPROVED with inference_approved')
+        if not selection or not checkpoint or selection.get('selected_sha256') != checkpoint:
+            raise JobRejected('the checkpoint is not the one the EXP-R01 selection record sealed')
+    else:
+        raise JobRejected(f'unknown mode {mode!r}')
+
+
+def verify_receipt(receipt: dict, expected: dict[str, tuple[str, str, str]],
+                   payload_sha256: str, kernel_source: str | None = None) -> None:
+    """Local side, after the run. `expected` maps repository path -> (view split, image
+    SHA256, LF label SHA256) for the phase's rows of the frozen manifest; `kernel_source`
+    is the locally rendered kernel, compared with the source hash taken inside the run."""
+    if receipt.get('payload_sha256') != payload_sha256:
+        raise JobRejected('the receipt comes from another payload than the rendered one')
+    if kernel_source is not None and (
+            receipt.get('kernel_source_sha256') != source_sha256(kernel_source)):
+        raise JobRejected('the executed kernel source differs from the rendered kernel')
+    got = {f['path']: (f['split'], f['image_sha256'], f['label_lf_sha256'])
+           for f in receipt['files']}
+    if len(got) != len(receipt['files']) or got != expected:
+        extra, missing = sorted(set(got) - set(expected)), sorted(set(expected) - set(got))
+        changed = sorted(p for p in set(got) & set(expected) if got[p] != expected[p])
+        raise JobRejected(f'receipt files differ from the manifest: extra {extra[:3]}, '
+                          f'missing {missing[:3]}, changed {changed[:3]}')
+
+
+def payload_of(kernel_text: str) -> dict:
+    """The PAYLOAD embedded in a rendered kernel."""
+    import ast
+    head = 'PAYLOAD = json.loads('
+    for line in kernel_text.splitlines():
+        if line.startswith(head) and line.endswith(')'):
+            return json.loads(ast.literal_eval(line[len(head):-1]))
+    raise JobRejected('the kernel text carries no PAYLOAD')
+
+
+def verify_prediction_run(receipt: dict, kernel_text: str, config: dict, phase: str,
+                          expected: dict[str, tuple[str, str, str]], config_sha256: str,
+                          manifest_sha256: str) -> dict:
+    """Local side (TASK-05 review HIGH-04): the receipt, the executed source, the embedded
+    payload, the sealed checkpoint, the config and manifest by hash, the phase, the frozen
+    settings and the runtime suppression evidence must all agree."""
+    payload = payload_of(kernel_text)
+    if payload.get('config_sha256') != config_sha256:
+        raise JobRejected('the run embedded another config than the one given')
+    if payload.get('manifest_sha256') != manifest_sha256:
+        raise JobRejected('the run embedded another manifest than the one given')
+    if not isinstance(receipt.get('end2end'), bool) or not receipt.get('input_contract') \
+            or receipt.get('agnostic_nms') is not False or receipt.get('single_cls') is not False \
+            or not receipt.get('effective_suppression'):
+        raise JobRejected('the receipt lacks the runtime suppression evidence')
+    verify_receipt(receipt, expected, sha256(json.dumps(payload, sort_keys=True).encode()),
+                   kernel_source=kernel_text)
+    if receipt.get('status') != 'COMPLETE' or receipt.get('mode') != 'predict':
+        raise JobRejected('only a COMPLETE predict run can supply predictions')
+    if payload.get('phase') != phase or receipt.get('phase') != phase:
+        raise JobRejected(f'the run is not the {phase} phase')
+    checkpoint = config.get('checkpoint_sha256')
+    if not checkpoint or {receipt.get('checkpoint_sha256'), payload.get('checkpoint_sha256')} != {checkpoint}:
+        raise JobRejected('the run used another checkpoint than the config seals')
+    for key in ('min_score', 'nms_iou', 'max_det', 'imgsz'):
+        if payload['inference'].get(key) != config.get(key):
+            raise JobRejected(f'inference setting {key} differs from the frozen config')
+    return {'checkpoint_sha256': checkpoint, 'phase': phase,
+            'payload_sha256': receipt['payload_sha256'],
+            'kernel_source_sha256': receipt['kernel_source_sha256'],
+            'predictions_raw_sha256': receipt.get('predictions_raw_sha256'),
+            'inference': payload['inference'], 'config_sha256': config_sha256,
+            'manifest_sha256': manifest_sha256, 'end2end': receipt['end2end'],
+            'agnostic_nms': False, 'single_cls': False,
+            'effective_suppression': receipt['effective_suppression'],
+            'input_contract': receipt['input_contract']}
+
+
+def capacity_verdict(epoch_seconds: list[float], setup_seconds: float, epochs: int,
+                     safety: float, limit_seconds: float) -> dict:
+    """Rule fixed before measuring: the first epoch is warm-up and excluded; the slowest
+    remaining epoch is projected over every frozen epoch with the safety factor."""
+    per_epoch = max(epoch_seconds[1:])
+    projected = setup_seconds + per_epoch * epochs * safety
+    return {'rule': 'setup + max(epochs 2..n) * epochs * safety <= limit',
+            'epoch_seconds': epoch_seconds, 'per_epoch_seconds': per_epoch,
+            'setup_seconds': setup_seconds, 'epochs': epochs, 'safety': safety,
+            'projected_seconds': projected, 'limit_seconds': limit_seconds,
+            'fits': projected <= limit_seconds}
+
+
+def run_recorded(receipt: dict, out: Path, body) -> None:
+    """Run body(receipt); the receipt is written whatever happens, with status and stage."""
+    try:
+        body(receipt)
+        receipt['status'] = 'COMPLETE'
+    except BaseException as error:
+        receipt['status'] = 'FAILED'
+        receipt['error'] = ''.join(traceback.format_exception_only(type(error), error)).strip()
+        raise
+    finally:
+        receipt['finished_unix'] = time.time()
+        (Path(out) / 'receipt.json').write_text(json.dumps(receipt, indent=2), encoding='utf-8')
+
+
+def render(payload: dict, forbidden: list[str] = (), trainer_source: str | None = None) -> str:
+    """The kernel: this file with PAYLOAD filled in and, for training, the trainer as a raw
+    string (plain text, so the kernel can be sent to Kaggle without escaping errors; its
+    SHA256 travels in the payload and is checked before import)."""
+    text = json.dumps(payload, sort_keys=True)
+    for item in forbidden:
+        if item in text:
+            raise JobRejected(f'the payload would carry a path outside its phase: {item}')
+    source = Path(__file__).read_text(encoding='utf-8')
+    source = source.replace('\nPAYLOAD = None\n', f'\nPAYLOAD = json.loads({text!r})\n', 1)
+    if trainer_source is not None:
+        if "'''" in trainer_source or '\r' in trainer_source \
+                or trainer_source.rstrip('\n').endswith('\\'):
+            raise JobRejected('the trainer source cannot be embedded as a raw string')
+        source += f"\n\nTRAINER_SOURCE = r'''{trainer_source}'''\n"
+    return source + "\n\nif __name__ == '__main__':\n    main(PAYLOAD)\n"
+
+
+# ---- everything below runs on Kaggle ----
+
+def _own_source() -> tuple[str | None, str]:
+    """Kaggle runs a script kernel as one notebook cell; its text is the executed source."""
+    try:
+        from IPython import get_ipython
+        cells = get_ipython().user_ns.get('In') or []
+        if cells and 'PAYLOAD = json.loads(' in cells[-1]:
+            return cells[-1], 'ipython_cell'
+    except Exception:  # noqa: BLE001 - absence is recorded, not fatal
+        pass
+    main_file = getattr(sys.modules.get('__main__'), '__file__', None)
+    if main_file and Path(main_file).is_file():
+        return Path(main_file).read_text(encoding='utf-8'), 'main_file'
+    return None, 'unavailable'
+
+
+def _get(url: str, tries: int = 5) -> bytes:
+    for attempt in range(tries):
+        try:
+            with urllib.request.urlopen(url, timeout=60) as response:
+                return response.read()
+        except OSError:
+            if attempt == tries - 1:
+                raise
+            time.sleep(2 ** attempt)
+
+
+def _run(command: list[str], evidence: Path, name: str) -> dict:
+    done = subprocess.run(command, capture_output=True, text=True)
+    (evidence / f'{name}.stdout.txt').write_text(done.stdout, encoding='utf-8')
+    (evidence / f'{name}.stderr.txt').write_text(done.stderr, encoding='utf-8')
+    return {'command': command, 'exit_code': done.returncode,
+            'stdout_sha256': sha256(done.stdout.encode()), 'stderr_sha256': sha256(done.stderr.encode())}
+
+
+def _environment(evidence: Path) -> dict:
+    from importlib.metadata import version
+
+    import torch
+    probes = {
+        'pip_freeze': _run([sys.executable, '-m', 'pip', 'freeze'], evidence, 'pip_freeze'),
+        'pip_check': _run([sys.executable, '-m', 'pip', 'check'], evidence, 'pip_check'),
+        'pip_config': _run([sys.executable, '-m', 'pip', 'config', 'list'], evidence, 'pip_config'),
+        'pip_debug': _run([sys.executable, '-m', 'pip', 'debug', '--verbose'], evidence, 'pip_debug'),
+        'nvidia_smi': _run(['nvidia-smi', '--query-gpu=name,driver_version,memory.total',
+                            '--format=csv,noheader'], evidence, 'nvidia_smi'),
+    }
+    return {'python': sys.version, 'platform': platform.platform(), 'cpu_count': os.cpu_count(),
+            'ultralytics': version('ultralytics'), 'torch': torch.__version__,
+            'cuda': torch.version.cuda, 'cudnn': torch.backends.cudnn.version(),
+            'cuda_available': torch.cuda.is_available(),
+            'gpus': [torch.cuda.get_device_name(i) for i in range(torch.cuda.device_count())],
+            'env': {k: os.environ[k] for k in ENV_WHITELIST if k in os.environ},
+            'probes': probes}
+
+
+def _predict(payload: dict, checkpoint: Path, view: Path, out: Path, receipt: dict) -> None:
+    """Raw detections at the frozen settings; the ONLY source of M1 metrics, computed later
+    from these bytes (TASK-05 review MEDIUM-02: no second AP from model.val). No threshold
+    is applied here. The effective suppression mode is recorded: YOLO26 is end-to-end, so
+    the NMS IoU argument is inert when end2end is true (review MEDIUM-04)."""
+    from ultralytics import YOLO
+    settings = payload['inference']
+    model = YOLO(str(checkpoint))
+    receipt['model_names'] = {int(k): v for k, v in model.names.items()}
+    receipt['end2end'] = bool(getattr(model.model, 'end2end', False))
+    receipt['agnostic_nms'] = False
+    receipt['single_cls'] = False
+    receipt['effective_suppression'] = (
+        'end-to-end one-to-one head: no NMS, the iou argument is inert' if receipt['end2end']
+        else f"class-aware NMS at IoU {settings['nms_iou']}")
+    receipt['input_contract'] = ('file path given to Ultralytics predict: the loader reads BGR '
+                                 'and preprocessing converts to RGB; rect letterbox at imgsz')
+    receipt['predict_args'] = {'conf': settings['min_score'], 'iou': settings['nms_iou'],
+                               'max_det': settings['max_det'], 'imgsz': settings['imgsz'],
+                               'device': '0', 'half': False, 'batch': 1}
+    lines = []
+    for image in sorted((view / 'images' / 'predict').iterdir()):
+        result = model.predict(str(image), conf=settings['min_score'], iou=settings['nms_iou'],
+                               max_det=settings['max_det'], imgsz=settings['imgsz'], device='0',
+                               half=False, agnostic_nms=False, verbose=False)[0]
+        boxes = result.boxes
+        lines.append(json.dumps({
+            'file': image.name, 'height': int(result.orig_shape[0]),
+            'width': int(result.orig_shape[1]),
+            'detections': [{'class_id': int(c), 'score': float(s), 'xyxy': [float(v) for v in b]}
+                           for b, s, c in zip(boxes.xyxy.tolist(), boxes.conf.tolist(),
+                                              boxes.cls.tolist())]}, sort_keys=True))
+    raw = out / 'predictions_raw.jsonl'
+    raw.write_text('\n'.join(lines) + '\n', encoding='utf-8')
+    receipt['predictions_raw_sha256'] = sha256(raw.read_bytes())
+    receipt['stage'] = 'predictions_written'
+
+
+def _train(payload: dict, base: Path, view: Path, out: Path, work: Path, receipt: dict) -> None:
+    trainer = work / 'train_model1.py'
+    trainer.write_bytes(globals()['TRAINER_SOURCE'].encode('utf-8'))
+    if sha256(trainer.read_bytes()) != payload['trainer_sha256']:
+        raise JobRejected('trainer source differs from the committed file')
+    sys.path.insert(0, str(work))
+    os.chdir(work)  # the AMP check resolves the base name here, never downloads it
+    from ultralytics import settings
+    settings.update({name: False for name in payload['integrations_off']})
+    import train_model1
+    capacity = payload['mode'] == 'capacity'
+    config = {**payload['config'], 'base_checkpoint': str(base)}
+    for key, value in train_model1.FROZEN.items():
+        if config[key] != value and not (capacity and key == 'epochs'):
+            raise JobRejected(f'{key} differs from the frozen protocol')
+    if receipt['base_sha256'] == train_model1.TRAINED_M1_SHA256:
+        raise JobRejected('the base is the trained M1 weight')
+    data_yaml = view / 'data.yaml'
+    data_yaml.write_text(f"path: {view.as_posix()}\ntrain: images/train\nval: images/val\n"
+                         f"nc: 2\nnames: ['Enfermo', 'Saludable']\n", encoding='utf-8')
+    evidence = out / 'evidence'
+    shutil.copyfile(data_yaml, evidence / 'data.yaml')
+    receipt['stage'] = 'training'
+    if capacity:
+        _capacity(train_model1, config, data_yaml, out, receipt)
+        return
+    receipt['result'] = train_model1.run_training(config, data_yaml, out / 'run', device='0')
+    receipt['outputs'] = {str(p.relative_to(out)): sha256(p.read_bytes())
+                          for p in sorted((out / 'run').rglob('*')) if p.is_file()}
+
+
+def _capacity(train_model1, config: dict, data_yaml: Path, out: Path, receipt: dict) -> None:
+    """Non-scientific: time and memory of a few epochs. Validation output is silenced and
+    the weights are deleted; nothing measured here may inform any selection."""
+    import logging
+
+    import torch
+    logging.getLogger('ultralytics').setLevel(logging.ERROR)
+    from ultralytics import YOLO
+    marks = []
+    model = YOLO(config['base_checkpoint'])
+    model.add_callback('on_fit_epoch_end', lambda trainer: marks.append(time.time()))
+    begun = time.time()
+    model.train(data=str(data_yaml), epochs=config['epochs'], patience=config['patience'],
+                batch=config['batch'], imgsz=config['imgsz'], seed=config['seed'],
+                optimizer=config['optimizer'], device='0', deterministic=True,
+                project='/tmp/capacity', name='probe', exist_ok=False, save=True, plots=True,
+                workers=config.get('workers', 2), verbose=False)
+    seconds = [b - a for a, b in zip([begun] + marks, marks)]
+    usage = shutil.disk_usage('/tmp/capacity')
+    receipt['capacity'] = {
+        **capacity_verdict(seconds, receipt['setup_seconds'], train_model1.FROZEN['epochs'],
+                           1.35, 43200),
+        'peak_allocated_bytes': torch.cuda.max_memory_allocated(0),
+        'peak_reserved_bytes': torch.cuda.max_memory_reserved(0),
+        'run_dir_bytes': sum(p.stat().st_size for p in Path('/tmp/capacity').rglob('*')
+                             if p.is_file()),
+        'disk_free_bytes': usage.free}
+    shutil.rmtree('/tmp/capacity')  # weights and metrics discarded
+
+
+def main(payload: dict) -> None:
+    out = Path('/kaggle/working')
+    evidence = out / 'evidence'
+    evidence.mkdir(parents=True, exist_ok=True)
+    # Ultralytics is imported only after every download, with its config in /tmp/ultralytics_cfg
+    # (copied into the evidence) and the same offline switch the local runner sets.
+    os.environ['YOLO_CONFIG_DIR'] = '/tmp/ultralytics_cfg'
+    source, how = _own_source()
+    receipt = {'payload_sha256': sha256(json.dumps(payload, sort_keys=True).encode()),
+               'mode': payload['mode'], 'phase': payload.get('phase'),
+               'experiment_id': payload.get('experiment_id'), 'started_unix': time.time(),
+               'kernel_source_sha256': source_sha256(source) if source else None,
+               'kernel_source_method': how, 'stage': 'start',
+               'test_evaluated': payload.get('phase') == 'test'}
+
+    def body(receipt):
+        attached = sorted(os.listdir('/kaggle/input')) if os.path.isdir('/kaggle/input') else []
+        checkpoint = None
+        if payload['mode'] != 'predict' and attached:
+            raise JobRejected(f'unexpected attached inputs: {attached}')
+        if payload['mode'] == 'predict':
+            # Only the output of the training kernel may be attached; its checkpoint is the
+            # one whose bytes were sealed locally.
+            found = sorted(Path('/kaggle/input').rglob('selected.pt'))
+            if len(attached) != 1 or len(found) != 1:
+                raise JobRejected(f'expected one attached training output, got {attached} {found}')
+            checkpoint = found[0]
+            receipt['checkpoint_sha256'] = sha256(checkpoint.read_bytes())
+            if receipt['checkpoint_sha256'] != payload['checkpoint_sha256']:
+                raise JobRejected('attached checkpoint differs from the sealed hash')
+        receipt['stage'] = 'environment'
+        receipt['pip_install'] = _run(
+            [sys.executable, '-m', 'pip', 'install', '-q', '--report',
+             str(evidence / 'pip_install_report.json'), f"ultralytics=={payload['ultralytics']}"],
+            evidence, 'pip_install')
+        if receipt['pip_install']['exit_code'] != 0:
+            raise JobRejected('pip install failed')
+        receipt['environment'] = _environment(evidence)
+        if receipt['environment']['ultralytics'] != payload['ultralytics']:
+            raise JobRejected('installed Ultralytics differs from the frozen version')
+
+        receipt['stage'] = 'download'
+        repo, commit = payload['repo'], payload['commit']
+        tree = json.loads(_get(f'https://api.github.com/repos/{repo}/git/trees/{commit}?recursive=1'))
+        blobs = {e['path']: e['sha'] for e in tree['tree'] if e['type'] == 'blob'}
+        paths = image_paths(tree)
+        if sha256(''.join(p + '\n' for p in paths).encode()) != payload['paths_digest']:
+            raise JobRejected('the commit image list differs from the frozen corpus')
+        chosen = ({p: 'all' for p in paths} if payload['mode'] == 'probe'
+                  else select(paths, unrle(payload['split'])))
+        view = Path('/tmp/view')
+
+        def fetch(path):
+            raw = f'https://raw.githubusercontent.com/{repo}/{commit}/'
+            image, label = _get(raw + path), _get(raw + label_path(path))
+            check_blob(path, image, blobs[path])
+            check_blob(label_path(path), label, blobs[label_path(path)])
+            if payload['mode'] != 'probe':
+                for kind, data, name in (('images', image, Path(path).name),
+                                         ('labels', lf(label), Path(label_path(path)).name)):
+                    target = view / kind / chosen[path] / name
+                    target.parent.mkdir(parents=True, exist_ok=True)
+                    target.write_bytes(data)
+            return path, sha256(image), sha256(lf(label))
+
+        with ThreadPoolExecutor(16) as pool:
+            lines = list(pool.map(fetch, sorted(chosen)))
+        receipt['files'] = [dict(zip(('path', 'image_sha256', 'label_lf_sha256', 'split'),
+                                     (*line, chosen[line[0]]))) for line in lines]
+        receipt['files_digest'] = digest(lines)
+        if receipt['files_digest'] != payload['files_digest']:
+            raise JobRejected('downloaded files differ from the frozen manifest')
+
+        work = Path('/tmp/work')
+        work.mkdir(parents=True, exist_ok=True)
+        if payload['mode'] == 'predict':
+            receipt['stage'] = 'predict'
+            os.environ['YOLO_OFFLINE'] = 'true'
+            _predict(payload, checkpoint, view, out, receipt)
+        else:
+            receipt['stage'] = 'base'
+            base = work / Path(payload['base']['url']).name
+            base.write_bytes(_get(payload['base']['url']))
+            receipt['base_sha256'] = sha256(base.read_bytes())
+            if receipt['base_sha256'] != payload['base']['sha256']:
+                raise JobRejected('base checkpoint differs from the official digest')
+            if payload['mode'] in ('train', 'capacity'):
+                font = Path(os.environ['YOLO_CONFIG_DIR']) / 'Arial.ttf'
+                font.parent.mkdir(parents=True, exist_ok=True)
+                font.write_bytes(_get(payload['font_url']))
+                receipt['font_sha256'] = sha256(font.read_bytes())
+                os.environ['YOLO_OFFLINE'] = 'true'
+                receipt['setup_seconds'] = time.time() - receipt['started_unix']
+                _train(payload, base, view, out, work, receipt)
+        settings = Path(os.environ['YOLO_CONFIG_DIR']) / 'settings.json'
+        if settings.is_file():
+            shutil.copyfile(settings, evidence / 'ultralytics_settings.json')
+        receipt['evidence'] = {p.name: sha256(p.read_bytes())
+                               for p in sorted(evidence.iterdir()) if p.is_file()}
+        receipt['stage'] = 'done'
+
+    run_recorded(receipt, out, body)
+    print(json.dumps({k: v for k, v in receipt.items()
+                      if k not in ('files', 'environment', 'evidence')}, indent=2))
+
+
+TRAINER_SOURCE = r'''"""TASK-04: retrain M1 from the official base checkpoint on the frozen clean split.
+
+Verified in the installed Ultralytics 8.4.52 (engine/trainer.py, utils/metrics.py):
+- detection fitness is mAP@0.5:0.95 only, weights [0, 0, 0, 1];
+- best.pt is written when best_fitness == fitness, so on a tie the LAST epoch wins,
+  which is the frozen rule;
+- on_model_save fires after the native save;
+- trainer.fitness is ROUNDED to 5 decimals (engine/validator.py:267), found by the local
+  smoke run. The unrounded value the SPEC requires lives in trainer.validator.metrics.
+  The native save condition still keeps the bytes of the unrounded maximum: that epoch's
+  rounded fitness equals the running rounded maximum, so it is always a candidate.
+
+`run_training` is independent of the repository layout, so the same function can
+run locally on CPU or inside a Kaggle notebook once PROTOCOL-AMENDMENT-008 allows it.
+"""
+
+import argparse
+import csv
+import hashlib
+import json
+import math
+import os
+import platform
+import shutil
+import sys
+from pathlib import Path
+
+sys.path.insert(0, str(Path(__file__).resolve().parents[2]))
+
+FROZEN = {'epochs': 150, 'patience': 100, 'batch': 16, 'imgsz': 640, 'seed': 0,
+          'optimizer': 'auto'}
+TRAINED_M1_SHA256 = '595fa3ea9b0670f63289529bde3333124ff1179588b52fbe16c9c454b6e488de'
+
+
+class RunRejected(Exception):
+    """An input or record that must stop the run rather than be worked around."""
+
+
+def _sha(path: Path) -> str:
+    digest = hashlib.sha256()
+    with Path(path).open('rb') as stream:
+        for chunk in iter(lambda: stream.read(1024 * 1024), b''):
+            digest.update(chunk)
+    return digest.hexdigest()
+
+
+def prepare_run(config: dict, manifest: Path, run_dir: Path) -> dict:
+    """All checks happen before any scientific import."""
+    manifest = Path(manifest)
+    sidecar = manifest.with_suffix(manifest.suffix + '.sha256')
+    if not sidecar.is_file():
+        raise RunRejected(f'manifest sidecar missing: {sidecar}')
+    declared = sidecar.read_text(encoding='ascii').split()[0]
+    actual = _sha(manifest)
+    if actual != declared:
+        raise RunRejected(f'manifest hash {actual} differs from its frozen sidecar {declared}')
+    for key, value in FROZEN.items():
+        if config.get(key) != value:
+            raise RunRejected(f'{key} is {config.get(key)!r}; the frozen protocol fixes {value!r}')
+    base_declared = config.get('base_checkpoint_sha256', '')
+    if base_declared == TRAINED_M1_SHA256:
+        raise RunRejected('the base checkpoint is the trained M1 weight; a changed split must '
+                          'start from the official base, never from weights that saw its members')
+    base = Path(config['base_checkpoint'])
+    if not base.is_file() or _sha(base) != base_declared:
+        raise RunRejected(f'base checkpoint bytes do not match the declared hash: {base}')
+    Path(run_dir).mkdir(parents=True, exist_ok=False)
+    return {'experiment_id': config['experiment_id'], 'manifest': str(manifest),
+            'manifest_sha256': actual, 'base_checkpoint': str(base),
+            'base_checkpoint_sha256': base_declared, 'config': dict(config),
+            'command': ' '.join(sys.argv)}
+
+
+def select_checkpoint(records: list[dict]) -> dict:
+    """Maximum unrounded fitness; the last epoch wins a tie. Bytes must match."""
+    if not records:
+        raise RunRejected('no checkpoint records to select from')
+    for record in records:
+        path = Path(record['checkpoint_path'])
+        if not path.is_file():
+            raise RunRejected(f"checkpoint missing for epoch {record['epoch']}: {path}")
+        if _sha(path) != record['sha256']:
+            raise RunRejected(f"checkpoint hash changed for epoch {record['epoch']}: {path}")
+        if not math.isfinite(float(record['fitness'])):
+            raise RunRejected(f"non-finite fitness at epoch {record['epoch']}")
+    return max(records, key=lambda r: (float(r['fitness']), int(r['epoch'])))
+
+
+def append_record(path: Path, record: dict) -> None:
+    """One JSON line flushed to disk now, so a cut run keeps every finished epoch."""
+    with Path(path).open('a', encoding='utf-8') as stream:
+        stream.write(json.dumps(record) + '\n')
+        stream.flush()
+        os.fsync(stream.fileno())
+
+
+def epoch_record(trainer) -> dict:
+    """Base-1 epoch with UNROUNDED fitness and metrics from the validator's DetMetrics."""
+    exact = trainer.validator.metrics
+    fitness = float(exact.fitness)
+    return {'epoch': trainer.epoch + 1, 'fitness': fitness, 'fitness_repr': repr(fitness),
+            'fitness_native_rounded': float(trainer.fitness),
+            'metrics': {k: float(v) for k, v in exact.results_dict.items()}}
+
+
+def run_training(config: dict, data_yaml: Path, run_dir: Path, device: str) -> dict:
+    """Train once; record every epoch and keep the bytes of every candidate best."""
+    from ultralytics import YOLO
+
+    candidates_dir = run_dir / 'weights' / 'candidates'
+    candidates_dir.mkdir(parents=True, exist_ok=True)
+    all_epochs, candidates = [], []
+
+    def on_model_save(trainer):
+        record = epoch_record(trainer)
+        all_epochs.append(record)
+        append_record(run_dir / 'epoch_records.jsonl', record)
+        if trainer.best_fitness == trainer.fitness:  # new best or a tie, on the rounded value
+            target = candidates_dir / f"epoch{record['epoch']:03d}.pt"
+            shutil.copyfile(trainer.best, target)
+            candidates.append({**record, 'checkpoint_path': str(target), 'sha256': _sha(target)})
+
+    model = YOLO(config['base_checkpoint'])
+    model.add_callback('on_model_save', on_model_save)
+    model.train(data=str(data_yaml), epochs=config['epochs'], patience=config['patience'],
+                batch=config['batch'], imgsz=config['imgsz'], seed=config['seed'],
+                optimizer=config['optimizer'], device=device, deterministic=True,
+                project=str(run_dir), name='train', exist_ok=False, save=True, plots=True,
+                workers=config.get('workers', 2))
+    finite = [r for r in all_epochs if math.isfinite(r['fitness'])]
+    if len(finite) != len(all_epochs):
+        raise RunRejected('a saved epoch had a non-finite fitness; the run cannot be validated')
+    chosen = select_checkpoint(candidates)
+    global_max = max(all_epochs, key=lambda r: (r['fitness'], r['epoch']))
+    if (chosen['epoch'], chosen['fitness']) != (global_max['epoch'], global_max['fitness']):
+        raise RunRejected('the selected candidate does not match the global maximum over all epochs')
+    shutil.copyfile(chosen['checkpoint_path'], run_dir / 'weights' / 'selected.pt')
+    return {'selected_epoch': chosen['epoch'], 'selected_fitness_repr': chosen['fitness_repr'],
+            'selected_sha256': chosen['sha256'], 'epochs_recorded': len(all_epochs),
+            'candidates_kept': len(candidates), 'selected_metrics': chosen['metrics']}
+
+
+def build_view(root: Path, manifest: Path, legacy: Path, run_id: str) -> Path:
+    """Train and valid only. The test split is never copied into the training view."""
+    from src.evaluation.provenance import check_output
+    view = check_output(root, root / 'data' / 'derived' / f'model1_clean_{run_id}',
+                        allow_directory=True)
+    if view.exists():
+        raise RunRejected(f'derived view already exists: {view}')
+    rows = list(csv.DictReader(open(manifest, encoding='utf-8')))
+    for row in rows:
+        if row['proposed_split'] == 'test':
+            continue
+        split = 'train' if row['proposed_split'] == 'train' else 'val'
+        for kind, relative in (('images', row['logical_path']), ('labels', row['label'])):
+            target = view / kind / split / Path(relative).name
+            target.parent.mkdir(parents=True, exist_ok=True)
+            shutil.copyfile(legacy / relative, target)
+    (view / 'data.yaml').write_text(
+        f'path: {view.as_posix()}\ntrain: images/train\nval: images/val\n'
+        "nc: 2\nnames: ['Enfermo', 'Saludable']\n", encoding='utf-8')
+    return view
+
+
+def main() -> int:
+    parser = argparse.ArgumentParser()
+    parser.add_argument('--config', type=Path, required=True)
+    parser.add_argument('--manifest', type=Path, required=True)
+    parser.add_argument('--run-dir', type=Path, required=True)
+    args = parser.parse_args()
+    config = json.loads(args.config.read_text(encoding='utf-8'))
+    record = prepare_run(config, args.manifest, args.run_dir)  # before any scientific import
+
+    from src.evaluation.provenance import (
+        authorized_root, configure_environment, lock_ultralytics, verify_environment,
+    )
+    root = authorized_root()
+    configure_environment(root)
+    verify_environment(root)
+    os.environ['YOLO_OFFLINE'] = 'true'
+    legacy = Path(json.loads((root / 'configs/root_mapping.json').read_text(encoding='utf-8'))
+                  ['legacy_corpus'])
+    view = build_view(root, args.manifest, legacy, config['experiment_id'])
+    from ultralytics import SETTINGS, __version__
+    import torch
+    lock_ultralytics(SETTINGS, root)
+
+    run_dir = args.run_dir
+    (run_dir / 'command.txt').write_text(record['command'] + '\n', encoding='utf-8')
+    (run_dir / 'dataset_manifest.sha256').write_text(
+        f"{record['manifest_sha256']}  {Path(record['manifest']).name}\n", encoding='ascii')
+    (run_dir / 'config.json').write_text(json.dumps(config, indent=2) + '\n', encoding='utf-8')
+    (run_dir / 'environment.json').write_text(json.dumps({
+        'python': sys.version, 'platform': platform.platform(), 'ultralytics': __version__,
+        'torch': torch.__version__, 'cuda_available': torch.cuda.is_available(),
+        'device': config['device'], 'gpus': [torch.cuda.get_device_name(i)
+                                             for i in range(torch.cuda.device_count())],
+        'venue': config.get('venue', 'local'), 'amendments': config.get('amendments', [])},
+        indent=2) + '\n', encoding='utf-8')
+    result = run_training(config, view / 'data.yaml', run_dir, config['device'])
+    after = _sha(args.manifest)
+    if after != record['manifest_sha256']:
+        raise RunRejected('the manifest changed during the run')
+    (run_dir / 'metrics.json').write_text(json.dumps({**result, 'test_evaluated': False},
+                                                     indent=2) + '\n', encoding='utf-8')
+    print(json.dumps(result, indent=2))
+    return 0
+
+
+if __name__ == '__main__':
+    try:
+        sys.exit(main())
+    except RunRejected as error:
+        print(f'REJECTED: {error}', file=sys.stderr)
+        sys.exit(2)
+'''
+
+
+if __name__ == '__main__':
+    main(PAYLOAD)

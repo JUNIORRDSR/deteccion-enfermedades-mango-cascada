@@ -1,0 +1,253 @@
+{
+  "method": "CSV transcription and arithmetic, NOT experimental metric reproduction",
+  "rows": 150,
+  "last": {
+    "epoch": 150.0,
+    "time": 1281.61,
+    "train/box_loss": 0.40916,
+    "train/cls_loss": 0.24959,
+    "train/dfl_loss": 0.00506,
+    "metrics/precision(B)": 0.92006,
+    "metrics/recall(B)": 0.84827,
+    "metrics/mAP50(B)": 0.90977,
+    "metrics/mAP50-95(B)": 0.79633,
+    "val/box_loss": 0.51316,
+    "val/cls_loss": 0.48135,
+    "val/dfl_loss": 0.0052,
+    "lr/pg0": 2.76722e-05,
+    "lr/pg1": 2.76722e-05,
+    "lr/pg2": 2.76722e-05
+  },
+  "maxima": {
+    "metrics/mAP50(B)": {
+      "epoch": 95.0,
+      "time": 823.681,
+      "train/box_loss": 0.64125,
+      "train/cls_loss": 0.44038,
+      "train/dfl_loss": 0.00632,
+      "metrics/precision(B)": 0.91634,
+      "metrics/recall(B)": 0.85848,
+      "metrics/mAP50(B)": 0.93174,
+      "metrics/mAP50-95(B)": 0.80005,
+      "val/box_loss": 0.55735,
+      "val/cls_loss": 0.43212,
+      "val/dfl_loss": 0.00578,
+      "lr/pg0": 0.000632793,
+      "lr/pg1": 0.000632793,
+      "lr/pg2": 0.000632793
+    },
+    "metrics/mAP50-95(B)": {
+      "epoch": 137.0,
+      "time": 1173.83,
+      "train/box_loss": 0.48528,
+      "train/cls_loss": 0.29559,
+      "train/dfl_loss": 0.00507,
+      "metrics/precision(B)": 0.92061,
+      "metrics/recall(B)": 0.83326,
+      "metrics/mAP50(B)": 0.91607,
+      "metrics/mAP50-95(B)": 0.80478,
+      "val/box_loss": 0.51292,
+      "val/cls_loss": 0.47567,
+      "val/dfl_loss": 0.00527,
+      "lr/pg0": 0.000170701,
+      "lr/pg1": 0.000170701,
+      "lr/pg2": 0.000170701
+    },
+    "metrics/precision(B)": {
+      "epoch": 101.0,
+      "time": 873.68,
+      "train/box_loss": 0.58147,
+      "train/cls_loss": 0.36958,
+      "train/dfl_loss": 0.00576,
+      "metrics/precision(B)": 0.94734,
+      "metrics/recall(B)": 0.83576,
+      "metrics/mAP50(B)": 0.90977,
+      "metrics/mAP50-95(B)": 0.78613,
+      "val/box_loss": 0.54712,
+      "val/cls_loss": 0.49073,
+      "val/dfl_loss": 0.00589,
+      "lr/pg0": 0.00056678,
+      "lr/pg1": 0.00056678,
+      "lr/pg2": 0.00056678
+    },
+    "metrics/recall(B)": {
+      "epoch": 1.0,
+      "time": 36.0445,
+      "train/box_loss": 0.82375,
+      "train/cls_loss": 4.65942,
+      "train/dfl_loss": 0.00788,
+      "metrics/precision(B)": 0.01316,
+      "metrics/recall(B)": 0.90552,
+      "metrics/mAP50(B)": 0.26299,
+      "metrics/mAP50-95(B)": 0.20729,
+      "val/box_loss": 0.56881,
+      "val/cls_loss": 3.50219,
+      "val/dfl_loss": 0.00629,
+      "lr/pg0": 0.00051677,
+      "lr/pg1": 0.00051677,
+      "lr/pg2": 0.00051677
+    }
+  },
+  "max_recall_excluding_epoch1": {
+    "epoch": 88.0,
+    "time": 765.597,
+    "train/box_loss": 0.63525,
+    "train/cls_loss": 0.46746,
+    "train/dfl_loss": 0.00645,
+    "metrics/precision(B)": 0.85247,
+    "metrics/recall(B)": 0.87314,
+    "metrics/mAP50(B)": 0.91686,
+    "metrics/mAP50-95(B)": 0.7866,
+    "val/box_loss": 0.55773,
+    "val/cls_loss": 0.48992,
+    "val/dfl_loss": 0.00607,
+    "lr/pg0": 0.000709809,
+    "lr/pg1": 0.000709809,
+    "lr/pg2": 0.000709809
+  },
+  "confusion_matrix_cls.csv": {
+    "labels": [
+      "Antracnosis",
+      "Cancro_bacteriano",
+      "Costras",
+      "Podredumbre_Extremo_tallo",
+      "Saludable"
+    ],
+    "matrix": [
+      [
+        44,
+        1,
+        0,
+        1,
+        0
+      ],
+      [
+        1,
+        37,
+        6,
+        0,
+        1
+      ],
+      [
+        2,
+        6,
+        36,
+        0,
+        0
+      ],
+      [
+        1,
+        0,
+        0,
+        41,
+        0
+      ],
+      [
+        1,
+        0,
+        0,
+        0,
+        41
+      ]
+    ],
+    "sum_cells": 219,
+    "diagonal": 199,
+    "diagonal_over_sum_cells": 0.908675799086758,
+    "per_class": [
+      {
+        "class": "Antracnosis",
+        "tp": 44,
+        "support": 46,
+        "predicted": 49,
+        "precision": 0.8979591836734694,
+        "recall": 0.9565217391304348,
+        "f1": 0.9263157894736843
+      },
+      {
+        "class": "Cancro_bacteriano",
+        "tp": 37,
+        "support": 45,
+        "predicted": 44,
+        "precision": 0.8409090909090909,
+        "recall": 0.8222222222222222,
+        "f1": 0.8314606741573033
+      },
+      {
+        "class": "Costras",
+        "tp": 36,
+        "support": 44,
+        "predicted": 42,
+        "precision": 0.8571428571428571,
+        "recall": 0.8181818181818182,
+        "f1": 0.8372093023255814
+      },
+      {
+        "class": "Podredumbre_Extremo_tallo",
+        "tp": 41,
+        "support": 42,
+        "predicted": 42,
+        "precision": 0.9761904761904762,
+        "recall": 0.9761904761904762,
+        "f1": 0.9761904761904762
+      },
+      {
+        "class": "Saludable",
+        "tp": 41,
+        "support": 42,
+        "predicted": 42,
+        "precision": 0.9761904761904762,
+        "recall": 0.9761904761904762,
+        "f1": 0.9761904761904762
+      }
+    ],
+    "macro_f1": 0.9094733436675042
+  },
+  "confusion_matrix_raw.csv": {
+    "labels": [
+      "Enfermo",
+      "Saludable",
+      "Fondo"
+    ],
+    "matrix": [
+      [
+        11,
+        1,
+        1
+      ],
+      [
+        3,
+        61,
+        22
+      ],
+      [
+        4,
+        13,
+        0
+      ]
+    ],
+    "sum_cells": 116,
+    "diagonal": 72,
+    "diagonal_over_sum_cells": 0.6206896551724138,
+    "per_class": [
+      {
+        "class": "Enfermo",
+        "tp": 11,
+        "support": 13,
+        "predicted": 18,
+        "precision": 0.6111111111111112,
+        "recall": 0.8461538461538461,
+        "f1": 0.7096774193548387
+      },
+      {
+        "class": "Saludable",
+        "tp": 61,
+        "support": 86,
+        "predicted": 75,
+        "precision": 0.8133333333333334,
+        "recall": 0.7093023255813954,
+        "f1": 0.7577639751552795
+      }
+    ],
+    "macro_f1": 0.7337206972550592
+  }
+}

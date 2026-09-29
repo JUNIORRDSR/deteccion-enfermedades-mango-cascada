@@ -1,0 +1,80 @@
+{
+  "source": "artifacts/metrics/benchmark_raw.csv",
+  "source_sha256": "2a8a5a68065d71998a12a5f593656a696b271278a89164d9e7c862ef68e48aa5",
+  "unit": "ms",
+  "definition": "benchmark-summary-v1: mean = arithmetic mean; median = middle value, or mean of the two middle values; std = population standard deviation (ddof=0, statistics.pstdev); p95 = linear interpolation between order statistics at 0-based rank (n-1)*0.95 (Hyndman-Fan type 7, NumPy default \"linear\"); min, max and n over the successful measured repetitions",
+  "stages": {
+    "read": {
+      "n": 3200,
+      "mean": 0.64153209375,
+      "median": 0.59935,
+      "std": 0.5712187726185706,
+      "p95": 0.8353599999999997,
+      "min": 0.3565,
+      "max": 24.4952
+    },
+    "decode": {
+      "n": 3200,
+      "mean": 2.7903075,
+      "median": 2.69995,
+      "std": 0.788823007480924,
+      "p95": 3.6159349999999986,
+      "min": 1.5714,
+      "max": 25.6403
+    },
+    "m1": {
+      "n": 3200,
+      "mean": 292.50766834375,
+      "median": 203.83645,
+      "std": 378.16957662394964,
+      "p95": 681.7581449999998,
+      "min": 124.104,
+      "max": 6144.3089
+    },
+    "m2_crops": {
+      "n": 3200,
+      "mean": 45.2850598125,
+      "median": 28.4368,
+      "std": 146.10831493873405,
+      "p95": 90.08955499999999,
+      "min": 0.0095,
+      "max": 4092.5644
+    },
+    "annotate": {
+      "n": 3200,
+      "mean": 0.1287915625,
+      "median": 0.1324,
+      "std": 0.07587934203430202,
+      "p95": 0.21230499999999997,
+      "min": 0.0011,
+      "max": 1.3722
+    },
+    "encode": {
+      "n": 3200,
+      "mean": 2.0305088125,
+      "median": 1.9972,
+      "std": 0.4360281788168511,
+      "p95": 2.6570799999999997,
+      "min": 1.1216,
+      "max": 9.658
+    },
+    "cascade": {
+      "n": 3200,
+      "mean": 337.7993799375,
+      "median": 233.8815,
+      "std": 459.6669030124358,
+      "p95": 772.0021649999983,
+      "min": 124.1246,
+      "max": 8598.4598
+    },
+    "end_to_end": {
+      "n": 3200,
+      "mean": 343.42431534375,
+      "median": 239.4089,
+      "std": 459.8540952119935,
+      "p95": 777.7390699999984,
+      "min": 129.4467,
+      "max": 8604.9733
+    }
+  }
+}
