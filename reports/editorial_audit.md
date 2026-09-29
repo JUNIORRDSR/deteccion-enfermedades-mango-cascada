@@ -1,6 +1,6 @@
 # Auditoría editorial del manuscrito (TASK-09)
 
-**Fecha:** 2026-09-28 · **Manuscrito:** `manuscript/source/Articulo_Mango_ALBUS_revision.docx` tras la pasada 2f (SHA-256 `d177dd9d2d944b021f3977ecf37271e235f7fcdfd2af8a48d2ce0f0af0397b1b`) · **Responde a:** la auditoría B, ronda 1 (`reports/execution/task-09-results-audit.md`, hallazgos B-08 y B-09) y ronda 2 (`reports/execution/task-09-results-audit-round2.md`, hallazgos R2-04 y R2-05), y a la revisión adversarial final (`reports/final_adversarial_review.md`).
+**Fecha:** 2026-09-28 · **Manuscrito:** `manuscript/source/Articulo_Mango_ALBUS_revision.docx` tras la pasada 2h (SHA-256 `f16115958d081467283089639b9f5f7a901acca2a835e20c364c55be016395ed`) · **Responde a:** la auditoría B, ronda 1 (`reports/execution/task-09-results-audit.md`, hallazgos B-08 y B-09) y ronda 2 (`reports/execution/task-09-results-audit-round2.md`, hallazgos R2-04 y R2-05), y a la revisión adversarial final (`reports/final_adversarial_review.md`).
 
 ## 1. Trazabilidad de las cifras
 
@@ -30,7 +30,7 @@ Quedan fuera del registro, con su fuente:
 
 ## 2. Lenguaje
 
-`reports/editorial_claim_audit.csv` recoge 24 decisiones, de ED-01 a ED-24. Cubren eficiencia, temporalidad, prevalencia, fuga, latencia, impacto, la adjudicación por IA, la cronología de la partición y dos afirmaciones de la literatura. Desde la pasada 2e, `document_checks` también busca «limpio» o «limpia» usado como veredicto de fuga. No encuentra ninguna coincidencia léxica sin revisar. La única coincidencia revisada es la negación de 3.3.1: «No se afirma que el conjunto esté libre de fuga».
+`reports/editorial_claim_audit.csv` recoge 28 decisiones, de ED-01 a ED-28. Cubren eficiencia, temporalidad, prevalencia, fuga, latencia, impacto, la adjudicación por IA, la cronología de la partición y dos afirmaciones de la literatura. Desde la pasada 2e, `document_checks` también busca «limpio» o «limpia» usado como veredicto de fuga. No encuentra ninguna coincidencia léxica sin revisar. La única coincidencia revisada es la negación de 3.3.1: «No se afirma que el conjunto esté libre de fuga».
 
 La búsqueda por palabras no basta, así que las pasadas 2d, 2e y 2f añadieron una revisión semántica.
 
@@ -126,11 +126,11 @@ La revisión del render de la pasada 2e (`reports/execution/render_review.md`) a
 
 ## 7. Revisión adversarial final
 
-La revisión (`reports/final_adversarial_review.md`) recomienda rechazar. Encontró 6 HIGH, 8 MEDIUM y 2 LOW. La pasada 2f (`provenance/commands/task09/revise_pass2f.py`) corrige o declara lo que el texto puede resolver, con las decisiones de los autores del 2026-09-28: declarar ya la adjudicación por IA, mantener el título y publicar el repositorio con los pesos bajo AGPL-3.0. Lo que exige datos nuevos o revisión humana queda abierto y declarado.
+La revisión (`reports/final_adversarial_review.md`) recomienda rechazar. Encontró 6 HIGH, 8 MEDIUM y 2 LOW. La pasada 2f (`provenance/commands/task09/revise_pass2f.py`) corrige o declara lo que el texto puede resolver, con las decisiones de los autores del 2026-09-28: declarar ya la adjudicación por IA, mantener el título y publicar el repositorio con los pesos bajo AGPL-3.0. Lo que exige datos nuevos o una re-adjudicación documentada queda abierto y declarado.
 
 | Hallazgo | Severidad | Estado tras la pasada 2f |
 |---|---|---|
-| H-01 adjudicación por agentes de IA presentada como revisores independientes | HIGH | Declarada en 3.3.1 y en REVIEW-01: modelos, ciego por instrucción, sin revisión humana, controles fallidos y desacuerdos (ED-21). Abierta la re-adjudicación humana que pide el revisor |
+| H-01 adjudicación por agentes de IA presentada como revisores independientes | HIGH | Declarada en 3.3.1 y en REVIEW-01: modelos, ciego por instrucción, controles fallidos y desacuerdos (ED-21). La pasada 2g añade la revisión manual posterior de una integrante del equipo, declarada por los autores sin registro caso a caso (ED-25, DECISION-040). Sigue abierta la re-adjudicación externa con ciego efectivo que pide el revisor |
 | H-02 regla de partición «fijada antes de ver los datos» | HIGH | Corregido en 3.3.1 y REVIEW-02: se fijó el 20-09-2026, antes de construir los grupos y después de conocer los datos (ED-22) |
 | H-03 sin estándar diagnóstico para las etiquetas | HIGH | Declarado en 6.1; el título se mantiene por decisión de los autores. Abierto: exige etiquetas con confirmación fitopatológica |
 | H-04 un único origen Enfermo en entrenamiento y sensibilidad baja | HIGH | Ya declarado en 3.2.1, 3.3.1 y 6.1. Abierto: exige datos nuevos |
@@ -147,4 +147,4 @@ La revisión (`reports/final_adversarial_review.md`) recomienda rechazar. Encont
 | L-01 URL móvil de Ultralytics y pie de plantilla | LOW | Ultralytics citado por la etiqueta v8.4.52; el pie lo completa la revista |
 | L-02 blancos y etiquetas densas | LOW | Aceptado; la pasada 2f además impide que una tabla se corte entre páginas |
 
-Quedan abiertos cuatro HIGH, que dependen de datos nuevos o de revisión humana (H-01 en su parte de re-adjudicación, H-03, H-04 y H-05), y dos MEDIUM en su parte de adjudicación y reentrenamiento (M-02 y M-03). Ningún cambio de texto los resuelve. Enviar así el manuscrito es una decisión de los autores, que el informe final registra.
+Quedan abiertos cuatro HIGH, que dependen de datos nuevos o de una re-adjudicación documentada (H-01 en su parte de re-adjudicación externa, H-03, H-04 y H-05), y dos MEDIUM en su parte de adjudicación y reentrenamiento (M-02 y M-03). Ningún cambio de texto los resuelve. Enviar así el manuscrito es una decisión de los autores, que el informe final registra.

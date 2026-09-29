@@ -202,10 +202,10 @@
   {
     "id": "villabastidas2026_repo",
     "status": "VERIFIED",
-    "apa7": "Villa Bastidas, D., Solano Romero, J., & Molina-Cárdenas, M. (2026). Detección y clasificación automatizada de enfermedades en mango: código, pesos y evidencia de la revisión (Versión 1.0.0) [Software]. GitHub. https://github.com/JUNIORRDSR/deteccion-enfermedades-mango-cascada/releases/tag/v1.0.0",
+    "apa7": "Villa Bastidas, D., Solano Romero, J., & Molina-Cárdenas, M. (2026). Detección y clasificación automatizada de enfermedades en mango: código, pesos y evidencia de la revisión (Versión 1.0.1) [Software]. GitHub. https://github.com/JUNIORRDSR/deteccion-enfermedades-mango-cascada/releases/tag/v1.0.1",
     "doi": "",
-    "url": "https://github.com/JUNIORRDSR/deteccion-enfermedades-mango-cascada/releases/tag/v1.0.0",
-    "version": "1.0.0",
+    "url": "https://github.com/JUNIORRDSR/deteccion-enfermedades-mango-cascada/releases/tag/v1.0.1",
+    "version": "1.0.1",
     "evidence_url": "https://github.com/JUNIORRDSR/deteccion-enfermedades-mango-cascada",
     "access_date": "2026-09-28"
   },

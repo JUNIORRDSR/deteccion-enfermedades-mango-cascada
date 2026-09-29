@@ -38,7 +38,8 @@
                    "data/audits/model1/supplementary_adjudications.csv", "reports/execution/task-02-audit-report.md"],
       "declared_limits": ["the A, B and C passes were Claude agents in separate instances, not human reviewers; blinding by instruction, not access control (manuscript 3.3.1 and REVIEW-01, pass 2f)",
                           "both first-round agents missed the two positive controls and disagreed on 14 of 35 units; the supplementary agents disagreed on 38 of 47 pairs",
-                          "human re-adjudication is open (reports/final_adversarial_review.md, H-01)"]
+                          "the authors declare that a team member later reviewed the candidates manually (DECISION-040); there is no case-by-case record of that review and the frozen groups come from the recorded AI-assisted adjudication",
+                          "an external re-adjudication with effective blinding is still open (reports/final_adversarial_review.md, H-01)"]
     },
     {
       "id": "AMENDMENT-04",
@@ -101,6 +102,6 @@
   ],
   "pending_author": [],
   "resolved_author": [
-    {"claim": "CLAIM-042", "item": "publication of the audit code", "resolution": "public repository https://github.com/JUNIORRDSR/deteccion-enfermedades-mango-cascada (v1.0.0, AGPL-3.0) with code, manifests, predictions and the weights of both models, cited in the abstract, 3.6, 5.3 and the data availability statement (pass 2f)"}
+    {"claim": "CLAIM-042", "item": "publication of the audit code", "resolution": "public repository https://github.com/JUNIORRDSR/deteccion-enfermedades-mango-cascada (v1.0.1, AGPL-3.0) with code, manifests, predictions and the weights of both models, cited in the abstract, 3.6, 5.3 and the data availability statement (pass 2f)"}
   ]
 }

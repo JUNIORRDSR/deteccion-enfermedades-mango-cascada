@@ -63,7 +63,7 @@ La puntuación, los intervalos y las cifras del manuscrito se regeneran byte a b
 
 ## Uso de IA
 
-La adjudicación visual de la auditoría de fuga del detector la hicieron agentes de IA (Claude) sin revisión humana, como declara la Sección 3.3.1 del manuscrito. La ejecución de la revisión se hizo con asistentes de IA de programación, bajo la dirección de los autores. Lo mismo vale para el código, los análisis y las revisiones metodológicas de `reports/`.
+La adjudicación visual de la auditoría de fuga del detector se hizo primero con apoyo de agentes de IA (Claude); sus respuestas están en `data/audits/model1/`. Después, una integrante del equipo revisó manualmente los candidatos (Sección 3.3.1 del manuscrito). Esa revisión manual no tiene un registro caso a caso en el repositorio (DECISION-040 en `docs/research/decision_log.md`). La ejecución de la revisión se hizo con asistentes de IA de programación, bajo la dirección de los autores. Lo mismo vale para el código, los análisis y las revisiones metodológicas de `reports/`.
 
 ## Qué no se incluye
 

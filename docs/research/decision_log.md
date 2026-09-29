@@ -166,3 +166,13 @@ Procedimiento para EXP-V01 v2 y EXP-R02: en el editor del kernel, File > Import 
 Consecuencia: cambian `src/evaluation/evaluate.py` y `provenance/commands/task04/verify_kaggle_run.py`, que están en la instantánea m1 de la enmienda 008 §5.1. La inferencia M1 queda bloqueada hasta que el investigador principal apruebe la nueva instantánea. La instantánea m2 no cambia.
 
 Aprobación: el investigador principal aprobó la inferencia para la nueva instantánea m1 en el chat de la sesión el 2026-09-28 y autorizó regenerar el JSON de la enmienda (`inference_approval` versión 10). Queda como riesgo residual que este cambio no tuvo revisión independiente.
+
+## DECISION-040 — Revisión manual posterior de la adjudicación visual del Modelo 1
+
+2026-09-29. Los autores declaran, en el chat de la sesión, que después de la adjudicación visual asistida por agentes de IA (Claude; `data/audits/model1/blinding_log.json` y `supplementary_blinding_log.json`) una integrante del equipo revisó manualmente los candidatos.
+
+Registro: ni el repositorio ni la carpeta del proyecto contienen un registro caso a caso de esa revisión. No constan las decisiones por candidato, la fecha, el alcance exacto ni el acuerdo con la adjudicación asistida. La partición congelada (`data/manifests/model1_clean_manifest.csv`, 2026-09-23) no cambia y sus grupos proceden de las decisiones registradas de la adjudicación asistida (`adjudication_resolution.csv` y `supplementary_resolution.csv`).
+
+Decisión: el manuscrito, la carta y los documentos actuales describen la adjudicación como asistida por IA en una primera fase y revisada después manualmente por una integrante del equipo, sin atribuir a esa revisión resultados ni protocolo que no están documentados (pasada 2g, `reports/final_text_cleanup_audit.md`). Los registros históricos de la adjudicación no se modifican.
+
+Riesgo residual: la revisión manual no es verificable desde el repositorio. Si existe un registro de sus decisiones, conviene añadirlo a `data/audits/model1/` y declarar cualquier desacuerdo con la adjudicación asistida.

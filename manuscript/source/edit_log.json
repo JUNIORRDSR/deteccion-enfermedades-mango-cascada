@@ -236,5 +236,22 @@
       "v01_map50": "0,889",
       "v01_map": "0,750"
     }
+  },
+  {
+    "pass": "2g",
+    "script": "provenance/commands/task09/revise_pass2g.py",
+    "responds_to": "reports/final_text_cleanup_audit.md TC-01 to TC-30; DECISION-040",
+    "before_sha256": "d177dd9d2d944b021f3977ecf37271e235f7fcdfd2af8a48d2ce0f0af0397b1b",
+    "after_sha256": "f4c75f7ca16c5066e69a550a1eaa188156595ee1e431773e73d4b0368b41dbdc",
+    "figures": {
+      "word/media/image1.png": "3a51208e8d6fb0fc7994fd0ea60a77e0058b455a45fd8b0ca0da4d56c3c8ba35"
+    }
+  },
+  {
+    "pass": "2h",
+    "script": "provenance/commands/task09/revise_pass2h.py",
+    "responds_to": "release v1.0.0 published from the pass 2f state; cite v1.0.1",
+    "before_sha256": "f4c75f7ca16c5066e69a550a1eaa188156595ee1e431773e73d4b0368b41dbdc",
+    "after_sha256": "f16115958d081467283089639b9f5f7a901acca2a835e20c364c55be016395ed"
   }
 ]

@@ -1,6 +1,6 @@
 # Estado de la revisión ALBUS26-116 — punto de reanudación
 
-**Fecha:** 2026-09-28 · **Plazo editorial:** 30-09-2026 · **Rama:** `revision/execute-approved-plan` (local) · **Worktree:** `ALBUS26_major_revision/.worktrees/execution` · **Publicación:** `https://github.com/JUNIORRDSR/deteccion-enfermedades-mango-cascada` (remoto `origin`, un commit, versión 1.0.0).
+**Fecha:** 2026-09-28 · **Plazo editorial:** 30-09-2026 · **Rama:** `revision/execute-approved-plan` (local) · **Worktree:** `ALBUS26_major_revision/.worktrees/execution` · **Publicación:** `https://github.com/JUNIORRDSR/deteccion-enfermedades-mango-cascada` (remoto `origin`; publicada la release v1.0.0 con el estado de la pasada 2f; la v1.0.1, con las pasadas 2g y 2h, queda en la rama local `publicacion` para que la suban los autores).
 
 Protocolo congelado `ALBUS26-116-PROTOCOL-001` (commit `7d0f998`, JSON `6d5aa3ff…c8b`), intacto.
 
@@ -18,11 +18,11 @@ Protocolo congelado `ALBUS26-116-PROTOCOL-001` (commit `7d0f998`, JSON `6d5aa3ff
 - Auditoría A (`reports/execution/task-05-execution-audit.md`): resultados válidos, reproducción byte a byte.
 - Auditoría B, ronda 1 (4 HIGH, 6 MEDIUM): corregidos en la pasada 2d.
 - Auditoría B, ronda 2 (2 HIGH, 5 MEDIUM): corregidos en la pasada 2e.
-- Revisión adversarial final (`reports/final_adversarial_review.md`): recomienda rechazar, con 6 HIGH y 8 MEDIUM. La pasada 2f corrige o declara lo que el texto puede resolver. Quedan abiertos 4 HIGH y 2 MEDIUM que exigen datos nuevos o revisión humana (`reports/editorial_audit.md`, sección 7).
+- Revisión adversarial final (`reports/final_adversarial_review.md`): recomienda rechazar, con 6 HIGH y 8 MEDIUM. La pasada 2f corrige o declara lo que el texto puede resolver. Quedan abiertos 4 HIGH y 2 MEDIUM que exigen datos nuevos o una re-adjudicación documentada (`reports/editorial_audit.md`, sección 7).
 
 ## Decisiones de los autores del 2026-09-28
 
-- Declarar ya que la adjudicación visual la hicieron agentes de IA; la re-adjudicación humana queda como trabajo futuro.
+- Declarar que la adjudicación visual se apoyó primero en agentes de IA. El 2026-09-29 los autores añadieron que después una integrante del equipo revisó manualmente los candidatos (DECISION-040, sin registro caso a caso); la pasada 2g lo incorpora.
 - Mantener el título.
 - Publicar un único commit del estado final, con autor noreply, los pesos de los dos modelos y licencia AGPL-3.0. Quedan fuera el dictamen, la carta, las versiones anteriores del manuscrito y la plantilla de la revista.
 

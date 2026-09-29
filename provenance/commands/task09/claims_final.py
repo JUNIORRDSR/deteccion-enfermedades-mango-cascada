@@ -6,7 +6,7 @@ final_status: SUPPORTED (kept, with its evidence), CORRECTED (kept with a correc
 REPLACED (the old result gave way to a new, traced one), REFORMULATED (kept as a narrower or
 hypothetical statement), QUALIFIED (kept with its stated limit), RETIRED (removed from the text),
 PENDING_AUTHOR (depends on a decision of the authors). Locations refer to the manuscript after
-pass 2f; evidence names committed repository paths. Rerunning rewrites the three final columns.
+pass 2h; evidence names committed repository paths. Rerunning rewrites the three final columns.
 """
 
 import csv
@@ -52,7 +52,7 @@ FINAL = {
     'CLAIM-028': ('RETIRED', '4.1.5;6.1;Tabla 8', 'Raspberry Pi 4 BLOCKED_BY_HARDWARE; sólo se declara que no se midió'),
     'CLAIM-029': ('RETIRED', '6.1;Tabla 8', 'Ídem CLAIM-028'),
     'CLAIM-030': ('REPLACED', '4.1.5', 'reports/benchmark_report.md (cascada y extremo a extremo con límites definidos)'),
-    'CLAIM-031': ('QUALIFIED', '3.5;6.1', 'Las etiquetas del corpus son de imagen completa (en formato YOLO, cajas cls 0.5 0.5 1.0 1.0) sin atribuirlas a anotaciones originales (pasada 2d; 6.1 en la pasada 2e); el Modelo 2 se describe como clasificador'),
+    'CLAIM-031': ('QUALIFIED', '3.5;6.1;Tabla 8', 'Las etiquetas del corpus son de imagen completa (en formato YOLO, cajas cls 0.5 0.5 1.0 1.0) sin atribuirlas a anotaciones originales (pasada 2d; 6.1 en la pasada 2e; Tabla 8 en la pasada 2g); el Modelo 2 se describe como clasificador'),
     'CLAIM-032': ('SUPPORTED', '3.5;Tabla 3;4.2.2', 'Registro de entrenamiento de ART-002 (train_args); entrenamiento histórico, no repetido'),
     'CLAIM-033': ('SUPPORTED', '4.2.3;Tabla 7;Resumen;7', R03),
     'CLAIM-034': ('CORRECTED', '4.2.3;Tabla 7;Resumen;7', f'{R03} (macro-F1 0,909, redondeo directo)'),
@@ -62,8 +62,8 @@ FINAL = {
     'CLAIM-038': ('REFORMULATED', '4.1.4;4.2.4;Figuras 5 y 7', 'Muestras al azar con semilla 42, no elegidas por su resultado; Figura 7 ilustrativa, sin verdad de terreno de enfermedad'),
     'CLAIM-039': ('RETIRED', '3.6;4.3;7', 'El servicio FastAPI sólo ejecuta el Modelo 1; la conclusión se corrigió en la pasada 2d'),
     'CLAIM-040': ('QUALIFIED', '4.3', 'Implementación observada en el código; ninguno de los prototipos se evaluó con usuarios'),
-    'CLAIM-041': ('CORRECTED', '5.2', 'Cinco diagnósticos (cuatro enfermedades y Saludable) y ausencia de corpus limitada a los conjuntos revisados (pasada 2d)'),
-    'CLAIM-042': ('SUPPORTED', 'Resumen;3.6;5.3;Disponibilidad de datos', 'Repositorio público https://github.com/JUNIORRDSR/deteccion-enfermedades-mango-cascada (versión 1.0.0, AGPL-3.0) con el código, los manifiestos, los pesos de los dos modelos y la evidencia, citado como Villa Bastidas et al. (2026) (pasada 2f)'),
+    'CLAIM-041': ('CORRECTED', '5.2', 'Cinco clases (cuatro enfermedades y Saludable) y ausencia de corpus limitada a los conjuntos revisados (pasada 2d)'),
+    'CLAIM-042': ('SUPPORTED', 'Resumen;3.6;5.3;Disponibilidad de datos', 'Repositorio público https://github.com/JUNIORRDSR/deteccion-enfermedades-mango-cascada (versión 1.0.1, AGPL-3.0; la 1.0.0 conserva el texto de la pasada 2f) con el código, los manifiestos, los pesos de los dos modelos y la evidencia, citado como Villa Bastidas et al. (2026) (pasada 2f)'),
     'CLAIM-043': ('REFORMULATED', '5.4;6.2;7', 'Detectar antes que el RGB se declara hipótesis por comprobar; la conclusión deja RGB-D y Raspberry Pi 4 como trabajo futuro no evaluado, sin efecto de consolidación ni de sostenibilidad (pasada 2e, R2-02)'),
     'CLAIM-044': ('SUPPORTED', '6.1;7', 'Ninguna imagen del detector procede de los cultivos objetivo'),
     'CLAIM-045': ('REFORMULATED', '7', 'El servicio web local se describe como diseño («pensado para»), sin afirmar funcionamiento sin conexión probado'),

@@ -68,7 +68,7 @@ def figure1(path):
     arrow(ax, (0.51, 0.77), (0.58, 0.77))
     arrow(ax, (0.76, 0.70), (0.76, 0.56))
     arrow(ax, (0.58, 0.49), (0.49, 0.49))
-    arrow(ax, (0.27, 0.42), (0.40, 0.27), 'diagnóstico', offset=(-0.08, 0.0))
+    arrow(ax, (0.27, 0.42), (0.40, 0.27), 'clase', offset=(-0.08, 0.0))
     ax.text(0.5, 0.045, 'Datos: detector, mangoUnhealty v2 (Jairos Workspace, 2026), 669 imágenes;\n'
             'clasificador, MangoDHDS (Barhate et al., 2025), 1500 imágenes.', ha='center',
             fontsize=8, style='italic', color='#555555')
